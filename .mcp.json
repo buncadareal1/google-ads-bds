@@ -1,0 +1,30 @@
+{
+  "mcpServers": {
+    "google-ads": {
+      "command": "uvx",
+      "args": ["--from", "git+https://github.com/googleads/google-ads-mcp.git", "google-ads-mcp"],
+      "env": {
+        "GOOGLE_APPLICATION_CREDENTIALS": "${GOOGLE_APPLICATION_CREDENTIALS}",
+        "GOOGLE_PROJECT_ID": "${GOOGLE_PROJECT_ID}",
+        "GOOGLE_ADS_DEVELOPER_TOKEN": "${GOOGLE_ADS_DEVELOPER_TOKEN}",
+        "GOOGLE_ADS_LOGIN_CUSTOMER_ID": "${GOOGLE_ADS_LOGIN_CUSTOMER_ID}"
+      }
+    },
+    "analytics-ga4": {
+      "command": "uvx",
+      "args": ["analytics-mcp"],
+      "env": {
+        "GOOGLE_APPLICATION_CREDENTIALS": "${GOOGLE_APPLICATION_CREDENTIALS}",
+        "GOOGLE_PROJECT_ID": "${GOOGLE_PROJECT_ID}"
+      }
+    },
+    "gtm": {
+      "command": "npx",
+      "args": ["-y", "mcp-remote", "https://gtm-mcp.stape.ai/mcp"]
+    },
+    "clarity": {
+      "command": "npx",
+      "args": ["-y", "@microsoft/clarity-mcp-server", "--clarity_api_token=${CLARITY_API_TOKEN}"]
+    }
+  }
+}

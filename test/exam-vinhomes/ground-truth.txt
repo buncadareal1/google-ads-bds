@@ -1,0 +1,27 @@
+rows: 486
+== TOTAL ==
+Hien_thi 28,286,633
+Nhap_chuot 180,835
+Chi_phi 1,803,537,000
+ChuyenDoi_Ads 3,820
+Lead_CRM 2,557
+Lead_SQL 651
+Di_Xem_Nha 206
+Booking 59
+Dat_Coc 18
+DoanhThu_HoaHong 3,130,000,000
+CPL_Ads 472,130 | CPL_CRM 705,333 | CP_SQL 2,770,410 | CP_Coc 100,196,500 | ROAS 1.735
+Funnel L>S 0.2546 S>X 0.3164 X>B 0.2864 B>C 0.3051
+== BY CAMPAIGN ==
+GDN_Remarketing_Web30d: chi 130.0tr convAds 302 leadCRM 193 SQL 36 coc 0 DT 0tr CPLa 430,493 CPLc 673,622 CPSQL 3,611,361 ROAS 0.00
+PMAX_VinhomesHM_Lead: chi 475.4tr convAds 1775 leadCRM 829 SQL 61 coc 0 DT 0tr CPLa 267,817 CPLc 573,433 CPSQL 7,793,049 ROAS 0.00
+SEA_Brand_Vinhomes_HocMon: chi 260.2tr convAds 871 leadCRM 857 SQL 352 coc 13 DT 2,280tr CPLa 298,759 CPLc 303,639 CPSQL 739,259 ROAS 8.76
+SEA_Competitor_DoiThu: chi 176.7tr convAds 31 leadCRM 32 SQL 3 coc 0 DT 0tr CPLa 5,701,484 CPLc 5,523,312 CPSQL 58,915,333 ROAS 0.00
+SEA_Generic_NhaPho_CanHo_TayBac: chi 678.0tr convAds 664 leadCRM 587 SQL 191 coc 5 DT 850tr CPLa 1,021,075 CPLc 1,155,015 CPSQL 3,549,707 ROAS 1.25
+YT_Video_TVC_MoBan: chi 83.2tr convAds 177 leadCRM 59 SQL 8 coc 0 DT 0tr CPLa 470,017 CPLc 1,410,051 CPSQL 10,399,125 ROAS 0.00
+== BY PHASE ==
+GĐ1: chi 545.7tr leadCRM 734 SQL 151 coc 2 ROAS 0.60 CPSQL 3,613,881
+GĐ2: chi 604.4tr leadCRM 761 SQL 184 coc 5 ROAS 1.41 CPSQL 3,284,739
+GĐ3: chi 653.4tr leadCRM 1062 SQL 316 coc 11 ROAS 2.98 CPSQL 2,067,877
+B5 max chi/coc @ROAS3: 60,333,333
+B6 gap: 1263 (973 junk + 353 dup - 63 tag loss = 1263)

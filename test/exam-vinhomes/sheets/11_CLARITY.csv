@@ -1,0 +1,36 @@
+MICROSOFT CLARITY — dự án 'vinhomes-hocmon-lp' (mã theo dõi gắn từ ngày 5),,,,,,,,,,
+Số liệu dựa trên phiên có ghi hình. Clarity lấy mẫu ~92% lưu lượng của trang đích.,,,,,,,,,,
+,,,,,,,,,,
+A. CHỈ SỐ MA SÁT THEO PHIÊN BẢN TRANG ĐÍCH & THIẾT BỊ,,,,,,,,,,
+Trang đích,Thiết bị,Phiên ghi hình,Nhấp giận dữ (rage click),Nhấp chết (dead click),Cuộn quá mức,Thoát nhanh dưới 3 giây,Phiên có lỗi JavaScript,Độ sâu cuộn TB,Thời gian tới tương tác đầu (giây),Thời lượng phiên trung vị (giây)
+v1 (N1–57),Di động,38091,0.187,0.241,0.112,0.312,0.093,0.41,6.2,22
+v1 (N1–57),Máy tính,8196,0.074,0.128,0.061,0.146,0.011,0.58,3.1,74
+v1 (N1–57),Máy tính bảng,1928,0.131,0.174,0.088,0.224,0.047,0.47,4.4,38
+v2 (N58–90),Di động,31602,0.031,0.062,0.039,0.124,0.089,0.67,2.1,86
+v2 (N58–90),Máy tính,6717,0.022,0.041,0.024,0.068,0.009,0.74,1.4,141
+v2 (N58–90),Máy tính bảng,1184,0.028,0.055,0.031,0.091,0.052,0.69,1.8,97
+"Chú ý: tỷ lệ lỗi JavaScript trên di động KHÔNG giảm sau khi lên trang đích v2 (9,3% → 8,9%).",,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+B. CHỈ SỐ MA SÁT THEO NGUỒN LƯU LƯỢNG (toàn kỳ),,,,,,,,,,
+Chiến dịch,Phiên ghi hình,Thoát nhanh dưới 3 giây,Thời lượng phiên trung vị (giây),Nhấp giận dữ,Số phiên xem trên 2 trang,Nhận định nhanh,,,,
+SEA_Brand_Vinhomes_HocMon,15945,0.094,168,0.028,0.612,Lưu lượng chất lượng cao,,,,
+SEA_Generic_NhaPho_CanHo_TayBac,16787,0.182,114,0.046,0.478,Tốt,,,,
+SEA_Competitor_DoiThu,2535,0.341,47,0.071,0.224,Ý định thấp,,,,
+PMAX_VinhomesHM_Lead,26298,0.743,3,0.019,0.061,Bất thường — xem lại vị trí đặt quảng cáo,,,,
+GDN_Remarketing_Web30d,14662,0.397,29,0.052,0.217,Trung bình,,,,
+YT_Video_TVC_MoBan,11493,0.481,21,0.038,0.164,"Đầu phễu, cần đo bằng thước khác",,,,
+,,,,,,,,,,
+,,,,,,,,,,
+C. TOP ĐIỂM MA SÁT PHÁT HIỆN QUA GHI HÌNH & BẢN ĐỒ NHIỆT,,,,,,,,,,
+#,Điểm ma sát,Vị trí,Số phiên ảnh hưởng,Trang đích,Ước tính lead bị mất,Trạng thái,,,,
+1,Ảnh 'Xem bảng giá chi tiết' trông như nút bấm nhưng không bấm được — 8.412 nhấp chết,"Khối 2, giữa trang",3104,v1,≈ 90 – 140,Đã sửa ở v2,,,,
+2,Trường 'Số CMND/CCCD' trong form v1 — 61% phiên bỏ dở ngay tại trường này,"Form, trường thứ 4/7",2987,v1,≈ 320 – 400,Đã bỏ ở v2,,,,
+3,"Dropdown 'Ngân sách đầu tư' 9 lựa chọn, khó thao tác trên di động — 27% bỏ dở","Form, trường thứ 6/7",1322,v1,≈ 110 – 150,Đã bỏ ở v2,,,,
+4,"Lỗi JS: TypeError e.setDate is not a function (bộ chọn ngày hẹn xem nhà), Safari iOS 17.x — form không gửi được, không báo lỗi cho khách","Form, nút gửi",4196,v1 và v2,≈ 280 – 340,CHƯA SỬA,,,,
+5,Nút 'Đăng ký nhận bảng giá' bị khung chat che trên màn hình hẹp dưới 380px,Cuối trang,2741,v1 và v2,≈ 60 – 90,CHƯA SỬA,,,,
+6,"Số hotline dạng liên kết tel: — người dùng máy tính bấm không có phản hồi, 1.847 nhấp chết",Đầu trang,1204,v1 và v2,≈ 30 – 50,CHƯA SỬA,,,,
+7,"Người dùng cuộn qua lại nhiều lần vùng 'Vị trí dự án' — bản đồ tải chậm 3,4 giây",Khối 4,5620,v1,Không định lượng được,Đã sửa ở v2,,,,
+,,,,,,,,,,
+"Tổng ước tính lead bị mất do các lỗi CHƯA SỬA (mục 4, 5, 6): khoảng 370 – 480 lead trong 90 ngày.",,,,,,,,,,
+"Ước tính do đội UX đưa ra dựa trên tỷ lệ hoàn tất form của nhóm phiên không gặp lỗi. Là ước tính, không phải số đo trực tiếp.",,,,,,,,,,

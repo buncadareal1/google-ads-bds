@@ -1,0 +1,143 @@
+{
+  "version": 1,
+  "skills": {
+    "ad-creative": {
+      "source": "coreyhaines31/marketingskills",
+      "sourceType": "github",
+      "skillPath": "skills/ad-creative/SKILL.md",
+      "computedHash": "f5a61cff2ea986a03f0b89c424e0e48e61b931e05f7d7596b6d46fee3933d50b"
+    },
+    "ad-library-teardown": {
+      "source": "scrapecreators/social-media-research-skills",
+      "sourceType": "github",
+      "skillPath": "skills/ad-library-teardown/SKILL.md",
+      "computedHash": "1f9ecc59fd94ea78dbc6d73ce89410b36ccf341f7d75092ae6e568e3bfc3693f"
+    },
+    "ads-budget": {
+      "source": "agricidaniel/claude-ads",
+      "sourceType": "github",
+      "skillPath": "skills/ads-budget/SKILL.md",
+      "computedHash": "7d26bc84c35fd5ead24455e7a63ca71b8df28030625f1ba881ba8c2cdac29aee"
+    },
+    "ads-competitor": {
+      "source": "agricidaniel/claude-ads",
+      "sourceType": "github",
+      "skillPath": "skills/ads-competitor/SKILL.md",
+      "computedHash": "aed18392ebc9f6301f735b18f9292deb89cc1886182673a5211fa68cc6e4d5cc"
+    },
+    "ads-copywriter": {
+      "source": "claude-office-skills/skills",
+      "sourceType": "github",
+      "skillPath": "ads-copywriter/SKILL.md",
+      "computedHash": "143d60166187d611c5ef943ccb440252934306e0ea5e9615ce2a064e5ea4b7f8"
+    },
+    "ads-creative": {
+      "source": "agricidaniel/claude-ads",
+      "sourceType": "github",
+      "skillPath": "skills/ads-creative/SKILL.md",
+      "computedHash": "b23c60404b3f03c374f11048a75a47ae39f2d9698149b8d69653f31d4b5c6b15"
+    },
+    "ads-google": {
+      "source": "agricidaniel/claude-ads",
+      "sourceType": "github",
+      "skillPath": "skills/ads-google/SKILL.md",
+      "computedHash": "a69d33b9f1cee3793450ba8e6af8dd764b51f5890d99128692db1490639394ff"
+    },
+    "ads-server-side-tracking": {
+      "source": "agricidaniel/claude-ads",
+      "sourceType": "github",
+      "skillPath": "skills/ads-server-side-tracking/SKILL.md",
+      "computedHash": "40cdfeb2862f0ef8d76eff8b2713b910513c7e92860300510ce91a9e6c9d8a44"
+    },
+    "adspy-analytics-intelligence": {
+      "source": "aradotso/data-skills",
+      "sourceType": "github",
+      "skillPath": "skills/adspy-analytics-intelligence/SKILL.md",
+      "computedHash": "076b3c0f7226974a50ed3bfdf32cb781ba548e9318ff29305eb2497d1815fca6"
+    },
+    "budget-pacing-monitor": {
+      "source": "aaron-he-zhu/aaron-marketing-skills",
+      "sourceType": "github",
+      "skillPath": "ad/scale/budget-pacing-monitor/SKILL.md",
+      "computedHash": "e7bb21977394f9af486aa0c4af2a5f594611f6f3f3926687ca15ee8f6560f298"
+    },
+    "conversion-signal-qa": {
+      "source": "aaron-he-zhu/aaron-marketing-skills",
+      "sourceType": "github",
+      "skillPath": "ad/activate/conversion-signal-qa/SKILL.md",
+      "computedHash": "c172256af2dd6b7c148e1ceb50e7ad99613ddc506cf62f51a585fd0082bb9531"
+    },
+    "cro": {
+      "source": "coreyhaines31/marketingskills",
+      "sourceType": "github",
+      "skillPath": "skills/cro/SKILL.md",
+      "computedHash": "07f7a27c57e48f4b67230712f8efbc5bcc01611b35321b3c2c2e5279c9304bcd"
+    },
+    "data-manager-api-event-ingestion": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "skillPath": "skills/ads/data-manager-api-event-ingestion/SKILL.md",
+      "computedHash": "7a0dc14a990de963465a2f3f40cb5d3f8ea66cf4997e60454e7651d80fe197b9"
+    },
+    "google-ads-account-audit": {
+      "source": "eliasmalmsandberg/google-ads-skills",
+      "sourceType": "github",
+      "skillPath": "skills/google-ads-account-audit/SKILL.md",
+      "computedHash": "cf4221d371ea0e288d1590a7d5ca639a3f51fbbc0d809ae021beeae27ec879cc"
+    },
+    "google-ads-api-mcp-setup": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "skillPath": "skills/ads/google-ads-api-mcp-setup/SKILL.md",
+      "computedHash": "c4e1407a6fbd3411e7a57e1d105df2615d604e9207bce237c445a3afb07e7e56"
+    },
+    "google-ads-api-quickstart": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "skillPath": "skills/ads/google-ads-api-quickstart/SKILL.md",
+      "computedHash": "523986435b17084ec2944ed6b17411916dcbb0d7f430ea9df671cee87f4e0273"
+    },
+    "google-ads-audiences": {
+      "source": "eliasmalmsandberg/google-ads-skills",
+      "sourceType": "github",
+      "skillPath": "skills/google-ads-audiences/SKILL.md",
+      "computedHash": "b47c251bfc0fe7fe0568a590e1d58d6fbafb1d7a92f8881e901075912ab88999"
+    },
+    "google-ads-audit-leadgen": {
+      "source": "eliasmalmsandberg/google-ads-skills",
+      "sourceType": "github",
+      "skillPath": "skills/google-ads-audit-leadgen/SKILL.md",
+      "computedHash": "7c46e5f9417899f1aab64be45b41df5f120a1da1247e68779f023376779c67b7"
+    },
+    "google-ads-bidding": {
+      "source": "eliasmalmsandberg/google-ads-skills",
+      "sourceType": "github",
+      "skillPath": "skills/google-ads-bidding/SKILL.md",
+      "computedHash": "a916b888a4fafaccdd154b1f70a4a9a4beaa6f54b54538454c91f9ad07c31f0c"
+    },
+    "google-ads-budget-management": {
+      "source": "eliasmalmsandberg/google-ads-skills",
+      "sourceType": "github",
+      "skillPath": "skills/google-ads-budget-management/SKILL.md",
+      "computedHash": "fb0d1acfdc6cc0f481fc62f620923fa0110ec8a78ce01712c16c1a4f80b4574a"
+    },
+    "google-ads-conversion-tracking": {
+      "source": "eliasmalmsandberg/google-ads-skills",
+      "sourceType": "github",
+      "skillPath": "skills/google-ads-conversion-tracking/SKILL.md",
+      "computedHash": "97a0d2592cb0867b9099cc478afff085b14103d5e28d903195c1162cf29df4c0"
+    },
+    "google-ads-manager": {
+      "source": "claude-office-skills/skills",
+      "sourceType": "github",
+      "skillPath": "google-ads-manager/SKILL.md",
+      "computedHash": "821d4199d97cae69dc1ec42a92ed991510a7e1010766dda8c2f4eaa472fd34b5"
+    },
+    "google-ads-quality-score": {
+      "source": "eliasmalmsandberg/google-ads-skills",
+      "sourceType": "github",
+      "skillPath": "skills/google-ads-quality-score/SKILL.md",
+      "computedHash": "f40df46744ffbcbe5b5be901db9ffc83566f2cafa6a64ec5561cfff2b5f79061"
+    }
+  }
+}

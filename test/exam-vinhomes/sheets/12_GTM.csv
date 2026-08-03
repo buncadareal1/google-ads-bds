@@ -1,0 +1,52 @@
+GOOGLE TAG MANAGER — vùng chứa web GTM-KP7X2QM,,,,,
+"34 thẻ · 21 điều kiện kích hoạt · 18 biến · 412 KB JavaScript bên thứ ba · ước tính làm chậm LCP thêm ~0,8 giây",,,,,
+,,,,,
+A. DANH MỤC THẺ,,,,,
+#,Tên thẻ,Loại,Điều kiện kích hoạt,Trạng thái,Ghi chú
+1,GA4 Configuration – Chính,Cấu hình GA4,Tất cả các trang,Hoạt động,
+2,GA4 Configuration – Copy of Main,Cấu hình GA4,Tất cả các trang,Hoạt động,TRÙNG LẶP — page_view bị bắn hai lần
+3,GA4 Event – generate_lead,Sự kiện GA4,Form Submit (.form-dk-v1 button),Hoạt động (đã từng hỏng N44–46),Điều kiện dựa trên class CSS — rất dễ vỡ khi dev đổi giao diện
+4,GA4 Event – click_to_call,Sự kiện GA4,Nhấp liên kết bắt đầu bằng tel:,Hoạt động,"Đếm mọi lượt nhấp, không khử trùng theo người dùng"
+5,GA4 Event – view_price_page,Sự kiện GA4,Xem trang /bang-gia,Hoạt động,ĐANG được đánh dấu là sự kiện chính và nhập vào Ads
+6,GA4 Event – engaged_30s,Sự kiện GA4,Bộ đếm 30 giây,Hoạt động,ĐANG được đánh dấu là sự kiện chính và nhập vào Ads
+7,GA4 Event – form_start,Sự kiện GA4,Focus vào trường đầu tiên,Hoạt động,Không nhập vào Ads (đúng)
+8,Google Ads – Liên kết nhập chuyển đổi từ GA4,Chuyển đổi Ads,—,Hoạt động,Nhập cả 4 sự kiện ở mục 3–6
+9,Google Ads – Tiếp thị lại,Tiếp thị lại,Tất cả các trang,Hoạt động,
+10,Microsoft Clarity,HTML tùy chỉnh,Tất cả các trang,Hoạt động,Chưa gắn ID phiên Clarity vào bản ghi CRM
+11,Meta Pixel,HTML tùy chỉnh,Tất cả các trang,Hoạt động,
+12,Zalo Tracking,HTML tùy chỉnh,Tất cả các trang,Hoạt động,"Không rõ ai cài, không có mô tả"
+13,Thẻ đối tác sàn F2 (3 thẻ),HTML tùy chỉnh,Tất cả các trang,Hoạt động,Không rõ nguồn gốc — cần rà soát bảo mật
+14,Enhanced Conversions (chuyển đổi nâng cao),—,—,CHƯA CÀI,Mất khả năng khớp dữ liệu bên thứ nhất
+15,Biến ẩn lưu GCLID vào form,—,—,CHƯA CÀI,Không có GCLID trong CRM ⇒ KHÔNG THỂ nhập chuyển đổi ngoại tuyến
+16,Consent Mode v2,—,—,CHƯA CẤU HÌNH,
+17,Vùng chứa phía máy chủ (server-side),—,—,KHÔNG CÓ,Toàn bộ đo lường phụ thuộc trình duyệt
+18,Cảnh báo khi chuyển đổi = 0,—,—,KHÔNG CÓ,Nguyên nhân khiến sự cố N44–46 mất 3 ngày mới bị phát hiện
+,,,,,
+,,,,,
+B. LỊCH SỬ XUẤT BẢN VÙNG CHỨA,,,,,
+Phiên bản,Ngày (thứ tự trong chiến dịch),Thời điểm,Người xuất bản,Nội dung thay đổi,Hệ quả đo lường
+v18,Trước ngày 1,—,agency-cu@,"Thiết lập ban đầu: 4 sự kiện chính, nhập tất cả vào Google Ads",Chuyển đổi bị thổi phồng ngay từ ngày đầu tiên
+v19,Ngày 5,10:24,marketing@,Gắn Microsoft Clarity,Có dữ liệu Clarity từ ngày 5
+v20,Ngày 18,16:03,dev@,Thêm thẻ đối tác sàn F2,"LCP tăng thêm ~0,3 giây"
+v21,Ngày 27,11:47,marketing@,Thêm Meta Pixel,—
+v22,Ngày 31,09:55,dev@,Thêm GA4 Configuration – Copy of Main,page_view bị đếm đôi từ ngày 31
+v23,NGÀY 44,09:12,dev@,Triển khai form đăng ký v2 (thử nghiệm): đổi class .form-dk-v1 thành .form-register,"ĐIỀU KIỆN KÍCH HOẠT generate_lead NGỪNG KHỚP ⇒ chuyển đổi = 0 trong ngày 44, 45, 46"
+v24,NGÀY 47,14:38,dev@,Sửa điều kiện kích hoạt trở lại theo class .form-register,Khôi phục ghi nhận. 63 lead của 3 ngày trước đó vĩnh viễn không có trong Google Ads/GA4
+v25,Ngày 58,07:20,dev@,Triển khai trang đích v2,—
+v26,Ngày 71,13:09,marketing@,Thêm sự kiện zalo_click và file_download,"Có dữ liệu nhưng chưa đánh dấu là sự kiện chính, chưa nhập vào Ads"
+,,,,,
+,,,,,
+C. BẢNG KIỂM SỨC KHỎE ĐO LƯỜNG,,,,,
+Hạng mục,Đạt / Không đạt,Tác động nếu không sửa,,,
+Chỉ những hành động thật sự là khách hàng tiềm năng mới được tính là chuyển đổi,KHÔNG ĐẠT,Máy học tối ưu theo tín hiệu rác — nguyên nhân gốc của toàn bộ vấn đề PMax,,,
+Khử trùng lượt nhấp gọi theo người dùng,KHÔNG ĐẠT,"Thổi phồng 353 chuyển đổi (9,2%)",,,
+Điều kiện kích hoạt không phụ thuộc class CSS,KHÔNG ĐẠT,Mọi lần dev đổi giao diện đều có thể làm gãy đo lường,,,
+Có cảnh báo tự động khi chuyển đổi bằng 0,KHÔNG ĐẠT,Sự cố mất 3 ngày mới bị phát hiện,,,
+Lưu GCLID vào CRM,KHÔNG ĐẠT,Không thể nhập chuyển đổi ngoại tuyến ⇒ không thể tối ưu theo lead chất lượng,,,
+Bật chuyển đổi nâng cao,KHÔNG ĐẠT,Mất 10–20% khả năng khớp chuyển đổi,,,
+Không có thẻ cấu hình GA4 trùng lặp,KHÔNG ĐẠT,Số phiên và tỷ lệ thoát bị sai lệch từ ngày 31,,,
+Có đo lường phía máy chủ,KHÔNG ĐẠT,Phụ thuộc hoàn toàn vào trình duyệt và trình chặn quảng cáo,,,
+Gắn ID phiên Clarity vào bản ghi CRM,KHÔNG ĐẠT,Không xem lại được hành trình của lead đã chốt cọc,,,
+Có sự kiện form_start để chẩn đoán phễu,ĐẠT,—,,,
+Có liên kết Google Ads ↔ GA4,ĐẠT,—,,,
+Có tài liệu ghi lại thay đổi trong lịch sử phiên bản,ĐẠT,Nhờ đó truy được nguyên nhân sự cố ngày 44,,,

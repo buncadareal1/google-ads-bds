@@ -1,0 +1,474 @@
+keyword,ly_do,cap_do
+thuê,Nhu cầu thuê không phải mua - nguồn lãng phí lớn nhất của ads BĐS VN,account
+cho thuê,Nhu cầu thuê không phải mua,account
+cho thue,Biến thể không dấu (Google thường tự khớp nhưng thêm cho chắc),account
+thuê nhà,Nhu cầu thuê,account
+thuê căn hộ,Nhu cầu thuê,account
+thuê chung cư,Nhu cầu thuê,account
+thuê phòng,Nhu cầu thuê,account
+thuê nguyên căn,Nhu cầu thuê,account
+thuê văn phòng,Nhu cầu thuê văn phòng - khác tệp,account
+thuê mặt bằng,Nhu cầu thuê kinh doanh,account
+thuê kho,Nhu cầu thuê công nghiệp,account
+thuê xưởng,Nhu cầu thuê công nghiệp,account
+giá thuê,Tra cứu giá thuê,account
+cho thuê lại,Nhu cầu thuê,account
+ở ghép,Tìm bạn ở ghép - sinh viên/người đi làm thuê,account
+tìm người ở ghép,Tìm bạn ở ghép,account
+sang nhượng mặt bằng,Sang nhượng kinh doanh không phải mua BĐS sơ cấp,account
+nhà trọ,Phân khúc trọ - không phải khách mua,account
+phòng trọ,Phân khúc trọ,account
+nhà trọ giá rẻ,Phân khúc trọ,account
+ktx,Ký túc xá,account
+ký túc xá,Ký túc xá,account
+homestay,Lưu trú ngắn hạn,account
+airbnb,Lưu trú ngắn hạn,account
+booking,Đặt phòng du lịch | QA war-game 2026-07-28: hạ từ account xuống campaign — chỉ áp campaign KHÔNG bán condotel/resort (booking=giữ chỗ là intent thật),campaign
+đặt phòng,Đặt phòng du lịch,account
+khách sạn,Đặt phòng du lịch,account
+nhà nghỉ,Lưu trú ngắn hạn,account
+motel,Lưu trú ngắn hạn,account
+resort giá,Đặt phòng nghỉ dưỡng không phải mua | QA war-game 2026-07-28: hạ từ account xuống campaign — chỉ áp campaign KHÔNG bán condotel/resort (booking=giữ chỗ là intent thật),campaign
+giá phòng,Đặt phòng du lịch,account
+theo ngày,Thuê/lưu trú theo ngày,account
+theo tháng,Thuê theo tháng,account
+tour,Du lịch,account
+du lịch,Du lịch,account
+vé máy bay,Không liên quan,account
+tuyển dụng,Tìm việc không phải mua nhà,account
+việc làm,Tìm việc,account
+tuyển,Tìm việc,account
+tuyển sales,Tìm việc,account
+tuyển nhân viên,Tìm việc,account
+tuyển nhân viên kinh doanh,Tìm việc,account
+tuyển ctv,Tìm việc,account
+cộng tác viên,Tìm việc,account
+tuyển môi giới,Tìm việc,account
+lương,Tra cứu lương ngành BĐS,account
+mức lương,Tra cứu lương,account
+lương môi giới,Tra cứu lương,account
+hoa hồng môi giới,Người trong nghề không phải khách mua,account
+phí môi giới bao nhiêu,Người trong nghề,account
+học môi giới,Đào tạo nghề,account
+khóa học,Đào tạo nghề,account
+đào tạo,Đào tạo nghề,account
+chứng chỉ môi giới,Đào tạo nghề,account
+thi chứng chỉ,Đào tạo nghề,account
+thực tập,Sinh viên,account
+báo cáo thực tập,Sinh viên,account
+tuyển thực tập sinh,Tìm việc,account
+cv xin việc,Tìm việc,account
+jd,Tìm việc,account
+job,Tìm việc,account
+recruitment,Tìm việc,account
+career,Tìm việc,account
+luận văn,Học thuật,account
+tiểu luận,Học thuật,account
+đồ án,Học thuật,account
+đồ án tốt nghiệp,Học thuật,account
+giáo trình,Học thuật,account
+slide,Học thuật,account
+tài liệu,Học thuật/tra cứu,account
+nghiên cứu khoa học,Học thuật,account
+điểm chuẩn,Tuyển sinh đại học,account
+ngành bất động sản,Tuyển sinh/định hướng nghề,account
+học phí,Tuyển sinh,account
+đại học,Tuyển sinh,account
+wiki,Tra cứu bách khoa,account
+wikipedia,Tra cứu bách khoa,account
+là gì,Truy vấn định nghĩa - top funnel không chuyển đổi,account
+nghĩa là gì,Truy vấn định nghĩa,account
+định nghĩa,Truy vấn định nghĩa,account
+viết tắt,Truy vấn định nghĩa,account
+tiếng anh là gì,Truy vấn dịch thuật,account
+pdf,Tìm file tải về,account
+download,Tìm file tải về,account
+tải về,Tìm file tải về,account
+file excel,Tìm file tải về,account
+mẫu hợp đồng,Tìm biểu mẫu miễn phí,account
+hợp đồng mẫu,Tìm biểu mẫu miễn phí,account
+mẫu đơn,Tìm biểu mẫu miễn phí,account
+biểu mẫu,Tìm biểu mẫu miễn phí,account
+mẫu giấy,Tìm biểu mẫu miễn phí,account
+mẫu hợp đồng đặt cọc,Tìm biểu mẫu miễn phí,account
+mẫu hợp đồng mua bán,Tìm biểu mẫu miễn phí,account
+mẫu hợp đồng thuê nhà,Tìm biểu mẫu + nhu cầu thuê,account
+luật đất đai,Tra cứu văn bản luật,account
+nghị định,Tra cứu văn bản luật,account
+thông tư,Tra cứu văn bản luật,account
+điều 3 luật,Tra cứu văn bản luật,account
+văn bản pháp luật,Tra cứu văn bản luật,account
+thư viện pháp luật,Tra cứu văn bản luật,account
+tra cứu,Tra cứu thông tin không mua,account
+tra cứu quy hoạch,Tra cứu thông tin,account
+bản đồ quy hoạch,Tra cứu thông tin,account
+bảng giá đất nhà nước,Tra cứu giá đất nhà nước không phải giá bán dự án,account
+khung giá đất,Tra cứu giá đất nhà nước,account
+giá đất nhà nước,Tra cứu giá đất nhà nước,account
+hệ số điều chỉnh giá đất,Tra cứu giá đất nhà nước,account
+tính thuế đất,Tra cứu thuế,account
+nộp thuế đất,Tra cứu thuế,account
+cách tính thuế,Tra cứu thuế,account
+lệ phí trước bạ,Tra cứu thuế,account
+làm sổ đỏ,Thủ tục hành chính,account
+cấp lại sổ đỏ,Thủ tục hành chính,account
+mất sổ đỏ,Thủ tục hành chính,account
+đính chính sổ đỏ,Thủ tục hành chính,account
+sang tên sổ đỏ,Thủ tục hành chính,account
+tách thửa,Thủ tục hành chính,account
+lừa đảo,Truy vấn tiêu cực - hại thương hiệu và không chuyển đổi,account
+scam,Truy vấn tiêu cực,account
+tố cáo,Truy vấn tiêu cực,account
+kiện,Truy vấn tiêu cực,account
+khởi kiện,Truy vấn tiêu cực,account
+tranh chấp,Truy vấn tiêu cực,account
+khiếu nại,Truy vấn tiêu cực,account
+vỡ nợ,Truy vấn tiêu cực,account
+phá sản,Truy vấn tiêu cực,account
+bị bắt,Truy vấn tiêu cực,account
+công an,Truy vấn tiêu cực,account
+điều tra,Truy vấn tiêu cực,account
+sai phạm,Truy vấn tiêu cực,account
+thanh tra,Truy vấn tiêu cực,account
+bỏ hoang,Truy vấn tiêu cực,account
+dự án ma,Truy vấn tiêu cực,account
+bóc phốt,Truy vấn tiêu cực,account
+phốt,Truy vấn tiêu cực,account
+scandal,Truy vấn tiêu cực,account
+tin đồn,Truy vấn tiêu cực,account
+án mạng,Truy vấn tiêu cực,account
+cháy,Sự cố - truy vấn tin tức,account
+tai nạn,Sự cố - truy vấn tin tức,account
+tin tức,Đọc tin không mua,account
+vnexpress,Đọc tin,account
+cafef,Đọc tin,account
+tin mới nhất hôm nay,Đọc tin,account
+thời sự,Đọc tin,account
+video,Xem video,account
+youtube,Xem video,account
+tiktok,Mạng xã hội,account
+facebook,Mạng xã hội,account
+hình ảnh,Tìm ảnh,account
+hình nền,Tìm ảnh,account
+ảnh,Tìm ảnh,account
+mô hình,Đồ chơi/mô hình,account
+lego,Đồ chơi,account
+game,Trò chơi,account
+minecraft,Trò chơi,account
+the sims,Trò chơi,account
+miễn phí,Tìm thứ miễn phí,account
+free,Tìm thứ miễn phí,account
+batdongsan com vn,Kênh rao vặt đối thủ,account
+chợ tốt,Kênh rao vặt đối thủ,account
+nhà tốt,Kênh rao vặt đối thủ,account
+alonhadat,Kênh rao vặt đối thủ,account
+muaban net,Kênh rao vặt đối thủ,account
+homedy,Kênh rao vặt đối thủ,account
+mogi,Kênh rao vặt đối thủ,account
+dothi net,Kênh rao vặt đối thủ,account
+nhadat24h,Kênh rao vặt đối thủ,account
+rever,Kênh rao vặt đối thủ,account
+propzy,Kênh rao vặt đối thủ,account
+meeyland,Kênh rao vặt đối thủ,account
+guland,Kênh tra cứu quy hoạch,account
+thiết kế nội thất,Dịch vụ khác,account
+nội thất,Dịch vụ khác,account
+sửa nhà,Dịch vụ khác,account
+xây nhà,Dịch vụ khác,account
+xây nhà trọn gói,Dịch vụ khác,account
+thi công,Dịch vụ khác,account
+vật liệu xây dựng,Dịch vụ khác,account
+báo giá xây dựng,Dịch vụ khác,account
+chuyển nhà,Dịch vụ khác,account
+dọn nhà,Dịch vụ khác,account
+sơn nhà,Dịch vụ khác,account
+chống thấm,Dịch vụ khác,account
+bản vẽ,Dịch vụ thiết kế,account
+autocad,Dịch vụ thiết kế,account
+kiến trúc sư,Dịch vụ thiết kế,account
+xem tuổi,Phong thủy - không chuyển đổi,account
+xem ngày,Phong thủy,account
+phong thủy,Phong thủy,account
+hướng nhà hợp tuổi,Phong thủy,account
+tử vi,Phong thủy,account
+đất nông nghiệp,Loại đất không bán trong dự án,account
+đất trồng cây,Loại đất không bán,account
+đất rừng,Loại đất không bán,account
+đất lúa,Loại đất không bán,account
+trang trại,Loại hình không bán,account
+nghĩa trang,Loại hình không bán,account
+mộ phần,Loại hình không bán,account
+hoa viên nghĩa trang,Loại hình không bán,account
+chung cư mini,Loại hình rủi ro pháp lý - không phải sản phẩm bán,account
+nhà tập thể,Loại hình cũ không bán,account
+nhà cấp 4,Loại hình cũ không bán,account
+đất thổ cư lẻ,Hàng lẻ không phải dự án,campaign
+phát mãi,Tài sản ngân hàng phát mãi - khác sản phẩm,campaign
+đấu giá,Đấu giá tài sản - khác sản phẩm,campaign
+thanh lý ngân hàng,Tài sản ngân hàng - khác sản phẩm,campaign
+siết nợ,Tài sản ngân hàng,campaign
+tài sản đảm bảo,Tài sản ngân hàng,campaign
+định cư,Đầu tư định cư nước ngoài,account
+eb5,Đầu tư định cư nước ngoài,account
+golden visa,Đầu tư định cư nước ngoài,account
+nhà ở mỹ,Thị trường nước ngoài,account
+nhà ở canada,Thị trường nước ngoài,account
+nhà ở úc,Thị trường nước ngoài,account
+bất động sản singapore,Thị trường nước ngoài,account
+bất động sản dubai,Thị trường nước ngoài,account
+bất động sản thái lan,Thị trường nước ngoài,account
+bất động sản campuchia,Thị trường nước ngoài,account
+bất động sản nhật bản,Thị trường nước ngoài,account
+bất động sản hàn quốc,Thị trường nước ngoài,account
+giá rẻ,Chặn ở campaign cao cấp - GIỮ LẠI ở campaign nhà ở xã hội/bình dân,campaign
+rẻ nhất,Chặn ở campaign cao cấp,campaign
+siêu rẻ,Chặn ở campaign cao cấp,campaign
+rẻ như cho,Ngân sách không khớp,campaign
+dưới 100 triệu,Ngân sách quá thấp so với sản phẩm,campaign
+dưới 200 triệu,Ngân sách quá thấp,campaign
+dưới 300 triệu,Ngân sách quá thấp,campaign
+dưới 500 triệu,Ngân sách quá thấp,campaign
+dưới 700 triệu,Ngân sách quá thấp,campaign
+dưới 1 tỷ,Ngân sách quá thấp - trừ campaign nhà ở xã hội,campaign
+100 triệu,Ngân sách quá thấp,campaign
+200 triệu,Ngân sách quá thấp,campaign
+nhà ở xã hội,Chặn ở campaign thương mại/cao cấp - có campaign riêng,campaign
+tái định cư,Phân khúc khác,campaign
+nhà tình nghĩa,Phân khúc khác,campaign
+chính chủ,Hàng thứ cấp cá nhân - chặn nếu chỉ bán sơ cấp,campaign
+bán gấp,Hàng thứ cấp cá nhân,campaign
+bán lại,Hàng thứ cấp,campaign
+cắt lỗ,Hàng thứ cấp,campaign
+nhà cũ,Hàng thứ cấp,campaign
+ký gửi,Dịch vụ ký gửi không phải mua,campaign
+môi giới,Truy vấn tìm nghề/người trong ngành,campaign
+sàn giao dịch,Người trong ngành,campaign
+đại lý phân phối,Người trong ngành - tìm hợp tác không phải mua,campaign
+làm đại lý,Người trong ngành,campaign
+hợp tác kinh doanh,Người trong ngành,campaign
+tuyển đại lý,Người trong ngành,campaign
+so sánh với,Chỉ chặn ở campaign brand để tránh cạnh tranh chéo dự án nhà,campaign
+giá cũ,Tra cứu lịch sử giá,campaign
+lịch sử giá,Tra cứu lịch sử giá,campaign
+năm 2020,Truy vấn thông tin cũ,campaign
+năm 2021,Truy vấn thông tin cũ,campaign
+năm 2022,Truy vấn thông tin cũ,campaign
+năm 2023,Truy vấn thông tin cũ,campaign
+100 trieu,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),campaign
+200 trieu,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),campaign
+an mang,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+ban do quy hoach,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+ban gap,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),campaign
+ban lai,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),campaign
+ban ve,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+bang gia dat nha nuoc,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+bao cao thuc tap,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+bao gia xay dung,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+bat dong san campuchia,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+bat dong san dubai,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+bat dong san han quoc,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+bat dong san nhat ban,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+bat dong san singapore,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+bat dong san thai lan,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+bi bat,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+bieu mau,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+bo hoang,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+boc phot,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+cach tinh thue,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+cap lai so do,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+cat lo,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),campaign
+chay,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+chinh chu,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),campaign
+cho thue lai,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+cho tot,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+chong tham,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+chung chi moi gioi,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+chung cu mini,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+chuyen nha,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+cong an,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+cong tac vien,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+cv xin viec,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+dai hoc,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+dai ly phan phoi,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),campaign
+dao tao,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+dat lua,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+dat nong nghiep,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+dat phong,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+dat rung,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+dat tho cu le,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),campaign
+dat trong cay,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+dau gia,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),campaign
+diem chuan,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+dieu 3 luat,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+dieu tra,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+dinh chinh so do,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+dinh cu,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+dinh nghia,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+do an,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+do an tot nghiep,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+don nha,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+du an ma,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+du lich,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+duoi 1 ty,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),campaign
+duoi 100 trieu,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),campaign
+duoi 200 trieu,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),campaign
+duoi 300 trieu,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),campaign
+duoi 500 trieu,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),campaign
+duoi 700 trieu,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),campaign
+gia cu,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),campaign
+gia dat nha nuoc,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+gia phong,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+gia re,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),campaign
+gia thue,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+giao trinh,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+he so dieu chinh gia dat,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+hinh anh,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+hinh nen,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+hoa hong moi gioi,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+hoa vien nghia trang,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+hoc moi gioi,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+hoc phi,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+hop dong mau,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+hop tac kinh doanh,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),campaign
+huong nha hop tuoi,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+khach san,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+khieu nai,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+khoa hoc,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+khoi kien,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+khung gia dat,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+kien,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+kien truc su,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+ky gui,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),campaign
+ky tuc xa,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+la gi,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+lam dai ly,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),campaign
+lam so do,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+le phi truoc ba,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+lich su gia,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),campaign
+lua dao,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+luan van,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+luat dat dai,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+luong,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+luong moi gioi,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+mat so do,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+mau don,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+mau giay,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+mau hop dong,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+mau hop dong dat coc,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+mau hop dong mua ban,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+mau hop dong thue nha,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+mien phi,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+mo hinh,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+mo phan,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+moi gioi,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),campaign
+muc luong,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+nam 2020,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),campaign
+nam 2021,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),campaign
+nam 2022,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),campaign
+nam 2023,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),campaign
+nganh bat dong san,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+nghi dinh,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+nghia la gi,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+nghia trang,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+nghien cuu khoa hoc,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+nha cap 4,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+nha cu,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),campaign
+nha nghi,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+nha o canada,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+nha o my,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+nha o uc,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+nha o xa hoi,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),campaign
+nha tap the,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+nha tinh nghia,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),campaign
+nha tot,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+nha tro,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+nha tro gia re,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+noi that,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+nop thue dat,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+o ghep,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+pha san,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+phat mai,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),campaign
+phi moi gioi bao nhieu,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+phong thuy,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+phong tro,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+phot,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+re nhat,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),campaign
+re nhu cho,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),campaign
+resort gia,biến thể không dấu (negative không khớp close variant - QA 2026-07-28) | QA war-game 2026-07-28: hạ từ account xuống campaign — chỉ áp campaign KHÔNG bán condotel/resort (booking=giữ chỗ là intent thật),campaign
+sai pham,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+san giao dich,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),campaign
+sang nhuong mat bang,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+sang ten so do,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+siet no,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),campaign
+sieu re,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),campaign
+so sanh voi,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),campaign
+son nha,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+sua nha,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+tach thua,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+tai dinh cu,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),campaign
+tai lieu,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+tai nan,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+tai san dam bao,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),campaign
+tai ve,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+thanh ly ngan hang,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),campaign
+theo ngay,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+theo thang,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+thi chung chi,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+thi cong,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+thiet ke noi that,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+thoi su,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+thong tu,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+thu vien phap luat,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+thuc tap,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+thue,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+thue can ho,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+thue chung cu,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+thue kho,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+thue mat bang,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+thue nguyen can,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+thue nha,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+thue phong,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+thue van phong,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+thue xuong,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+tieng anh la gi,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+tieu luan,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+tim nguoi o ghep,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+tin don,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+tin moi nhat hom nay,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+tin tuc,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+tinh thue dat,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+to cao,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+tra cuu,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+tra cuu quy hoach,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+trang trai,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+tranh chap,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+tu vi,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+tuyen,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+tuyen ctv,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+tuyen dai ly,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),campaign
+tuyen dung,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+tuyen moi gioi,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+tuyen nhan vien,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+tuyen nhan vien kinh doanh,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+tuyen sales,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+tuyen thuc tap sinh,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+van ban phap luat,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+vat lieu xay dung,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+ve may bay,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+viec lam,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+viet tat,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+vo no,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+xay nha,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+xay nha tron goi,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+xem ngay,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+xem tuoi,biến thể không dấu (negative không khớp close variant - QA 2026-07-28),account
+đọc báo,"Đọc tin — thay cho negative ""báo"" (bị xóa vì chặn cả ""báo giá"" là truy vấn mua thật)",account
+doc bao,"biến thể không dấu của ""đọc báo""",account
+văn giang,Chống cannibalize sibling Ecopark (Văn Giang - Hưng Yên) — chỉ áp campaign brand Eco Retreat,campaign
+van giang,Biến thể không dấu — chống cannibalize sibling Ecopark — chỉ áp campaign brand Eco Retreat,campaign
+sky oasis,Chống cannibalize sibling Ecopark (Sky Oasis - Văn Giang) — chỉ áp campaign brand Eco Retreat,campaign
+solforest,Chống cannibalize sibling Ecopark (Solforest - Văn Giang) — chỉ áp campaign brand Eco Retreat,campaign
+haven park,Chống cannibalize sibling Ecopark (Haven Park - Văn Giang) — chỉ áp campaign brand Eco Retreat,campaign
+đảo châu âu,Chống cannibalize sibling Ecopark (Ecopark Grand Đảo Châu Âu) — chỉ áp campaign brand Eco Retreat,campaign
+dao chau au,Biến thể không dấu — chống cannibalize sibling Ecopark Grand Đảo Châu Âu — chỉ áp campaign brand Eco Retreat,campaign
+ecovillage saigon river,Chống cannibalize sibling Ecopark (EcoVillage Saigon River - Nhơn Trạch) — chỉ áp campaign brand Eco Retreat,campaign

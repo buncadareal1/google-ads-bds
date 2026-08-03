@@ -1,0 +1,287 @@
+======================================================================
+== 0. TỔNG QUAN TOÀN KỲ (90 ngày, 02/03–30/05/2026) ==
+  Hien_thi             28,286,633
+  Nhap_chuot           180,835
+  Chi_phi              1,803,537,000
+  ChuyenDoi_Ads        3,820
+  Lead_CRM             2,557
+  Lead_SQL             651
+  Di_Xem_Nha           206
+  Booking              59
+  Dat_Coc              18
+  DoanhThu_HoaHong     3,130,000,000
+  n                    486
+
+======================================================================
+== B1. CPL Ads / CPL CRM / CP/SQL / CP/cọc ==
+Chiến dịch                                       Chi phí      CPL_Ads      CPL_CRM         CP/SQL           CP/cọc
+SEA_Brand_Vinhomes_HocMon                    260.219.000      298.759      303.639        739.259       20.016.846
+                                         clicks=19,045 convAds=871 lead=857 SQL=352 xem=125 book=37 coc=13 DT=2.280.000.000 CPC=13.663 CTR=11.63% SQL/lead=41.07% Ads/CRM=1.02x
+SEA_Generic_NhaPho_CanHo_TayBac              677.994.000    1.021.075    1.155.015      3.549.707      135.598.800
+                                         clicks=20,502 convAds=664 lead=587 SQL=191 xem=62 book=18 coc=5 DT=850.000.000 CPC=33.070 CTR=4.47% SQL/lead=32.54% Ads/CRM=1.13x
+SEA_Competitor_DoiThu                        176.746.000    5.701.484    5.523.312     58.915.333         —(0 cọc)
+                                         clicks=3,204 convAds=31 lead=32 SQL=3 xem=0 book=0 coc=0 DT=0 CPC=55.164 CTR=2.39% SQL/lead=9.38% Ads/CRM=0.97x
+PMAX_VinhomesHM_Lead                         475.376.000      267.817      573.433      7.793.049         —(0 cọc)
+                                         clicks=39,701 convAds=1,775 lead=829 SQL=61 xem=10 book=2 coc=0 DT=0 CPC=11.974 CTR=1.00% SQL/lead=7.36% Ads/CRM=2.14x
+GDN_Remarketing_Web30d                       130.009.000      430.493      673.622      3.611.361         —(0 cọc)
+                                         clicks=28,976 convAds=302 lead=193 SQL=36 xem=8 book=2 coc=0 DT=0 CPC=4.487 CTR=0.35% SQL/lead=18.65% Ads/CRM=1.56x
+YT_Video_TVC_MoBan                            83.193.000      470.017    1.410.051     10.399.125         —(0 cọc)
+                                         clicks=69,407 convAds=177 lead=59 SQL=8 xem=1 book=0 coc=0 DT=0 CPC=1.199 CTR=0.45% SQL/lead=13.56% Ads/CRM=3.00x
+TOÀN KỲ                                    1.803.537.000      472.130      705.333      2.770.410      100.196.500
+                                         clicks=180,835 convAds=3,820 lead=2,557 SQL=651 xem=206 book=59 coc=18 DT=3.130.000.000 CPC=9.973 CTR=0.64% SQL/lead=25.46% Ads/CRM=1.49x
+
+======================================================================
+== B2. ROAS toàn kỳ & theo giai đoạn ==
+GĐ1: chi phí=545.696.000 DT=330.000.000 ROAS=0.605x cọc=2 lead=734 SQL=151 CP/SQL=3.613.881
+GĐ2: chi phí=604.392.000 DT=850.000.000 ROAS=1.406x cọc=5 lead=761 SQL=184 CP/SQL=3.284.739
+GĐ3: chi phí=653.449.000 DT=1.950.000.000 ROAS=2.984x cọc=11 lead=1062 SQL=316 CP/SQL=2.067.877
+TOÀN KỲ: chi phí=1.803.537.000 DT=3.130.000.000 ROAS=1.735x
+ROAS theo chiến dịch:
+  SEA_Brand_Vinhomes_HocMon                ROAS=8.762x  lãi/lỗ=2.019.781.000
+  SEA_Generic_NhaPho_CanHo_TayBac          ROAS=1.254x  lãi/lỗ=172.006.000
+  SEA_Competitor_DoiThu                    ROAS=0.000x  lãi/lỗ=-176.746.000
+  PMAX_VinhomesHM_Lead                     ROAS=0.000x  lãi/lỗ=-475.376.000
+  GDN_Remarketing_Web30d                   ROAS=0.000x  lãi/lỗ=-130.009.000
+  YT_Video_TVC_MoBan                       ROAS=0.000x  lãi/lỗ=-83.193.000
+
+======================================================================
+== B3. Tỷ lệ chuyển đổi từng bước phễu (toàn kỳ) ==
+  Lead_CRM->SQL          651/2557 = 25.46%
+  SQL->Đi xem            206/651 = 31.64%
+  Đi xem->Booking        59/206 = 28.64%
+  Booking->Cọc           18/59 = 30.51%
+  Lead->Cọc (tổng)       18/2557 = 0.70%
+Phễu theo giai đoạn:
+  GĐ1: SQL/lead=20.57% xem/SQL=25.17% book/xem=26.32% coc/book=20.00% coc/lead=0.27%
+  GĐ2: SQL/lead=24.18% xem/SQL=30.43% book/xem=28.57% coc/book=31.25% coc/lead=0.66%
+  GĐ3: SQL/lead=29.76% xem/SQL=35.44% book/xem=29.46% coc/book=33.33% coc/lead=1.04%
+Phễu chỉ tính 3 chiến dịch Search (loại PMax/GDN/YT — 0 cọc):
+  lead=1476 SQL=546 xem=187 book=55 coc=18
+  SQL/lead=36.99% xem/SQL=34.25% book/xem=29.41% coc/book=32.73% coc/SQL=3.30%
+  GĐ3-Search: lead=726 SQL=278 xem=104 book=32 coc=11 SQL/lead=38.29% coc/SQL=3.96%
+
+======================================================================
+== B4. Ngược từ KPI 32 cọc ==
+A. Toàn kỳ toàn tài khoản (bảo thủ)
+   SQL/lead=25.46%  cọc/SQL=2.76%
+   → cần SQL=1157  cần lead thô=4546  CP/SQL trần=1.814.516  CPL trần=461.967
+B. Chỉ Search toàn kỳ
+   SQL/lead=36.99%  cọc/SQL=3.30%
+   → cần SQL=971  cần lead thô=2624  CP/SQL trần=2.163.462  CPL trần=800.305
+C. Search GĐ3 (LP v2 + SLA 15') — kế hoạch dùng
+   SQL/lead=38.29%  cọc/SQL=3.96%
+   → cần SQL=809  cần lead thô=2112  CP/SQL trần=2.596.673  CPL trần=994.318
+Ràng buộc KPI CP/SQL ≤ 2.200.000 → với 2,1 tỷ mua tối đa 955 SQL
+   A. Toàn kỳ toàn tài khoản (bảo thủ): 955 SQL × 2.76% = 26.4 cọc
+   B. Chỉ Search toàn kỳ: 955 SQL × 3.30% = 31.5 cọc
+   C. Search GĐ3 (LP v2 + SLA 15') — kế hoạch dùng: 955 SQL × 3.96% = 37.8 cọc
+Năng lực sale: 8×12=96 lead/ngày ×90 = 8640 lead; T7/CN chỉ 2 sale → 75.4 lead/ngày bình quân có người xử lý = 6789 lead/90 ngày
+
+======================================================================
+== B5. Điểm hòa vốn / trần chi phí mỗi cọc ==
+  ROAS 1.0x → chi phí quảng cáo tối đa/cọc = 181.000.000
+  ROAS 2.0x → chi phí quảng cáo tối đa/cọc = 90.500.000
+  ROAS 3.0x → chi phí quảng cáo tối đa/cọc = 60.333.333
+  ROAS 4.0x → chi phí quảng cáo tối đa/cọc = 45.250.000
+  KPI 32 cọc × 181.000.000 = doanh thu 5.792.000.000; ROAS tại ngân sách 2,1 tỷ = 2.76x
+  Để ROAS=3,0x với ngân sách 2,1 tỷ → cần DT 6.300.000.000 = 34.8 cọc (cao hơn KPI 32 cọc → KPI 32 cọc là ràng buộc CHẶT hơn? không)
+  Hiện tại CP/cọc thực tế = 100.196.500 → gấp 1.66 lần trần ROAS 3x
+
+======================================================================
+== B6. Đối chiếu 3 nguồn (sheet 10_GA4 mục A + 12_GTM v23/v24) ==
+  Ads/GA4 'Chuyển đổi' = 1715+1132+612+361 = 3820 (khớp 3820: True)
+  (1) đếm trùng click_to_call = 1132-779 = 353
+  (2) sự kiện rác (view_price_page + engaged_30s) = 612+361 = 973
+  → lead thật đo được bằng thẻ = 3820 - 353 - 973 = 2494 (GA4 ghi 2494: True)
+  (3) mất thẻ N44–46 (GTM v23 đổi class .form-dk-v1→.form-register) = 2557 - 2494 = 63 lead
+  PHÉP CỘNG KHỚP: 3820 - 353(trùng) - 973(rác) + 63(mất thẻ) = 2557 = CRM 2557 → True
+  Tỷ trọng: trùng 9.2%, rác 25.5%, tổng thổi phồng 34.7% của cột Chuyển đổi
+  Ads/CRM = 1.49x (benchmark sheet 09: báo động >1,8x)
+  Kiểm chứng từ sheet 02 (Ngay_thu 44-46):
+    N43 convAds=43 leadCRM=30 chi phí=19.744.000
+    N44 convAds=0 leadCRM=17 chi phí=20.249.000
+    N45 convAds=0 leadCRM=15 chi phí=19.699.000
+    N46 convAds=0 leadCRM=31 chi phí=19.580.000
+    N47 convAds=33 leadCRM=18 chi phí=19.912.000
+    N48 convAds=36 leadCRM=26 chi phí=19.627.000
+    Tổng N44-46: convAds=0 leadCRM=63 chi phí=59.528.000 → CRM-Ads=63
+
+======================================================================
+== B7. Lead mất do lỗi kỹ thuật CHƯA SỬA (sheet 11_CLARITY mục C) ==
+  CPL CRM thực tế toàn kỳ = 705.333; CP/SQL = 2.770.410; SQL/lead=25.46%; cọc/SQL=2.76%
+  #4 Lỗi JS setDate (Safari iOS) — form không gửi được: 4196 phiên ảnh hưởng, lead mất 280–340 (SỐ ĐO Clarity: phiên; ƯỚC TÍNH đội UX: lead)
+  #5 Nút CTA bị khung chat che (<380px): 2741 phiên ảnh hưởng, lead mất 60–90 (SỐ ĐO Clarity: phiên; ƯỚC TÍNH đội UX: lead)
+  #6 tel: không phản hồi trên desktop (1.847 nhấp chết): 1204 phiên ảnh hưởng, lead mất 30–50 (SỐ ĐO Clarity: phiên; ƯỚC TÍNH đội UX: lead)
+  Tổng lead mất (đo/ước tính của Clarity) = 370–480 lead
+  Kịch bản thấp 370 lead:
+     giá trị theo CPL thực tế: 370 × 705.333 = 260.973.285
+     quy ra SQL (×25.46%) = 94 SQL → giá trị theo CP/SQL = 260.973.285
+     quy ra cọc (×2.76%) = 2.6 cọc → hoa hồng bỏ lỡ = 471.435.276
+  Kịch bản cao 480 lead:
+     giá trị theo CPL thực tế: 480 × 705.333 = 338.559.937
+     quy ra SQL (×25.46%) = 122 SQL → giá trị theo CP/SQL = 338.559.937
+     quy ra cọc (×2.76%) = 3.4 cọc → hoa hồng bỏ lỡ = 611.591.709
+  Điều chỉnh Clarity lấy mẫu ~92% → quy toàn bộ lưu lượng: 402–522 lead
+  Clarity gắn từ ngày 5 → thiếu 4/90 ngày dữ liệu (4.4%), ước tính là cận dưới.
+
+======================================================================
+== A. BẰNG CHỨNG SỐ CHO CHẨN ĐOÁN ==
+-- A1. PMax: chi phí, lead, chất lượng --
+  chi phí=475.376.000 (26.4% tài khoản) convAds=1775 lead=829 SQL=61 cọc=0 DT=0
+  Ads/CRM=2.14x; SQL/lead=7.36% (benchmark <12% = nhắm sai tệp); CP/SQL=7.793.049 (báo động >5tr)
+  Clarity: thoát nhanh <3s = 74,3%; thời lượng phiên trung vị 3s; GA4 tỷ lệ tương tác 8,7%; hao hụt nhấp→phiên 28,0%
+  CRM 08C: lead PMax dùng được 7% (trùng SĐT 31%, SĐT sai 24%, sai phân khúc 34%)
+  → lead dùng được ước tính = 829 × 7% = 58; chi phí/lead dùng được = 8.191.901
+  Lãng phí (chi phí PMax - 0 doanh thu) = 475.376.000
+-- A2. Chuyển đổi rác nhập vào Ads (view_price+engaged=973 = 25,5% cột Chuyển đổi) --
+  973/3820 = 25.5%; máy học tối ưu theo 973 tín hiệu không phải lead
+  Phân bổ 973 sự kiện rác theo chiến dịch (sheet 10B): PMax 438+259=697, GDN 50+30=80, YT 71+42=113, Generic 38+22=60, Brand 15+8=23 → PMax chiếm 71.6% sự kiện rác
+-- A3. Competitor campaign: 0 cọc, 0 doanh thu --
+  chi phí=176.746.000 lead=32 SQL=3 cọc=0 CP/SQL=58.915.333 CPC=55.164
+  CTR=2.39% (benchmark generic báo động <2%); CRM 08C: 26% lead là môi giới/đối thủ, chỉ 26% dùng được
+-- A4. YouTube & GDN: 0 cọc --
+  YT_Video_TVC_MoBan: chi phí=83.193.000 lead=59 SQL=8 cọc=0 CP/SQL=10.399.125
+  GDN_Remarketing_Web30d: chi phí=130.009.000 lead=193 SQL=36 cọc=0 CP/SQL=3.611.361
+  Tổng 3 kênh không cọc (PMax+GDN+YT) = 688.578.000 = 38.2% ngân sách, 0đ doanh thu
+-- A5. Brand bị bóp ngân sách (Impression Share) --
+  SEA_Brand_Vinhomes_HocMon                IS=53.01% mất_IS_ngân_sách=40.06% mất_IS_thứ_hạng=6.93% (bình quân có trọng số chi phí)
+  SEA_Generic_NhaPho_CanHo_TayBac          IS=71.23% mất_IS_ngân_sách=23.63% mất_IS_thứ_hạng=5.14% (bình quân có trọng số chi phí)
+  SEA_Competitor_DoiThu                    IS=62.08% mất_IS_ngân_sách=31.95% mất_IS_thứ_hạng=5.97% (bình quân có trọng số chi phí)
+  PMAX_VinhomesHM_Lead                     IS=0.00% mất_IS_ngân_sách=0.00% mất_IS_thứ_hạng=0.00% (bình quân có trọng số chi phí)
+  GDN_Remarketing_Web30d                   IS=0.00% mất_IS_ngân_sách=0.00% mất_IS_thứ_hạng=0.00% (bình quân có trọng số chi phí)
+  YT_Video_TVC_MoBan                       IS=0.00% mất_IS_ngân_sách=0.00% mất_IS_thứ_hạng=0.00% (bình quân có trọng số chi phí)
+    Brand GĐ1: IS=54.11% mất_IS_NS=39.14% chi phí=57.619.000 cọc=2 ROAS=5.73x
+    Brand GĐ2: IS=48.90% mất_IS_NS=43.78% chi phí=72.302.000 cọc=3 ROAS=7.19x
+    Brand GĐ3: IS=54.79% mất_IS_NS=38.41% chi phí=130.298.000 cọc=8 ROAS=10.97x
+  Ước tính: Brand mất 40.06% IS do ngân sách. Nếu bù đủ → hiển thị ×1.67, giả định tuyến tính lead/cọc → cọc thêm ≈ 8.7, doanh thu thêm ≈ 1.524.054.416, chi phí thêm ≈ 173.942.068
+-- A6. Search terms rác (sheet 04) --
+  Số cụm từ trong báo cáo: 32; chi phí phủ trong báo cáo: 1.114.962.000
+  Cụm từ 0 SQL: 17 cụm, chi phí = 419.729.000 = 23.3% tổng chi phí tài khoản
+     vạn phúc city giá bán                         Cụm từ       40.652.000 lead=7 SQL=0
+     the global city                               Cụm từ       38.884.000 lead=6 SQL=0
+     giá đất hóc môn 2026                          Rộng         33.900.000 lead=29 SQL=0
+     izumi city đồng nai                           Rộng         33.582.000 lead=6 SQL=0
+     bản đồ quy hoạch hóc môn                      Rộng         27.120.000 lead=6 SQL=0
+     thuê nhà nguyên căn hóc môn                   Rộng         27.120.000 lead=6 SQL=0
+     bán đất thổ cư hóc môn 100 triệu              Rộng         27.120.000 lead=6 SQL=0
+     aqua city có nên mua                          Rộng         24.744.000 lead=5 SQL=0
+     khu đô thị sinh thái tây bắc củ chi           Rộng         21.210.000 lead=4 SQL=0
+     nhà trọ hóc môn giá rẻ                        Rộng         20.340.000 lead=4 SQL=0
+     cho thuê kho xưởng hóc môn                    Rộng         20.340.000 lead=4 SQL=0
+     việc làm bất động sản hóc môn                 Rộng         20.340.000 lead=4 SQL=0
+  Trong đó cụm từ SAI Ý ĐỊNH rõ ràng (tuyển dụng/thuê/trọ/việc làm/quy hoạch/lừa đảo/mini): 10 cụm, chi phí=209.082.000
+  Cụm từ đối thủ 0 SQL: 6 cụm, chi phí=176.747.000
+  Cấu hình 05: đối sánh rộng = 71% chi phí Search, chính xác 9%, chỉ 12 từ phủ định
+  Chi phí Search toàn kỳ=1.114.959.000 → 71% đối sánh rộng ≈ 791.620.890
+-- A7. Địa lý ngoài vùng bán --
+  Hà Nội + Đà Nẵng + Cần Thơ/ĐBSCL + ngoài VN: chi phí=364.314.474 (20.2%), lead=437, SQL=46, cọc=0
+     Hà Nội                                                155.104.182 SQL=20 CP/SQL=7.755.209 cọc=0
+     Đà Nẵng                                                86.569.776 SQL=7 CP/SQL=12.367.111 cọc=0
+     Cần Thơ & ĐBSCL                                        93.783.924 SQL=12 CP/SQL=7.815.327 cọc=0
+     Người dùng ngoài Việt Nam quan tâm đến Việt Nam        28.856.592 SQL=7 CP/SQL=4.122.370 cọc=0
+  Lõi TP.HCM: chi phí=1.076.711.589 (59.7%) SQL=482 cọc=17 CP/SQL=2.233.841
+  LƯU Ý DỮ LIỆU: tổng lead sheet 06 = 2566 vs sheet 02 = 2557 (lệch 9, do làm tròn % chi phí) → dùng sheet 02 làm chuẩn
+-- A8. Khung giờ / thiết bị / ngày trong tuần --
+  (sheet 07) 20:00–24:00 chiếm 22,7% chi phí (0,187+0,04) nhưng tỷ lệ gọi lại <30' chỉ 21%/12%
+     chi phí 20:00–24:00 = 409.402.899 = 22.7%; SQL=134; cọc=3
+     CP/SQL khung 20-24h = 3.055.246 vs khung 09-12h = 2.504.084
+  (sheet 07B) Di động: 78,1% chi phí, CVR 2,03%, CP/SQL 3.042.251đ; Máy tính: 16,7% chi phí, CVR 4,02%, CP/SQL 1.847.796đ
+     Chênh CP/SQL di động/máy tính = 1.65x
+  (sheet 07C) T7+CN: chi phí 503.810.000đ, 6 cọc/178 SQL, chỉ 2 sale trực
+     T7+CN = 27.9% chi phí; CP/SQL=2.830.393
+     T3+T4: chi phí=520.076.000 SQL=162 cọc=2 CP/SQL=3.210.346
+-- A9. Tốc độ phản hồi lead (sheet 08A) --
+  Tổng lead phân loại=2554; cọc kỳ vọng theo phân bố hiện tại=15.8
+  Nếu tất cả <5 phút: cọc kỳ vọng = 46.5 → chênh +30.7 cọc = 5.556.428.500 hoa hồng
+  Nếu tất cả <30 phút: cọc kỳ vọng = 30.9 → chênh +15.1 cọc = 2.736.557.100 hoa hồng
+  Kịch bản thực tế hơn (50% <5', 30% 5–30', 20% 30'–2h): cọc=35.5 → chênh +19.7 cọc = 3.564.027.560
+  Lead bị bỏ sót (08B): 118+96+61 = 275 lead → theo CPL thực tế = 193.966.631; quy ra cọc = 1.9 = 350.391.083 hoa hồng
+  47% lead được gọi lại sau 2 giờ (0,21+0,26) — benchmark 09: >2h là ngưỡng báo động
+-- A10. Trang đích v1 vs v2 (sheet 10C) --
+  v1 (N1–57): 52.410 phiên, tương tác 34,2%, hoàn tất form 20,4%, LCP 4,8s
+  v2 (N58–90): 42.938 phiên, tương tác 58,7%, hoàn tất form 28,0%, LCP 1,9s
+  Nếu v1 đạt tỷ lệ hoàn tất form của v2: 4912 form_start × 28,0% = 1376 lead vs thực tế 1002 → mất 374 lead
+  → giá trị mất theo CPL thực tế = 263.506.041; quy ra cọc = 2.6 = 476.010.573
+  Di động v1 hoàn tất form chỉ 16,1% vs máy tính 34,8% (10C chi tiết thiết bị)
+-- A11. Mô hình phân bổ (sheet 10D) --
+  Nhấp cuối vs Dựa trên dữ liệu: Brand 592→401 (-32,3%); YT 43→165 (+283,7%); GDN 132→186 (+40,9%); Generic 418→402 (-3,8%); PMax 510→466 (-8,6%); ngoài Ads 0→71
+  ⇒ Brand đang được ghi công QUÁ 191 lead; YT/GDN bị ghi công THIẾU 176 lead
+-- A12. Cấu hình tài khoản (sheet 05) — rủi ro không định lượng trực tiếp --
+  Search Partners BẬT + Display Network trong Search campaign BẬT (cả 3 chiến dịch Search)
+  Điểm chất lượng TB 5,2/10, trải nghiệm trang đích 'Dưới trung bình'
+  31 từ khóa/nhóm, 1 RSA/nhóm; 12 từ phủ định; không có ngân sách chia sẻ
+  Enhanced conversions TẮT; không nhập chuyển đổi ngoại tuyến; CRM không lưu GCLID
+  Không có reCAPTCHA/OTP → giải thích 31% trùng SĐT của PMax (sheet 08C)
+  Tiện ích: chỉ 4 sitelink; thiếu Cuộc gọi, Lead form, Vị trí, Chú thích, Hình ảnh
+  Generic + Competitor dùng 'Tối đa hóa số lần nhấp' không đặt trần CPC → CPC Generic=33.070 (benchmark báo động >60.000đ), CPC Competitor=55.164
+-- A13. GTM: 34 thẻ, 412KB JS bên thứ ba, +0,8s LCP; GA4 config trùng lặp từ N31 --
+  Không có cảnh báo chuyển đổi=0 → sự cố N44–46 mất 3 ngày mới phát hiện
+  zalo_click 894 lượt + file_download 1.206 lượt chưa đo/chưa nhập (sheet 10E) — tín hiệu ý định bị bỏ (đăng ký từ N71, GTM v26)
+-- A14. Tổng lãng phí có thể quy tiền (không cộng dồn trùng nhau) --
+  PMax (chi phí, 0 doanh thu)                           475.376.000 (26.4%)
+  Cụm từ 0 SQL trong báo cáo search terms               419.729.000 (23.3%)
+  Địa lý ngoài vùng bán (HN/ĐN/CT/ngoài VN)             364.314.474 (20.2%)
+  Competitor (chi phí, 0 doanh thu)                     176.746.000 (9.8%)
+  GDN Remarketing (chi phí, 0 doanh thu)                130.009.000 (7.2%)
+  YouTube (chi phí, 0 doanh thu)                         83.193.000 (4.6%)
+  (các dòng trên CHỒNG LẤN nhau — không cộng tổng)
+  Doanh thu (hoa hồng) bỏ lỡ, ước tính:
+  Lỗi kỹ thuật chưa sửa (370–480 lead)             471.435.276 – 611.591.709
+  LP v1 kém (≈374 lead)                            476.010.573 – 476.010.573
+  Lead bỏ sót không ai gọi (275 lead)              350.391.083 – 350.391.083
+  Phản hồi chậm (nâng SLA)                         3.564.027.560 – 5.556.428.500
+  Mất thẻ N44–46 (63 lead không có trong Ads)      80.271.412 – 80.271.412
+
+======================================================================
+== C. KIỂM TRA PHÂN BỔ NGÂN SÁCH 2,1 TỶ ==
+Chiến dịch                     GĐ1 (N1–30)      GĐ2 (N31–60)      GĐ3 (N61–90)              TỔNG       %
+SEA_Brand                      150.000.000       180.000.000       220.000.000       550.000.000  26.2%
+SEA_Generic_Cluster            250.000.000       300.000.000       340.000.000       890.000.000  42.4%
+SEA_Competitor                           0        20.000.000        20.000.000        40.000.000   1.9%
+PMAX_Feed_Lead                  60.000.000       110.000.000       150.000.000       320.000.000  15.2%
+GDN_Remarketing                 30.000.000        40.000.000        60.000.000       130.000.000   6.2%
+YT_Video                                 0        20.000.000        60.000.000        80.000.000   3.8%
+Dự phòng                        10.000.000        30.000.000        50.000.000        90.000.000   4.3%
+TỔNG GIAI ĐOẠN                 500.000.000       700.000.000       900.000.000     2.100.000.000
+  Kiểm tra tổng = 2.100.000.000? True (chênh 0)
+  Ngân sách/ngày bình quân: GĐ1 (N1–30)=16.666.667, GĐ2 (N31–60)=23.333.333, GĐ3 (N61–90)=30.000.000
+-- Dự báo kết quả kế hoạch (dùng tỷ lệ Search GĐ3 làm cơ sở) --
+  Nếu CP/SQL=1.800.000 → SQL=1167, lead thô=3047, cọc=46.2, DT=8.355.515.588, ROAS=3.98x
+  Nếu CP/SQL=2.000.000 → SQL=1050, lead thô=2742, cọc=41.5, DT=7.519.964.029, ROAS=3.58x
+  Nếu CP/SQL=2.200.000 → SQL=955, lead thô=2493, cọc=37.8, DT=6.836.330.935, ROAS=3.26x
+  Lead thô/ngày ở kịch bản CP/SQL 2,0tr = 30.5 (năng lực sale bình quân có người trực ≈ 75/ngày) → khả thi
+
+======================================================================
+== D3. PMax CP/chuyển đổi thấp nhất — bóc tách ==
+Chiến dịch                                   CP/convAds    CP/lead CRM          CP/SQL            CP/cọc     ROAS
+SEA_Brand_Vinhomes_HocMon                       298.759        303.639         739.259        20.016.846    8.76x
+SEA_Generic_NhaPho_CanHo_TayBac               1.021.075      1.155.015       3.549.707       135.598.800    1.25x
+SEA_Competitor_DoiThu                         5.701.484      5.523.312      58.915.333         ∞ (0 cọc)    0.00x
+PMAX_VinhomesHM_Lead                            267.817        573.433       7.793.049         ∞ (0 cọc)    0.00x
+GDN_Remarketing_Web30d                          430.493        673.622       3.611.361         ∞ (0 cọc)    0.00x
+YT_Video_TVC_MoBan                              470.017      1.410.051      10.399.125         ∞ (0 cọc)    0.00x
+TOÀN KỲ                                         472.130        705.333       2.770.410       100.196.500    1.74x
+  PMax CP/convAds=267.817 rẻ nhất; nhưng CP/SQL=7.793.049 — đắt gấp 10.5 lần Brand (739.259) và 0 cọc
+  Nếu dồn toàn bộ 2,1 tỷ vào PMax theo CP/SQL hiện tại → SQL=269, cọc theo lịch sử PMax = 0 → ROAS = 0
+
+======================================================================
+== D1. Bảo vệ ngân sách Brand ==
+  Brand: chi phí=260.219.000 (14.4% tài khoản) DT=2.280.000.000 (72.8% doanh thu) ROAS=8.76x cọc=13/18
+  Generic: chi phí=677.994.000 (37.6%) DT=850.000.000 ROAS=1.25x CP/SQL=3.549.707 vs Brand 739.259
+  Đổi 1đ Brand sang Generic: mất 8.76đ, được 1.25đ → lỗ ròng 7.51đ/1đ chuyển
+  Chuyển toàn bộ 260.219.000 → mất DT ≈ 1.953.763.853
+  Nhượng bộ mô hình phân bổ: nếu chỉ ghi công Brand 401/592 lead (DDA, sheet 10D) → ROAS Brand điều chỉnh ≈ 5.93x — vẫn > 1.25x của Generic và > 3,0x mục tiêu
+  Brand mất IS do ngân sách 40.06% → còn dư địa MỞ RỘNG, không phải cắt
+
+======================================================================
+== D4. Kịch bản ngân sách 1,2 tỷ ==
+  SEA_Brand                                             420.000.000   35.0%
+  SEA_Generic_Cluster (lõi TP.HCM, exact/phrase)        520.000.000   43.3%
+  PMAX_Feed_Lead (giới hạn, tCPA)                       130.000.000   10.8%
+  GDN_Remarketing                                        80.000.000    6.7%
+  Dự phòng/test                                          50.000.000    4.2%
+  SEA_Competitor                                                  0    0.0%
+  YT_Video                                                        0    0.0%
+  TỔNG = 1.200.000.000 (khớp 1,2 tỷ: True)
+  CP/SQL=1.800.000 → SQL=667 cọc=26.4 DT=4.774.580.336 ROAS=3.98x
+  CP/SQL=2.000.000 → SQL=600 cọc=23.7 DT=4.297.122.302 ROAS=3.58x

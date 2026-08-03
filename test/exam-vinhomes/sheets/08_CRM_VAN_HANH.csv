@@ -1,0 +1,27 @@
+A. ẢNH HƯỞNG CỦA TỐC ĐỘ PHẢN HỒI LEAD (toàn bộ 90 ngày),,,,,,
+Thời gian gọi lại lần đầu,Số lead,% tổng lead,Tỷ lệ liên hệ được,Tỷ lệ đồng ý đi xem nhà,Tỷ lệ đặt cọc,
+Dưới 5 phút,281,0.11,0.87,0.231,0.0182,
+5 – 30 phút,485,0.19,0.74,0.154,0.0121,
+30 phút – 2 giờ,588,0.23,0.58,0.086,0.0058,
+2 – 12 giờ,536,0.21,0.41,0.042,0.0021,
+Trên 12 giờ / hôm sau,664,0.26,0.22,0.011,0.0004,
+,,,,,,
+,,,,,,
+B. NĂNG LỰC XỬ LÝ CỦA ĐỘI SALE,,,,,,
+Chỉ số,GĐ1 (ngày 1–30),GĐ2 (ngày 31–60),GĐ3 (ngày 61–90),,,
+Số lead mới bình quân/ngày,24.5,25.4,35.4,,,
+Năng lực xử lý tối đa/ngày (8 sale × 12),96,96,96,,,
+Tỷ lệ lead được gọi trong ngày,0.61,0.68,0.79,,,
+Thời gian phản hồi trung vị (phút),214,142,47,,,
+Số lead bị bỏ sót (không ai gọi),118,96,61,,,
+Ghi chú vận hành,Chưa phân lead tự động,Bắt đầu dùng phần mềm phân lead,Có SLA gọi trong 15 phút giờ hành chính,,,
+,,,,,,
+,,,,,,
+C. CHẤT LƯỢNG LEAD THEO NGUỒN (mẫu kiểm tra 600 lead),,,,,,
+Chiến dịch,Số lead kiểm tra,Trùng số điện thoại,Số điện thoại sai/không liên lạc được,Sai phân khúc (ngân sách < 2 tỷ),Là môi giới/đối thủ,Lead dùng được
+SEA_Brand_Vinhomes_HocMon,180,0.04,0.06,0.18,0.05,0.67
+SEA_Generic_NhaPho_CanHo_TayBac,150,0.07,0.11,0.29,0.07,0.46
+SEA_Competitor_DoiThu,40,0.05,0.12,0.31,0.26,0.26
+PMAX_VinhomesHM_Lead,160,0.31,0.24,0.34,0.04,0.0699999999999999
+GDN_Remarketing_Web30d,45,0.12,0.17,0.27,0.06,0.38
+YT_Video_TVC_MoBan,25,0.16,0.21,0.33,0.05,0.25

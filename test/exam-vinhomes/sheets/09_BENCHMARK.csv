@@ -1,0 +1,17 @@
+Chỉ số,Ngưỡng tốt,Trung bình ngành,Ngưỡng báo động,Ghi chú
+CTR — Search thương hiệu,> 12%,8 – 12%,< 6%,Giảm mạnh thường do đối thủ đấu giá
+CTR — Search từ khóa chung,> 5%,3 – 5%,< 2%,
+CPC — Search từ khóa chung BĐS TP.HCM,< 25.000đ,25.000 – 45.000đ,> 60.000đ,
+Tỷ lệ chuyển đổi trang đích,> 4%,2 – 4%,"< 1,5%",BĐS cao cấp thường thấp hơn
+CPL (lead thô),< 500.000đ,500.000 – 1.100.000đ,> 1.500.000đ,
+Chi phí / lead chất lượng (CP/SQL),< 1.800.000đ,"1,8 – 3,5 triệu",> 5 triệu,
+Tỷ lệ SQL / lead thô,> 30%,18 – 30%,< 12%,Dưới 12% là dấu hiệu nhắm sai tệp
+Tỷ lệ SQL → đi xem nhà,> 35%,22 – 35%,< 15%,Phụ thuộc năng lực sale
+Tỷ lệ đi xem → đặt cọc,> 12%,7 – 12%,< 4%,
+Impression Share thương hiệu,> 85%,70 – 85%,< 60%,Thấp = mất khách đã biết mình
+Mất IS do ngân sách (chiến dịch tốt),0%,< 10%,> 20%,Là tiền đang bỏ lại trên bàn
+Chênh lệch chuyển đổi Ads / lead CRM,"1,0 – 1,2x","1,2 – 1,5x","> 1,8x",Cao = đếm sai hoặc lead rác
+Tốc độ tải trang đích (LCP),"< 2,5s","2,5 – 4s",> 4s,
+Thời gian phản hồi lead,< 5 phút,5 – 30 phút,> 2 giờ,Sau 30 phút tỷ lệ liên hệ giảm quá nửa
+,,,,
+"Ghi chú: các ngưỡng trên là giả lập cho bài test, không phải số liệu ngành đã kiểm chứng.",,,,

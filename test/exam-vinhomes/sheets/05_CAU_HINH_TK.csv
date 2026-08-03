@@ -1,0 +1,45 @@
+Hạng mục cấu hình,Giá trị hiện tại,Ghi chú
+NHẮM MỤC TIÊU,,
+Nhắm mục tiêu vị trí,Việt Nam (toàn quốc),Áp dụng cho cả 6 chiến dịch
+Tùy chọn vị trí,Hiện diện HOẶC quan tâm (mặc định),Chưa từng chỉnh
+Loại trừ vị trí,Không có,
+Ngôn ngữ,"Tiếng Việt, Tiếng Anh",
+Lịch quảng cáo,"24/7, không điều chỉnh giá thầu theo giờ",
+Đối tượng,"Chỉ ở chế độ Quan sát, chưa dùng để điều chỉnh giá thầu",
+Danh sách loại trừ,Chưa loại trừ khách đã đặt cọc / đã ký HĐMB,
+MẠNG HIỂN THỊ,,
+Đối tác tìm kiếm (Search Partners),BẬT,Cả 3 chiến dịch Search
+Mạng hiển thị trong chiến dịch Search,BẬT,Cả 3 chiến dịch Search
+PMax — loại trừ nội dung,Chưa thiết lập danh sách loại trừ vị trí đặt,
+PMax — loại trừ thương hiệu (brand exclusion),CHƯA bật,
+TỪ KHÓA,,
+Tỷ trọng chi phí theo đối sánh rộng,71% tổng chi phí Search,
+Tỷ trọng chi phí theo đối sánh chính xác,9% tổng chi phí Search,
+Số từ khóa phủ định trong tài khoản,12 từ,Không dùng danh sách phủ định chia sẻ
+Nhóm quảng cáo bình quân,"31 từ khóa/nhóm, 1 mẫu quảng cáo tìm kiếm thích ứng",
+Điểm chất lượng bình quân,"5,2/10",Trải nghiệm trang đích: Dưới trung bình
+CHUYỂN ĐỔI & ĐO LƯỜNG,,
+Hành động tính vào cột 'Chuyển đổi' #1,Gửi biểu mẫu đăng ký (BẬT),Chính
+Hành động tính vào cột 'Chuyển đổi' #2,Nhấp vào số điện thoại (BẬT),Chính
+Hành động tính vào cột 'Chuyển đổi' #3,Xem trang /bang-gia (BẬT),Tính là chuyển đổi chính
+Hành động tính vào cột 'Chuyển đổi' #4,Ở lại trang > 30 giây (BẬT),Tính là chuyển đổi chính
+Chuyển đổi nâng cao (Enhanced conversions),TẮT,
+Nhập chuyển đổi ngoại tuyến từ CRM,CHƯA triển khai,CRM không lưu GCLID
+Mô hình phân bổ,Nhấp cuối cùng,
+Cửa sổ chuyển đổi,90 ngày,
+Google Analytics 4,"Đã liên kết, sự kiện qua Google Tag Manager phía client",Không có đo lường phía máy chủ
+Chống spam biểu mẫu,"Không có reCAPTCHA, không xác minh OTP số điện thoại",
+GIÁ THẦU & NGÂN SÁCH,,
+SEA_Brand_Vinhomes_HocMon,"CPC thủ công, ngân sách 2,0 → 2,5 → 4,5 triệu/ngày",
+SEA_Generic_NhaPho_CanHo_TayBac,"Tối đa hóa số lần nhấp, không đặt trần CPC",
+SEA_Competitor_DoiThu,Tối đa hóa số lần nhấp,
+PMAX_VinhomesHM_Lead,"Tối đa hóa chuyển đổi, không đặt CPA mục tiêu",
+GDN_Remarketing_Web30d,CPC nâng cao,
+YT_Video_TVC_MoBan,CPV mục tiêu,
+Ngân sách chia sẻ,Không dùng,
+TIỆN ÍCH & TRANG ĐÍCH,,
+Tiện ích đang bật,Chỉ có Liên kết trang web (4 liên kết),
+Tiện ích còn thiếu,"Cuộc gọi, Biểu mẫu khách hàng tiềm năng, Vị trí, Chú thích, Hình ảnh",
+Trang đích ngày 1–57,"vinhomeshocmon-landing.vn — LCP 4,8s, form 7 trường, không hiện giá",
+Trang đích từ ngày 58,"Bản mới — LCP 1,9s, form 3 trường, có bảng giá & video nhà mẫu",
+Số phiên bản trang đích đang chạy A/B,1 (không thử nghiệm),

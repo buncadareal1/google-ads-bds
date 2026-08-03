@@ -1,0 +1,31 @@
+BỘ ĐỀ TEST AGENT — QUẢN TRỊ GOOGLE ADS 90 NGÀY,
+"Dự án giả lập: KHU ĐÔ THỊ VINHOMES HÓC MÔN (TP.HCM) — Đại lý phân phối F1 ""An Phát Land""",
+,
+"⚠️ TOÀN BỘ SỐ LIỆU TRONG FILE NÀY LÀ HƯ CẤU, ĐƯỢC SINH BẰNG MÔ PHỎNG ĐỂ KIỂM THỬ AGENT.",
+Không phải dữ liệu kinh doanh thật của Vinhomes/Vinhomes Hóc Môn hay bất kỳ doanh nghiệp nào.,
+,
+CÁCH DÙNG,
+1. Đưa file này + file DE_BAI.md cho agent cần đánh giá. KHÔNG đưa file DAP_AN_RUBRIC.md.,
+"2. Agent phải tự đọc dữ liệu, chẩn đoán vấn đề, và lập kế hoạch 90 ngày tiếp theo.",
+3. Chấm theo thang 100 điểm trong DAP_AN_RUBRIC.md. Đạt = ≥70 điểm và không dính quá 1 cờ đỏ.,
+,
+DANH MỤC SHEET,
+01_BOI_CANH,"Bối cảnh dự án, sản phẩm, mục tiêu KPI của ban giám đốc"
+02_DU_LIEU_NGAY,Dữ liệu chi tiết 90 ngày × 6 chiến dịch (bảng dữ liệu chính)
+03_TONG_HOP_CD,Tổng hợp theo chiến dịch × giai đoạn (công thức SUMIFS)
+04_SEARCH_TERMS,Báo cáo cụm từ tìm kiếm 90 ngày (2 chiến dịch Search)
+05_CAU_HINH_TK,Bảng kiểm cấu hình tài khoản hiện tại
+06_DIA_LY,Phân bổ chi phí & kết quả theo khu vực
+07_KHUNG_GIO_TB,Phân bổ theo khung giờ và thiết bị
+08_CRM_VAN_HANH,"Dữ liệu vận hành sale: tốc độ phản hồi, năng lực xử lý lead"
+09_BENCHMARK,Chỉ số tham chiếu ngành BĐS Việt Nam (giả lập)
+10_GA4,"Google Analytics 4: đối chiếu 3 nguồn số liệu, hành vi phiên, trang đích, mô hình phân bổ"
+11_CLARITY,"Microsoft Clarity: nhấp giận dữ, nhấp chết, thoát nhanh, lỗi JavaScript, top điểm ma sát"
+12_GTM,"Google Tag Manager: danh mục thẻ, lịch sử xuất bản, bảng kiểm sức khỏe đo lường"
+,
+GHI CHÚ VỀ CÁCH GHI NHẬN SỐ LIỆU (QUAN TRỌNG),
+• ChuyenDoi_Ads = số chuyển đổi Google Ads tự báo cáo. Lead_CRM = số lead thật đã khử trùng trên CRM.,
+"• Các chỉ số phễu (SQL, Đi xem nhà, Booking, Đặt cọc, Doanh thu) được gán về NGÀY PHÁT SINH LEAD",
+"  (cohort), đã chốt số đến ngày thứ 120 nên không còn độ trễ bán hàng.",
+"• Doanh thu = hoa hồng đại lý ghi nhận, đơn vị VND.",
+• Tiền tệ: VND. Chu kỳ dữ liệu: 02/03/2026 – 30/05/2026.,
