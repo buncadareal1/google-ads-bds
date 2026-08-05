@@ -52,6 +52,18 @@ export GOOGLE_PROJECT_ID="PROJECT_ID"
 ## 3. Google Tag Manager MCP (`gtm`)
 Không cần env var — dùng remote server của Stape (`https://gtm-mcp.stape.ai/mcp`), OAuth Google sẽ bật trình duyệt lần đầu kết nối.
 
+### ID công khai đã biết
+
+| ID | Giá trị | Nguồn | Trạng thái |
+|---|---|---|---|
+| GTM container | **`GTM-TKDNJXJ9`** | Đọc từ LP thật `https://smartrealtors.vn/beachtro-tower-blanca-city/` (thẻ `googletagmanager.com/ns.html?id=`) ngày 2026-08-05 | ⚠️ **chưa xác minh quyền truy cập** — cần OAuth GTM (local) để đối chiếu với `tracking/gtm-container-spec.md` |
+| GA4 Measurement ID `G-` | chưa có | — | ⏳ chờ user |
+| Google Ads `AW-` + conversion labels | chưa có | — | ⏳ chờ (phụ thuộc developer token) |
+
+> ID công khai (GTM-/G-/AW-) ghi thẳng vào file này theo quy ước. **Token bí mật chỉ vào env var, không bao giờ vào repo.**
+> LP dùng WordPress theme `smr` (`/wp-content/themes/smr/Beachtro-tower-blanca-city/`) → khớp phương án hosting "WordPress SmartLand pattern" ở PLAN §6.5.
+
+
 ## 4. Microsoft Clarity MCP (`clarity`) — ✅ HOÀN TẤT 2026-07-28
 
 ✔ Token Data.Export trong `~/.bashrc` (`CLARITY_API_TOKEN`) · ✔ **Test API 200 OK** (project-live-insights).
