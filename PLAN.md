@@ -20,7 +20,7 @@ Mục tiêu: hệ thống khép kín **Ads → Landing page → Lead → CRM qua
 | MCP phase 1: `google-ads` (official, read-only GAQL), `analytics-ga4`, `gtm` (Stape), `clarity` | `.mcp.json` ✔ — chờ credentials (SETUP.md). **Developer token cần apply Basic access qua MCC (1-3 ngày) — làm NGAY** |
 | MCP phase 2 (bật khi cần): DataForSEO (keyword volume VN), mcp-google-sheets (reporting), mcp-gsc (Search Console), Keyword Planner (ncosentino) | Chưa cài — xem research/mcp-servers.md |
 | Connector claude.ai sẵn có | Meta Ads (Pipeboard), Semrush, Google Drive, Canva |
-| Skills: 34 bộ trong `.claude/skills/` (bộ suite eliasmalmsandberg: bidding, audiences, quality-score, budget-management, account-audit; + ads-budget, budget-pacing-monitor, youtube-ads) | ✔ google-ads-manager, ads-google (audit), ads, ad-creative, ads-copywriter, cro, analytics, attribution, ab-testing, marketing-psychology, offers, popups, keyword-research, competitor-research, google-search-console, landing-page-generator, google-ads-audit-leadgen; đo lường chuyển đổi: **data-manager-api-event-ingestion (Google official)**, ads-server-side-tracking, conversion-signal-qa, google-ads-conversion-tracking + có sẵn: no-code-landing-re, ad-click-attribution, seo-machine, keap/cf7-lead-form |
+| Skills: 37 bộ trong `.claude/skills/` (bộ suite eliasmalmsandberg: bidding, audiences, quality-score, budget-management, account-audit; + ads-budget, budget-pacing-monitor, youtube-ads) | ✔ google-ads-manager, ads-google (audit), ads, ad-creative, ads-copywriter, cro, analytics, attribution, ab-testing, marketing-psychology, offers, popups, keyword-research, competitor-research, google-search-console, landing-page-generator, google-ads-audit-leadgen; đo lường chuyển đổi: **data-manager-api-event-ingestion (Google official)**, ads-server-side-tracking, conversion-signal-qa, google-ads-conversion-tracking + có sẵn: no-code-landing-re, ad-click-attribution, seo-machine, keap/cf7-lead-form |
 
 ## 2. Tài sản đã hoàn thành
 
@@ -44,7 +44,7 @@ Bộ từ khóa là **tài sản sống**: tuần → search terms report qua MC
 - ✅ **C. Tracking** → `tracking/` 7 file (lp-requirements handoff, GTM spec, GA4 audiences, ECL Keap → Data Manager API + `upload_ecl.py` selftest pass, Clarity, audit tháng).
 - ✅ **D. SEO content** → `content/` 2 bài (7,8k từ, nguồn kiểm chứng, sạch policy).
 - ✅ **Competitor** → `research/competitors/` (playbook tháng + vòng thật Eco Retreat; đã vá bộ kw: +22 `brand-eco-retreat`).
-- 🔲 **B. Landing page** — USER TỰ LÀM theo `tracking/lp-requirements.md` (skills hỗ trợ: no-code-landing-re, keap-lead-form, ad-click-attribution, frontend-design).
+- 🟡 **B. Landing page** — **ĐÃ CÓ BẢN CHẠY THẬT** (2026-08-05): `https://smartrealtors.vn/beachtro-tower-blanca-city/`, WordPress theme `smr`. Chưa đóng được vì audit (`landing-page/beachtro-tower-audit.md`) còn **4 việc sửa** (H1 thiếu tên dự án · canonical trỏ sai sang `/sun-blanca-city/` · form 2 field 0 dropdown qualifying, sai spec `tracking/lp-requirements.md` §3 · thiếu Zalo) và **4 hard gate chưa verify được từ cloud** (GTM Preview · PageSpeed 4G · pháp nhân/MST footer · gclid→Keap). Hard gate "khoảng giá" đang rớt vì CĐT chưa công bố bảng giá — quyết định kinh doanh, không phải lỗi kỹ thuật. Skills hỗ trợ: no-code-landing-re, keap-lead-form, ad-click-attribution, frontend-design.
 
 **Quyết định QA đã chốt:** `phone_click`/`zalo_click` = Secondary (chống optimize-to-quality trap); primary ban đầu = `generate_lead`, đảo sang `Lead_Contactable` khi ECL chạy.
 

@@ -78,7 +78,7 @@ Thang giá trị theo `PLAN.md` §0.4. Tạo cả 6, kể cả 3 cái chưa có 
 Xuất danh sách account-level, đóng ngoặc kép để thành **phrase match** (mặc định theo `adgroup-map.md`):
 
 ```bash
-cd /home/docdang/Projects/google-ads
+cd "$(git rev-parse --show-toplevel)"   # gốc repo — chạy được ở máy bất kỳ
 awk -F, 'NR>1 && $3=="account" {print "\"" $1 "\""}' keywords/negative-keywords.csv
 # → 382 dòng, copy toàn bộ
 ```
@@ -218,7 +218,7 @@ print(f'-- {n} keyword', file=sys.stderr)
 Chạy — thay slug bằng **dự án đang thực sự phân phối** (`PLAN.md` §6.2) và khu vực của chúng:
 
 ```bash
-cd /home/docdang/Projects/google-ads
+cd "$(git rev-parse --show-toplevel)"   # gốc repo — chạy được ở máy bất kỳ
 python3 /tmp/mk.py 1 '^(brand-the-global-city|brand-lumiere-midtown|brand-cdt--masterise-homes|quan-2--|thu-duc--)' > /tmp/launch-kw.tsv
 # kiểm tra trước khi dán
 cut -f1 /tmp/launch-kw.tsv | sort | uniq -c

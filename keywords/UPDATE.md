@@ -11,6 +11,7 @@ Bộ keyword chết sau ~6 tuần nếu không nuôi: dự án mới mở bán l
 | `master-keywords.csv` | Output sinh ra | **KHÔNG** — sẽ bị ghi đè |
 | `negative-keywords.csv` | Negative list | **Có** — append thủ công |
 | `adgroup-map.md` | Map → campaign, ngân sách | Có |
+| `pending-negatives.csv` | **Chưa tồn tại — sinh lúc chạy.** Hàng đợi negative do suggest engine đề xuất (`playbook/monitoring.md` §3, mẫu tin §7). Được **commit để review diff** vào thứ 6 hàng tuần (monitoring §4), không gitignore. Duyệt xong thì append sang `negative-keywords.csv` rồi xoá | Không sửa tay |
 
 Regenerate:
 ```bash

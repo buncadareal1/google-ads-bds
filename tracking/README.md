@@ -63,10 +63,11 @@ Google nêu 3 lý do dùng server-side: **performance**, **data control**, **dat
 
 ⚠️ Cạm bẫy Google nêu tên khi làm: **"cross-domain breaks when domains send data to different container IDs"** — LP ở domain riêng + proxy Keap ở domain khác là đúng tình huống này.
 
-## Trạng thái hiện tại (2026-07-28)
+## Trạng thái hiện tại (cập nhật 2026-08-05)
 
 - ✅ Spec đầy đủ 7 file, `upload_ecl.py --selftest` pass.
-- 🔲 Chưa có: credentials (GTM-, G-, AW-, conversion labels, Keap SAK, GCP service account),
-  LP thật (user đang làm), developer token.
+- ✅ **LP thật đã có**: `https://smartrealtors.vn/beachtro-tower-blanca-city/` — audit ở `landing-page/beachtro-tower-audit.md`. ⚠️ Trên LP hiện chỉ 4/6 event registry có chỗ bắn: `xem_bang_gia` (chưa có block bảng giá) và `zalo_click` (chưa có Zalo) chưa có phần tử tương ứng. **Không xoá khỏi registry, không đổi tên** — mở lại khi LP bổ sung.
+- ✅ **GTM container**: `GTM-TKDNJXJ9` (xem `SETUP.md`). Chưa verify được nội dung container — cần OAuth GTM chạy local.
+- 🔲 Chưa có: `G-`, `AW-`, conversion labels, Keap SAK, GCP service account, developer token.
 - 🔲 Chờ user chốt: thang giá trị điểm vs ₫ thật · `Dat Coc` primary · đường gửi gclid vào Keap
   (xem PLAN.md §6).

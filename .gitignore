@@ -2,3 +2,4 @@ __pycache__/
 *.pyc
 .env
 ops/audit-log.jsonl
+ops/pending-actions.jsonl
