@@ -16,11 +16,15 @@ Kiểm bằng lệnh gọi API thật, không suy đoán. Tài khoản Ads `6918
 | Recommendation | `FROM recommendation` | ✅ |
 | **Auction insights** | `segments.auction_insight_domain` + `metrics.auction_insight_*` | ❌ **BỊ CHẶN** — `The developer doesn't have access to metrics` |
 
-### ❌ Auction insights — khoảng trống duy nhất
+### ❌ Auction insights — khoảng trống duy nhất, KHÔNG PHẢI do quyền token
 
-Developer token đang ở mức **Basic access**; nhóm metric auction insight đòi **Standard access**. Hệ quả: không tự phát hiện đối thủ nhảy vào đấu brand qua API.
+Đã kiểm 4 dạng truy vấn (1 metric + domain, thêm `campaign.id`, `FROM ad_group`, `FROM keyword_view`) — **tất cả cùng một lỗi**, nên không phải lỗi cú pháp.
 
-→ **Bù bằng nghi thức tay**: mỗi thứ Sáu tải Auction insights trên UI về `data/ads/auction-insights-<yyyy-mm-dd>.csv` (đúng luật quét điểm gãy `playbook/monitoring.md §4`). Muốn tự động: xin nâng token lên Standard trong API Center của MCC.
+**Nguyên nhân thật:** `metrics.auction_insight_*` là **feature allowlist** của Google, tài liệu ghi rõ *"This metric is not publicly available"*. Chỉ tài khoản được Google đưa vào danh sách trắng mới gọi được, và **chương trình allowlist hiện ĐÓNG** với người xin mới. Không liên quan Basic/Standard access, không phải thứ nâng cấp được trong API Center. (Nâng Standard vẫn nên làm vì nới trần request/ngày, nhưng KHÔNG mở được auction insights.)
+
+Hệ quả: mọi công cụ đi qua API đều mù chỗ này — kể cả Google Ads Scripts. Ai làm được auction insights là làm **trên UI**, không phải qua API.
+
+→ **Bù bằng nghi thức tay, không có đường khác**: mỗi thứ Sáu `Chiến dịch → Thông tin chi tiết → Auction insights → Tải xuống` về `data/ads/auction-insights-<yyyy-mm-dd>.csv` (luật quét điểm gãy `playbook/monitoring.md §4`). Đây là mục **bắt buộc** trong checklist tuần, không được bỏ — chính chỗ này là bẫy P7 đánh trượt 5/5 thí sinh kỳ thi Vinhomes.
 
 ### Cấu hình tài khoản (đọc từ API)
 
