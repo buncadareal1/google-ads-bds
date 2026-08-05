@@ -1,13 +1,16 @@
 # Hệ thống Google Ads BĐS
 
-Repo này là hệ thống vận hành Google Ads cho bất động sản VN. Đọc `PLAN.md` trước.
+Repo này là hệ thống vận hành Google Ads cho bất động sản VN — **nền tảng dùng chung cho NHIỀU dự án** (playbook/tracking/keywords là tài sản chung, mỗi dự án chỉ thêm bộ kw + LP + chỉ số riêng). Đọc `PLAN.md` trước.
+**Dự án đang active: BEACHTRO TOWER — Blanca City (Sun Group, Vũng Tàu).** Dự án mới = thêm vào `keywords/projects.tsv` + mục riêng trong COWORK.md, không fork repo.
 
 - `playbook/` — chiến lược campaign, keyword, ad copy, checklist tuần
 - `landing-page/` — template LP Astro (chuẩn skill `no-code-landing-re`, có `ad-click-attribution`)
 - `tracking/` — spec GTM/GA4/Clarity + pipeline ECL. **Đụng vào đo lường: đọc `tracking/README.md` TRƯỚC** (bản đồ + 6 luật bất di bất dịch + skill nào cho việc nào)
 - `landing-page/` — **làm/review/audit LP: đọc `landing-page/README.md` TRƯỚC** (message match, above the fold, khung phân tích điểm yếu CVR, checklist nghiệm thu 10 mục)
 - `content/` — bài SEO hỗ trợ (chuẩn `seo-machine`)
+- **Lead: NGOÀI PHẠM VI hệ (chốt 2026-08-05)** — bỏ Keap API, hệ KHÔNG đo lead; user tự quản lý lead riêng. Hệ chỉ đo chỉ số nền tảng: Ads (CPC/CTR/IS/conv on-site), GA4 events, Clarity. Pipeline ECL trong `tracking/` tạm đóng băng cho tới khi user yêu cầu lại.
 - MCP: 4 server trong `.mcp.json`, credentials xem `SETUP.md`
+- Cowork (cloud): quy tắc làm việc + prompt khởi động trong `COWORK.md` — push nhánh `cowork/*`, không push main
 
 Quy ước: nội dung tiếng Việt, đơn vị ₫, số điện thoại/Zalo là CTA chính. Event GA4 chuẩn (registry duy nhất — LP và tracking/ phải khớp): `generate_lead`, `phone_click`, `zalo_click`, `xem_bang_gia`, `xem_mat_bang`, `form_start`.
 
