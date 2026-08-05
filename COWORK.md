@@ -6,7 +6,7 @@ Repo này là nền tảng vận hành Google Ads BĐS **đa dự án**. Mọi s
 
 | Dự án | CĐT | Vị trí | Trạng thái |
 |---|---|---|---|
-| **Beachtro Tower — Blanca City** | Sun Group | Vũng Tàu | Active từ 2026-08-05 · GA4 property `548678683` |
+| **Beachtro Tower — Blanca City** | Sun Group | Vũng Tàu | Active từ 2026-08-05 · GA4 property `548678683` · Ads account `6918288556` (0 campaign — chưa launch) |
 
 Dự án mới: thêm dòng vào bảng này + `keywords/projects.tsv` (qua keyword-planner), không fork repo.
 
@@ -29,14 +29,15 @@ Trước khi làm bất cứ gì:
 4. Số liệu phải có nguồn, tính bằng script, không bịa benchmark. Ponytail: ngắn nhất chạy được.
 
 Nhiệm vụ thường trực:
-A. QUẢN LÝ CHỈ SỐ: nguồn chỉ số DUY NHẤT là GA4 (Google Ads đã link vào property →
-   đọc advertiserAdCost/Clicks/Impressions/CostPerClick + sessionGoogleAdsCampaignName)
-   và Clarity. KHÔNG dùng Google Ads API (đã bỏ 2026-08-05, xem SETUP.md §1).
+A. QUẢN LÝ CHỈ SỐ: nguồn chỉ số = **Google Ads API** (đã kết nối 2026-08-05, chi tiết
+   SETUP.md §1) + GA4 + Clarity. ⚠️ Trên Cowork KHÔNG gọi được 3 cổng này (credentials
+   ở máy local) → viết rõ truy vấn/việc cần chạy để user chạy local, KHÔNG giả lập số.
    Phân tích theo playbook/monitoring.md: ngưỡng alert, quét WoW điểm gãy §4, luật
    Simpson, exclusion áp cho cả phân tích §2.1.
-   LƯU Ý: hệ KHÔNG đo lead (bỏ Keap API — user tự quản lý lead riêng). KPI vận hành =
-   CPL raw (generate_lead) + chất lượng traffic. Việc cần UI (search terms, auction
-   insights, sửa bid/budget) → viết đề xuất cho user làm tay, không tự apply.
+   LƯU Ý 1: hệ KHÔNG đo lead (bỏ Keap API — user tự quản lý lead riêng). KPI vận hành =
+   CPL raw (generate_lead) + chất lượng traffic, KHÔNG phải contact rate.
+   LƯU Ý 2: **Auction Insights không đọc được qua API** (allowlist Google đã đóng) →
+   luôn là việc tải tay hằng tuần, xem tracking/nghiem-thu-cong-ket-noi.md.
 B. BÁO CÁO TELEGRAM: gửi báo cáo qua bot theo khung giờ trong monitoring.md, dùng
    TG_BOT_TOKEN + TG_CHAT_ID trong env vars. Tiếng Việt, đơn vị ₫, số liệu kèm nguồn,
    tách theo từng dự án active.
@@ -45,13 +46,24 @@ C. TOKEN/ID: khi tôi cung cấp ID mới (GTM-, G-, AW-, conversion labels) →
 D. HỒ SƠ DỰ ÁN: dự án active chưa có trong keywords/projects.tsv → dispatch
    keyword-planner thêm dự án + sinh bộ từ khóa brand theo gen.py.
 
-Giới hạn cloud: GA4 dùng ADC nằm ở máy local nên trên Cowork KHÔNG gọi được GA4/GTM —
-chỉ có Clarity API và Telegram qua env vars (TG_BOT_TOKEN, TG_CHAT_ID,
-CLARITY_API_TOKEN). Việc cần GA4 thì ghi rõ query cần chạy để tôi chạy ở local, không
-giả lập kết quả.
+Giới hạn cloud: credential Google Ads (~/google-ads-smartland.yaml) và ADC của GA4 nằm
+ở máy local, KHÔNG có trên Cowork → không gọi được Google Ads API / GA4 / GTM. Trên
+Cowork chỉ có Clarity API + Telegram qua env vars (TG_BOT_TOKEN, TG_CHAT_ID,
+CLARITY_API_TOKEN). Cần số từ 3 cổng kia thì viết sẵn script/GAQL để user chạy local,
+không giả lập kết quả.
 
 Việc hôm nay: [MÔ TẢ VIỆC CỤ THỂ]
 ```
+
+## Việc Cowork LÀM ĐƯỢC / KHÔNG làm được
+
+| Làm được trên Cowork | Phải làm ở local |
+|---|---|
+| Đọc/sửa toàn bộ tài liệu, playbook, checklist | Mọi lệnh gọi Google Ads API (dựng campaign, đọc chỉ số, negative) |
+| Bộ từ khóa (keyword-planner, gen.py), negative list | Mọi lệnh gọi GA4 / GTM |
+| Viết content SEO, RSA copy, kiểm ký tự | Apply thay đổi lên tài khoản Ads thật |
+| Phân tích file CSV/export user tải về | |
+| Clarity API + gửi Telegram (có env vars) | |
 
 ## Checklist trước khi mở session Cowork
 

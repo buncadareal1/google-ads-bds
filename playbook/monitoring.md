@@ -160,7 +160,9 @@ phát hiện điều kiện (mục 3)
 6. Learning phase guard chạy TRƯỚC apply: campaign đang learning → từ chối kèm lý do.
 7. Kill switch: nhắn bot `/pause_all_suggestions` → ngừng gửi suggest (không đụng ads).
 
-⛔ **Approve-flow tự động apply ĐÓNG BĂNG (chốt 2026-08-05)** — hệ không dùng Google Ads API nên không apply được qua code. Thay bằng: bot gửi **đề xuất** qua Telegram (số liệu từ GA4), user tự apply trên Google Ads UI rồi nhắn xác nhận để ghi `ops/audit-log.jsonl`. Toàn bộ luật an toàn ở trên vẫn áp cho phần đề xuất (ngưỡng ±20% budget, ±15% tCPA, learning guard, hết hạn 24h).
+Điều kiện chạy (✅ đủ từ 2026-08-05): credential Google Ads API `~/google-ads-smartland.yaml` + venv `.venv-ads/` (API v24) + máy/cloud chạy `approve-bot.py`. Chạy ở **máy local** — Cowork cloud không có credential nên chỉ gửi đề xuất, không apply.
+
+⚠️ Chưa bật thật: đang chờ campaign đầu tiên (account `6918288556` hiện 0 campaign). Khi launch, bật theo thứ tự: chạy chế độ **chỉ đề xuất** 30 ngày đầu (user tự apply, đối chiếu xem đề xuất có đúng không) → mới mở apply tự động trong whitelist. Không mở apply ngay ngày 1 khi chưa hiệu chỉnh bằng dữ liệu thật.
 
 ## 7. Format tin Telegram (mẫu)
 

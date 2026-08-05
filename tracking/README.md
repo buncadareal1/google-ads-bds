@@ -63,10 +63,12 @@ Google nêu 3 lý do dùng server-side: **performance**, **data control**, **dat
 
 ⚠️ Cạm bẫy Google nêu tên khi làm: **"cross-domain breaks when domains send data to different container IDs"** — LP ở domain riêng + proxy Keap ở domain khác là đúng tình huống này.
 
-## Trạng thái hiện tại (2026-07-28)
+## Trạng thái hiện tại (cập nhật 2026-08-05)
 
-- ✅ Spec đầy đủ 7 file, `upload_ecl.py --selftest` pass.
-- 🔲 Chưa có: credentials (GTM-, G-, AW-, conversion labels, Keap SAK, GCP service account),
-  LP thật (user đang làm), developer token.
-- 🔲 Chờ user chốt: thang giá trị điểm vs ₫ thật · `Dat Coc` primary · đường gửi gclid vào Keap
-  (xem PLAN.md §6).
+- ✅ **Google Ads API đã kết nối** (account `6918288556`) — nghiệm thu: `nghiem-thu-cong-ket-noi.md`.
+- ✅ GA4 property Beachtro `548678683` đọc được qua API · Clarity ✅ · GTM ✅.
+- ⛔ **ECL / Keap / thang giá trị lead: ĐÓNG BĂNG** — hệ không đo lead (chốt 2026-08-05).
+  Spec 7 file + `upload_ecl.py` giữ nguyên, mở lại khi user yêu cầu.
+- 🔲 Chặn launch: **LP thật + GTM gắn đúng 6 event registry** (hiện GA4 chỉ có 1 session test,
+  bắn `view_content` — SAI registry), chưa đánh dấu key event nào, thiếu 5/6 conversion action,
+  negative account-level mới 1/382 dòng, tracking template UTM còn rỗng.
