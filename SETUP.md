@@ -14,7 +14,18 @@ Sau khi link, đọc được qua GA4 API (`run_report`):
 
 **Làm tay trên Google Ads UI** (API không thay được): search terms report (→ negative keywords hằng tuần), auction insights, sửa bid/budget/campaign.
 
-### Fallback khi chưa link được (chưa có quyền Quản trị trên Google Ads)
+### Đường A — Google Ads Script → Google Sheet (KHUYẾN NGHỊ khi không có developer token)
+
+Không cần developer token, không cần billing, không cần quyền Quản trị — chỉ cần **quyền Chuẩn (Standard)** trên tài khoản Ads.
+
+1. Tạo Google Sheet trống → copy URL.
+2. Google Ads → **Công cụ → Thao tác hàng loạt → Tập lệnh** → **+** → dán `scripts/ads-export.js` → sửa `SHEET_URL` → **Chạy thử** → ủy quyền.
+3. Đặt lịch **hằng ngày 04:00**.
+4. Sheet → **File → Chia sẻ → Xuất bản lên web** → từng tab (`campaign_daily`, `search_terms`, `keyword_daily`) → định dạng **CSV** → copy 3 link, lưu vào `SETUP-secrets.md` (không commit) hoặc đưa Claude.
+
+Hệ đọc 3 link CSV đó bằng `curl` — tự động, không cần credentials. Vẫn thiếu **auction insights** (Google Ads Script không truy cập được) → mục đó export tay hằng tuần.
+
+### Đường B — Fallback export CSV tay (khi chỉ có quyền Xem)
 
 Export CSV tay từ Google Ads UI (quyền Xem/Chuẩn là đủ), bỏ vào repo — Cowork/agent đọc file này thay cho GA4:
 
