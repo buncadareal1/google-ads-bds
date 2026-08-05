@@ -6,7 +6,7 @@ Repo này là nền tảng vận hành Google Ads BĐS **đa dự án**. Mọi s
 
 | Dự án | CĐT | Vị trí | Trạng thái |
 |---|---|---|---|
-| **Beachtro Tower — Blanca City** | Sun Group | Vũng Tàu | Active từ 2026-08-05 |
+| **Beachtro Tower — Blanca City** | Sun Group | Vũng Tàu | Active từ 2026-08-05 · GA4 property `548678683` |
 
 Dự án mới: thêm dòng vào bảng này + `keywords/projects.tsv` (qua keyword-planner), không fork repo.
 
@@ -29,11 +29,14 @@ Trước khi làm bất cứ gì:
 4. Số liệu phải có nguồn, tính bằng script, không bịa benchmark. Ponytail: ngắn nhất chạy được.
 
 Nhiệm vụ thường trực:
-A. QUẢN LÝ CHỈ SỐ: theo dõi chỉ số nền tảng theo playbook/monitoring.md — Ads
-   (CPC/CTR/IS/conv on-site), GA4 events, Clarity. Ngưỡng alert, quét WoW điểm gãy §4,
-   luật Simpson, exclusion áp cho cả phân tích §2.1.
-   LƯU Ý: hệ KHÔNG đo lead (đã chốt 2026-08-05, bỏ Keap API — user tự quản lý lead
-   riêng). KPI vận hành = CPL raw (generate_lead) + chất lượng traffic.
+A. QUẢN LÝ CHỈ SỐ: nguồn chỉ số DUY NHẤT là GA4 (Google Ads đã link vào property →
+   đọc advertiserAdCost/Clicks/Impressions/CostPerClick + sessionGoogleAdsCampaignName)
+   và Clarity. KHÔNG dùng Google Ads API (đã bỏ 2026-08-05, xem SETUP.md §1).
+   Phân tích theo playbook/monitoring.md: ngưỡng alert, quét WoW điểm gãy §4, luật
+   Simpson, exclusion áp cho cả phân tích §2.1.
+   LƯU Ý: hệ KHÔNG đo lead (bỏ Keap API — user tự quản lý lead riêng). KPI vận hành =
+   CPL raw (generate_lead) + chất lượng traffic. Việc cần UI (search terms, auction
+   insights, sửa bid/budget) → viết đề xuất cho user làm tay, không tự apply.
 B. BÁO CÁO TELEGRAM: gửi báo cáo qua bot theo khung giờ trong monitoring.md, dùng
    TG_BOT_TOKEN + TG_CHAT_ID trong env vars. Tiếng Việt, đơn vị ₫, số liệu kèm nguồn,
    tách theo từng dự án active.
@@ -42,9 +45,10 @@ C. TOKEN/ID: khi tôi cung cấp ID mới (GTM-, G-, AW-, conversion labels) →
 D. HỒ SƠ DỰ ÁN: dự án active chưa có trong keywords/projects.tsv → dispatch
    keyword-planner thêm dự án + sinh bộ từ khóa brand theo gen.py.
 
-Giới hạn cloud: không có Google Ads API / GA4 ADC / GTM OAuth — chỉ Clarity API và
-Telegram qua env vars (TG_BOT_TOKEN, TG_CHAT_ID, CLARITY_API_TOKEN). Việc cần
-credentials local thì ghi chú vào PLAN.md mục chờ, không giả lập kết quả.
+Giới hạn cloud: GA4 dùng ADC nằm ở máy local nên trên Cowork KHÔNG gọi được GA4/GTM —
+chỉ có Clarity API và Telegram qua env vars (TG_BOT_TOKEN, TG_CHAT_ID,
+CLARITY_API_TOKEN). Việc cần GA4 thì ghi rõ query cần chạy để tôi chạy ở local, không
+giả lập kết quả.
 
 Việc hôm nay: [MÔ TẢ VIỆC CỤ THỂ]
 ```

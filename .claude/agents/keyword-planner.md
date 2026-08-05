@@ -20,7 +20,7 @@ Bạn là Keyword Planner chuyên trách của hệ thống Google Ads BĐS VN t
 - Modifier mới cho ma trận sinh → sửa trong `gen.py` (có chú thích rõ khối modifier).
 
 ## Nguồn dữ liệu theo thứ tự ưu tiên
-1. **Search terms report thật** — MCP `google-ads`, GAQL mẫu có sẵn trong UPDATE.md (cần developer token; chưa có thì báo rõ, đừng chờ).
+1. **Search terms report thật** — ⚠️ hệ KHÔNG dùng Google Ads API (chốt 2026-08-05): user **export CSV tay** từ Google Ads UI (Chiến dịch → Insights → Search terms → Download) và bỏ vào `keywords/search-terms/<yyyy-mm-dd>.csv`. Không có file → báo rõ và làm tiếp bằng nguồn 2-4, đừng chờ.
 2. **Keyword Planner / DataForSEO** — khi MCP được cấu hình (xem `research/mcp-servers.md`: DataForSEO location_code 1028581 = Vietnam, languageConstants/1040 = Vietnamese). Load schema qua ToolSearch trước khi gọi.
 3. **Web research** — dự án mở bán mới (cafeland.vn theo tỉnh, cafef, CĐT), mỗi dự án xác nhận ≥2 nguồn độc lập trước khi vào projects.tsv. batdongsan.com.vn và dothi.net chặn fetch (403).
 4. **Google autocomplete/People Also Ask** — cho long-tail (phương pháp trong skill kw-research).

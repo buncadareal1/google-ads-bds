@@ -2,15 +2,21 @@
 
 `.mcp.json` đã cấu hình sẵn 4 server. Bạn chỉ cần cung cấp credentials qua biến môi trường (thêm vào `~/.bashrc` hoặc export trước khi mở Claude Code).
 
-## 1. Google Ads MCP (`google-ads`)
-Cần:
-- **Developer Token**: Google Ads UI → Tools → API Center (quyền tối thiểu: Explorer). Manager account (MCC) thì thêm `GOOGLE_ADS_LOGIN_CUSTOMER_ID` = customer ID của MCC (bỏ dấu gạch).
-- **Google Cloud project** đã bật Google Ads API + OAuth credentials JSON.
+## 1. Chỉ số Google Ads — ⛔ KHÔNG DÙNG API (chốt 2026-08-05)
 
-```bash
-export GOOGLE_ADS_DEVELOPER_TOKEN="..."
-export GOOGLE_ADS_LOGIN_CUSTOMER_ID="1234567890"   # nếu dùng MCC
-```
+Bỏ Google Ads API / developer token / MCC. **Chỉ số Ads lấy qua GA4** bằng tài khoản `webdev@smartland.vn` (ADC ở mục 2 đã đủ quyền).
+
+**Việc cần làm 1 lần cho mỗi dự án:** GA4 → Admin → **Product links → Google Ads links → Link** → chọn tài khoản Google Ads → bật *Enable personalized advertising* + *Enable auto-tagging*. Cần quyền Admin ở cả GA4 lẫn Google Ads.
+
+Sau khi link, đọc được qua GA4 API (`run_report`):
+- Metrics: `advertiserAdCost`, `advertiserAdClicks`, `advertiserAdImpressions`, `advertiserAdCostPerClick`, `advertiserAdCostPerKeyEvent`
+- Dimensions: `sessionGoogleAdsCampaignName`, `sessionGoogleAdsAdGroupName`, `sessionGoogleAdsKeyword`, `sessionSourceMedium`
+
+**Làm tay trên Google Ads UI** (API không thay được): search terms report (→ negative keywords hằng tuần), auction insights, sửa bid/budget/campaign.
+
+| Property GA4 | ID | Link Ads |
+|---|---|---|
+| Beachtro Tower - Blanca City | `548678683` | ⬜ chưa link |
 
 ## 2. GA4 MCP (`analytics-ga4`) — ✅ HOÀN TẤT 2026-07-28
 

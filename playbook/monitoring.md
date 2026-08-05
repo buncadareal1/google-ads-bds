@@ -160,7 +160,7 @@ phát hiện điều kiện (mục 3)
 6. Learning phase guard chạy TRƯỚC apply: campaign đang learning → từ chối kèm lý do.
 7. Kill switch: nhắn bot `/pause_all_suggestions` → ngừng gửi suggest (không đụng ads).
 
-Điều kiện chạy: developer token + OAuth Google Ads API (cùng bộ với MCP) + máy/cloud chạy `approve-bot.py`.
+⛔ **Approve-flow tự động apply ĐÓNG BĂNG (chốt 2026-08-05)** — hệ không dùng Google Ads API nên không apply được qua code. Thay bằng: bot gửi **đề xuất** qua Telegram (số liệu từ GA4), user tự apply trên Google Ads UI rồi nhắn xác nhận để ghi `ops/audit-log.jsonl`. Toàn bộ luật an toàn ở trên vẫn áp cho phần đề xuất (ngưỡng ±20% budget, ±15% tCPA, learning guard, hết hạn 24h).
 
 ## 7. Format tin Telegram (mẫu)
 

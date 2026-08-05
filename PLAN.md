@@ -17,7 +17,7 @@ Mục tiêu: hệ thống khép kín **Ads → Landing page → Lead → CRM qua
 
 | Thành phần | Trạng thái |
 |---|---|
-| MCP phase 1: `google-ads` (official, read-only GAQL), `analytics-ga4`, `gtm` (Stape), `clarity` | `.mcp.json` ✔ — chờ credentials (SETUP.md). **Developer token cần apply Basic access qua MCC (1-3 ngày) — làm NGAY** |
+| MCP: `analytics-ga4` ✅, `clarity` ✅, `gtm` (Stape) ✅ · `google-ads` **KHÔNG DÙNG** (chốt 2026-08-05) | Chỉ số Ads lấy qua **GA4 sau khi link Google Ads ↔ property** — không cần developer token/MCC. Chi tiết SETUP.md |
 | MCP phase 2 (bật khi cần): DataForSEO (keyword volume VN), mcp-google-sheets (reporting), mcp-gsc (Search Console), Keyword Planner (ncosentino) | Chưa cài — xem research/mcp-servers.md |
 | Connector claude.ai sẵn có | Meta Ads (Pipeboard), Semrush, Google Drive, Canva |
 | Skills: 34 bộ trong `.claude/skills/` (bộ suite eliasmalmsandberg: bidding, audiences, quality-score, budget-management, account-audit; + ads-budget, budget-pacing-monitor, youtube-ads) | ✔ google-ads-manager, ads-google (audit), ads, ad-creative, ads-copywriter, cro, analytics, attribution, ab-testing, marketing-psychology, offers, popups, keyword-research, competitor-research, google-search-console, landing-page-generator, google-ads-audit-leadgen; đo lường chuyển đổi: **data-manager-api-event-ingestion (Google official)**, ads-server-side-tracking, conversion-signal-qa, google-ads-conversion-tracking + có sẵn: no-code-landing-re, ad-click-attribution, seo-machine, keap/cf7-lead-form |
@@ -58,7 +58,7 @@ Bộ từ khóa là **tài sản sống**: tuần → search terms report qua MC
 
 3 điểm mù hệ thống lộ ra ở kỳ thi ngoài (cả 5 agent trượt giống nhau) đã vá vào tài liệu 2026-08-03: quét điểm gãy chuỗi thời gian (monitoring §4), luật Simpson (monitoring §4 + landing-page/README), exclusion-áp-cho-cả-phân-tích (monitoring §2.1). Chi tiết: `test/exam-vinhomes/LESSONS.md`.
 
-**Verdict production (Fable QA, 2026-08-03): ĐẠT CÓ ĐIỀU KIỆN.** Lớp kiến thức + quy trình + kỷ luật quyết định đã production-ready (4 đợt kiểm định độc lập, kể cả đề ngoài không do hệ tự ra, 0 cờ đỏ; effort medium đủ cho vòng lặp tuần). Điều kiện còn lại đều **ngoài hệ**: (1) tài khoản Google Ads + developer token, (2) LP thật theo lp-requirements, (3) số kinh doanh, (4) quyền xem quy trình sau-lead. Chế độ vận hành khi lên sóng: tự động trong whitelist approve-flow (monitoring §6), Fable QA giám sát, hiệu chỉnh bằng dữ liệu thật 30 ngày đầu trước khi nới quyền.
+**Verdict production (Fable QA, 2026-08-03): ĐẠT CÓ ĐIỀU KIỆN.** Lớp kiến thức + quy trình + kỷ luật quyết định đã production-ready (4 đợt kiểm định độc lập, kể cả đề ngoài không do hệ tự ra, 0 cờ đỏ; effort medium đủ cho vòng lặp tuần). Điều kiện còn lại đều **ngoài hệ** (cập nhật 2026-08-05): (1) **link Google Ads ↔ GA4 property** (thay cho developer token — đã bỏ API), (2) LP thật theo lp-requirements + gắn đúng 6 event chuẩn, (3) số kinh doanh. ~~(4) quyền sau-lead~~ — bỏ, hệ không đo lead. Chế độ vận hành khi lên sóng: tự động trong whitelist approve-flow (monitoring §6), Fable QA giám sát, hiệu chỉnh bằng dữ liệu thật 30 ngày đầu trước khi nới quyền.
 
 ## 5. Vòng lặp vận hành (khi có credentials)
 
@@ -66,7 +66,7 @@ Checklist ngày/tuần/tháng/quý chi tiết: `research/google-ads-bds-vn.md` m
 
 ## 6. User cần cung cấp / quyết định
 
-1. **Apply developer token Basic access ngay** (bottleneck 1-3 ngày) + credentials theo SETUP.md.
+1. ~~Apply developer token Basic access~~ **BỎ (chốt 2026-08-05): không dùng Google Ads API.** Thay bằng: **liên kết Google Ads ↔ GA4 property của dự án** (GA4 Admin → Product links → Google Ads links) → hệ đọc chi phí/click/impressions/CPC/conv theo campaign qua GA4 API bằng tài khoản `webdev@smartland.vn`. Search terms + auction insights + sửa bid/budget: làm tay trên UI.
 2. ~~Dự án cụ thể đang phân phối~~ **ĐÃ CHỐT (2026-08-05): repo là nền tảng ĐA DỰ ÁN; dự án active đầu tiên = BEACHTRO TOWER — Blanca City (Sun Group, Vũng Tàu)** — kiểm tra/thêm vào keywords/projects.tsv + sinh bộ kw brand (việc đầu tiên của Cowork, xem COWORK.md). Dự án sau: lặp lại đúng quy trình đó, không fork repo.
 3. ~~CRM đang dùng~~ **ĐÃ CHỐT (2026-08-05): bỏ Keap API, hệ KHÔNG đo lead** — user tự quản lý lead riêng. Hệ chỉ đo chỉ số nền tảng (Ads/GA4/Clarity). Hệ quả: pipeline ECL + thang conversion contactable/qualified/cọc (§0.4) đóng băng; KPI vận hành tạm thời = CPL raw (`generate_lead`) + chất lượng traffic, cho tới khi user mở lại đo lead.
 4. **Ngân sách tháng + mục tiêu booking** — để chốt kịch bản và KPI tree.
