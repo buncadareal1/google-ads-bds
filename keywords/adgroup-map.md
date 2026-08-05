@@ -8,7 +8,7 @@ Nguồn dữ liệu: `master-keywords.csv` (8.805 keyword, 245 dự án thật, 
 > Ad group brand duy nhất cần build ở campaign #1: **`brand-blanca-city`** (110 kw — gồm cả 4 alias
 > `beachtro tower`, `blanca city vũng tàu`, `sun blanca city`, `beachtro tower vũng tàu`).
 > Kèm theo: `brand-cdt--sun-group` + `brand-cdt--sun-property` (campaign #2) và cụm khu vực
-> `vung-tau--*` / `ba-ria-vung-tau--*` (campaign #3). Checklist LP: `landing-page/beachtro-tower-checklist.md`.
+> `vung-tau--*` / `ba-ria-vung-tau--*` (campaign #3). Audit LP: `landing-page/beachtro-tower-audit.md`.
 >
 > ```bash
 > python3 -c "
