@@ -216,7 +216,7 @@ MOD_PROJECT_EXTRA = [
 DEVELOPERS = [
     ("vinhomes", "toàn quốc"), ("vingroup", "toàn quốc"),
     ("masterise homes", "toàn quốc"), ("ecopark", "Hưng Yên"),
-    ("sun group", "toàn quốc"), ("novaland", "toàn quốc"),
+    ("sun group", "toàn quốc"), ("sun property", "toàn quốc"), ("novaland", "toàn quốc"),
     ("khang điền", "TP.HCM"), ("nam long", "TP.HCM"),
     ("phú mỹ hưng", "TP.HCM"), ("gamuda land", "toàn quốc"),
     ("capitaland", "toàn quốc"), ("keppel land", "TP.HCM"),

@@ -67,9 +67,30 @@ Checklist ngày/tuần/tháng/quý chi tiết: `research/google-ads-bds-vn.md` m
 ## 6. User cần cung cấp / quyết định
 
 1. **Apply developer token Basic access ngay** (bottleneck 1-3 ngày) + credentials theo SETUP.md.
-2. **Dự án cụ thể đang phân phối** (chọn từ 239 dự án trong keywords/projects.tsv hoặc thêm mới) — để lọc bộ kw launch + cá nhân hóa LP.
+2. ✅ **ĐÃ CHỐT (2026-08-05): Beachtro Tower — Blanca City** (Sun Property / Sun Group, căn hộ sổ hồng lâu dài, P.10 TP Vũng Tàu). Đã thêm `blanca city` + 4 alias vào `keywords/projects.tsv` (246 dự án, +110 kw `brand-blanca-city`), thêm CĐT `sun property` (+8 kw). Bộ launch = 220 kw (lệnh lọc trong `keywords/adgroup-map.md`). Checklist LP cá nhân hóa: `landing-page/beachtro-tower-checklist.md`. **Còn chờ user**: (a) bảng hàng + chính sách bán hàng chính thức từ CĐT — 3 nguồn báo lệch nhau về số căn (1.785 / "gần 1.800" / "gần 2.000") và giá mới chỉ là *rumor*, chưa số nào được phép lên LP; (b) có phân phối các phân khu anh em (Beacon Tower, Casa Townhouse, Casa Villa, Casa Grand Villa) không — nếu KHÔNG thì cần negative **campaign-level** chống cannibalize theo tiền lệ Ecopark (UPDATE.md 2026-07-28), nếu CÓ thì thêm alias vào cùng dòng `blanca city`.
 3. **CRM đang dùng** (Keap? khác?) — quyết định pipeline lead + ECL. Keap: gọi REST API trực tiếp, không dùng Keap MCP (0★).
 4. **Ngân sách tháng + mục tiêu booking** — để chốt kịch bản và KPI tree.
 5. **Hosting LP**: WordPress SmartLand pattern (nhúng static build) hay Vercel?
 6. ⏸️ **Quy trình sau lead (`playbook/sau-lead.md`) — PENDING** (2026-07-28): user chưa có quyền xem quy trình sale. Hệ quả cần biết: contact rate >50% và pipeline ECL phụ thuộc việc **sales gắn tag trong Keap** (contactable/dat-coc) — cần người có quyền Keap thống nhất quy tắc gắn tag trước khi ECL chạy thật. **Ràng buộc mới từ curriculum Google (2026-07): conversion adjustment nên upload trong ≤7 ngày sau click → SLA cho sales: gắn tag `Lead_Contactable` trong tối đa 48h, muộn nhất 7 ngày** — đưa vào thỏa thuận khi có quyền. Thêm từ vòng 2 curriculum: **Customer Match ở quy mô hệ chỉ dùng được Exclusion/Observation** ($50k spend mới mở Targeting) → thỏa thuận Keap cần thêm (a) xuất list khách đã cọc/đã mua để LOẠI khỏi campaign acquisition (list Customer Match giữ member tối đa 540 ngày — dài hơn hẳn audience GA4 14 ngày; ⚠️ vòng 3: exclusion chỉ gắn được SAU khi campaign publish, không có trong luồng tạo campaign — thêm bước hậu kiểm; kiểm khả dụng Customer Match VN trong `Tools → Audience manager` TRƯỚC khi thoả thuận); (b) privacy policy trên LP phải khai có chia sẻ dữ liệu khách với bên thứ 3 trước lần upload đầu. Mở lại khi có quyền.
 7. **Từ tracking/ (chờ chốt):** ~~thang giá trị điểm hay ₫ thật~~ **ĐÃ ĐÓNG (vòng 2): Google chính thức cho phép proxy value** ("utilize proxy values that align with your business priorities") → thang điểm 1/10/50/500 hợp lệ để bắt đầu value-based bidding ngay; chuyển ₫ thật khi có phí môi giới TB/căn là tối ưu thêm, không phải điều kiện · `Dat Coc` Primary khi ≥15 lượt/tháng · đường gửi click id vào Keap: SmartLand proxy (`form_url`) hay custom field + server proxy · danh sách credentials/ID: GTM-, G-, AW-, conversion labels, Keap SAK, GCP service account (chi tiết trong tracking/ecl-keap-pipeline.md).
+
+## 7. Mục chờ — việc Cowork (cloud) KHÔNG chạy được, cần chạy local
+
+Ghi nhận 2026-08-05, phiên Cowork đầu tiên trên repo. Sandbox cloud chặn egress theo allowlist
+(`x-deny-reason: host_not_allowed`) và không có credential Google. **Không mục nào dưới đây được
+giả lập kết quả** — để nguyên trạng thái chờ.
+
+| # | Việc | Chặn bởi | Chạy được ở đâu |
+|---|---|---|---|
+| 7.1 | Search terms report tuần (UPDATE.md Q1–Q5) | MCP `google-ads` cần developer token Basic access + OAuth; `googleads.googleapis.com` ngoài allowlist | Claude Code local |
+| 7.2 | Đối chiếu GA4 quý (UPDATE.md §Hàng quý) | MCP `analytics-ga4` cần ADC; `*.googleapis.com` ngoài allowlist | Local |
+| 7.3 | Kiểm tra GTM container theo `tracking/gtm-container-spec.md` | GTM OAuth | Local |
+| 7.4 | Clarity rage/dead click (`tracking/clarity-checklist.md`) | `www.clarity.ms` **ngoài allowlist** — kể cả khi có API token | Local, hoặc xin org owner mở allowlist |
+| 7.5 | Báo cáo Telegram theo `playbook/monitoring.md` | `api.telegram.org` **ngoài allowlist**; `TG_BOT_TOKEN`/`TG_CHAT_ID` **chưa được inject** vào env phiên Cowork | Local (`scripts/notify-telegram.sh`), hoặc mở allowlist + set env |
+| 7.6 | ECL upload Keap → Data Manager API (`tracking/upload_ecl.py`) | Keap SAK + GCP service account + `*.googleapis.com` | Local |
+| 7.7 | Volume/CPC forecast cho bộ kw Beachtro | Chưa có Keyword Planner / DataForSEO. Luật keyword-planner: **KHÔNG BỊA VOLUME/CPC** | Local khi có MCP |
+
+**Để mở khóa 7.4 + 7.5 trên cloud** (2 việc duy nhất PLAN §1 dự kiến chạy được ở cloud): org owner
+thêm `api.telegram.org` và `www.clarity.ms` vào allowlist mạng Cowork, đồng thời inject
+`TG_BOT_TOKEN` + `TG_CHAT_ID` vào env phiên. Trước đó, báo cáo Telegram chỉ soạn được nội dung,
+không gửi được.
