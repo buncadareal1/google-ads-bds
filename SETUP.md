@@ -14,6 +14,18 @@ Sau khi link, đọc được qua GA4 API (`run_report`):
 
 **Làm tay trên Google Ads UI** (API không thay được): search terms report (→ negative keywords hằng tuần), auction insights, sửa bid/budget/campaign.
 
+### Fallback khi chưa link được (chưa có quyền Quản trị trên Google Ads)
+
+Export CSV tay từ Google Ads UI (quyền Xem/Chuẩn là đủ), bỏ vào repo — Cowork/agent đọc file này thay cho GA4:
+
+| File | Lấy ở đâu | Nhịp |
+|---|---|---|
+| `data/ads/campaign-daily-<yyyy-mm-dd>.csv` | Chiến dịch → thêm cột Ngày → Tải xuống CSV (chi phí, click, hiển thị, CTR, CPC, chuyển đổi, IS) | tuần |
+| `keywords/search-terms/<yyyy-mm-dd>.csv` | Chiến dịch → Thông tin chi tiết → Cụm từ tìm kiếm → Tải xuống | tuần |
+| `data/ads/auction-insights-<yyyy-mm-dd>.csv` | Chiến dịch → Auction insights → Tải xuống | tuần (bắt buộc — GA4 không có dữ liệu này) |
+
+⚠️ Export **theo ngày**, không lấy tổng kỳ — quét điểm gãy chuỗi thời gian (monitoring §4) cần dữ liệu ngày.
+
 | Property GA4 | ID | Link Ads |
 |---|---|---|
 | Beachtro Tower - Blanca City | `548678683` | ⬜ chưa link |
