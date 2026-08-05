@@ -9,8 +9,8 @@ Repo này là hệ thống vận hành Google Ads cho bất động sản VN —
 - `landing-page/` — **làm/review/audit LP: đọc `landing-page/README.md` TRƯỚC** (message match, above the fold, khung phân tích điểm yếu CVR, checklist nghiệm thu 10 mục)
 - `content/` — bài SEO hỗ trợ (chuẩn `seo-machine`)
 - **Lead: NGOÀI PHẠM VI hệ (chốt 2026-08-05)** — bỏ Keap API, hệ KHÔNG đo lead; user tự quản lý lead riêng. Pipeline ECL trong `tracking/` đóng băng.
-- **Nguồn chỉ số = GA4, KHÔNG dùng Google Ads API (chốt 2026-08-05).** Liên kết Google Ads ↔ GA4 property → đọc chi phí/click/impressions/CPC/conv theo campaign qua GA4 API bằng tài khoản `webdev@smartland.vn` (ADC đã có). Không cần developer token, không cần MCC. Việc API không làm được (search terms, auction insights, sửa bid/budget) → làm tay trên Google Ads UI.
-- MCP: dùng `analytics-ga4` + `clarity` + `gtm`; server `google-ads` **không dùng**. Credentials xem `SETUP.md`
+- **Google Ads API ĐÃ KẾT NỐI (2026-08-05)** — credential `~/google-ads-smartland.yaml`, venv `.venv-ads/`, API v24. Account đang dùng: `6918288556` (SMR- Sun Galaxy, VND, **trống — chưa có campaign**). Gọi bằng script Python, KHÔNG dùng MCP `google-ads` (ghim MCC khác). Luôn set `client.login_customer_id = ACCOUNT`. Chi tiết + bẫy: `SETUP.md §1`.
+- MCP: dùng `analytics-ga4` + `clarity` + `gtm`. Credentials xem `SETUP.md`
 - Cowork (cloud): quy tắc làm việc + prompt khởi động trong `COWORK.md` — push nhánh `cowork/*`, không push main
 
 Quy ước: nội dung tiếng Việt, đơn vị ₫, số điện thoại/Zalo là CTA chính. Event GA4 chuẩn (registry duy nhất — LP và tracking/ phải khớp): `generate_lead`, `phone_click`, `zalo_click`, `xem_bang_gia`, `xem_mat_bang`, `form_start`.

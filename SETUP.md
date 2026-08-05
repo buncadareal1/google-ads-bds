@@ -2,9 +2,24 @@
 
 `.mcp.json` đã cấu hình sẵn 4 server. Bạn chỉ cần cung cấp credentials qua biến môi trường (thêm vào `~/.bashrc` hoặc export trước khi mở Claude Code).
 
-## 1. Chỉ số Google Ads — ⛔ KHÔNG DÙNG API (chốt 2026-08-05)
+## 1. Google Ads API — ✅ ĐÃ KẾT NỐI 2026-08-05
 
-Bỏ Google Ads API / developer token / MCC. **Chỉ số Ads lấy qua GA4** bằng tài khoản `webdev@smartland.vn` (ADC ở mục 2 đã đủ quyền).
+Developer token của Smartland + OAuth refresh_token đã ráp xong. **File credential: `~/google-ads-smartland.yaml`** (chmod 600, đã trong `.gitignore` — KHÔNG commit, không dán vào chat).
+
+- venv: `.venv-ads/` (`google-ads==31.0.0`, API **v24**) · script sinh token: `~/get_ads_refresh_token.py`
+- Khuôn script chuẩn: xem `HUONG-DAN-KET-NOI-GG-ADS-CLAUDE.md` mục 5 — **bắt buộc** `client.login_customer_id = <ID account con>`, không thì query account con báo không thấy.
+
+**Tài khoản đọc được (verify 2026-08-05):**
+
+| ID | Tên | Loại | Tiền/TZ | Hiện trạng |
+|---|---|---|---|---|
+| `6918288556` | SMR- Sun Galaxy - 7490 - Mạnh | thường (không MCC) | VND / Asia/Saigon | **0 campaign, 0 ngân sách** — tài khoản trống, sẵn sàng dựng Beachtro. Có 1 conversion action: `7709665581` "Lượt gửi biểu mẫu khách hàng tiềm năng" (WEBPAGE, SUBMIT_LEAD_FORM, **primary**) |
+
+⚠️ Refresh_token hiện tại chỉ thấy **1 account** này. Muốn thấy toàn bộ account con Smartland → sinh lại token bằng user quản lý MCC (chạy `~/get_ads_refresh_token.py`).
+
+⚠️ `LAST_90_DAYS` KHÔNG phải date literal hợp lệ trong GAQL — dùng `LAST_30_DAYS` hoặc `segments.date BETWEEN "..." AND "..."`.
+
+### Bổ trợ: chỉ số qua GA4 (không bắt buộc nữa, vẫn nên link)
 
 **Việc cần làm 1 lần cho mỗi dự án:** GA4 → Admin → **Product links → Google Ads links → Link** → chọn tài khoản Google Ads → bật *Enable personalized advertising* + *Enable auto-tagging*. Cần quyền Admin ở cả GA4 lẫn Google Ads.
 
