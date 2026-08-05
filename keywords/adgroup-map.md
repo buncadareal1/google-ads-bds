@@ -4,6 +4,21 @@ Nguồn dữ liệu: `master-keywords.csv` (8.805 keyword, 245 dự án thật, 
 
 > **Đây là kho keyword, không phải lệnh build 1:1.** File có 1.616 `nhom_adgroup` khác nhau vì mỗi dự án thật có một ad group brand riêng (alias dùng chung ad group với dự án gốc, không tạo nhóm mới). Chỉ tạo ad group cho dự án bạn **thực sự đang phân phối**. Phần còn lại là kho dự phòng khi nhận thêm rổ hàng — lọc bằng cột `nhom_adgroup`.
 
+> **Dự án ĐANG PHÂN PHỐI (2026-08-05): Beachtro Tower — Blanca City** (Sun Group, Vũng Tàu).
+> Ad group brand duy nhất cần build ở campaign #1: **`brand-blanca-city`** (110 kw — gồm cả 4 alias
+> `beachtro tower`, `blanca city vũng tàu`, `sun blanca city`, `beachtro tower vũng tàu`).
+> Kèm theo: `brand-cdt--sun-group` + `brand-cdt--sun-property` (campaign #2) và cụm khu vực
+> `vung-tau--*` / `ba-ria-vung-tau--*` (campaign #3). Checklist LP: `landing-page/beachtro-tower-checklist.md`.
+>
+> ```bash
+> python3 -c "
+> import csv,sys
+> r=csv.reader(open('master-keywords.csv')); w=csv.writer(sys.stdout)
+> h=next(r); w.writerow(h)
+> [w.writerow(x) for x in r if x[1].startswith(('brand-blanca-city','brand-cdt--sun-','vung-tau--','ba-ria-vung-tau--'))]
+> " > beachtro-launch.csv
+> ```
+
 ## Nguyên tắc cấu trúc
 
 **Không dùng SKAG.** Từ khi Google mở rộng close-variant matching (2018→nay), một keyword exact tự khớp hàng chục biến thể, nên SKAG chỉ làm loãng dữ liệu conversion và kéo dài learning phase. Dùng **STAG (Single Theme Ad Group)**: gom keyword cùng *một* intent + *một* thông điệp landing page vào một ad group, để RSA và LP nói đúng một chuyện.

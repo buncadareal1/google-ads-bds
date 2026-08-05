@@ -121,6 +121,11 @@ maison grand phú mỹ | Tùng Mỹ | căn hộ shophouse | Phú Mỹ, BR-VT | B
 eco home phú mỹ | Hodeco | nhà ở xã hội | Phú Mỹ, BR-VT | B
 ecotown phú mỹ | đang cập nhật | đất nền nhà phố | Phú Mỹ, BR-VT | B
 dic solar city vũng tàu | DIC Corp | khu đô thị nhà phố | Vũng Tàu, BR-VT | B
+# Blanca City thêm 2026-08-05 — dự án ĐANG PHÂN PHỐI. Nguồn: vnexpress.net, dantri.com.vn,
+# baodautu.vn, tinnhanhchungkhoan.vn (kick-off Beachtro Tower 30/07/2026) — 4 nguồn độc lập.
+# Beachtro Tower là PHÂN KHU của Blanca City -> để alias, dùng chung ad group brand-blanca-city
+# (luật dòng 2 + adgroup-map: "1 ad group / dự án đang bán, alias không tạo nhóm mới").
+blanca city | Sun Group | căn hộ | Vũng Tàu, BR-VT | A | beachtro tower, blanca city vũng tàu, sun blanca city, beachtro tower vũng tàu
 
 # ============ Hà Nội ============
 vinhomes ocean park 1 | Vinhomes | khu đô thị | Gia Lâm, Hà Nội | A
