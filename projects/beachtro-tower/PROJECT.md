@@ -8,7 +8,7 @@
 | Phạm vi bán | **CHỈ căn hộ Beachtro** (chốt 2026-08-06) — không bán biệt thự / shophouse / nhà phố trong Blanca City → 15 negative cấp campaign, xem `keywords/negative.csv` |
 | Bàn giao | Dự kiến 8/2028 |
 | Vai trò của ta | **Phân phối chính thức** (SmartRealtors & Partners) — không phải CĐT |
-| Trạng thái | 🟡 **Campaign đã dựng, đang TẠM DỪNG** — chờ user duyệt + qua gate G0 rồi bật |
+| Trạng thái | 🟢 **ĐANG CHẠY từ 2026-08-06** — bật theo lệnh user, BỎ QUA gate G0 → phanh cứng: lead đầu không có gclid trong Keap = PAUSE ngay |
 | Ngày mở hồ sơ | 2026-08-05 |
 
 ## Cổng kết nối (verify 2026-08-06 bằng API thật)
@@ -68,11 +68,11 @@ Ad copy 2 bộ RSA: `ad-copy.md`. Plan chạy: `plan-chay-ads.md`.
 
 > **Chốt 2026-08-06 (đổi so với ban đầu): user yêu cầu agent dựng campaign qua API**, user tự vào UI duyệt trước khi bật.
 
-### ✅ Đã dựng xong qua API 2026-08-06 — campaign đang **TẠM DỪNG**
+### ✅ Đã dựng qua API — **ĐANG CHẠY từ 2026-08-06** (ENABLED · SERVING · 2 ad ĐÃ DUYỆT)
 
 | Thành phần | Giá trị | ID |
 |---|---|---|
-| Campaign | `BDS_Search_Brand_DuAn` · **PAUSED** · Search · Maximize Clicks | `24103805490` |
+| Campaign | `BDS_Search_Brand_DuAn` · **ENABLED/SERVING** · Search · Maximize Clicks | `24103805490` |
 | Ngân sách | **1.000.000 ₫/ngày** (không dùng chung) | `15778630477` |
 | Trần CPC | **20.000 ₫** (campaign + cả 2 ad group) | |
 | Ad group | `brand-beachtro-tower` · `brand-blanca-city` | `195939193901` · `195939194061` |
@@ -91,8 +91,8 @@ Ad copy 2 bộ RSA: `ad-copy.md`. Plan chạy: `plan-chay-ads.md`.
 
 | # | Việc | Ghi chú |
 |---|---|---|
-| 1 | **Duyệt campaign** trước khi bật | đang PAUSED, chưa tiêu đồng nào |
-| 2 | **Gate G0**: bắn 1 lead test thật → Ads có conversion ≤24h · Keap có `gclid` | **chặn launch** |
+| 1 | ~~Duyệt + bật campaign~~ | ✅ ĐÃ BẬT 2026-08-06 theo lệnh user |
+| 2 | ~~Gate G0~~ → thay bằng **phanh cứng D+1**: lead thật đầu tiên phải có `gclid` trong Keap, không có → PAUSE | user chốt bỏ qua G0 |
 | 3 | Tắt **Tài sản tự động tạo (ACA)** + **Dynamic sitelinks** | API không expose, phải làm trên UI |
 | 4 | Tắt **Auto-apply recommendations** (cấp tài khoản) | UI: Đề xuất → Tự động áp dụng → bỏ tick hết |
 | 5 | Nộp **xác minh nhà quảng cáo** (Tổ chức, 3–5 ngày) — ⚠️ giờ là nút thắt của 2 loại tài sản: Google từ chối gắn cả **hình ảnh** lẫn **biểu tượng doanh nghiệp** với lỗi "Customer is not verified". Logo SmartRealtors (asset `404392250361`) + 4 ảnh đã nằm sẵn thư viện, xác minh xong là gắn được ngay | user |
@@ -141,4 +141,5 @@ Rủi ro còn lại nếu Google vẫn từ chối vì thiếu thông tin doanh 
 | 2026-08-06 | Chốt phạm vi bán = chỉ căn hộ → 15 negative cấp campaign chặn biệt thự/shophouse/nhà phố/liền kề/đất nền/condotel |
 | 2026-08-06 | Dựng campaign qua API (PAUSED): 2 ad group, 81 kw, 2 RSA, 6 sitelink anchor nội bộ, 8 callout, 2 snippet, call asset, UTM template, 382 negative account |
 | 2026-08-06 | Target tuổi **35+** (loại 18-24, 25-34; GIỮ Unknown) — chốt user. +13 negative campaign chặn khách du lịch (vé/Sun World/công viên nước/tắm biển/resort) + thứ cấp (thanh lý/chuyển nhượng) → 28 negative campaign |
+| 2026-08-06 | **BẬT CAMPAIGN** (lệnh user, bỏ qua gate G0): ENABLED · SERVING · 2 ad đã duyệt · bidding learning. Phanh cứng D+1: lead đầu phải có gclid |
 | 2026-08-06 | Ad Strength: POOR/AVERAGE → **GOOD cả 2** (bỏ ghim H1 + đa dạng headline + vòng 2 nhồi keyword bộ beachtro). Ảnh: 4 file trong thư viện, tài khoản chưa đủ điều kiện gắn (UI không có mục Hình ảnh) — retry sau xác minh + 1-2 tuần chạy |
