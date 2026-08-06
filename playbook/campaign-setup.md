@@ -396,6 +396,17 @@ Final URL: `https://<lp>/<slug>/tra-gop/` · Path1: `tra-gop` · Path2: `ho-tro-
 
 > Headline #8 "Ngân Hàng Bảo Lãnh Dự Án" và description #4 chỉ dùng khi dự án **thật sự** có bảo lãnh ngân hàng — có văn bản. Không có thì thay bằng `Pháp Lý Sổ Hồng Đầy Đủ` (22).
 
+### 3.3b Bộ 4 — Pre-launch, CĐT CHƯA công bố giá (template dùng chung, thêm 2026-08-06)
+
+Mọi dự án đều đi qua giai đoạn này; Beachtro là ca đầu (bản chạy thật: `projects/beachtro-tower/ad-copy.md`). Luật:
+
+1. **Cấm mọi câu có giá/ưu đãi/chiết khấu** — `{Giá từ}`, `Giá Gốc CĐT`, `{Vay%}` đều là bịa khi chưa công bố = misrepresentation. Bộ 1–3 ở trên KHÔNG dùng được nguyên trạng.
+2. Offer hợp lệ duy nhất = **bán thông tin**: "Nhận Bảng Giá Khi Công Bố", bộ mặt bằng, lịch bàn giao. Đây là đúng loại headline cho mức nhận thức 2–3, không phải giải pháp tạm (Schwartz cách #25).
+3. **Deadly Sincerity**: 1 description nói thẳng "Chủ đầu tư chưa công bố giá..." — tự nêu khuyết điểm làm phần còn lại được tin gấp bội, và tuyệt đối an toàn policy vì không có số nào.
+4. Khi không nói được giá, vũ khí mạnh nhất = **gỡ giới hạn** ("Sở Hữu Lâu Dài, Không Thời Hạn" — X mà không phải chịu Y) + **con số có nguồn** (quy mô, mốc bàn giao).
+5. **Headline có hạn sử dụng**: ngày CĐT công bố giá, thị trường nhảy sang mức nhận thức 1 → toàn bộ headline "khi công bố" chết trong 24h. Mốc biết trước — bộ thay phải viết sẵn, và ngày đó = bắt đầu kỳ đo mới (cấm so CPL trước/sau).
+6. **Description = lead** (Great Leads): một bộ RSA = một kiểu lead, khai kiểu lead ở đầu bộ (Offer/Promise/Problem-Solution/Secret/Proclamation/Story — ánh xạ theo mức nhận thức trong `research/books/great-leads.md §3`). Proclamation không viết được thì đừng bịa — nó phải *tìm* được từ research.
+
 ### 3.4 Extensions (tài sản)
 
 **Sitelink (6)** — cấp campaign. `Campaign → Tài sản → + → Liên kết trang web`. Tiêu đề ≤25, mỗi dòng mô tả ≤35.
@@ -454,6 +465,10 @@ for lst, lim, tag in ((H, 30, 'H'), (D, 90, 'D')):
         if n > lim: bad += 1; print(f'{tag}{i} VUOT {n}/{lim}: {s}')
 assert len(H) == 15 and len(D) == 4, 'phai du 15 headline + 4 description'
 assert not any(s.isupper() for s in H + D), 'co ALL-CAPS'
+# 2 dòng kiểm định mức C (Cashvertising C.4/C.5): >=2/15 co dai tu ngoi hai; >=3/15 khong chua du kien san pham
+nyou = sum(1 for s in H if any(w in s.lower() for w in ('bạn','cả nhà','gia đình')))
+nc   = sum(1 for s in H if not any(ch.isdigit() for ch in s))
+print(f'headline co "ban/ca nha": {nyou}/15 (can >=2) | khong chua chu so (proxy nhom C): {nc}/15')
 print('OK' if not bad else f'{bad} loi')
 ```
 

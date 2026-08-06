@@ -126,6 +126,20 @@ Cột **xử lý**: `Search` = bid trên Search campaign · `Content+RMKT` = kh�
 
 ---
 
+### 1.3 Trục thứ ba: mức nhận thức Schwartz (bổ sung 2026-08-06 — `research/books/breakthrough-advertising.md`)
+
+Giai đoạn hành trình đo *còn bao lâu tới lúc mua*; mức nhận thức đo *khách biết gì về SẢN PHẨM MÌNH* — hai trục khác nhau, headline được quyết bởi trục thứ hai. Quy tắc ánh xạ nhanh:
+
+| Mức nhận thức | Modifier điển hình | Luật |
+|---|---|---|
+| 1 — biết sản phẩm, chờ điều kiện mua | brand + `bảng giá`/`mở bán`/`giá` | Headline = tên + điều kiện mua. Traffic đắt nhất đáng nhất |
+| 2 — biết, chưa tin | brand + `review`/`có nên mua`/`đánh giá` | Bằng chứng, cơ chế mới, gỡ giới hạn |
+| 3 — muốn thứ đó, chưa biết có sản phẩm | `căn hộ view biển`, `sổ hồng lâu dài` + khu vực | Gọi tên HAM MUỐN, không gọi tên sản phẩm. ⚠️ Brand con 0 volume (Beachtro) = khách ở mức 3 với nó dù mức 1 với brand mẹ → phải bắc cầu |
+| 4 — có vấn đề, chưa nối được giải pháp | `hết hạn sở hữu thì sao`, `nghỉ hưu ở đâu` | Đích là `content/` + remarketing, KPI = engaged session, KHÔNG ép form |
+| 5 — không biết mình cần | (gần như không gõ gì) | **KHÔNG mua Search.** Kênh của mức 5 là YouTube/Demand Gen, đo bằng brand search lift |
+
+Một bộ RSA = MỘT mức nhận thức, không trộn. Thị trường căn hộ VN 2026 ở sophistication ~3½–4 → claim trần vô hiệu, bảng "Trục thắng" §3.2 phải là **cơ chế** hoặc **gỡ giới hạn**, cấm claim so sánh trần.
+
 ## 2. Chiến lược theo giai đoạn
 
 Mỗi giai đoạn: nhóm kw bật · bid priority · RSA angle · LP anchor (**trỏ về `adgroup-map.md` §Message match, không lặp lại bảng đó**) · audience đổ vào / loại ra (5 audience trong `tracking/ga4-setup.md` §3) · dòng chảy sang giai đoạn sau.

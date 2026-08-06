@@ -10,6 +10,7 @@ Dự án mới = copy `projects/_TEMPLATE/` thành `projects/<slug>/` + thêm d�
 - `tracking/` — spec GTM/GA4/Clarity + pipeline ECL. **Đụng vào đo lường: đọc `tracking/README.md` TRƯỚC** (bản đồ + 6 luật bất di bất dịch + skill nào cho việc nào)
 - `landing-page/` — **làm/review/audit LP: đọc `landing-page/README.md` TRƯỚC** (message match, above the fold, khung phân tích điểm yếu CVR, checklist nghiệm thu 10 mục)
 - `content/` — bài SEO hỗ trợ (chuẩn `seo-machine`)
+- `research/books/` — **10 cuốn chưng cất (2026-08-06)**: Schwartz/Whitman/Sugarman/Heath/Great Leads (copy) · Sharp/Binet-Field (chiến lược brand) · CRE/Kohavi (chẩn đoán + kỷ luật đọc số) · Sutherland (động cơ ngầm). Viết RSA/LP/đọc số: tra ở đây trước khi tự nghĩ.
 - **Lead: NGOÀI PHẠM VI hệ (chốt 2026-08-05)** — bỏ Keap API, hệ KHÔNG đo lead; user tự quản lý lead riêng. Pipeline ECL trong `tracking/` đóng băng.
 - **Google Ads API ĐÃ KẾT NỐI (2026-08-05)** — credential `~/google-ads-smartland.yaml`, venv `.venv-ads/`, API v24. Account đang dùng: `6918288556` (SMR- Sun Galaxy, VND — campaign `BDS_Search_Brand_DuAn` **ĐANG CHẠY từ 2026-08-06**, hồ sơ: `projects/beachtro-tower/`). Gọi bằng script Python qua helper `scripts/ads_client.py` (client/retry/đổi VND↔micros), KHÔNG dùng MCP `google-ads` (ghim MCC khác). Bẫy API v24 (micros, EU political field, negative account = shared set, RSA bất biến, verify-gate cho ảnh/logo…): `SETUP.md §1`.
 - MCP: dùng `analytics-ga4` + `clarity` + `gtm`. Credentials xem `SETUP.md`

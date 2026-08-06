@@ -64,6 +64,14 @@ Bộ từ khóa là **tài sản sống**: tuần → search terms report qua MC
 
 Checklist ngày/tuần/tháng/quý chi tiết: `research/google-ads-bds-vn.md` mục 8. Tuần: T2 search terms → negative; T3 lead quality (contact rate, ECL upload); T4 hiệu suất theo intent tier; T5 auction insights + LP; T6 báo cáo + 1 hypothesis.
 
+## 5b. Chiến lược brand SÀN vs brand DỰ ÁN (chốt khung 2026-08-06 — `research/books/how-brands-grow.md` + `long-and-short.md`)
+
+- **Hai tầng, không cạnh tranh ngân sách**: cưỡi brand DỰ ÁN ở tầng mua traffic (mental availability nằm ở tên CĐT/đại đô thị — bằng chứng: `blanca city` 18.520 lượt/tháng vs `beachtro` 0); xây brand SÀN ở tầng tài sản (nhận diện SmartRealtors trên LP/tư vấn/sau bán).
+- ⚠️ **Quảng cáo brand dự án là hàng hoá công cộng** — mọi sàn cùng phân phối đều hưởng bộ ký ức mình bơm; chỉ phần mang nhận diện SmartRealtors là của mình. Cưỡi brand người khác = hết dự án về 0.
+- **Chưa chi media xây brand sàn** ở bậc ngân sách hiện tại (dưới mọi ngưỡng reach; lối cho ngân sách nhỏ là fame/creativity, không phải mua media). **Mốc xét lại: ≥3 dự án chạy song song.**
+- BĐS thuộc nhóm "recency mạnh" (Sharp fn.70): khách lọc bỏ quảng cáo tới sát lúc mua → 85% ngân sách bottom-funnel là ĐÚNG cho ngành này, không phải thiếu sót. Tăng trưởng = penetration (loyalty trần ở 1) — reach trong đúng tệp đang tìm, không nuôi tệp cũ.
+- Kỷ luật đo: mọi so sánh kênh dưới ~6 tháng nghiêng về activation — cấm dùng CPL tuần để phán brand vs performance (`playbook/monitoring.md` phụ lục).
+
 ## 6. User cần cung cấp / quyết định
 
 1. ~~Apply developer token~~ ✅ **XONG (2026-08-05): Google Ads API đã kết nối** — developer token Smartland + refresh_token, credential `~/google-ads-smartland.yaml`, account `6918288556`. Đọc được campaign/chi phí/IS/search terms/keyword+QS; **auction insights KHÔNG đọc được** (allowlist Google đã đóng → tải tay hằng tuần). Nghiệm thu: `projects/beachtro-tower/nghiem-thu.md`. Vẫn nên link Ads ↔ GA4 property để ghép hành vi on-site với chi phí (cần quyền Quản trị Ads — chưa có).

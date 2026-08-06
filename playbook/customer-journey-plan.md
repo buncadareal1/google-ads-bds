@@ -245,6 +245,9 @@ Mọi kill rule và quyết định scale đều neo vào `CPL mục tiêu` này
 | CAC/booking | dẫn xuất | | | |
 | Search impression share | Google Ads | | | |
 | Lost IS (budget) vs (rank) | Google Ads | | | |
+| **Chiết khấu/quà TB phải bỏ ra để chốt 1 booking** | **CRM/sale, nhập tay** | | | |
+
+> Dòng chiết khấu (thêm 2026-08-06, Binet-Field): lợi nhuận của brand mạnh nằm ở GIÁ chứ không ở volume — 30 năm dữ liệu IPA không có case direct-response nào giảm được độ nhạy giá. Với sàn, biến tương đương là mức chiết khấu/quà để chốt deal; không ghi số này thì không bao giờ thấy được brand equity đang rẻ đi hay đắt lên. Chi tiết: `research/books/long-and-short.md`.
 
 > **Nguồn chân lý** (`attribution`): **CRM quyết định số lượng conversion.** GA4 và Google Ads chỉ giải thích *đến từ đâu*. **Không cộng dồn** conversion giữa các nguồn. Với chu kỳ 3–12 tháng, luôn báo cáo **first-touch và last-touch cạnh nhau** — khoảng cách giữa hai con số chính là insight. Bổ sung câu "Anh/chị biết dự án qua đâu?" trong form/cuộc gọi đầu (self-reported) — đây là thứ duy nhất bắt được truyền miệng và Zalo group, vốn rất lớn trong BĐS VN.
 

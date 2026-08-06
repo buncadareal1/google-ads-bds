@@ -140,3 +140,16 @@ Cả 6 anchor đã đối chiếu với HTML thật của LP — đều tồn t�
 → **Việc cần làm:** (1) kiểm trên UI `Tài sản → Hình ảnh` — nếu UI cũng không cho gắn thì xác nhận chẩn đoán; (2) sau khi xác minh nhà quảng cáo xong + campaign chạy 1–2 tuần, **chạy lại lệnh gắn `AD_IMAGE`** — đường gọi đã đúng, chỉ chờ tài khoản đủ điều kiện.
 
 **Location**: bỏ qua — chưa có Google Business Profile đã xác minh. Smartland có VP Vũng Tàu (GA.01.16 Chung cư Gateway, P. Nguyễn An Ninh) → tạo GBP rồi quay lại gắn.
+
+
+## Bộ đề xuất vòng 2 — CHỜ DUYỆT + chờ hết tuần-1 freeze (task #22)
+
+Nguồn: 10 cuốn `research/books/` (2026-08-06). Ad thật CHƯA đổi. Khi áp: thêm thành **RSA thứ 2** mỗi ad group (slot đã chừa), ≤2 câu/vòng, đọc lại `ad_strength` sau mỗi vòng. ⚠️ 2 RSA cùng ad group KHÔNG phải A/B test (Kohavi) — mục đích là đa dạng tài sản, không kết luận bộ nào "thắng" từ impression split.
+
+**Vai trò ad group (Schwartz):** `brand-beachtro-tower` = **thu hoạch** (0 volume, hứng khi CĐT truyền thông tên tòa — không kỳ vọng tăng trưởng); `brand-blanca-city` = tăng trưởng, headline phải **bắc cầu** Blanca → Beachtro.
+
+Headline ứng viên (đã kiểm ký tự): `Chỗ Cả Nhà Muốn Về Cuối Tuần` (28) · `Sáng Mở Mắt Đã Thấy Biển` (24) · `Nghỉ Hưu Bên Biển Vũng Tàu` (26) · `Sổ Hồng Lâu Dài Đứng Tên Bạn` (28) · `Hè Này Cả Nhà Ở Đâu?` (20) · `Đi Bộ Vài Phút Là Tới Biển` (26) · `Sở Hữu Lâu Dài, Không Thời Hạn` (30 — chỉ dùng sau khi verify đối thủ ven biển bán có thời hạn qua `research/competitors/`).
+
+Description ứng viên: `Nhận nhà 8/2028 — hè 2029 là mùa hè đầu tiên cả nhà không phải đặt phòng.` (75) · tông Deadly Sincerity: `Chủ đầu tư chưa công bố giá. Đăng ký để nhận đúng lúc bảng giá và chính sách ra.` (~80) · `Sáng mở cửa thấy biển, chiều cả nhà đi bộ ra bãi. Căn hộ sở hữu lâu dài tại Blanca City.` (88).
+
+**Hạn sử dụng:** ngày CĐT công bố giá → mọi câu "khi công bố" chết trong 24h, bộ thay phải sẵn trước ngày đó; ngày đó cũng là **bắt đầu kỳ đo mới** (cấm so CPL trước/sau).
