@@ -140,4 +140,5 @@ Rủi ro còn lại nếu Google vẫn từ chối vì thiếu thông tin doanh 
 | 2026-08-06 | Lấy volume thật từ Keyword Planner: **18.520** lượt/tháng, **toàn bộ ở "blanca city"**; "beachtro" = 0 |
 | 2026-08-06 | Chốt phạm vi bán = chỉ căn hộ → 15 negative cấp campaign chặn biệt thự/shophouse/nhà phố/liền kề/đất nền/condotel |
 | 2026-08-06 | Dựng campaign qua API (PAUSED): 2 ad group, 81 kw, 2 RSA, 6 sitelink anchor nội bộ, 8 callout, 2 snippet, call asset, UTM template, 382 negative account |
+| 2026-08-06 | Target tuổi **35+** (loại 18-24, 25-34; GIỮ Unknown) — chốt user. +13 negative campaign chặn khách du lịch (vé/Sun World/công viên nước/tắm biển/resort) + thứ cấp (thanh lý/chuyển nhượng) → 28 negative campaign |
 | 2026-08-06 | Ad Strength: POOR/AVERAGE → **GOOD cả 2** (bỏ ghim H1 + đa dạng headline + vòng 2 nhồi keyword bộ beachtro). Ảnh: 4 file trong thư viện, tài khoản chưa đủ điều kiện gắn (UI không có mục Hình ảnh) — retry sau xác minh + 1-2 tuần chạy |
