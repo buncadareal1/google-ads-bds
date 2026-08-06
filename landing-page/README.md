@@ -53,7 +53,7 @@ Thứ tự phần tử bắt buộc trong màn hình đầu:
 Ma trận 7 tiêu chí dưới đây là **danh sách best practice** — nó cho biết trang thiếu gì so với chuẩn, KHÔNG cho biết *vì sao khách của trang này không chuyển đổi*. Áp best practice mù = "marketing malpractice": mỗi objection là ổ khoá, mỗi giải pháp là chìa — chìa sai còn làm loãng đoạn duy nhất cứu được deal. Chi tiết + bộ kỹ thuật chẩn đoán: `research/books/making-websites-win.md`.
 
 Luật khi LP đã có traffic:
-1. **Chẩn đoán tối thiểu trước khi chấm điểm/sửa**: câu hỏi vàng *"Điều gì suýt khiến anh/chị KHÔNG đăng ký?"* hỏi 20–30 người ĐÃ đăng ký (sale hỏi trong cuộc gọi đầu, 0đ) + Clarity heatmap/recording (đọc web UI, không tốn quota API). Đừng hỏi người bỏ đi — câu trả lời của họ là cá trích đỏ.
+1. **Chẩn đoán tối thiểu trước khi chấm điểm/sửa**: câu hỏi vàng *"Điều gì suýt khiến anh/chị KHÔNG đăng ký?"* hỏi 20–30 người ĐÃ đăng ký (sale hỏi trong cuộc gọi đầu, 0đ) + Clarity heatmap/recording (đọc web UI, không tốn quota API). Đừng hỏi người bỏ đi — câu trả lời của họ là cá trích đỏ. ⚠️ Và đọc câu trả lời theo kiểu **lateral, không literal** (Alchemy): khách mô tả đúng *cảm xúc* nhưng thường sai *nguyên nhân* — "chưa có giá nên chưa đăng ký" rất có thể nghĩa thật là "chưa đủ tin để đưa SĐT". Lý do được sinh ra SAU quyết định để biện minh, không phải trước.
 2. Lập bảng **O/CO** (objection ↔ counterobjection) xếp theo tần suất → mỗi lần sửa LP nhắm đúng 1 objection mạnh nhất.
 3. **Traffic thấp thì cấm "meek tweaking"**: cải thiện 10–20% mất hàng tháng mới đo ra — chỉ đổi táo bạo có mục tiêu, và khi mọi A/B test sẽ mất >6 tháng thì **chỉ dùng user test**.
 4. **Future pacing cạnh form** (khoảng trống hay gặp nhất): nói rõ khách sẽ nhận gì, khi nào, qua kênh nào, SĐT được dùng thế nào — ma trận hiện dừng đúng ở nút submit.
@@ -77,6 +77,20 @@ dùng** nếu cơ cấu traffic đổi giữa 2 kỳ (campaign mới bật, mix 
 theo từng campaign (hoặc chỉ Search) + tỷ lệ hoàn tất form theo thiết bị, cùng khung ngày. Kiểm luôn xem
 2 kỳ có ngày tracking gãy hoặc thẻ đo trùng lặp làm nhiễu mẫu số không (đối chiếu lịch sử GTM) trước khi
 tin bất kỳ con số nào.
+
+## Yếu tố 4: Dòng chảy & độ dính của copy (Sugarman + Heath + Sutherland, chưng cất 2026-08-06)
+
+Chi tiết: `research/books/adweek-copywriting.md` (slippery slide) · `made-to-stick.md` (SUCCESs + bảng dữ kiện→bản dính) · `alchemy.md` (psycho-logic). Luật rút gọn:
+
+1. **Slippery slide**: mỗi phần tử LP chỉ có 1 nhiệm vụ — đẩy người đọc sang phần tử kế. **Câu đầu tiên ≤12 chữ, không dữ kiện, không tên dự án, không CTA** — nhiệm vụ duy nhất của nó là khiến câu thứ hai được đọc.
+2. **"Số đứng sau cảnh"** (hoà giải Heath×luật số-ở-màn-hình-đầu): cảm xúc mua, lý trí biện minh → block mở đầu chạm *cảnh* ("sáng mở cửa thấy biển"), các con số (1.785 căn, 8/2028, khoảng giá khi có) đứng NGAY SAU để biện minh — giữ đủ số, chỉ đổi thứ tự. Số vẫn phải trong màn hình đầu theo luật cũ.
+3. **Bán thuốc chữa, không bán thuốc phòng** (Sugarman axiom 15): "sống cạnh biển" = thuốc phòng, khách gật rồi thôi; **nỗi đau có thật + giải pháp thật** (sợ hết hạn sở hữu → sổ hồng lâu dài) mới là trục bán. Mỗi LP phải chỉ ra được đâu là "thuốc chữa" của nó.
+4. **Trục "chắc chắn hơn" thay trục "tốt hơn"** (Alchemy — satisficing): với món 2-3 tỷ bàn giao sau 2 năm, câu hỏi vô thức của khách 35+ là *"ai bán mà tôi không bị lừa?"*, không phải *"căn nào tốt nhất?"*. Block trust (CĐT, pháp lý, đơn vị phân phối, cam kết hành vi) trả lời câu này — và nó **không cần bảng giá**.
+5. **Satisfaction conviction cạnh form** (Sugarman — được đo nhân đôi response): cam kết vượt mức về hành vi — "không spam, chỉ gọi trong giờ trực 08:00–21:00, không ép cọc". Khác future pacing (nói nhận gì); đây là nói *chúng tôi sẽ KHÔNG làm gì*.
+6. **Kết luận để khách tự rút** (mental engagement): nêu dữ kiện ("sổ hồng lâu dài, đứng tên bạn") rồi DỪNG — không viết câu so sánh với dự án khác. Mạnh hơn và an toàn nhãn hiệu hơn.
+7. **Kiểm độ dính khi chưa có traffic**: đọc to 200 chữ đầu của LP — vấp ở đâu, khách vấp ở đó. Mỗi thông số phải có bản "cảm được" (human scale): không viết "96 ha" trần, viết bản quy đổi đời thường kèm theo.
+
+⚠️ Những gì 3 cuốn này KHÔNG được phép đụng: 6 luật `tracking/` (Sutherland chống *mô hình*, không chống *thí nghiệm* — chính ông mở sách bằng một A/B test); luật "deadline chỉ dùng khi thật"; cấm so sánh giá kiểu "bằng tiền khách sạn mỗi hè" khi CHƯA công bố giá (hàm ý hoàn vốn = vi phạm ràng buộc ad-copy).
 
 ## Ma trận đánh giá CRO (chấm điểm LP — dùng khi nghiệm thu, so sánh phiên bản, hoặc audit đối thủ)
 
