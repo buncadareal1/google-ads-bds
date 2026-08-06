@@ -19,6 +19,23 @@ Developer token của Smartland + OAuth refresh_token đã ráp xong. **File cre
 
 ⚠️ `LAST_90_DAYS` KHÔNG phải date literal hợp lệ trong GAQL — dùng `LAST_30_DAYS` hoặc `segments.date BETWEEN "..." AND "..."`.
 
+### Bẫy API v24 đã vấp thật (dựng campaign Beachtro 2026-08-06) — đọc trước khi VIẾT lên tài khoản
+
+Mọi script mới: dùng `scripts/ads_client.py` (client + retry + đổi VND↔micros) thay vì viết lại boilerplate.
+
+| # | Bẫy | Cách đúng |
+|---|---|---|
+| 1 | **Đơn vị micros**: 1 VND = 1.000.000 micros. Đặt `amount_micros=1_000_000` tưởng là 1tr đ nhưng thực ra là **1.000 đ** — lỗi im lặng, campaign vẫn tạo được | `vnd(1_000_000)` từ `ads_client.py`. Sau mọi mutate tiền bạc: **đọc lại bằng search để nghiệm thu** |
+| 2 | Tạo campaign báo `REQUIRED ... contains_eu_political_advertising` | v24 bắt buộc: `cp.contains_eu_political_advertising = DOES_NOT_CONTAIN_EU_POLITICAL_ADVERTISING` |
+| 3 | Negative cấp tài khoản: `CustomerNegativeCriterion.keyword` → `Unknown field` | Đường đúng 3 bước: `SharedSet` type `ACCOUNT_LEVEL_NEGATIVE_KEYWORDS` → nhét keyword bằng `SharedCriterionService` → gắn set bằng `CustomerNegativeCriterion.negative_keyword_list`. Đang dùng: set `NEG_BDS_Account_v1` (12184898936, 382 kw) |
+| 4 | **RSA bất biến** — không sửa được headline của ad đã tạo | Sửa = tạo ad mới + remove ad cũ (2 operation) |
+| 5 | Ảnh + logo doanh nghiệp bị `UNSUPPORTED_FIELD_TYPE` / `Customer is not verified` | KHÔNG phải lỗi code — `AD_IMAGE`/`BUSINESS_LOGO` yêu cầu **đã xác minh nhà quảng cáo**. Upload vào thư viện được ngay, gắn thì phải chờ verify. UI cũng không có mục Hình ảnh khi chưa verify |
+| 6 | Structured snippet header tiếng Việt bị `invalid string value` | Header phải thuộc danh sách định sẵn. **Hợp lệ (đã probe)**: Tiện nghi, Thương hiệu, Điểm đến, Chương trình, Khóa học, Khách sạn nổi bật. KHÔNG hợp lệ: Loại hình, Kiểu dáng, Khu dân cư, Danh mục dịch vụ |
+| 7 | `mutate_assets(..., validate_only=True)` → `unexpected keyword` | `validate_only` là field của **request object**: `req=get_type("MutateAssetsRequest"); req.validate_only=True; svc.mutate_assets(request=req)` |
+| 8 | Thi thoảng `503 UNAVAILABLE ... ipv6 Network is unreachable` | Lỗi mạng tạm thời của máy, không phải tài khoản — `retry()` trong `ads_client.py` |
+| 9 | **Keyword Planner hoạt động ngay** với credential hiện tại (không cần quyền thêm) | `KeywordPlanIdeaService.generate_keyword_historical_metrics` (volume bộ kw có sẵn) + `generate_keyword_ideas` (mở rộng). VN = geo `2704`, tiếng Việt = lang `1040` |
+| 10 | Ad Strength đọc được qua API, kèm gợi ý sửa | `ad_group_ad.ad_strength` + `ad_group_ad.action_items`. **Ghim H1 = tụt thẳng POOR** — xem `campaign-setup.md §3` (đã sửa luật ghim 2026-08-06) |
+
 ### Bổ trợ: chỉ số qua GA4 (không bắt buộc nữa, vẫn nên link)
 
 **Việc cần làm 1 lần cho mỗi dự án:** GA4 → Admin → **Product links → Google Ads links → Link** → chọn tài khoản Google Ads → bật *Enable personalized advertising* + *Enable auto-tagging*. Cần quyền Admin ở cả GA4 lẫn Google Ads.

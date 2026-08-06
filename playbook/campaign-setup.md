@@ -289,10 +289,17 @@ Cột **Trần** = số ký tự tối đa của `{Tên dự án}` / `{Quận}` 
 
 Khi viết bộ RSA cho dự án mới: chấm ABCD trước khi chạy script đếm ký tự §3.5. Thiếu **C** là lỗi hay gặp nhất và cũng làm giảm asset diversity (đầu vào của Ad Strength).
 
+> 🔧 **ĐỔI LUẬT GHIM (2026-08-06, kiểm chứng thật trên campaign Beachtro):** bản cũ của file này dạy "ghim H1 = headline #1 để khoá message match" — làm đúng như vậy thì Google chấm Ad Strength **POOR** ngay (ghim là hình phạt nặng nhất trong cách chấm). Bỏ ghim + đa dạng hoá headline → **GOOD**. Luật mới:
+> 1. **Mặc định KHÔNG ghim.** Message match giữ bằng cách khác: *mọi* headline trong bộ đều phải hợp lệ để đứng vị trí 1 — không viết câu chỉ hợp làm câu phụ.
+> 2. Tên dự án xuất hiện ~3/15 headline là đủ nhận brand; 7/15 câu mở đầu bằng tên dự án = Google chấm "thiếu đa dạng".
+> 3. Chỉ ghim khi buộc phải có câu không đứng đầu được (disclaimer, số hiệu giấy phép) — và chấp nhận Ad Strength tụt.
+> 4. Ad Strength **GOOD là đích, đừng đuổi Excellent** — muốn lên nữa phải nhồi keyword vào description làm câu gượng, trong khi Ad Strength không vào Ad Rank/QS (`research §7b`).
+> 5. Đọc điểm + gợi ý qua API: `ad_group_ad.ad_strength` + `ad_group_ad.action_items`.
+
 ### 3.1 Bộ 1 — Brand dự án (ad group `brand-<slug>`, modifier *bảng giá*)
 
 Message match `adgroup-map.md`: headline chứa **tên dự án + "Bảng Giá Mới Nhất"** → LP scroll tới block **bảng giá + form tải bảng giá**.
-Final URL: `https://<lp>/<slug-du-an>/` · Path1: `bang-gia` · Path2: `2026` · Pinning: **H1 = headline #1** (khoá message match), còn lại không ghim.
+Final URL: `https://<lp>/<slug-du-an>/` · Path1: `bang-gia` · Path2: `2026` · Pinning: **KHÔNG ghim** (đổi luật 2026-08-06, xem hộp dưới §3).
 
 | # | Headline | Ký tự | Trần |
 |---|---|---|---|
@@ -322,7 +329,7 @@ Final URL: `https://<lp>/<slug-du-an>/` · Path1: `bang-gia` · Path2: `2026` ·
 ### 3.2 Bộ 2 — Giao dịch khu vực (ad group `<khu-vực>--gia-bang-gia`)
 
 Message match: **loại hình + khu vực + "Giá Từ … ₫"** → LP block **bảng giá**.
-Final URL: `https://<lp>/can-ho-<slug-khu-vuc>/` · Path1: `can-ho` · Path2: `bang-gia` · Pinning: **H1 = headline #1**.
+Final URL: `https://<lp>/can-ho-<slug-khu-vuc>/` · Path1: `can-ho` · Path2: `bang-gia` · Pinning: **KHÔNG ghim**.
 
 | # | Headline | Ký tự | Trần `{Quận}` |
 |---|---|---|---|
@@ -354,7 +361,7 @@ Khu vực dài (`Bình Dương` 10, `Thủ Đức` 7, `Long Biên` 9) → kiểm
 ### 3.3 Bộ 3 — Tài chính / trả góp (ad group `tai-chinh`, `<khu-vực>--tai-chinh`)
 
 Message match: **"Trả Góp – Hỗ Trợ Vay …%"** → LP block **chính sách vay**.
-Final URL: `https://<lp>/<slug>/tra-gop/` · Path1: `tra-gop` · Path2: `ho-tro-vay` · Pinning: **H1 = headline #1**.
+Final URL: `https://<lp>/<slug>/tra-gop/` · Path1: `tra-gop` · Path2: `ho-tro-vay` · Pinning: **KHÔNG ghim**.
 
 | # | Headline | Ký tự | Trần |
 |---|---|---|---|
@@ -423,7 +430,9 @@ Sitelink phải trỏ **anchor trên chính LP**, không sang trang khác — gi
 **Location (1)** — cấp tài khoản. `Quản trị → Tài sản → + → Vị trí` → liên kết **Hồ sơ doanh nghiệp** (Google Business Profile) đã xác minh của văn phòng/nhà mẫu.
 Chưa có GBP đã xác minh → **bỏ qua**, không tạo hồ sơ ảo (rủi ro đình chỉ). Tạo GBP thật rồi quay lại gắn.
 
-*Structured snippet, Price, Promotion asset: bỏ qua ngày 1 — thêm khi có chính sách bán hàng cố định ≥1 tháng.*
+*Price, Promotion asset: bỏ qua ngày 1 — thêm khi có chính sách bán hàng cố định ≥1 tháng.*
+
+**Structured snippet — dùng được ngày 1**, nhưng header phải thuộc danh sách Google định sẵn. Header **hợp lệ cho tiếng Việt** (probe API 2026-08-06): `Tiện nghi`, `Thương hiệu`, `Điểm đến`, `Chương trình`, `Khóa học`, `Khách sạn nổi bật`. `Loại hình` / `Kiểu dáng` / `Khu dân cư` / `Danh mục dịch vụ` bị từ chối — đừng thử lại.
 
 ### 3.5 Kiểm ký tự sau khi điền placeholder (bắt buộc trước khi dán)
 
@@ -599,7 +608,7 @@ Nguồn: [About PMax](https://support.google.com/google-ads/answer/10724817?hl=e
 ### 5.6 AI Max — 3 điều kiện cứng trước khi bật
 
 1. **Bắt buộc conversion-based bidding.** Google: "The Search Term Matching feature in AI Max **will not work with manual CPC bidding**." → ở bậc Max Clicks/Manual CPC thì **bật cũng vô nghĩa**, phải qua tCPA/tROAS trước (§4.4).
-2. **Pinning H1 bị BỎ QUA** nếu bật cả `text customization` + `final URL expansion`, hoặc khi có URL inclusions. Message match của hệ khoá bằng pinning H1 (§3.1-3.3) → **giữ quyết định TẮT final URL expansion**, giờ có lý do thứ 2 ngoài "không lạc trang".
+2. **Pinning H1 bị BỎ QUA** nếu bật cả `text customization` + `final URL expansion`, hoặc khi có URL inclusions. ~~Message match của hệ khoá bằng pinning H1~~ (luật ghim đã bỏ 2026-08-06 — message match giờ khoá bằng "mọi headline đều on-message", xem hộp §3) → **vẫn giữ quyết định TẮT final URL expansion** vì lý do "không lạc trang".
 3. **Rà chéo negative account-level ↔ brand inclusions TRƯỚC khi bật** — Google cảnh báo negative trùng brand inclusion làm giảm hiệu suất. Negative keyword vẫn được tôn trọng khi bật AI Max ("Negative keywords will be respected even with AI Max turned on"), nhưng trùng lặp với brand inclusion thì tự chặn mình.
 
 Báo cáo sau khi bật: search terms report **vẫn đầy đủ** + có match type mới `AI Max` và cột `source` (broad expansion vs keywordless) — xem `research` §1.

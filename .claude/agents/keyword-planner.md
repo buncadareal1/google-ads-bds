@@ -21,7 +21,21 @@ Bạn là Keyword Planner chuyên trách của hệ thống Google Ads BĐS VN t
 
 ## Nguồn dữ liệu theo thứ tự ưu tiên
 1. **Search terms report thật** — Google Ads API đã kết nối (2026-08-05, xem `SETUP.md §1`): chạy GAQL `FROM search_term_view` bằng `.venv-ads/bin/python` + `~/google-ads-smartland.yaml`, account `6918288556`, luôn set `client.login_customer_id`. ⚠️ Chỉ chạy được ở **máy local** — trên Cowork thì viết sẵn script cho user chạy, hoặc đọc file CSV user export sẵn trong `projects/<slug>/data/ads/search-terms/<yyyy-mm-dd>.csv`. Chưa có campaign nào (2026-08-05) → chưa có search terms, dùng nguồn 2-4.
-2. **Keyword Planner / DataForSEO** — khi MCP được cấu hình (xem `research/mcp-servers.md`: DataForSEO location_code 1028581 = Vietnam, languageConstants/1040 = Vietnamese). Load schema qua ToolSearch trước khi gọi.
+2. **Keyword Planner qua Google Ads API — ✅ ĐÃ CHẠY THẬT (2026-08-06), dùng credential sẵn có, không cần quyền thêm.** Local-only. Khuôn:
+   ```python
+   import sys; sys.path.insert(0, 'scripts')
+   from ads_client import client, retry, ACCOUNT
+   c = client(); svc = c.get_service("KeywordPlanIdeaService"); gas = c.get_service("GoogleAdsService")
+   # Volume/CPC cho bộ keyword CÓ SẴN:
+   req = c.get_type("GenerateKeywordHistoricalMetricsRequest")
+   req.customer_id = ACCOUNT; req.keywords.extend(danh_sach_kw)
+   req.language = gas.language_constant_path("1040")                      # tiếng Việt
+   req.geo_target_constants.append(gas.geo_target_constant_path("2704")) # Việt Nam
+   req.keyword_plan_network = c.enums.KeywordPlanNetworkEnum.GOOGLE_SEARCH
+   # -> r.keyword_metrics: avg_monthly_searches, competition, low/high_top_of_page_bid_micros (micros/1e6 = đ)
+   # Mở rộng ý tưởng: GenerateKeywordIdeasRequest + keyword_seed.keywords
+   ```
+   Kết quả ghi vào `projects/<slug>/keywords/brand.csv` theo 5 cột chuẩn (`vol_thang`, `canh_tranh`, `bid_thap_d`, `bid_cao_d`, `ngay_do_volume` — quy ước `projects/README.md`), đo lại mỗi quý. File `.tsv` import giữ đúng 4 cột, KHÔNG nhét cột volume. Fallback khi không có API: DataForSEO qua MCP (location 1028581, lang 1040 — `research/mcp-servers.md`).
 3. **Web research** — dự án mở bán mới (cafeland.vn theo tỉnh, cafef, CĐT), mỗi dự án xác nhận ≥2 nguồn độc lập trước khi vào projects.tsv. batdongsan.com.vn và dothi.net chặn fetch (403).
 4. **Google autocomplete/People Also Ask** — cho long-tail (phương pháp trong skill kw-research).
 

@@ -32,19 +32,28 @@ Muốn giữ ngày thêm gốc cho từng keyword (thay vì ngày regenerate), s
 
 ---
 
-## Hàng tuần — đọc search terms qua MCP `google-ads`
+## Hàng tuần — đọc search terms qua Google Ads API
 
-MCP server official (`googleads/google-ads-mcp`) expose 3 tool: **`search`** (chạy GAQL), `get_resource_metadata`, `list_accessible_customers`. Toàn bộ vòng lặp dưới đây dùng `search`.
+⚠️ **KHÔNG dùng MCP `google-ads`** (ghim MCC khác — CLAUDE.md). Chạy GAQL bằng script Python: `.venv-ads/bin/python` + helper `scripts/ads_client.py` (client/retry/account có sẵn — bẫy API xem `SETUP.md §1`). Khuôn:
+
+```python
+import sys; sys.path.insert(0, 'scripts')
+from ads_client import client, retry, ACCOUNT
+c = client()
+rows = retry(lambda: list(c.get_service("GoogleAdsService").search(customer_id=ACCOUNT, query=Q1)))
+```
+
+Toàn bộ vòng lặp dưới đây là các query GAQL — dán vào khuôn trên.
 
 > 📉 **Search terms report LUÔN ẩn term ít volume** vì privacy threshold ([About the search terms report](https://support.google.com/google-ads/answer/2472708?hl=en): "Some search terms that don't have enough query activity are omitted… in order to keep with our standards on data privacy"). Ba hệ quả áp thẳng vào vòng lặp này:
-> 1. Tổng click cộng từ `search_term_view` **< tổng click của `campaign`**. **Không phải bug** — đừng đi tìm lỗi GAQL, đừng báo "MCP trả thiếu dữ liệu".
+> 1. Tổng click cộng từ `search_term_view` **< tổng click của `campaign`**. **Không phải bug** — đừng đi tìm lỗi GAQL, đừng báo "API trả thiếu dữ liệu".
 > 2. Negative list **không bao giờ phủ hết**. Luôn còn rò rỉ dư. Mục tiêu là **giảm dần**, không phải "0 term rác" — đặt mục tiêu 0 là tự tạo việc vô hạn.
 > 3. Mọi báo cáo tự động (`playbook/monitoring.md`) phải khai rõ đang đọc `search_term_view` hay `campaign`, và **không được** trừ hai con số đó cho nhau rồi kết luận gì.
 > Điều này áp cho **mọi** Search campaign, kể cả khi bật AI Max — không phải hạn chế riêng của AI Max (`research/google-ads-bds-vn.md` §1).
 
 Trong Claude Code, prompt mẫu:
 
-> Dùng MCP `google-ads` tool `search` trên customer `<CUSTOMER_ID>` chạy query dưới đây, rồi phân loại kết quả thành 3 nhóm: (1) search term nên thêm làm keyword mới, (2) nên thêm làm negative, (3) bỏ qua.
+> Chạy query GAQL dưới đây trên account `6918288556` (khuôn `ads_client.py` ở đầu mục), rồi phân loại kết quả thành 3 nhóm: (1) search term nên thêm làm keyword mới, (2) nên thêm làm negative, (3) bỏ qua.
 
 ### Q1 — Search term đốt tiền nhưng không ra lead → nguồn negative
 

@@ -11,7 +11,7 @@ Dự án mới = copy `projects/_TEMPLATE/` thành `projects/<slug>/` + thêm d�
 - `landing-page/` — **làm/review/audit LP: đọc `landing-page/README.md` TRƯỚC** (message match, above the fold, khung phân tích điểm yếu CVR, checklist nghiệm thu 10 mục)
 - `content/` — bài SEO hỗ trợ (chuẩn `seo-machine`)
 - **Lead: NGOÀI PHẠM VI hệ (chốt 2026-08-05)** — bỏ Keap API, hệ KHÔNG đo lead; user tự quản lý lead riêng. Pipeline ECL trong `tracking/` đóng băng.
-- **Google Ads API ĐÃ KẾT NỐI (2026-08-05)** — credential `~/google-ads-smartland.yaml`, venv `.venv-ads/`, API v24. Account đang dùng: `6918288556` (SMR- Sun Galaxy, VND, **trống — chưa có campaign**). Gọi bằng script Python, KHÔNG dùng MCP `google-ads` (ghim MCC khác). Luôn set `client.login_customer_id = ACCOUNT`. Chi tiết + bẫy: `SETUP.md §1`.
+- **Google Ads API ĐÃ KẾT NỐI (2026-08-05)** — credential `~/google-ads-smartland.yaml`, venv `.venv-ads/`, API v24. Account đang dùng: `6918288556` (SMR- Sun Galaxy, VND — campaign `BDS_Search_Brand_DuAn` **ĐANG CHẠY từ 2026-08-06**, hồ sơ: `projects/beachtro-tower/`). Gọi bằng script Python qua helper `scripts/ads_client.py` (client/retry/đổi VND↔micros), KHÔNG dùng MCP `google-ads` (ghim MCC khác). Bẫy API v24 (micros, EU political field, negative account = shared set, RSA bất biến, verify-gate cho ảnh/logo…): `SETUP.md §1`.
 - MCP: dùng `analytics-ga4` + `clarity` + `gtm`. Credentials xem `SETUP.md`
 - Cowork (cloud): quy tắc làm việc + prompt khởi động trong `COWORK.md` — push nhánh `cowork/*`, không push main
 
