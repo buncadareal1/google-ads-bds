@@ -33,13 +33,13 @@ Final URL `https://smartrealtors.vn/beachtro-tower-blanca-city/` · Path1 `bang-
 | 1 | Beachtro Tower Blanca City | 26 |
 | 2 | Bảng Giá Beachtro Tower | 23 |
 | 3 | Căn Hộ Sở Hữu Lâu Dài | 21 |
-| 4 | Bốn Tòa E6-E9 Vũng Tàu | 22 |
+| 4 | Căn Hộ Beachtro Vũng Tàu | 24 |
 | 5 | Nhận Bảng Giá Khi Công Bố | 25 |
 | 6 | Tòa Căn Hộ Cuối Của Blanca | 26 |
-| 7 | Mặt Bằng Từng Loại Căn | 22 |
+| 7 | Mặt Bằng Căn Hộ Beachtro | 24 |
 | 8 | Chọn Căn Cho Gia Đình Bạn | 25 |
 | 9 | Sun Group Phát Triển | 20 |
-| 10 | Tiến Độ Bàn Giao 8/2028 | 23 |
+| 10 | Tháp Beachtro Bàn Giao 8/2028 | 29 |
 | 11 | Tư Vấn Chọn Căn Miễn Phí | 24 |
 | 12 | 1.785 Căn Hộ Sổ Hồng | 20 |
 | 13 | Đăng Ký Nhận Bộ Thông Tin | 25 |
@@ -93,7 +93,9 @@ Final URL `https://smartrealtors.vn/beachtro-tower-blanca-city/` · Path1 `blanc
 Bộ đầu tiên bị Google chấm **Kém / Trung bình**. Hai nguyên nhân, đã sửa cả hai:
 
 1. **Ghim H1** — đây là hình phạt nặng nhất. Ghim khoá message match nhưng chặn Google xoay tổ hợp, Ad Strength tụt ngay. → **Bỏ ghim toàn bộ.** Message match vẫn giữ được vì *mọi* headline đều nói đúng về dự án, không có câu lạc đề.
-2. **Headline lặp tên dự án** — bản cũ có 7/15 câu mở đầu bằng "Beachtro Tower", Google coi là thiếu đa dạng. → Bản mới chỉ còn **1–2 câu** mở đầu bằng tên dự án; 15 câu phủ nhiều góc: sở hữu, quy mô, CĐT, vị trí, tiến độ, tiện ích, cảm xúc, CTA.
+2. **Headline lặp tên dự án** — bản cũ có 7/15 câu mở đầu bằng "Beachtro Tower", Google coi là thiếu đa dạng. → Bản mới phủ nhiều góc: sở hữu, quy mô, CĐT, vị trí, tiến độ, cảm xúc, CTA.
+
+**Kết quả chấm lại (2026-08-06):** bộ 2 `brand-blanca-city` → **GOOD (Tốt)** ✅. Bộ 1 `brand-beachtro-tower` → AVERAGE do headline ít chứa cụm keyword của ad group → vòng 2: nâng số headline chứa "beachtro" từ 2 lên **5/15** (thay #4, #7, #10), vẫn không ghim. ⚠️ Trần thực tế của bộ 1: toàn bộ keyword của ad group này **0 search volume** — yếu tố "popular keywords in headlines" của Ad Strength không có gì để bám. Nếu vòng 2 vẫn AVERAGE thì đó là trần của ad group 0-volume, **không sửa thêm** — Ad Strength không vào Ad Rank/QS.
 
 Đánh đổi đã chấp nhận: không ghim nghĩa là Google có thể chọn bất kỳ headline nào làm H1. Rủi ro thấp ở đây vì cả 15 câu đều hợp lệ để đứng đầu. **Nếu sau này thêm headline chỉ hợp làm câu phụ thì phải cân nhắc ghim lại** — và chấp nhận Ad Strength tụt.
 
