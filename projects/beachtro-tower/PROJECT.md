@@ -61,24 +61,25 @@ Ad copy 2 bộ RSA: `ad-copy.md`.
 
 ## 🔴 Blocker chặn launch (theo thứ tự)
 
+> **Chốt 2026-08-06: KHÔNG sửa GTM.** Chuỗi đo vẫn chạy — conversion Ads đến thẳng từ thẻ `awct` khi khách vào trang cảm ơn, không đi qua GA4. Giá phải trả: đếm trùng nếu F5 (bù bằng Count = Một), không dùng được Enhanced Conversions, không biết lead đến từ form/tòa nào. Chi tiết: `audit-lp.md`.
+
 | # | Việc | Ai làm |
 |---|---|---|
 | 1 | LP: thêm **footer pháp nhân + MST + địa chỉ** (thiếu = rủi ro disapproved) | user |
-| 2 | GTM: trigger Custom Event `generate_lead` cho cả tag Ads + GA4; đổi tên event GA4 `gui_form_beachtro_tower` → `generate_lead` | tôi (GTM API) |
-| 3 | GA4: **đánh dấu key event** `generate_lead` (hiện 0 key event) | user (GA4 UI) |
-| 4 | Ads: import **382 negative cấp tài khoản** (hiện 1 dòng) | tôi (Ads API) |
-| 5 | Ads: gắn **tracking URL template UTM** (hiện rỗng) | tôi (Ads API) |
-| 6 | **Gate G0**: bắn 1 lead test thật → GA4 Realtime có `generate_lead` · Ads có conversion ≤24h · Keap có `gclid` | user + tôi |
-| 7 | Dựng campaign `BDS_Search_Brand_DuAn` + 2 ad group + RSA + extensions, để **Tạm dừng** | tôi (Ads API) — **chờ user duyệt ngân sách** |
-| 8 | Nộp **xác minh nhà quảng cáo** (Tổ chức, 3–5 ngày) | user |
+| 2 | Ads: đặt `Số lượng` = **Một (One)** trên conversion `7709665581` — chống đếm trùng trang cảm ơn | tôi (Ads API) |
+| 3 | Ads: import **382 negative cấp tài khoản** (hiện 1 dòng) | tôi (Ads API) |
+| 4 | Ads: gắn **tracking URL template UTM** (hiện rỗng) | tôi (Ads API) |
+| 5 | **Gate G0**: bắn 1 lead test thật → Ads có conversion ≤24h · Keap có `gclid` | user + tôi |
+| 6 | Dựng campaign `BDS_Search_Brand_DuAn` + 2 ad group + RSA + extensions, để **Tạm dừng** | tôi (Ads API) — **chờ user chốt ngân sách** |
+| 7 | Nộp **xác minh nhà quảng cáo** (Tổ chức, 3–5 ngày) | user |
 
-## 🟡 Backlog tuần đầu (không chặn launch)
+## 🟡 Backlog (không chặn launch)
 
-- LP: thêm **link + sticky Zalo** (CTA chính của khách VN đang thiếu hẳn), bắn `zalo_click` / `phone_click`
-- Gắn **Clarity** vào container GTM
+- LP: thêm **link + sticky Zalo** — CTA chính của khách VN đang thiếu hẳn
+- GA4: đánh dấu key event (chỉ để báo cáo GA4 đọc được; Ads không phụ thuộc)
 - Link GA4 ↔ Google Ads (cần quyền Quản trị Ads)
 - Thêm 2 dropdown qualifying vào form **ngay khi có bảng giá**
-- Event `xem_bang_gia` / `xem_mat_bang` khi có bảng giá thật
+- Hoãn: Clarity · sửa GTM về registry · `xem_bang_gia` / `xem_mat_bang`
 
 ## Nhật ký
 

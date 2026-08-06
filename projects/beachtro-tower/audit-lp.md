@@ -27,7 +27,18 @@ Vì vậy hard gate *"không có khoảng giá ở bất kỳ đâu → không l
 
 **LP tự bắn dataLayer** (đọc từ bundle JS): `view_content` (page load), `form_start` (focusin), `generate_lead` (submit, kèm đủ `gclid/gbraid/wbraid/gad_source/gad_campaignid/utm_*/fbclid/msclkid/ttclid` + phone + email + `event_id` chống trùng).
 
-### 3 lỗi đo lường
+### ⚖️ Quyết định 2026-08-06: KHÔNG sửa GTM
+
+User chốt giữ nguyên container. Chuỗi đo hiện tại **vẫn chạy được**: khách submit → Keap redirect sang trang cảm ơn → thẻ `awct` bắn conversion thẳng về Ads. **Không đi qua GA4**, nên việc GA4 chưa có key event **không chặn launch**.
+
+Ba cái giá phải trả, chấp nhận có ý thức:
+1. **Đếm trùng nếu khách F5 hoặc quay lại trang cảm ơn.** Bù bằng cách đặt `Số lượng` (Count) = **Một (One)** trên conversion action `7709665581` — bắt buộc, không phải tùy chọn.
+2. **Không dùng được Enhanced Conversions** dù LP đã có sẵn phone/email trong payload → mất một phần khả năng ghép chuyển đổi trên iOS/trình duyệt chặn cookie.
+3. **Mất ngữ cảnh lead**: không biết lead đến từ form nào (7 form dùng chung 1 xid), tòa nào khách quan tâm, `src` nào. Muốn phân tích chuyện đó thì đọc bên Keap, không đọc được từ Ads/GA4.
+
+Ba mục dưới đây giữ lại làm **hồ sơ kỹ thuật** — mở lại khi user đổi ý.
+
+### 3 lỗi đo lường (đã quyết định không sửa)
 
 **#1 — Ba event dataLayer của LP KHÔNG có tag nào nhận.** Container chỉ có đúng 1 trigger, là pageview trang cảm ơn. Nghĩa là `generate_lead` — event giàu dữ liệu nhất, có sẵn `event_id` chống trùng và đủ tham số attribution — **rơi vào hư không**. Conversion hiện đếm bằng lượt xem trang cảm ơn: đúng số trong điều kiện bình thường, nhưng **đếm sai khi khách F5 hoặc quay lại trang cảm ơn** và **mất hết ngữ cảnh** (form nào, tòa nào, nguồn nào). Đây cũng là lý do không dùng được Enhanced Conversions dù LP đã có sẵn phone/email trong payload.
 
@@ -74,11 +85,10 @@ Endpoint `rhq551.infusionsoft.com/app/form/process/c661fd73838c0b58bfab553297fd7
 | # | Việc | Ai làm | Chặn launch? |
 |---|---|---|---|
 | 1 | Thêm **footer pháp nhân đầy đủ**: Công ty TNHH Bất động sản SmartRealtors and Partners + MST + địa chỉ + hotline | user (LP) | 🔴 **CÓ** |
-| 2 | Tạo trigger GTM **Custom Event `generate_lead`** → gắn cho cả tag Ads lẫn tag GA4; **đổi tên event GA4** `gui_form_beachtro_tower` → `generate_lead`; giữ trigger trang cảm ơn làm dự phòng nhưng chống trùng bằng `event_id` | tôi làm được qua GTM API | 🔴 **CÓ** |
-| 3 | **Đánh dấu key event** `generate_lead` trong GA4 property `548678683` | user (GA4 UI) | 🔴 **CÓ** — không có key event thì Ads không import được gì |
-| 4 | Thêm **link Zalo** + sticky bar Zalo/hotline trên mobile, bắn `zalo_click` / `phone_click` | user (LP) + tôi (GTM) | 🟡 không, nhưng mất CTA chính của khách VN |
-| 5 | Gắn **Clarity** vào container | tôi (GTM) | 🟡 không |
-| 6 | Bắn 1 lead test thật → xác nhận GA4 Realtime có `generate_lead`, Ads có conversion trong 24h, Keap có `gclid` (**gate G0**) | user + tôi | 🔴 **CÓ** |
-| 7 | Đổi tên/bổ sung event `xem_bang_gia`, `xem_mat_bang` khi có bảng giá | sau | không |
+| 2 | Đặt `Số lượng` (Count) = **Một (One)** trên conversion action `7709665581` — chống đếm trùng khi khách F5 trang cảm ơn | tôi (Ads API) | 🔴 **CÓ** |
+| 3 | Bắn 1 lead test thật → Ads có conversion ≤24h · Keap có `gclid` (**gate G0**) | user + tôi | 🔴 **CÓ** |
+| 4 | Thêm **link Zalo** + sticky bar Zalo/hotline trên mobile | user (LP) | 🟡 không, nhưng mất CTA chính của khách VN |
+| 5 | Đánh dấu key event trong GA4 `548678683` | user (GA4 UI) | 🟡 không — Ads không phụ thuộc, chỉ để báo cáo GA4 đọc được |
+| 6 | Gắn Clarity · sửa GTM về registry · event `xem_bang_gia`/`xem_mat_bang` | hoãn | không |
 
 Việc phía tài khoản Ads (negative 382 dòng, tracking template UTM, conversion action còn thiếu, dựng campaign): xem `PROJECT.md`.
