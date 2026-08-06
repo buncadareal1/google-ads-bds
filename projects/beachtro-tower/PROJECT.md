@@ -63,14 +63,27 @@ Ad copy 2 bộ RSA: `ad-copy.md`.
 
 > **Chốt 2026-08-06: KHÔNG sửa GTM.** Chuỗi đo vẫn chạy — conversion Ads đến thẳng từ thẻ `awct` khi khách vào trang cảm ơn, không đi qua GA4. Giá phải trả: đếm trùng nếu F5 (bù bằng Count = Một), không dùng được Enhanced Conversions, không biết lead đến từ form/tòa nào. Chi tiết: `audit-lp.md`.
 
+> **Chốt 2026-08-06: mọi thao tác trên tài khoản Google Ads do user tự làm trên UI.** Ở repo chỉ chuẩn bị dữ liệu, tài liệu, file import và lệnh kiểm tra. Agent chỉ **đọc** qua API để đối chiếu, không ghi.
+
 | # | Việc | Ai làm |
 |---|---|---|
-| 1 | Ads: đặt `Số lượng` = **Một (One)** trên conversion `7709665581` — chống đếm trùng trang cảm ơn | tôi (Ads API) |
-| 2 | Ads: import **382 negative cấp tài khoản** (hiện 1 dòng) | tôi (Ads API) |
-| 3 | Ads: gắn **tracking URL template UTM** (hiện rỗng) | tôi (Ads API) |
-| 4 | **Gate G0**: bắn 1 lead test thật → Ads có conversion ≤24h · Keap có `gclid` | user + tôi |
-| 5 | Dựng campaign `BDS_Search_Brand_DuAn` + 2 ad group + RSA + extensions, để **Tạm dừng** | tôi (Ads API) — **chờ user chốt ngân sách** |
-| 6 | Nộp **xác minh nhà quảng cáo** (Tổ chức, 3–5 ngày) | user |
+| 1 | **Gate G0**: bắn 1 lead test thật → Ads có conversion ≤24h · Keap có `gclid` | user |
+| 2 | Ads: import **382 negative cấp tài khoản** (hiện 1 dòng) — lệnh xuất danh sách ở `campaign-setup.md §1.4` | user (UI) |
+| 3 | Ads: gắn **tracking URL template UTM** (hiện rỗng) — chuỗi ở `campaign-setup.md §1.5.9` | user (UI) |
+| 4 | Dựng campaign `BDS_Search_Brand_DuAn` + 2 ad group + RSA + extensions, để **Tạm dừng** — dùng `keywords/launch-uu-tien-1.tsv` + `ad-copy.md` | user (UI/Editor) |
+| 5 | Nộp **xác minh nhà quảng cáo** (Tổ chức, 3–5 ngày) | user |
+
+### ✅ Đã đúng sẵn — không phải sửa (đọc API 2026-08-06)
+
+| Mục | Giá trị | Đối chiếu spec |
+|---|---|---|
+| `counting_type` của conversion `7709665581` | **ONE_PER_CLICK** | ✔ `§1.2.3` — 1 lượt nhấp = tối đa 1 lead, trang cảm ơn load lại bao nhiêu lần cũng vậy |
+| Cửa sổ chuyển đổi lượt nhấp | **90 ngày** | ✔ `§1.2.4` |
+| Mô hình phân bổ | Dựa trên dữ liệu | ✔ `§1.2.5` |
+| Trạng thái / danh mục | ENABLED · WEBPAGE · SUBMIT_LEAD_FORM · primary | ✔ `§1.2.7` |
+| Gắn thẻ tự động (auto-tagging) | True | ✔ `§1.3.1` |
+
+Lệch nhẹ, không chặn: **cửa sổ xem qua = 1 ngày** (spec `§1.2.5` là 30). Chỉ ảnh hưởng view-through conversion của Display — hiện chưa chạy Display nên không tác động.
 
 ## Nhận diện doanh nghiệp trên LP — chốt 2026-08-06: KHÔNG làm footer
 

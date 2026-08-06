@@ -32,7 +32,7 @@ Vì vậy hard gate *"không có khoảng giá ở bất kỳ đâu → không l
 User chốt giữ nguyên container. Chuỗi đo hiện tại **vẫn chạy được**: khách submit → Keap redirect sang trang cảm ơn → thẻ `awct` bắn conversion thẳng về Ads. **Không đi qua GA4**, nên việc GA4 chưa có key event **không chặn launch**.
 
 Ba cái giá phải trả, chấp nhận có ý thức:
-1. **Đếm trùng nếu khách F5 hoặc quay lại trang cảm ơn.** Bù bằng cách đặt `Số lượng` (Count) = **Một (One)** trên conversion action `7709665581` — bắt buộc, không phải tùy chọn.
+1. ~~Đếm trùng nếu khách F5 trang cảm ơn~~ → **KHÔNG phải vấn đề.** Kiểm API 2026-08-06: conversion action `7709665581` đã ở `counting_type = ONE_PER_CLICK`. Một lượt nhấp quảng cáo chỉ sinh tối đa 1 conversion, trang cảm ơn load lại bao nhiêu lần cũng vậy. Không cần sửa gì.
 2. **Không dùng được Enhanced Conversions** dù LP đã có sẵn phone/email trong payload → mất một phần khả năng ghép chuyển đổi trên iOS/trình duyệt chặn cookie.
 3. **Mất ngữ cảnh lead**: không biết lead đến từ form nào (7 form dùng chung 1 xid), tòa nào khách quan tâm, `src` nào. Muốn phân tích chuyện đó thì đọc bên Keap, không đọc được từ Ads/GA4.
 
@@ -83,11 +83,10 @@ Endpoint `rhq551.infusionsoft.com/app/form/process/c661fd73838c0b58bfab553297fd7
 
 | # | Việc | Ai làm | Chặn launch? |
 |---|---|---|---|
-| 1 | Đặt `Số lượng` (Count) = **Một (One)** trên conversion action `7709665581` — chống đếm trùng khi khách F5 trang cảm ơn | tôi (Ads API) | 🔴 **CÓ** |
-| 2 | Bắn 1 lead test thật → Ads có conversion ≤24h · Keap có `gclid` (**gate G0**) | user + tôi | 🔴 **CÓ** |
-| 3 | Thêm **link Zalo** + sticky bar Zalo/hotline trên mobile | user (LP) | 🟡 không, nhưng mất CTA chính của khách VN |
-| 4 | Đánh dấu key event trong GA4 `548678683` | user (GA4 UI) | 🟡 không — Ads không phụ thuộc, chỉ để báo cáo GA4 đọc được |
-| 5 | Gắn Clarity · sửa GTM về registry · event `xem_bang_gia`/`xem_mat_bang` | hoãn | không |
+| 1 | Bắn 1 lead test thật → Ads có conversion ≤24h · Keap có `gclid` (**gate G0**) | user | 🔴 **CÓ** |
+| 2 | Thêm **link Zalo** + sticky bar Zalo/hotline trên mobile | user (LP) | 🟡 không, nhưng mất CTA chính của khách VN |
+| 3 | Đánh dấu key event trong GA4 `548678683` | user (GA4 UI) | 🟡 không — Ads không phụ thuộc, chỉ để báo cáo GA4 đọc được |
+| 4 | Gắn Clarity · sửa GTM về registry · event `xem_bang_gia`/`xem_mat_bang` | hoãn | không |
 
 **Footer: không làm** (chốt 2026-08-06) — LP đã nhận diện được doanh nghiệp qua section "SmartRealtors & Partners" + dòng "Phân phối chính thức… đối tác chiến lược của Sun Group" + hotline + link Chính sách bảo mật. Chi tiết và lý do trong `PROJECT.md`.
 
