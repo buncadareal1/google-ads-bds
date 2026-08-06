@@ -4,11 +4,11 @@ Repo này là nền tảng vận hành Google Ads BĐS **đa dự án**. Mọi s
 
 ## Dự án active
 
-| Dự án | CĐT | Vị trí | Trạng thái |
-|---|---|---|---|
-| **Beachtro Tower — Blanca City** | Sun Group | Vũng Tàu | Active từ 2026-08-05 · GA4 property `548678683` · Ads account `6918288556` (0 campaign — chưa launch) |
+| Dự án | Thư mục | CĐT | Vị trí | Trạng thái |
+|---|---|---|---|---|
+| **Beachtro Tower — Blanca City** | `projects/beachtro-tower/` | Sun Group | Vũng Tàu | Active từ 2026-08-05 · GA4 property `548678683` · Ads account `6918288556` (0 campaign — chưa launch) |
 
-Dự án mới: thêm dòng vào bảng này + `keywords/projects.tsv` (qua keyword-planner), không fork repo.
+Mỗi dự án có hồ sơ riêng trong `projects/<slug>/` (PROJECT.md, keywords/, data/, ad-copy.md, nghiem-thu.md). Quy ước + cách mở dự án mới: `projects/README.md`. Dự án mới = copy `projects/_TEMPLATE/` + thêm dòng vào bảng này và `keywords/projects.tsv` (qua keyword-planner), không fork repo.
 
 ## Prompt khởi động session
 
@@ -22,6 +22,10 @@ Xong việc mở Pull Request về main kèm mô tả tiếng Việt — tôi re
 Cowork không tự merge.
 
 Trước khi làm bất cứ gì:
+0. Hồ sơ dự án nằm ở `projects/<slug>/` — đọc `projects/README.md` + `projects/<slug>/PROJECT.md`
+   trước khi đụng việc của dự án đó. File riêng dự án (data export, ad copy, keyword brand,
+   nghiệm thu) ghi vào trong thư mục đó, KHÔNG rải ra gốc repo.
+   ⚠️ `projects/` (dự án mình chạy ads) ≠ `keywords/projects.tsv` (245 dự án toàn thị trường).
 1. Đọc CLAUDE.md và PLAN.md — tuân thủ tuyệt đối.
 2. Đụng tracking → đọc tracking/README.md trước. Đụng LP → landing-page/README.md trước.
    Việc từ khóa → quy trình keywords/UPDATE.md, dispatch keyword-planner, không sửa tay.
@@ -37,7 +41,7 @@ A. QUẢN LÝ CHỈ SỐ: nguồn chỉ số = **Google Ads API** (đã kết n�
    LƯU Ý 1: hệ KHÔNG đo lead (bỏ Keap API — user tự quản lý lead riêng). KPI vận hành =
    CPL raw (generate_lead) + chất lượng traffic, KHÔNG phải contact rate.
    LƯU Ý 2: **Auction Insights không đọc được qua API** (allowlist Google đã đóng) →
-   luôn là việc tải tay hằng tuần, xem tracking/nghiem-thu-cong-ket-noi.md.
+   luôn là việc tải tay hằng tuần, xem projects/beachtro-tower/nghiem-thu.md.
 B. BÁO CÁO TELEGRAM: gửi báo cáo qua bot theo khung giờ trong monitoring.md, dùng
    TG_BOT_TOKEN + TG_CHAT_ID trong env vars. Tiếng Việt, đơn vị ₫, số liệu kèm nguồn,
    tách theo từng dự án active.

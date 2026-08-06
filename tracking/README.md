@@ -65,7 +65,7 @@ Google nêu 3 lý do dùng server-side: **performance**, **data control**, **dat
 
 ## Trạng thái hiện tại (cập nhật 2026-08-05)
 
-- ✅ **Google Ads API đã kết nối** (account `6918288556`) — nghiệm thu: `nghiem-thu-cong-ket-noi.md`.
+- ✅ **Google Ads API đã kết nối** (account `6918288556`) — nghiệm thu: `projects/beachtro-tower/nghiem-thu.md`.
 - ✅ GA4 property Beachtro `548678683` đọc được qua API · Clarity ✅ · GTM ✅.
 - ⛔ **ECL / Keap / thang giá trị lead: ĐÓNG BĂNG** — hệ không đo lead (chốt 2026-08-05).
   Spec 7 file + `upload_ecl.py` giữ nguyên, mở lại khi user yêu cầu.

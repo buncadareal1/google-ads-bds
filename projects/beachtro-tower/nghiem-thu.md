@@ -24,7 +24,7 @@ Kiểm bằng lệnh gọi API thật, không suy đoán. Tài khoản Ads `6918
 
 Hệ quả: mọi công cụ đi qua API đều mù chỗ này — kể cả Google Ads Scripts. Ai làm được auction insights là làm **trên UI**, không phải qua API.
 
-→ **Bù bằng nghi thức tay, không có đường khác**: mỗi thứ Sáu `Chiến dịch → Thông tin chi tiết → Auction insights → Tải xuống` về `data/ads/auction-insights-<yyyy-mm-dd>.csv` (luật quét điểm gãy `playbook/monitoring.md §4`). Đây là mục **bắt buộc** trong checklist tuần, không được bỏ — chính chỗ này là bẫy P7 đánh trượt 5/5 thí sinh kỳ thi Vinhomes.
+→ **Bù bằng nghi thức tay, không có đường khác**: mỗi thứ Sáu `Chiến dịch → Thông tin chi tiết → Auction insights → Tải xuống` về `projects/beachtro-tower/data/ads/auction-insights-<yyyy-mm-dd>.csv` (luật quét điểm gãy `playbook/monitoring.md §4`). Đây là mục **bắt buộc** trong checklist tuần, không được bỏ — chính chỗ này là bẫy P7 đánh trượt 5/5 thí sinh kỳ thi Vinhomes.
 
 ### Cấu hình tài khoản (đọc từ API)
 

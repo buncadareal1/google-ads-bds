@@ -1,7 +1,9 @@
 # Hệ thống Google Ads BĐS
 
 Repo này là hệ thống vận hành Google Ads cho bất động sản VN — **nền tảng dùng chung cho NHIỀU dự án** (playbook/tracking/keywords là tài sản chung, mỗi dự án chỉ thêm bộ kw + LP + chỉ số riêng). Đọc `PLAN.md` trước.
-**Dự án đang active: BEACHTRO TOWER — Blanca City (Sun Group, Vũng Tàu).** Dự án mới = thêm vào `keywords/projects.tsv` + mục riêng trong COWORK.md, không fork repo.
+**Dự án đang active: BEACHTRO TOWER — Blanca City (Sun Group, Vũng Tàu)** → `projects/beachtro-tower/`.
+Dự án mới = copy `projects/_TEMPLATE/` thành `projects/<slug>/` + thêm dòng vào `keywords/projects.tsv` + dòng bảng trong COWORK.md — **không fork repo**. Quy ước đầy đủ: `projects/README.md`.
+⚠️ `projects/` (dự án MÌNH chạy ads) ≠ `keywords/projects.tsv` (245 dự án toàn thị trường, chỉ để sinh keyword).
 
 - `playbook/` — chiến lược campaign, keyword, ad copy, checklist tuần
 - `landing-page/` — template LP Astro (chuẩn skill `no-code-landing-re`, có `ad-click-attribution`)
