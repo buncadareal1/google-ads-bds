@@ -29,9 +29,9 @@
 
 | Chỉ số | Mục tiêu | Ghi chú |
 |---|---|---|
-| Ngân sách/ngày | `[user chốt]` | Kịch bản mẫu 30tr₫/tháng = 1.000.000 ₫/ngày (`campaign-setup.md §2.1`) |
-| CPL raw | `[điền từ tuần chạy đầu]` | Hệ **không đo lead sau đó** — KPI là CPL raw + chất lượng traffic |
-| CPC trần #1 Brand | **20.000 ₫** | Theo `campaign-setup.md §2.2` cho campaign brand |
+| Ngân sách/ngày | **1.000.000 ₫** (chốt 2026-08-06) | **1 campaign brand duy nhất** — `plan-chay-ads.md` |
+| CPL mục tiêu | **chưa đặt** — chốt ở tuần 4 từ số thật | Tháng 1 dùng **kill rule cấu trúc**, không cắt theo giá (`plan-chay-ads.md §4`) |
+| CPC trần | **20.000 ₫** | Campaign brand, QS cao → CPC thực rẻ hơn nhiều |
 | IS brand | ≥ 80% | Ngưỡng `monitoring.md §4` |
 
 ⚠️ **Giai đoạn pre-launch, chưa có bảng giá** → CPL raw sẽ rẻ giả tạo (LP không có rào tài chính). Không so CPL giai đoạn này với giai đoạn sau khi công bố giá.
@@ -70,7 +70,7 @@ Ad copy 2 bộ RSA: `ad-copy.md`.
 | 1 | **Gate G0**: bắn 1 lead test thật → Ads có conversion ≤24h · Keap có `gclid` | user |
 | 2 | Ads: import **382 negative cấp tài khoản** (hiện 1 dòng) — lệnh xuất danh sách ở `campaign-setup.md §1.4` | user (UI) |
 | 3 | Ads: gắn **tracking URL template UTM** (hiện rỗng) — chuỗi ở `campaign-setup.md §1.5.9` | user (UI) |
-| 4 | Dựng campaign `BDS_Search_Brand_DuAn` + 2 ad group + RSA + extensions, để **Tạm dừng** — dùng `keywords/launch-uu-tien-1.tsv` + `ad-copy.md` | user (UI/Editor) |
+| 4 | Dựng **1 campaign** `BDS_Search_Brand_DuAn` + 2 ad group + RSA + extensions, để **Tạm dừng** — theo `plan-chay-ads.md`, dùng `keywords/launch-uu-tien-1.tsv` + `ad-copy.md` | user (UI/Editor) |
 | 5 | Nộp **xác minh nhà quảng cáo** (Tổ chức, 3–5 ngày) | user |
 
 ### ✅ Đã đúng sẵn — không phải sửa (đọc API 2026-08-06)

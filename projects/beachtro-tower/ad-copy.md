@@ -82,6 +82,12 @@ Final URL `https://smartrealtors.vn/beachtro-tower-blanca-city/` · Path1 `blanc
 | 3 | Bảng giá và chính sách bán hàng gửi ngay khi chủ đầu tư công bố. Để lại số điện thoại. | 86 |
 | 4 | Xem mặt bằng, tiện ích Tro Collection và vị trí mặt tiền đường 3/2. Tư vấn miễn phí. | 84 |
 
+## Nếu sau này mở campaign săn brand đối thủ (hiện KHÔNG chạy)
+
+> 🚨 **LUẬT CỨNG: RSA của campaign đó tuyệt đối không được chứa tên đối thủ.**
+> Bid vào tên đối thủ làm keyword thì **được**; đưa tên đối thủ hoặc CĐT của họ vào **ad text** là xâm phạm nhãn hiệu — Google gỡ quảng cáo theo khiếu nại, tái phạm thì đình chỉ tài khoản. Cấm xuất hiện trong headline/description/sitelink/callout: `the sóng`, `an gia`, `dic solar`, `dic corp`, `novaworld`, `novaland`.
+> Hệ quả không vá được: khách gõ tên đối thủ mà ad nói về Beachtro → message match đứt theo thiết kế → QS dự kiến 2–4, CPC gấp 2–4 lần brand mình. Nếu mở, phải là campaign riêng, ngân sách riêng, kill sớm.
+
 ## Chấm ABCD (`campaign-setup.md §3`)
 
 | | Bộ 1 | Bộ 2 |
