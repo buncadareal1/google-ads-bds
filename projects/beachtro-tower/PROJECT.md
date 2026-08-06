@@ -95,7 +95,7 @@ Ad copy 2 bộ RSA: `ad-copy.md`. Plan chạy: `plan-chay-ads.md`.
 | 2 | **Gate G0**: bắn 1 lead test thật → Ads có conversion ≤24h · Keap có `gclid` | **chặn launch** |
 | 3 | Tắt **Tài sản tự động tạo (ACA)** + **Dynamic sitelinks** | API không expose, phải làm trên UI |
 | 4 | Tắt **Auto-apply recommendations** (cấp tài khoản) | UI: Đề xuất → Tự động áp dụng → bỏ tick hết |
-| 5 | Nộp **xác minh nhà quảng cáo** (Tổ chức, 3–5 ngày) | |
+| 5 | Nộp **xác minh nhà quảng cáo** (Tổ chức, 3–5 ngày) — ⚠️ giờ là nút thắt của 2 loại tài sản: Google từ chối gắn cả **hình ảnh** lẫn **biểu tượng doanh nghiệp** với lỗi "Customer is not verified". Logo SmartRealtors (asset `404392250361`) + 4 ảnh đã nằm sẵn thư viện, xác minh xong là gắn được ngay | user |
 
 ### ✅ Đã đúng sẵn — không phải sửa (đọc API 2026-08-06)
 
