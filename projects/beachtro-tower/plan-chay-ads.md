@@ -20,14 +20,33 @@ Final URL cả 2 ad group: `https://smartrealtors.vn/beachtro-tower-blanca-city/
 
 Không chạy: brand CĐT Sun Group · khu vực Vũng Tàu · săn brand đối thủ · tài chính/trả góp · remarketing. Bộ keyword của chúng vẫn nằm sẵn trong `keywords/brand.csv` và `master-keywords.csv`, mở khi cần.
 
-### ⚠️ Ngân sách sẽ KHÔNG tiêu hết — và đó là chuyện bình thường
+### 📊 Search volume thật (Keyword Planner API, 2026-08-06, VN + tiếng Việt)
 
-80 keyword brand của một dự án chưa công bố giá không có đủ lượt tìm kiếm để tiêu 1tr₫/ngày. Với Maximize Clicks + CPC cap, phần thừa **không rò rỉ** sang keyword rộng (chỉ broad match mới vậy) — nó đơn giản không tiêu.
+Số đầy đủ: `keywords/volume-2026-08-06.csv` (80 kw launch) · `keywords/keyword-ideas-2026-08-06.csv` (505 ý tưởng có volume).
 
-Nên **đừng đọc "chi tiêu thấp" là thất bại**, và tuyệt đối **đừng tăng bid để tiêu cho hết**. Chỉ số phải nhìn là `budget lost IS`:
+**Chỉ 8/80 keyword có volume — và toàn bộ nằm ở "blanca city", không phải "beachtro".**
 
-- `budget lost IS` ≈ **0%** → ngân sách đang thừa. Brand đã phủ hết phần có thể phủ. **Hạ ngân sách**, hoặc mở thêm campaign khu vực nếu muốn dùng hết tiền.
-- `budget lost IS` > **0%** → ngân sách đang thật sự là nút thắt, lúc đó mới tính chuyện tăng.
+| Keyword | Vol/tháng | Cạnh tranh | Bid đầu trang (thấp–cao) |
+|---|---|---|---|
+| blanca city | **12.100** | LOW | 8.897 – 30.582 ₫ |
+| blanca city vũng tàu | **4.400** | LOW | 9.041 – 37.392 ₫ |
+| sun blanca city | 1.300 | LOW | 9.867 – 37.059 ₫ |
+| blanca city sun group | 480 | LOW | 11.054 – 42.616 ₫ |
+| blanca city giá | 110 | LOW | 7.991 – 37.532 ₫ |
+| blanca city vũng tàu giá | 70 | MEDIUM | 9.041 – 39.513 ₫ |
+| blanca city mở bán | 20 | MEDIUM | 6.493 – 60.890 ₫ |
+| blanca city giá bao nhiêu | 10 | MEDIUM | 5.104 – 29.584 ₫ |
+| **Tổng** | **18.490** | | |
+
+Ba điều rút ra, ảnh hưởng thẳng tới cách chạy:
+
+**1. Toàn bộ 40 keyword `brand-beachtro-tower` = 0 volume.** Tên "Beachtro" mới ra mắt, chưa ai gõ. Ad group này sẽ gần như **0 impression**. Vẫn **giữ lại** — exact match trên term 0 volume không tốn gì, và đây là bộ hứng sẵn khi CĐT bắt đầu truyền thông tên tòa. Nhưng **đừng chờ traffic từ nó**, và đừng kết luận "ads không chạy" khi thấy ad group này trống.
+
+**2. Ngân sách 1tr₫/ngày là hợp lý hơn tôi ước lượng ban đầu.** Với 18.490 lượt tìm/tháng và bid đầu trang thấp ~9.000 ₫, campaign có khả năng tiêu **khoảng 300–500k₫/ngày**, không phải "nằm chết" như tôi nói trước khi có số. Vẫn theo dõi `budget lost IS`: ≈0% suốt 14 ngày → hạ ngân sách; >0% → ngân sách mới thật sự là nút thắt. **Tuyệt đối không tăng bid chỉ để tiêu cho hết.**
+
+**3. ⚠️ "Blanca City" là brand của Sun Group, KHÔNG phải của riêng Beachtro.** Blanca City là đại đô thị 96 ha gồm nhiều dòng sản phẩm; LP của ta chỉ nói về **4 tòa căn hộ E6–E9**. Người gõ "blanca city" có thể đang tìm biệt thự / shophouse / nhà phố → vào LP căn hộ là lệch nhu cầu, tốn click mà không ra lead.
+
+→ **Bắt buộc thêm negative campaign-level** cho những dòng sản phẩm ta không bán trên LP này (rà lại với sale trước khi chốt): `biệt thự`, `shophouse`, `nhà phố`, `liền kề`, `đất nền`, `condotel`. Cộng thêm nhóm rác đã thấy trong dữ liệu ideas: `cho thuê`, `thuê`, `dưới 1 tỷ` (`cho thuê`/`thuê` đã nằm sẵn ở negative account-level).
 
 ---
 
@@ -108,7 +127,19 @@ CPL mục tiêu      = Breakeven CPL × (1 − biên lợi nhuận yêu cầu)
 
 ---
 
-## 6. Kích hoạt khi CĐT công bố bảng giá
+## 6. Cơ hội đang bỏ trống (số thật, để user quyết sau)
+
+Từ `keywords/keyword-ideas-2026-08-06.csv` — không nằm trong plan hiện tại, ghi lại để tuần 4 cân nhắc:
+
+| Nhóm | Vol/tháng | Bid đầu trang thấp | Ghi chú |
+|---|---|---|---|
+| `căn hộ vũng tàu` + `chung cư vũng tàu` + biến thể | ~2.500 | **2.060 ₫** | Rẻ hơn brand ~4 lần. Nhưng LP chưa có giá → khách không-brand dễ bỏ đi |
+| `căn hộ biển / view biển / gần biển vũng tàu` | ~400 | 1.974–7.381 ₫ | Đúng USP của dự án (1 km bờ biển) |
+| Tên tòa đối thủ: `csj tower` 8.100 · `melody` 2.900 · `gateway` 2.900 · `vũng tàu pearl` 720 | ~15.000 | 500–3.000 ₫ | Volume rất lớn, bid rất rẻ — nhưng vướng luật trademark ở ad text (xem `ad-copy.md`) |
+
+Rác đã lộ diện trong dữ liệu, xác nhận giá trị của negative list: `thuê căn hộ vũng tàu` 260 · `căn hộ cho thuê vũng tàu` 170 · `chung cư vũng tàu dưới 1 tỷ` 90.
+
+## 7. Kích hoạt khi CĐT công bố bảng giá
 
 Bước ngoặt lớn nhất của dự án — chuẩn bị trước để không lỡ nhịp:
 
