@@ -70,25 +70,25 @@ Endpoint `rhq551.infusionsoft.com/app/form/process/c661fd73838c0b58bfab553297fd7
 | 2. Above the fold | 20% | **3** | Có H1, trust bar (Lâu dài · 4 tòa · 1.785 căn · 8/2028), CTA, hotline. **Thiếu khoảng giá** (bất khả kháng) và **thiếu Zalo sticky** (khắc phục được ngay) |
 | 3. Form & qualifying | 15% | **4** | Honeypot, chống bot, chuẩn hóa SĐT, gclid tới CRM đầy đủ. Trừ điểm: chưa có dropdown qualifying |
 | 4. Offer & con số | 15% | **3** | Nhiều con số thật (1.785 căn, E6 34–E9 40 tầng, 96 ha, 1 km biển, 8/2028) nhưng **offer chỉ là "chờ bảng giá"** — không có gì để quyết ngay |
-| 5. Objection & trust | 10% | **3** | Xử lý thẳng "bàn giao 8/2028" bằng section lộ trình, có mục "phù hợp với ai / không phù hợp với ai" (rất tốt). Trừ điểm: **footer thiếu MST + địa chỉ pháp nhân** |
+| 5. Objection & trust | 10% | **3** | Xử lý thẳng "bàn giao 8/2028" bằng section lộ trình, có mục "phù hợp với ai / không phù hợp với ai" (rất tốt). Nhận diện doanh nghiệp có sẵn trong section SmartRealtors (không chạy footer — chốt 2026-08-06) |
 | 6. Tốc độ & kỹ thuật | 5% | **5** | HTML 70 KB, TTFB 0,24s, Astro build tĩnh, JS bundle 9 KB |
 | 7. Đo lường | 10% | **2** | Xem 3 lỗi mục 1 |
 
 **Điểm tổng = 3,50 / 5** → thang kết luận: **Đạt — được launch, các mục dưới 3 vào backlog tuần đầu.**
 
-⚠️ Nhưng **rớt 2 hard gate**, mà hard gate thì bất kể tổng điểm:
-1. **Tiêu chí 7 (Đo lường) = 2 < 3** → phải vá trước khi bật quảng cáo.
-2. **Footer thiếu pháp nhân + MST** → rủi ro bị từ chối quảng cáo *"Unclear relevance"* (`campaign-setup.md §1.1.4`).
+⚠️ Rớt **1 hard gate**: **tiêu chí 7 (Đo lường) = 2 < 3**. Xử lý bằng quyết định giữ nguyên GTM ở mục trên — chuỗi đo qua trang cảm ơn vẫn ghi nhận conversion, chỉ cần chặn đếm trùng bằng `Count = Một`.
+
 
 ## 4. Việc phải làm trước khi bật quảng cáo (theo thứ tự)
 
 | # | Việc | Ai làm | Chặn launch? |
 |---|---|---|---|
-| 1 | Thêm **footer pháp nhân + địa chỉ Vũng Tàu + hotline** — text dán sẵn trong `PROJECT.md`. **Miễn MST** (chốt 2026-08-06: LP đã có Chính sách bảo mật; Google yêu cầu nhận diện doanh nghiệp, không yêu cầu MST) | user (LP) | 🔴 **CÓ** |
-| 2 | Đặt `Số lượng` (Count) = **Một (One)** trên conversion action `7709665581` — chống đếm trùng khi khách F5 trang cảm ơn | tôi (Ads API) | 🔴 **CÓ** |
-| 3 | Bắn 1 lead test thật → Ads có conversion ≤24h · Keap có `gclid` (**gate G0**) | user + tôi | 🔴 **CÓ** |
-| 4 | Thêm **link Zalo** + sticky bar Zalo/hotline trên mobile | user (LP) | 🟡 không, nhưng mất CTA chính của khách VN |
-| 5 | Đánh dấu key event trong GA4 `548678683` | user (GA4 UI) | 🟡 không — Ads không phụ thuộc, chỉ để báo cáo GA4 đọc được |
-| 6 | Gắn Clarity · sửa GTM về registry · event `xem_bang_gia`/`xem_mat_bang` | hoãn | không |
+| 1 | Đặt `Số lượng` (Count) = **Một (One)** trên conversion action `7709665581` — chống đếm trùng khi khách F5 trang cảm ơn | tôi (Ads API) | 🔴 **CÓ** |
+| 2 | Bắn 1 lead test thật → Ads có conversion ≤24h · Keap có `gclid` (**gate G0**) | user + tôi | 🔴 **CÓ** |
+| 3 | Thêm **link Zalo** + sticky bar Zalo/hotline trên mobile | user (LP) | 🟡 không, nhưng mất CTA chính của khách VN |
+| 4 | Đánh dấu key event trong GA4 `548678683` | user (GA4 UI) | 🟡 không — Ads không phụ thuộc, chỉ để báo cáo GA4 đọc được |
+| 5 | Gắn Clarity · sửa GTM về registry · event `xem_bang_gia`/`xem_mat_bang` | hoãn | không |
+
+**Footer: không làm** (chốt 2026-08-06) — LP đã nhận diện được doanh nghiệp qua section "SmartRealtors & Partners" + dòng "Phân phối chính thức… đối tác chiến lược của Sun Group" + hotline + link Chính sách bảo mật. Chi tiết và lý do trong `PROJECT.md`.
 
 Việc phía tài khoản Ads (negative 382 dòng, tracking template UTM, conversion action còn thiếu, dựng campaign): xem `PROJECT.md`.

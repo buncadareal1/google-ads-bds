@@ -65,29 +65,25 @@ Ad copy 2 bộ RSA: `ad-copy.md`.
 
 | # | Việc | Ai làm |
 |---|---|---|
-| 1 | LP: thêm **footer pháp nhân + địa chỉ + hotline** (text sẵn ở mục dưới) | user |
-| 2 | Ads: đặt `Số lượng` = **Một (One)** trên conversion `7709665581` — chống đếm trùng trang cảm ơn | tôi (Ads API) |
-| 3 | Ads: import **382 negative cấp tài khoản** (hiện 1 dòng) | tôi (Ads API) |
-| 4 | Ads: gắn **tracking URL template UTM** (hiện rỗng) | tôi (Ads API) |
-| 5 | **Gate G0**: bắn 1 lead test thật → Ads có conversion ≤24h · Keap có `gclid` | user + tôi |
-| 6 | Dựng campaign `BDS_Search_Brand_DuAn` + 2 ad group + RSA + extensions, để **Tạm dừng** | tôi (Ads API) — **chờ user chốt ngân sách** |
-| 7 | Nộp **xác minh nhà quảng cáo** (Tổ chức, 3–5 ngày) | user |
+| 1 | Ads: đặt `Số lượng` = **Một (One)** trên conversion `7709665581` — chống đếm trùng trang cảm ơn | tôi (Ads API) |
+| 2 | Ads: import **382 negative cấp tài khoản** (hiện 1 dòng) | tôi (Ads API) |
+| 3 | Ads: gắn **tracking URL template UTM** (hiện rỗng) | tôi (Ads API) |
+| 4 | **Gate G0**: bắn 1 lead test thật → Ads có conversion ≤24h · Keap có `gclid` | user + tôi |
+| 5 | Dựng campaign `BDS_Search_Brand_DuAn` + 2 ad group + RSA + extensions, để **Tạm dừng** | tôi (Ads API) — **chờ user chốt ngân sách** |
+| 6 | Nộp **xác minh nhà quảng cáo** (Tổ chức, 3–5 ngày) | user |
 
-## Footer LP — text dán sẵn (chốt 2026-08-06)
+## Nhận diện doanh nghiệp trên LP — chốt 2026-08-06: KHÔNG làm footer
 
-> **Chốt: KHÔNG dùng MST.** LP đã có Chính sách bảo mật & quyền riêng tư. Yêu cầu thật của Google là **nhận diện được doanh nghiệp đứng sau trang** (tên pháp nhân + địa chỉ + số liên hệ thật), không phải mã số thuế — MST là luật nội bộ chặt hơn của `campaign-setup.md §1.1.4`, dự án này miễn. Rủi ro còn lại: thấp. Cả `smartland.vn` lẫn `smartrealtors.vn` hiện cũng không hiển thị MST.
+LP công ty từ trước tới nay không chạy footer, và **không cần**: yêu cầu của Google là nhận diện được doanh nghiệp đứng sau trang, không phải một khối footer đúng khuôn. Trang này đã có sẵn, kiểm 2026-08-06:
 
-Dùng **địa chỉ Vũng Tàu** — cùng tỉnh với dự án, tăng độ tin cậy tại chỗ và về sau làm nền cho Google Business Profile (→ Location asset):
+- Section riêng **"SmartRealtors & Partners"** với nội dung giới thiệu đơn vị
+- Dòng **"Phân phối chính thức SmartRealtors & Partners — đối tác chiến lược của Sun Group hơn 10 năm"**
+- Hotline `0937 837 888` hiển thị ở nav + link `tel:`
+- Link **Chính sách bảo mật & quyền riêng tư** ở mọi form
 
-```
-Website thuộc sở hữu bởi: CÔNG TY TNHH BẤT ĐỘNG SẢN SMARTLAND
-Văn phòng Vũng Tàu: GA.01.16 Chung cư Gateway, Phường Nguyễn An Ninh, TP. Vũng Tàu
-Trụ sở chính: L17-11 Tầng 17, Tòa nhà Vincom Center, 72 Lê Thánh Tôn, Phường Sài Gòn, TP. HCM
-Hotline: 0937 837 888 · Email: lienhe@smartland.vn
-SmartRealtors & Partners là đơn vị phân phối chính thức, không phải chủ đầu tư.
-```
+→ Miễn cả footer lẫn MST cho dự án này (`campaign-setup.md §1.1.4` là luật nội bộ chặt hơn thực tế). Dòng "Phân phối chính thức… đối tác chiến lược của Sun Group" đồng thời **thỏa ràng buộc #4 của `ad-copy.md`** — RSA được phép dùng chữ "phân phối chính thức" mà không dính lỗi mạo nhận CĐT. **Không được xóa dòng này khỏi LP.**
 
-Dòng cuối **bắt buộc giữ** — đó là căn cứ để RSA được phép nói "phân phối chính thức" mà không dính lỗi mạo nhận CĐT (`ad-copy.md` ràng buộc #4).
+Rủi ro còn lại nếu Google vẫn từ chối vì thiếu thông tin doanh nghiệp: **thấp và đảo ngược được** — thêm khối thông tin rồi gửi duyệt lại trong ngày, không mất tài khoản.
 
 ## 🟡 Backlog (không chặn launch)
 
