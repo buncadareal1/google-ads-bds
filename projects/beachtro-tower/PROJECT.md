@@ -5,6 +5,7 @@
 | Chủ đầu tư | Sun Group (Sun Property) |
 | Vị trí | Mặt tiền đường 3/2, P.10 & P.11, TP. Vũng Tàu — trong đại đô thị Blanca City (96 ha, 1 km bờ biển) |
 | Loại hình | Căn hộ **sở hữu lâu dài** · 4 tòa E6–E9 · 1.785 căn · Studio → 3BR+ |
+| Phạm vi bán | **CHỈ căn hộ Beachtro** (chốt 2026-08-06) — không bán biệt thự / shophouse / nhà phố trong Blanca City → 15 negative cấp campaign, xem `keywords/negative.csv` |
 | Bàn giao | Dự kiến 8/2028 |
 | Vai trò của ta | **Phân phối chính thức** (SmartRealtors & Partners) — không phải CĐT |
 | Trạng thái | ⬜ **chưa launch** — Ads account trống, LP live nhưng còn 4 việc chặn |
@@ -72,8 +73,9 @@ Ad copy 2 bộ RSA: `ad-copy.md`. Plan chạy: `plan-chay-ads.md`.
 | 1 | **Gate G0**: bắn 1 lead test thật → Ads có conversion ≤24h · Keap có `gclid` | user |
 | 2 | Ads: import **382 negative cấp tài khoản** (hiện 1 dòng) — lệnh xuất danh sách ở `campaign-setup.md §1.4` | user (UI) |
 | 3 | Ads: gắn **tracking URL template UTM** (hiện rỗng) — chuỗi ở `campaign-setup.md §1.5.9` | user (UI) |
-| 4 | Dựng **1 campaign** `BDS_Search_Brand_DuAn` + 2 ad group + RSA + extensions, để **Tạm dừng** — theo `plan-chay-ads.md`, dùng `keywords/launch-uu-tien-1.tsv` + `ad-copy.md` | user (UI/Editor) |
-| 5 | Nộp **xác minh nhà quảng cáo** (Tổ chức, 3–5 ngày) | user |
+| 4 | Ads: dán **15 negative cấp campaign** từ `keywords/negative.csv` (KHÔNG đưa lên account-level) | user (UI) |
+| 5 | Dựng **1 campaign** `BDS_Search_Brand_DuAn` + 2 ad group + RSA + extensions, để **Tạm dừng** — theo `plan-chay-ads.md`, dùng `keywords/launch-uu-tien-1.tsv` + `ad-copy.md` | user (UI/Editor) |
+| 6 | Nộp **xác minh nhà quảng cáo** (Tổ chức, 3–5 ngày) | user |
 
 ### ✅ Đã đúng sẵn — không phải sửa (đọc API 2026-08-06)
 
@@ -116,3 +118,4 @@ Rủi ro còn lại nếu Google vẫn từ chối vì thiếu thông tin doanh 
 | 2026-08-06 | Mở hồ sơ trong `projects/`; audit LP (3,50/5); +2 dòng `projects.tsv` → 220 brand keyword; viết 2 bộ RSA |
 | 2026-08-06 | Duyệt plan chạy ads: 1 campaign brand, 1tr₫/ngày, chưa đặt CPL mục tiêu |
 | 2026-08-06 | Lấy volume thật từ Keyword Planner: **18.520** lượt/tháng, **toàn bộ ở "blanca city"**; "beachtro" = 0 |
+| 2026-08-06 | Chốt phạm vi bán = chỉ căn hộ → 15 negative cấp campaign chặn biệt thự/shophouse/nhà phố/liền kề/đất nền/condotel |

@@ -47,7 +47,17 @@ Ba điều rút ra, ảnh hưởng thẳng tới cách chạy:
 
 **3. ⚠️ "Blanca City" là brand của Sun Group, KHÔNG phải của riêng Beachtro.** Blanca City là đại đô thị 96 ha gồm nhiều dòng sản phẩm; LP của ta chỉ nói về **4 tòa căn hộ E6–E9**. Người gõ "blanca city" có thể đang tìm biệt thự / shophouse / nhà phố → vào LP căn hộ là lệch nhu cầu, tốn click mà không ra lead.
 
-→ **Bắt buộc thêm negative campaign-level** cho những dòng sản phẩm ta không bán trên LP này (rà lại với sale trước khi chốt): `biệt thự`, `shophouse`, `nhà phố`, `liền kề`, `đất nền`, `condotel`. Cộng thêm nhóm rác đã thấy trong dữ liệu ideas: `cho thuê`, `thuê`, `dưới 1 tỷ` (`cho thuê`/`thuê` đã nằm sẵn ở negative account-level).
+→ **Đã chốt 2026-08-06** (xác nhận với user): chỉ bán **căn hộ Beachtro**, không bán biệt thự / shophouse / nhà phố. **15 dòng negative cấp campaign** trong `keywords/negative.csv`, dán vào campaign khi dựng:
+
+`biệt thự` · `biet thu` · `shophouse` · `shop house` · `nhà phố` · `nha pho` · `liền kề` · `lien ke` · `đất nền` · `dat nen` · `condotel` · `villa` · `townhouse` · `dưới 1 tỷ` · `duoi 1 ty`
+
+Đã rà chéo: **0 xung đột** với 81 keyword launch và 220 keyword dự phòng của dự án.
+
+⚠️ **Phải ở cấp campaign, KHÔNG được đưa lên account-level** — repo là nền tảng đa dự án, dự án khác có thể bán đúng những dòng sản phẩm này. Đưa lên account là chặn nhầm cả hệ.
+
+⚠️ Mỗi negative đều có **bản không dấu** đi kèm: negative **không khớp close variant** như positive keyword (`research §3`) — thiếu bản không dấu là thủng lưới.
+
+`cho thuê` / `thuê` không có ở đây vì đã nằm sẵn trong 382 dòng negative account-level.
 
 ---
 
