@@ -12,7 +12,7 @@ Duyệt 2026-08-06. Tài liệu **thực thi**: mở Google Ads UI làm từ tr�
 
 | Campaign | Ad group | KW | Ngân sách | CPC cap | Bidding |
 |---|---|---|---|---|---|
-| `BDS_Search_Brand_DuAn` | `brand-beachtro-tower` (40) · `brand-blanca-city` (41) | **81** | **1.000.000 ₫/ngày** | **20.000 ₫** | Maximize Clicks + cap |
+| `BDS_Search_Brand_DuAn` | `brand-beachtro-tower` (40) · `brand-blanca-city` (41) | **81** | **1.000.000 ₫/ngày** | **35.000 ₫** (nâng từ 20k, lệnh user 2026-08-06 ngày bật) | Maximize Clicks + cap |
 
 File import sẵn: **`keywords/launch-uu-tien-1.tsv`** — 81 dòng, 4 cột `Campaign / Ad group / Keyword / Match type`, 40 exact + 41 phrase, **0 broad**. Lọc theo `uu_tien=1` **hoặc** volume thật > 0.
 

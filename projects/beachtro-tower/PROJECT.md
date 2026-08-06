@@ -32,7 +32,7 @@
 |---|---|---|
 | Ngân sách/ngày | **1.000.000 ₫** (chốt 2026-08-06) | **1 campaign brand duy nhất** — `plan-chay-ads.md` |
 | CPL mục tiêu | **chưa đặt** — chốt ở tuần 4 từ số thật | Tháng 1 dùng **kill rule cấu trúc**, không cắt theo giá (`plan-chay-ads.md §4`) |
-| CPC trần | **20.000 ₫** | Campaign brand, QS cao → CPC thực rẻ hơn nhiều |
+| CPC trần | **35.000 ₫** (nâng từ 20k ngày bật, lệnh user) | Phủ trọn dải bid đầu trang của cụm blanca city (8.9k–42.6k); CPC thực vẫn quyết bởi đấu giá |
 | IS brand | ≥ 80% | Ngưỡng `monitoring.md §4` |
 
 ⚠️ **Giai đoạn pre-launch, chưa có bảng giá** → CPL raw sẽ rẻ giả tạo (LP không có rào tài chính). Không so CPL giai đoạn này với giai đoạn sau khi công bố giá.
@@ -74,7 +74,7 @@ Ad copy 2 bộ RSA: `ad-copy.md`. Plan chạy: `plan-chay-ads.md`.
 |---|---|---|
 | Campaign | `BDS_Search_Brand_DuAn` · **ENABLED/SERVING** · Search · Maximize Clicks | `24103805490` |
 | Ngân sách | **1.000.000 ₫/ngày** (không dùng chung) | `15778630477` |
-| Trần CPC | **20.000 ₫** (campaign + cả 2 ad group) | |
+| Trần CPC | **35.000 ₫** (campaign + cả 2 ad group — nâng từ 20k cùng ngày bật) | |
 | Ad group | `brand-beachtro-tower` · `brand-blanca-city` | `195939193901` · `195939194061` |
 | Keyword | **81** (40 exact + 41 phrase, 0 broad) | |
 | RSA | 2 bộ, ghim H1, path `/bang-gia/2026` và `/blanca-city/can-ho` | |
