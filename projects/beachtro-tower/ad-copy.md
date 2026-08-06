@@ -26,23 +26,23 @@ Nguồn dữ kiện: LP `https://smartrealtors.vn/beachtro-tower-blanca-city/` (
 
 ## Bộ 1 — ad group `brand-beachtro-tower`
 
-Final URL `https://smartrealtors.vn/beachtro-tower-blanca-city/` · Path1 `bang-gia` · Path2 `2026` · **Ghim H1 = headline #1**, còn lại không ghim.
+Final URL `https://smartrealtors.vn/beachtro-tower-blanca-city/` · Path1 `bang-gia` · Path2 `2026` · **KHÔNG ghim headline nào** (xem mục Độ mạnh quảng cáo).
 
 | # | Headline | Ký tự |
 |---|---|---|
-| 1 | Beachtro Tower Bảng Giá Mới | 27 |
-| 2 | Beachtro Tower Blanca City | 26 |
-| 3 | Căn Hộ Sở Hữu Lâu Dài Vũng Tàu | 30 |
-| 4 | Beachtro Tower - Sun Group | 26 |
+| 1 | Beachtro Tower Blanca City | 26 |
+| 2 | Bảng Giá Beachtro Tower | 23 |
+| 3 | Căn Hộ Sở Hữu Lâu Dài | 21 |
+| 4 | Bốn Tòa E6-E9 Vũng Tàu | 22 |
 | 5 | Nhận Bảng Giá Khi Công Bố | 25 |
-| 6 | Beachtro Tower Mặt Bằng Căn | 27 |
-| 7 | 1.785 Căn Sổ Hồng Lâu Dài | 25 |
-| 8 | Tòa Căn Hộ Cuối Của Blanca | 26 |
-| 9 | Chọn Căn Cho Gia Đình Của Bạn | 29 |
-| 10 | Beachtro Tower Tiến Độ 8/2028 | 29 |
-| 11 | Đăng Ký Nhận Bộ Thông Tin | 25 |
-| 12 | Tư Vấn Chọn Căn Miễn Phí | 24 |
-| 13 | Beachtro Tower Vũng Tàu | 23 |
+| 6 | Tòa Căn Hộ Cuối Của Blanca | 26 |
+| 7 | Mặt Bằng Từng Loại Căn | 22 |
+| 8 | Chọn Căn Cho Gia Đình Bạn | 25 |
+| 9 | Sun Group Phát Triển | 20 |
+| 10 | Tiến Độ Bàn Giao 8/2028 | 23 |
+| 11 | Tư Vấn Chọn Căn Miễn Phí | 24 |
+| 12 | 1.785 Căn Hộ Sổ Hồng | 20 |
+| 13 | Đăng Ký Nhận Bộ Thông Tin | 25 |
 | 14 | Mặt Tiền Đường 3/2 Vũng Tàu | 27 |
 | 15 | Gọi Ngay Để Được Tư Vấn | 23 |
 
@@ -55,24 +55,24 @@ Final URL `https://smartrealtors.vn/beachtro-tower-blanca-city/` · Path1 `bang-
 
 ## Bộ 2 — ad group `brand-blanca-city`
 
-Final URL `https://smartrealtors.vn/beachtro-tower-blanca-city/` · Path1 `blanca-city` · Path2 `can-ho` · **Ghim H1 = headline #1**.
+Final URL `https://smartrealtors.vn/beachtro-tower-blanca-city/` · Path1 `blanca-city` · Path2 `can-ho` · **KHÔNG ghim headline nào**.
 
 | # | Headline | Ký tự |
 |---|---|---|
-| 1 | Blanca City Bảng Giá Mới Nhất | 29 |
-| 2 | Blanca City Vũng Tàu Sun Group | 30 |
-| 3 | Blanca City - Căn Hộ Sổ Hồng | 28 |
-| 4 | Beachtro Tower Trong Blanca | 27 |
-| 5 | Đại Đô Thị 96ha Bờ Biển 1km | 27 |
-| 6 | Blanca City Mở Bán Đợt Mới | 26 |
-| 7 | Nhận Bảng Giá Khi Công Bố | 25 |
-| 8 | Blanca City Mặt Bằng Căn Hộ | 27 |
-| 9 | Sống Cạnh Biển Mỗi Ngày | 23 |
-| 10 | Blanca City Tiến Độ Mới Nhất | 28 |
+| 1 | Blanca City Vũng Tàu | 20 |
+| 2 | Bảng Giá Blanca City 2026 | 25 |
+| 3 | Căn Hộ Sở Hữu Lâu Dài | 21 |
+| 4 | Sun Group Phát Triển | 20 |
+| 5 | Nhận Bảng Giá Khi Công Bố | 25 |
+| 6 | Đại Đô Thị 96ha Ven Biển | 24 |
+| 7 | Mặt Bằng Căn Hộ E6-E9 | 21 |
+| 8 | Sống Cạnh Biển Mỗi Ngày | 23 |
+| 9 | Blanca City Mở Bán Đợt Mới | 26 |
+| 10 | Vị Trí Mặt Tiền Đường 3/2 | 25 |
 | 11 | Tư Vấn Chọn Căn Miễn Phí | 24 |
-| 12 | Blanca City Vị Trí Kết Nối | 26 |
+| 12 | 1.785 Căn Hộ Sổ Hồng | 20 |
 | 13 | Đăng Ký Nhận Bộ Thông Tin | 25 |
-| 14 | Blanca City Tiện Ích Nội Khu | 28 |
+| 14 | Bàn Giao Dự Kiến 8/2028 | 23 |
 | 15 | Gọi Ngay Để Được Tư Vấn | 23 |
 
 | # | Description | Ký tự |
@@ -88,32 +88,52 @@ Final URL `https://smartrealtors.vn/beachtro-tower-blanca-city/` · Path1 `blanc
 > Bid vào tên đối thủ làm keyword thì **được**; đưa tên đối thủ hoặc CĐT của họ vào **ad text** là xâm phạm nhãn hiệu — Google gỡ quảng cáo theo khiếu nại, tái phạm thì đình chỉ tài khoản. Cấm xuất hiện trong headline/description/sitelink/callout: `the sóng`, `an gia`, `dic solar`, `dic corp`, `novaworld`, `novaland`.
 > Hệ quả không vá được: khách gõ tên đối thủ mà ad nói về Beachtro → message match đứt theo thiết kế → QS dự kiến 2–4, CPC gấp 2–4 lần brand mình. Nếu mở, phải là campaign riêng, ngân sách riêng, kill sớm.
 
+## Độ mạnh quảng cáo (Ad Strength) — chốt 2026-08-06
+
+Bộ đầu tiên bị Google chấm **Kém / Trung bình**. Hai nguyên nhân, đã sửa cả hai:
+
+1. **Ghim H1** — đây là hình phạt nặng nhất. Ghim khoá message match nhưng chặn Google xoay tổ hợp, Ad Strength tụt ngay. → **Bỏ ghim toàn bộ.** Message match vẫn giữ được vì *mọi* headline đều nói đúng về dự án, không có câu lạc đề.
+2. **Headline lặp tên dự án** — bản cũ có 7/15 câu mở đầu bằng "Beachtro Tower", Google coi là thiếu đa dạng. → Bản mới chỉ còn **1–2 câu** mở đầu bằng tên dự án; 15 câu phủ nhiều góc: sở hữu, quy mô, CĐT, vị trí, tiến độ, tiện ích, cảm xúc, CTA.
+
+Đánh đổi đã chấp nhận: không ghim nghĩa là Google có thể chọn bất kỳ headline nào làm H1. Rủi ro thấp ở đây vì cả 15 câu đều hợp lệ để đứng đầu. **Nếu sau này thêm headline chỉ hợp làm câu phụ thì phải cân nhắc ghim lại** — và chấp nhận Ad Strength tụt.
+
+⚠️ Ad Strength **không** vào Ad Rank / Quality Score (`research §7b`). Nó là chỉ báo đa dạng tài sản, không phải chỉ số hiệu quả. Đừng hy sinh độ đúng của thông điệp để chạy theo nó.
+
 ## Chấm ABCD (`campaign-setup.md §3`)
 
 | | Bộ 1 | Bộ 2 |
 |---|---|---|
-| **A** Attract | ✔ #1 tên dự án + bảng giá | ✔ |
-| **B** Brand | ✔ tên dự án ở 7/15 headline | ✔ 8/15 |
-| **C** Connect | ✔ #9 "Chọn Căn Cho Gia Đình Của Bạn" | ✔ #9 "Sống Cạnh Biển Mỗi Ngày" |
-| **D** Direct | ✔ #11, #15 | ✔ #11, #13, #15 |
+| **A** Attract | ✔ tên dự án + bảng giá | ✔ |
+| **B** Brand | ✔ tên dự án ở 3/15 headline (giảm chủ ý để tăng đa dạng) | ✔ 3/15 |
+| **C** Connect | ✔ "Chọn Căn Cho Gia Đình Bạn" | ✔ "Sống Cạnh Biển Mỗi Ngày" |
+| **D** Direct | ✔ "Đăng Ký Nhận Bộ Thông Tin", "Gọi Ngay Để Được Tư Vấn" | ✔ như bộ 1 |
 
-## Extensions
+## Tài sản (asset) — đã gắn thật trên tài khoản 2026-08-06
 
-**Sitelink (6, cấp campaign)** — anchor trên chính LP, không sang trang khác:
+**Sitelink (6, cấp campaign)** — **chỉ dùng anchor nội bộ trên chính LP**, không sang trang khác (giữ scent, không mất `gclid`):
 
-| Tiêu đề | Mô tả 1 | Mô tả 2 |
-|---|---|---|
-| Bốn Tòa E6–E9 | Mặt bằng và tầm view từng tòa | Số tầng E6 34 đến E9 40 |
-| Sở Hữu Lâu Dài | Sổ hồng lâu dài theo quy định | Tòa căn hộ cuối của Blanca |
-| Tùy Chọn DyHome | Tự hoàn thiện hoặc gói cơ bản | Có bảng đơn giá theo loại căn |
-| Tiện Ích Tro Collection | 12 hạng mục rải theo tầng | Hồ bơi, công viên, khu thể thao |
-| Vị Trí & Kết Nối | Mặt tiền đường 3/2 Vũng Tàu | Trong đại đô thị Blanca 96 ha |
-| Lộ Trình Nhận Nhà | Bàn giao dự kiến 8/2028 | Các mốc từ nay đến khi nhận |
+| Tiêu đề | Mô tả 1 | Mô tả 2 | Anchor |
+|---|---|---|---|
+| Bốn Tòa E6-E9 | Mặt bằng và tầm view từng tòa | Số tầng E6 34 đến E9 40 | `#s6-bon-toa` |
+| Sở Hữu Lâu Dài | Sổ hồng lâu dài theo quy định | Tòa căn hộ cuối của Blanca | `#s3-usp-cuoi-cung` |
+| Tùy Chọn DyHome | Tự hoàn thiện hoặc gói cơ bản | Có bảng đơn giá theo loại căn | `#s5-dyhome` |
+| Tiện Ích Tro Collection | 12 hạng mục rải theo tầng | Hồ bơi, công viên, khu thể thao | `#s7-tro-collection` |
+| Vị Trí & Kết Nối | Mặt tiền đường 3/2 Vũng Tàu | Trong đại đô thị Blanca 96 ha | `#s9-vi-tri` |
+| Lộ Trình Nhận Nhà | Bàn giao dự kiến 8/2028 | Các mốc từ nay đến khi nhận | `#s11-lo-trinh` |
 
-⚠️ Anchor `#...` tương ứng phải **có thật trên LP** — kiểm trước khi dán, sitelink trỏ anchor không tồn tại sẽ nhảy về đầu trang và mất scent.
+Cả 6 anchor đã đối chiếu với HTML thật của LP — đều tồn tại. Sitelink trỏ anchor không có thật sẽ nhảy về đầu trang và mất scent.
 
-**Callout (cấp tài khoản)**: `Sở hữu lâu dài` · `Phân phối chính thức` · `Tư vấn chọn căn miễn phí` · `Sun Group phát triển`
+**Chú thích / Callout (8, cấp campaign)**: `Sở hữu lâu dài` · `Phân phối chính thức` · `Tư vấn chọn căn miễn phí` · `Sun Group phát triển` · `Bàn giao dự kiến 8/2028` · `1.785 căn hộ E6-E9` · `Trong đại đô thị 96 ha` · `Nhận bảng giá khi công bố`
 
-**Call (cấp tài khoản)**: Việt Nam · `0937 837 888` (số trên LP) · chuyển tiếp Google **TẮT** · lịch = đúng giờ trực máy.
+**Đoạn có cấu trúc / Structured snippet (2, cấp campaign)**:
+- «Tiện nghi»: Hồ bơi · Công viên nội khu · Phòng tập · Khu vui chơi trẻ em
+- «Thương hiệu»: Sun Group · Sun Property · Blanca City · Beachtro Tower
 
-**Location**: bỏ qua — chưa có Google Business Profile đã xác minh.
+⚠️ Header của structured snippet phải lấy từ danh sách Google định sẵn theo ngôn ngữ. Header **hợp lệ cho tiếng Việt** (đã probe API): `Tiện nghi`, `Thương hiệu`, `Điểm đến`, `Chương trình`, `Khóa học`, `Khách sạn nổi bật`. `Loại hình`, `Kiểu dáng`, `Khu dân cư`, `Danh mục dịch vụ` **không hợp lệ** — đừng thử lại.
+
+**Hotline / Call (1, cấp campaign)**: Việt Nam · `0937 837 888` · giờ trực **08:00–21:00** (hẹp hơn lịch campaign 05:00–24:00 để không hiện nút gọi ngoài giờ có người trực) · **chuyển tiếp Google TẮT** (chưa hỗ trợ VN).
+
+**Hình ảnh (4, ĐÃ upload — chờ gắn tay trên UI)**: cắt từ ảnh chính thức trên LP (`hero-kv-beachtro.jpg`, `og-beachtro.jpg`) về đúng tỉ lệ Google: 2 ảnh ngang 1200×628 (1,91:1) + 2 ảnh vuông 1200×1200 và 566×566.
+⚠️ **Google chặn gắn asset ảnh vào campaign Search qua API** (`The given field type is not supported to be added directly through asset links`) — đã thử cả 3 cấp campaign / ad group / tài khoản và cả `MARKETING_IMAGE`, `SQUARE_MARKETING_IMAGE`, `AD_IMAGE`. Ảnh đã nằm trong **thư viện tài sản** của tài khoản, chỉ cần vào UI `Tài sản → Hình ảnh` chọn là xong.
+
+**Location**: bỏ qua — chưa có Google Business Profile đã xác minh. Smartland có VP Vũng Tàu (GA.01.16 Chung cư Gateway, P. Nguyễn An Ninh) → tạo GBP rồi quay lại gắn.
