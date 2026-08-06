@@ -35,8 +35,11 @@ Rồi:
    ```bash
    awk -F, 'NR==1 || $2=="brand-'$SLUG'"' keywords/master-keywords.csv > projects/$SLUG/keywords/brand.csv
    ```
-4. Thêm dòng vào bảng "Dự án active" trong `COWORK.md`.
-5. Làm việc trên nhánh `cowork/<slug>-<việc>`, PR về main — không push thẳng main.
+4. Đo volume thật rồi ghi vào chính file keyword (Keyword Planner API — **chỉ đọc**, không tạo gì trong tài khoản). 5 cột thêm vào `brand.csv`: `vol_thang`, `canh_tranh`, `bid_thap_d`, `bid_cao_d`, `ngay_do_volume`.
+   ⚠️ **File `.tsv` để import giữ đúng 4 cột** `Campaign / Ad group / Keyword / Match type` — không nhét cột volume vào, Google Ads Editor sẽ báo lỗi.
+   ⚠️ Volume là số **chụp tại một thời điểm** — luôn kèm `ngay_do_volume`, đo lại mỗi quý. Dự án mới mở bán thì tên dự án thường 0 volume trong vài tháng đầu, đó là bình thường, không phải lỗi.
+5. Thêm dòng vào bảng "Dự án active" trong `COWORK.md`.
+6. Làm việc trên nhánh `cowork/<slug>-<việc>`, PR về main — không push thẳng main.
 
 ## Nhịp file data
 
@@ -46,3 +49,5 @@ Rồi:
 | `data/ads/search-terms/<yyyy-mm-dd>.csv` | `FROM search_term_view` hoặc export UI | tuần |
 | `data/ads/auction-insights-<yyyy-mm-dd>.csv` | **chỉ tải tay từ UI** — API bị chặn (allowlist Google đã đóng) | tuần, bắt buộc |
 | `data/ga4/*.csv` | GA4 API | khi cần đối chiếu |
+| `keywords/volume-<yyyy-mm-dd>.csv` | Keyword Planner API — volume bộ launch | quý |
+| `keywords/keyword-ideas-<yyyy-mm-dd>.csv` | Keyword Planner API — ý tưởng mở rộng | quý |

@@ -52,12 +52,12 @@
 | Ad group | Tổng | `uu_tien=1` (bộ launch) | Volume/tháng thật |
 |---|---|---|---|
 | `brand-beachtro-tower` | 110 | 40 | **0** ⚠️ |
-| `brand-blanca-city` | 110 | 40 | **18.490** |
+| `brand-blanca-city` | 110 | 41 | **18.520** |
 
-Sinh từ `keywords/projects.tsv` (2 dòng: `beachtro tower` + `blanca city`, hạng A, kèm alias) → `gen.py`. File import sẵn: `keywords/launch-uu-tien-1.tsv` (80 dòng, campaign `BDS_Search_Brand_DuAn`).
-Rà chéo negative account-level × 80 kw launch: **0 xung đột**.
+Sinh từ `keywords/projects.tsv` (2 dòng: `beachtro tower` + `blanca city`, hạng A, kèm alias) → `gen.py`. File import sẵn: `keywords/launch-uu-tien-1.tsv` (**81 dòng**, campaign `BDS_Search_Brand_DuAn`) — quy tắc lọc: `uu_tien=1` **hoặc** có volume thật > 0 (thêm `blanca city vị trí`, 30 lượt/tháng).
+Rà chéo negative account-level × 81 kw launch: **0 xung đột**.
 
-⚠️ **Search volume thật (Keyword Planner API 2026-08-06)**: chỉ 8/80 keyword launch có volume, **toàn bộ ở "blanca city"** — tên "Beachtro" chưa ai gõ (0 volume). Ad group `brand-beachtro-tower` sẽ gần như 0 impression cho tới khi CĐT truyền thông tên tòa. Số đầy đủ: `keywords/volume-2026-08-06.csv` + `keywords/keyword-ideas-2026-08-06.csv` (505 ý tưởng). Phân tích: `plan-chay-ads.md §1`.
+⚠️ **Search volume thật (Keyword Planner API 2026-08-06)**: chỉ **9/220** keyword có volume (8 trong bộ launch gốc + `blanca city vị trí`), **toàn bộ ở "blanca city"** — tên "Beachtro" chưa ai gõ (0 volume). Ad group `brand-beachtro-tower` sẽ gần như 0 impression cho tới khi CĐT truyền thông tên tòa. Volume đã ghi thẳng vào `keywords/brand.csv` (5 cột `vol_thang`/`canh_tranh`/`bid_thap_d`/`bid_cao_d`/`ngay_do_volume`, đo 2026-08-06, **đo lại mỗi quý**). Bản chụp rời: `keywords/volume-2026-08-06.csv` + `keywords/keyword-ideas-2026-08-06.csv` (505 ý tưởng). Phân tích: `plan-chay-ads.md §1`.
 
 Ad copy 2 bộ RSA: `ad-copy.md`. Plan chạy: `plan-chay-ads.md`.
 
@@ -115,4 +115,4 @@ Rủi ro còn lại nếu Google vẫn từ chối vì thiếu thông tin doanh 
 | 2026-08-05 | Kết nối Google Ads API + GA4, nghiệm thu 2 cổng (`nghiem-thu.md`) |
 | 2026-08-06 | Mở hồ sơ trong `projects/`; audit LP (3,50/5); +2 dòng `projects.tsv` → 220 brand keyword; viết 2 bộ RSA |
 | 2026-08-06 | Duyệt plan chạy ads: 1 campaign brand, 1tr₫/ngày, chưa đặt CPL mục tiêu |
-| 2026-08-06 | Lấy volume thật từ Keyword Planner: 18.490 lượt/tháng, **toàn bộ ở "blanca city"**; "beachtro" = 0 |
+| 2026-08-06 | Lấy volume thật từ Keyword Planner: **18.520** lượt/tháng, **toàn bộ ở "blanca city"**; "beachtro" = 0 |

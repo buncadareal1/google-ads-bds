@@ -12,9 +12,9 @@ Duyệt 2026-08-06. Tài liệu **thực thi**: mở Google Ads UI làm từ tr�
 
 | Campaign | Ad group | KW | Ngân sách | CPC cap | Bidding |
 |---|---|---|---|---|---|
-| `BDS_Search_Brand_DuAn` | `brand-beachtro-tower` (40) · `brand-blanca-city` (40) | **80** | **1.000.000 ₫/ngày** | **20.000 ₫** | Maximize Clicks + cap |
+| `BDS_Search_Brand_DuAn` | `brand-beachtro-tower` (40) · `brand-blanca-city` (41) | **81** | **1.000.000 ₫/ngày** | **20.000 ₫** | Maximize Clicks + cap |
 
-File import sẵn: **`keywords/launch-uu-tien-1.tsv`** — 80 dòng, 4 cột `Campaign / Ad group / Keyword / Match type`, 40 exact + 40 phrase, **0 broad**.
+File import sẵn: **`keywords/launch-uu-tien-1.tsv`** — 81 dòng, 4 cột `Campaign / Ad group / Keyword / Match type`, 40 exact + 41 phrase, **0 broad**. Lọc theo `uu_tien=1` **hoặc** volume thật > 0.
 
 Final URL cả 2 ad group: `https://smartrealtors.vn/beachtro-tower-blanca-city/`. RSA: 2 bộ trong `ad-copy.md`, mỗi ad group 1 bộ, ghim H1 = headline #1.
 
@@ -22,9 +22,9 @@ Không chạy: brand CĐT Sun Group · khu vực Vũng Tàu · săn brand đối
 
 ### 📊 Search volume thật (Keyword Planner API, 2026-08-06, VN + tiếng Việt)
 
-Số đầy đủ: `keywords/volume-2026-08-06.csv` (80 kw launch) · `keywords/keyword-ideas-2026-08-06.csv` (505 ý tưởng có volume).
+Volume đã ghi thẳng vào `keywords/brand.csv` (cột `vol_thang`, `canh_tranh`, `bid_thap_d`, `bid_cao_d`, `ngay_do_volume`). Bản chụp rời: `keywords/volume-2026-08-06.csv` · `keywords/keyword-ideas-2026-08-06.csv` (505 ý tưởng).
 
-**Chỉ 8/80 keyword có volume — và toàn bộ nằm ở "blanca city", không phải "beachtro".**
+**Chỉ 9/220 keyword có volume — và toàn bộ nằm ở "blanca city", không phải "beachtro".**
 
 | Keyword | Vol/tháng | Cạnh tranh | Bid đầu trang (thấp–cao) |
 |---|---|---|---|
@@ -34,15 +34,16 @@ Số đầy đủ: `keywords/volume-2026-08-06.csv` (80 kw launch) · `keywords/
 | blanca city sun group | 480 | LOW | 11.054 – 42.616 ₫ |
 | blanca city giá | 110 | LOW | 7.991 – 37.532 ₫ |
 | blanca city vũng tàu giá | 70 | MEDIUM | 9.041 – 39.513 ₫ |
+| blanca city vị trí | 30 | LOW | `uu_tien=2` — thêm vào launch vì có volume thật |
 | blanca city mở bán | 20 | MEDIUM | 6.493 – 60.890 ₫ |
 | blanca city giá bao nhiêu | 10 | MEDIUM | 5.104 – 29.584 ₫ |
-| **Tổng** | **18.490** | | |
+| **Tổng** | **18.520** | | |
 
 Ba điều rút ra, ảnh hưởng thẳng tới cách chạy:
 
 **1. Toàn bộ 40 keyword `brand-beachtro-tower` = 0 volume.** Tên "Beachtro" mới ra mắt, chưa ai gõ. Ad group này sẽ gần như **0 impression**. Vẫn **giữ lại** — exact match trên term 0 volume không tốn gì, và đây là bộ hứng sẵn khi CĐT bắt đầu truyền thông tên tòa. Nhưng **đừng chờ traffic từ nó**, và đừng kết luận "ads không chạy" khi thấy ad group này trống.
 
-**2. Ngân sách 1tr₫/ngày là hợp lý hơn tôi ước lượng ban đầu.** Với 18.490 lượt tìm/tháng và bid đầu trang thấp ~9.000 ₫, campaign có khả năng tiêu **khoảng 300–500k₫/ngày**, không phải "nằm chết" như tôi nói trước khi có số. Vẫn theo dõi `budget lost IS`: ≈0% suốt 14 ngày → hạ ngân sách; >0% → ngân sách mới thật sự là nút thắt. **Tuyệt đối không tăng bid chỉ để tiêu cho hết.**
+**2. Ngân sách 1tr₫/ngày là hợp lý hơn tôi ước lượng ban đầu.** Với 18.520 lượt tìm/tháng và bid đầu trang thấp ~9.000 ₫, campaign có khả năng tiêu **khoảng 300–500k₫/ngày**, không phải "nằm chết" như tôi nói trước khi có số. Vẫn theo dõi `budget lost IS`: ≈0% suốt 14 ngày → hạ ngân sách; >0% → ngân sách mới thật sự là nút thắt. **Tuyệt đối không tăng bid chỉ để tiêu cho hết.**
 
 **3. ⚠️ "Blanca City" là brand của Sun Group, KHÔNG phải của riêng Beachtro.** Blanca City là đại đô thị 96 ha gồm nhiều dòng sản phẩm; LP của ta chỉ nói về **4 tòa căn hộ E6–E9**. Người gõ "blanca city" có thể đang tìm biệt thự / shophouse / nhà phố → vào LP căn hộ là lệch nhu cầu, tốn click mà không ra lead.
 
@@ -61,7 +62,7 @@ Ba điều rút ra, ảnh hưởng thẳng tới cách chạy:
 - Lịch quảng cáo **05:00–24:00**
 - **Auto-apply recommendations TẮT HẾT** (cấp tài khoản) — nguy hiểm nhất là `Remove conflicting negative keywords` (phá negative list) và `Use Display expansion` (bật lại thứ vừa tắt)
 - **Tracking template UTM** cấp tài khoản (`§1.5.9`) — hiện **rỗng**
-- **Negative account-level 382 dòng** — hiện mới **1 dòng**. Lệnh xuất ở `campaign-setup.md §1.4`. Đã rà chéo với 80 keyword launch: **0 xung đột**
+- **Negative account-level 382 dòng** — hiện mới **1 dòng**. Lệnh xuất ở `campaign-setup.md §1.4`. Đã rà chéo với 81 keyword launch: **0 xung đột**
 - RSA: **2 RSA/ad group** ngày 1, chừa 1 slot cho biến thể tuần 3
 
 ---

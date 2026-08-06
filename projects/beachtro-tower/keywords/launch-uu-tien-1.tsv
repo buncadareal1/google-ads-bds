@@ -40,13 +40,17 @@ BDS_Search_Brand_DuAn	brand-beachtro-tower	tháp beachtro mua	Phrase
 BDS_Search_Brand_DuAn	brand-beachtro-tower	tháp beachtro mở bán	Exact
 BDS_Search_Brand_DuAn	brand-beachtro-tower	tháp beachtro tiến độ thanh toán	Phrase
 BDS_Search_Brand_DuAn	brand-blanca-city	blanca city	Exact
+BDS_Search_Brand_DuAn	brand-blanca-city	blanca city vũng tàu	Exact
+BDS_Search_Brand_DuAn	brand-blanca-city	sun blanca city	Exact
+BDS_Search_Brand_DuAn	brand-blanca-city	blanca city sun group	Exact
+BDS_Search_Brand_DuAn	brand-blanca-city	blanca city giá	Exact
+BDS_Search_Brand_DuAn	brand-blanca-city	blanca city vũng tàu giá	Exact
+BDS_Search_Brand_DuAn	brand-blanca-city	blanca city vị trí	Phrase
+BDS_Search_Brand_DuAn	brand-blanca-city	blanca city mở bán	Exact
+BDS_Search_Brand_DuAn	brand-blanca-city	blanca city giá bao nhiêu	Phrase
 BDS_Search_Brand_DuAn	brand-blanca-city	blanca city bảng giá	Exact
 BDS_Search_Brand_DuAn	brand-blanca-city	blanca city chính sách bán hàng	Phrase
-BDS_Search_Brand_DuAn	brand-blanca-city	blanca city giá	Exact
-BDS_Search_Brand_DuAn	brand-blanca-city	blanca city giá bao nhiêu	Phrase
 BDS_Search_Brand_DuAn	brand-blanca-city	blanca city mua	Phrase
-BDS_Search_Brand_DuAn	brand-blanca-city	blanca city mở bán	Exact
-BDS_Search_Brand_DuAn	brand-blanca-city	blanca city sun group	Exact
 BDS_Search_Brand_DuAn	brand-blanca-city	blanca city sun group bảng giá	Exact
 BDS_Search_Brand_DuAn	brand-blanca-city	blanca city sun group chính sách bán hàng	Phrase
 BDS_Search_Brand_DuAn	brand-blanca-city	blanca city sun group giá	Exact
@@ -55,15 +59,12 @@ BDS_Search_Brand_DuAn	brand-blanca-city	blanca city sun group mua	Phrase
 BDS_Search_Brand_DuAn	brand-blanca-city	blanca city sun group mở bán	Exact
 BDS_Search_Brand_DuAn	brand-blanca-city	blanca city sun group tiến độ thanh toán	Phrase
 BDS_Search_Brand_DuAn	brand-blanca-city	blanca city tiến độ thanh toán	Phrase
-BDS_Search_Brand_DuAn	brand-blanca-city	blanca city vũng tàu	Exact
 BDS_Search_Brand_DuAn	brand-blanca-city	blanca city vũng tàu bảng giá	Exact
 BDS_Search_Brand_DuAn	brand-blanca-city	blanca city vũng tàu chính sách bán hàng	Phrase
-BDS_Search_Brand_DuAn	brand-blanca-city	blanca city vũng tàu giá	Exact
 BDS_Search_Brand_DuAn	brand-blanca-city	blanca city vũng tàu giá bao nhiêu	Phrase
 BDS_Search_Brand_DuAn	brand-blanca-city	blanca city vũng tàu mua	Phrase
 BDS_Search_Brand_DuAn	brand-blanca-city	blanca city vũng tàu mở bán	Exact
 BDS_Search_Brand_DuAn	brand-blanca-city	blanca city vũng tàu tiến độ thanh toán	Phrase
-BDS_Search_Brand_DuAn	brand-blanca-city	sun blanca city	Exact
 BDS_Search_Brand_DuAn	brand-blanca-city	sun blanca city bảng giá	Exact
 BDS_Search_Brand_DuAn	brand-blanca-city	sun blanca city chính sách bán hàng	Phrase
 BDS_Search_Brand_DuAn	brand-blanca-city	sun blanca city giá	Exact
