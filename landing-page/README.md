@@ -48,6 +48,16 @@ Thứ tự phần tử bắt buộc trong màn hình đầu:
 - Exit popup: vô dụng trên mobile → dùng **sticky bar**; nếu có popup thì đổi offer ("nhận bảng giá
   qua Zalo"), không lặp lại form chính (skill `popups`).
 
+## Luật DiPS — chẩn đoán trước, kê đơn sau (Making Websites Win, chưng cất 2026-08-06)
+
+Ma trận 7 tiêu chí dưới đây là **danh sách best practice** — nó cho biết trang thiếu gì so với chuẩn, KHÔNG cho biết *vì sao khách của trang này không chuyển đổi*. Áp best practice mù = "marketing malpractice": mỗi objection là ổ khoá, mỗi giải pháp là chìa — chìa sai còn làm loãng đoạn duy nhất cứu được deal. Chi tiết + bộ kỹ thuật chẩn đoán: `research/books/making-websites-win.md`.
+
+Luật khi LP đã có traffic:
+1. **Chẩn đoán tối thiểu trước khi chấm điểm/sửa**: câu hỏi vàng *"Điều gì suýt khiến anh/chị KHÔNG đăng ký?"* hỏi 20–30 người ĐÃ đăng ký (sale hỏi trong cuộc gọi đầu, 0đ) + Clarity heatmap/recording (đọc web UI, không tốn quota API). Đừng hỏi người bỏ đi — câu trả lời của họ là cá trích đỏ.
+2. Lập bảng **O/CO** (objection ↔ counterobjection) xếp theo tần suất → mỗi lần sửa LP nhắm đúng 1 objection mạnh nhất.
+3. **Traffic thấp thì cấm "meek tweaking"**: cải thiện 10–20% mất hàng tháng mới đo ra — chỉ đổi táo bạo có mục tiêu, và khi mọi A/B test sẽ mất >6 tháng thì **chỉ dùng user test**.
+4. **Future pacing cạnh form** (khoảng trống hay gặp nhất): nói rõ khách sẽ nhận gì, khi nào, qua kênh nào, SĐT được dùng thế nào — ma trận hiện dừng đúng ở nút submit.
+
 ## Yếu tố 3: Khung phân tích điểm yếu chuyển đổi (khi được yêu cầu audit)
 
 Xếp hạng theo tác động, kiểm theo thứ tự:

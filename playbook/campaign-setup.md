@@ -296,6 +296,12 @@ Khi viết bộ RSA cho dự án mới: chấm ABCD trước khi chạy script �
 > 4. Ad Strength **GOOD là đích, đừng đuổi Excellent** — muốn lên nữa phải nhồi keyword vào description làm câu gượng, trong khi Ad Strength không vào Ad Rank/QS (`research §7b`).
 > 5. Đọc điểm + gợi ý qua API: `ad_group_ad.ad_strength` + `ad_group_ad.action_items`.
 
+> 📚 **BỔ SUNG TỪ 3 CUỐN SÁCH ĐÃ CHƯNG CẤT (2026-08-06 — chi tiết `research/books/`):**
+> - **Bước 0 trước khi viết bất kỳ bộ RSA nào** (Schwartz): khai 2 số ở đầu bộ — `Mức nhận thức khách = 1–5` (họ biết gì về SẢN PHẨM MÌNH — lưu ý: cùng truy vấn có thể mức 1 với brand mẹ nhưng mức 3 với brand con) và `Mức sophistication thị trường = 1–5`. Thị trường căn hộ VN 2026 ≈ mức 3½–4 → claim trần (`giá tốt`, `ưu đãi`) vô hiệu, chỉ **cơ chế** ("sổ hồng lâu dài") và **gỡ giới hạn** ("X mà không phải chịu Y") còn ăn. Một bộ RSA = một mức nhận thức, không trộn.
+> - **Rubric ABCD → ABCD-M**: thêm hàng **M — Mechanism**: mỗi bộ ≥1 headline nói *bằng cách nào*, không chỉ *được gì*.
+> - **Chữ C (Connect) — định nghĩa ĐO ĐƯỢC thay cảm tính** (Cashvertising): headline nhóm C = câu **không chứa dữ kiện sản phẩm**, mô tả *trạng thái khách sau khi mua* hoặc *con người khách muốn thành*, và phải chỉ đích danh **LF8 số mấy** (mạnh nhất cho BĐS ở/nghỉ dưỡng: #7 người thân, #3 thoát sợ hãi pháp lý). Định mức **≥3/15 nhóm C** và **≥2/15 có đại từ ngôi hai** (`bạn`/`cả nhà`). `Sống Cạnh Biển Mỗi Ngày` KHÔNG phải C — nó vẫn mô tả sản phẩm; bản C thật: `Sáng Mở Mắt Đã Thấy Biển`.
+> - Cụ thể thắng chung chung: con số có nguồn (`1.785 căn`, `bàn giao 8/2028`) vừa là chi tiết vừa tăng độ tin — kỹ thuật hợp policy nhất. Khi ad không ra lead: **đổi offer trước khi kết luận thị trường không có nhu cầu**.
+
 ### 3.1 Bộ 1 — Brand dự án (ad group `brand-<slug>`, modifier *bảng giá*)
 
 Message match `adgroup-map.md`: headline chứa **tên dự án + "Bảng Giá Mới Nhất"** → LP scroll tới block **bảng giá + form tải bảng giá**.
