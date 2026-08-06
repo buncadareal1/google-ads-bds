@@ -134,7 +134,15 @@ CPL mục tiêu      = Breakeven CPL × (1 − biên lợi nhuận yêu cầu)
 
 `CPL thực > CPL mục tiêu` → tháng 2 chuyển sang cắt theo kinh tế. Ngược lại → scale **≤20%/lần, cách 3–5 ngày**.
 
-⚠️ **Luật Simpson:** khi CĐT công bố bảng giá, LP đổi bản chất → **không so CPL trước/sau**. So cùng campaign, cùng khung ngày. Ghi mốc đổi LP vào nhật ký `PROJECT.md`.
+⚠️ **Luật Simpson:** khi CĐT công bố bảng giá, LP đổi bản chất → **không so CPL trước/sau**. So cùng campaign, cùng khung ngày. Ghi mốc đổi LP vào nhật ký `PROJECT.md`. Bản nâng cấp (Kohavi): ngày công bố giá = **bắt đầu kỳ đo mới**, hoặc diff-in-diff với một campaign không đổi.
+
+### Kỷ luật đọc số (Kohavi + Binet-Field, chưng cất 2026-08-06 — chi tiết `research/books/`)
+
+1. **CPL tuần 4 chỉ để đặt kill rule.** CẤM dùng nó so "kênh/bộ ad nào tốt hơn về dài hạn" — mọi phép đo dưới ~6 tháng nghiêng hẳn về activation (Binet-Field: hai đường profit cắt nhau ở ~6 tháng).
+2. **2 RSA trong cùng ad group KHÔNG phải A/B test.** Google chia impression theo *dự đoán hiệu suất* (assignment phụ thuộc chính thứ đang đo), chung ngân sách, chung mô hình học → không SRM check nào cứu được. Chỉ dùng để Google chọn cái chạy; **cấm kết luận "headline X thắng headline Y"** từ số liệu này.
+3. **Cỡ mẫu là con số, không phải cảm tính**: CVR ~3% cần **~12.900 click/nhánh** mới bắt được chênh +20% (n≈16σ²/δ²). Hệ có vài trăm click/tháng → không có A/B hợp lệ nào tồn tại ở quy mô này; công cụ đúng là **user test + thay đổi táo bạo** (making-websites-win) và **fixed-period, không peeking** — chốt khung ngày trước, đọc một lần khi hết kỳ.
+4. **Twyman's law**: chỉ số ĐẸP đột biến (CVR ×2, CPL giảm nửa) đáng ngờ ngang chỉ số xấu — kiểm tracking/bot/đếm trùng trước khi ăn mừng.
+5. **Guardrail tin cậy có quyền phủ quyết**: ngày nào `gclid` mismatch / tracking gãy → **cấm đọc mọi số khác của ngày đó** (kể cả số đẹp).
 
 ---
 

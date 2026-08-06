@@ -178,3 +178,10 @@ IS lost budget: 12% ⚠️ 3 ngày liên tiếp
    Rủi ro: learning 0 ngày còn lại. Duyệt: mở Cowork → apply.
 🧹 Negative mới: 4 term (file sẵn: keywords/pending-negatives.csv)
 ```
+
+
+## Phụ lục: 3 luật đọc số bổ sung (Kohavi, chưng cất 2026-08-06 — `research/books/kohavi-experiments.md`)
+
+1. **Alert đối xứng — tin TỐT đột biến cũng là alert** (Twyman's law): chỉ số đẹp bất thường >2× so trung vị 3 tuần → nghi tracking/bot/đếm trùng trước, ăn mừng sau. Hệ hiện chỉ có alert chiều xấu.
+2. **Guardrail tin cậy phủ quyết**: ngày có tracking gãy / gclid mismatch / thẻ đo trùng → gạch toàn bộ số của ngày đó khỏi mọi phân tích, kể cả số đẹp (Microsoft ExP giấu luôn scorecard khi trust-guardrail rớt).
+3. **2 RSA cùng ad group không phải A/B test** — Google chia impression theo dự đoán hiệu suất, chung budget, chung learning. Được phép: để Google chọn cái chạy. Cấm: kết luận headline nào "thắng" từ impression split.
