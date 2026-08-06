@@ -84,7 +84,7 @@ Endpoint `rhq551.infusionsoft.com/app/form/process/c661fd73838c0b58bfab553297fd7
 
 | # | Việc | Ai làm | Chặn launch? |
 |---|---|---|---|
-| 1 | Thêm **footer pháp nhân đầy đủ**: Công ty TNHH Bất động sản SmartRealtors and Partners + MST + địa chỉ + hotline | user (LP) | 🔴 **CÓ** |
+| 1 | Thêm **footer pháp nhân + địa chỉ Vũng Tàu + hotline** — text dán sẵn trong `PROJECT.md`. **Miễn MST** (chốt 2026-08-06: LP đã có Chính sách bảo mật; Google yêu cầu nhận diện doanh nghiệp, không yêu cầu MST) | user (LP) | 🔴 **CÓ** |
 | 2 | Đặt `Số lượng` (Count) = **Một (One)** trên conversion action `7709665581` — chống đếm trùng khi khách F5 trang cảm ơn | tôi (Ads API) | 🔴 **CÓ** |
 | 3 | Bắn 1 lead test thật → Ads có conversion ≤24h · Keap có `gclid` (**gate G0**) | user + tôi | 🔴 **CÓ** |
 | 4 | Thêm **link Zalo** + sticky bar Zalo/hotline trên mobile | user (LP) | 🟡 không, nhưng mất CTA chính của khách VN |
