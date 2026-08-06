@@ -8,14 +8,14 @@
 | Phạm vi bán | **CHỈ căn hộ Beachtro** (chốt 2026-08-06) — không bán biệt thự / shophouse / nhà phố trong Blanca City → 15 negative cấp campaign, xem `keywords/negative.csv` |
 | Bàn giao | Dự kiến 8/2028 |
 | Vai trò của ta | **Phân phối chính thức** (SmartRealtors & Partners) — không phải CĐT |
-| Trạng thái | ⬜ **chưa launch** — Ads account trống, LP live nhưng còn 4 việc chặn |
+| Trạng thái | 🟡 **Campaign đã dựng, đang TẠM DỪNG** — chờ user duyệt + qua gate G0 rồi bật |
 | Ngày mở hồ sơ | 2026-08-05 |
 
 ## Cổng kết nối (verify 2026-08-06 bằng API thật)
 
 | Cổng | ID | Trạng thái |
 |---|---|---|
-| Google Ads customer | `6918288556` (SMR- Sun Galaxy - 7490 - Mạnh) | ✅ API v24 · VND / Asia/Saigon · **0 campaign** |
+| Google Ads customer | `6918288556` (SMR- Sun Galaxy - 7490 - Mạnh) | ✅ API v24 · VND / Asia/Saigon · **1 campaign (PAUSED)** |
 | Google Ads conversion id | `18359425041` · label `rRYqCK3SoNwcEJGwurJE` | ✅ đã gắn trong GTM |
 | GA4 property | `548678683` · measurement `G-RRXWDGQ206` | ✅ có dữ liệu · ❌ **0 key event** · ❌ chưa link Ads |
 | GTM | `GTM-TKDNJXJ9` (account `6353959536` / container `260355978` / workspace `6`) | ✅ đã publish |
@@ -66,16 +66,36 @@ Ad copy 2 bộ RSA: `ad-copy.md`. Plan chạy: `plan-chay-ads.md`.
 
 > **Chốt 2026-08-06: KHÔNG sửa GTM.** Chuỗi đo vẫn chạy — conversion Ads đến thẳng từ thẻ `awct` khi khách vào trang cảm ơn, không đi qua GA4. Giá phải trả: đếm trùng nếu F5 (bù bằng Count = Một), không dùng được Enhanced Conversions, không biết lead đến từ form/tòa nào. Chi tiết: `audit-lp.md`.
 
-> **Chốt 2026-08-06: mọi thao tác trên tài khoản Google Ads do user tự làm trên UI.** Ở repo chỉ chuẩn bị dữ liệu, tài liệu, file import và lệnh kiểm tra. Agent chỉ **đọc** qua API để đối chiếu, không ghi.
+> **Chốt 2026-08-06 (đổi so với ban đầu): user yêu cầu agent dựng campaign qua API**, user tự vào UI duyệt trước khi bật.
 
-| # | Việc | Ai làm |
+### ✅ Đã dựng xong qua API 2026-08-06 — campaign đang **TẠM DỪNG**
+
+| Thành phần | Giá trị | ID |
 |---|---|---|
-| 1 | **Gate G0**: bắn 1 lead test thật → Ads có conversion ≤24h · Keap có `gclid` | user |
-| 2 | Ads: import **382 negative cấp tài khoản** (hiện 1 dòng) — lệnh xuất danh sách ở `campaign-setup.md §1.4` | user (UI) |
-| 3 | Ads: gắn **tracking URL template UTM** (hiện rỗng) — chuỗi ở `campaign-setup.md §1.5.9` | user (UI) |
-| 4 | Ads: dán **15 negative cấp campaign** từ `keywords/negative.csv` (KHÔNG đưa lên account-level) | user (UI) |
-| 5 | Dựng **1 campaign** `BDS_Search_Brand_DuAn` + 2 ad group + RSA + extensions, để **Tạm dừng** — theo `plan-chay-ads.md`, dùng `keywords/launch-uu-tien-1.tsv` + `ad-copy.md` | user (UI/Editor) |
-| 6 | Nộp **xác minh nhà quảng cáo** (Tổ chức, 3–5 ngày) | user |
+| Campaign | `BDS_Search_Brand_DuAn` · **PAUSED** · Search · Maximize Clicks | `24103805490` |
+| Ngân sách | **1.000.000 ₫/ngày** (không dùng chung) | `15778630477` |
+| Trần CPC | **20.000 ₫** (campaign + cả 2 ad group) | |
+| Ad group | `brand-beachtro-tower` · `brand-blanca-city` | `195939193901` · `195939194061` |
+| Keyword | **81** (40 exact + 41 phrase, 0 broad) | |
+| RSA | 2 bộ, ghim H1, path `/bang-gia/2026` và `/blanca-city/can-ho` | |
+| Asset | 6 sitelink + 4 callout (cấp campaign) | |
+| Negative campaign | **15** (biệt thự/shophouse/nhà phố/… + bản không dấu) | |
+| Negative tài khoản | shared set `NEG_BDS_Account_v1`, **382 keyword**, đã gắn | `12184898936` |
+| Mạng | Search ✔ · Search Partners ✘ · Display ✘ | |
+| Vị trí | Việt Nam (`2704`), **PRESENCE** | |
+| Ngôn ngữ | Tiếng Việt + Tiếng Anh | |
+| Lịch | 7 ngày, **05:00–24:00** | |
+| Tracking template | UTM cấp tài khoản, đã gắn | |
+
+### 🔴 Còn lại — user làm trên UI
+
+| # | Việc | Ghi chú |
+|---|---|---|
+| 1 | **Duyệt campaign** trước khi bật | đang PAUSED, chưa tiêu đồng nào |
+| 2 | **Gate G0**: bắn 1 lead test thật → Ads có conversion ≤24h · Keap có `gclid` | **chặn launch** |
+| 3 | Tắt **Tài sản tự động tạo (ACA)** + **Dynamic sitelinks** | API không expose, phải làm trên UI |
+| 4 | Tắt **Auto-apply recommendations** (cấp tài khoản) | UI: Đề xuất → Tự động áp dụng → bỏ tick hết |
+| 5 | Nộp **xác minh nhà quảng cáo** (Tổ chức, 3–5 ngày) | |
 
 ### ✅ Đã đúng sẵn — không phải sửa (đọc API 2026-08-06)
 
