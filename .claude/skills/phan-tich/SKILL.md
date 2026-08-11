@@ -43,6 +43,28 @@ Cần địa lý thì thêm report `city × sessionSourceMedium`.
 
 Không thêm bảng, không giải thích phương pháp, không kể quá trình query. User hỏi "vì sao" mới mở rộng đúng mục đó.
 
+## Bước 4b — Khi user xin BÁO CÁO TỔNG HỢP / báo cáo gửi sếp
+
+Dùng format chuẩn công ty (Mạnh Sâm MKT), KHÔNG dùng format 10 dòng ở trên:
+
+```
+Thời gian: <dd/mm> đến <dd/mm/yyyy>
+Beachtro Tower - Blanca City | <tên người chạy> | Google Ads
+
+Ngân sách đã chạy: <chi> đ
+Số lead: <n> (<a> F1 + <b> đang chấm)
+Chi phí/lead (CPL): <chi/lead> đ
+Chi phí / F1: <chi/F1> đ
+
+Tổng lead (form, hotline, zalo): <n> (<a> đang chấm + <b> F1)
+Tổng lead F1: <n>
+Tỷ lệ qualify lead: <%>
+Tổng ngân sách đã chạy: <đ>
+Booking, F4 từ chiến dịch: <n> BK, <n> Deal
+```
+
+⚠️ Dữ liệu KHÔNG tự có, phải hỏi user (sale/CRM giữ): **F1, tỷ lệ qualify, booking, deal, lead qua hotline/Zalo**. Điền `— cần anh cung cấp` chứ TUYỆT ĐỐI không bịa. Phần Google Ads (chi, lead form, CPL) tự lấy từ script + GA4.
+
 ## Cờ đỏ — CHỈ những trường hợp này mới được viết dài hơn 10 dòng
 
 1. **Lead đầu tiên xuất hiện mà không có gclid trong Keap** → đề nghị PAUSE campaign (task #20)
