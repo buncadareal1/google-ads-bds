@@ -22,7 +22,44 @@
 
 ---
 
-## 2. Bộ đề xuất v2 — `brand-blanca-city` (RSA #2)
+## 2. Bộ đề xuất **v3** — `brand-blanca-city` (RSA #2) ⭐ BẢN TRÌNH DUYỆT
+
+> v3 thay v2 sau khi research dự án (12/08, xem `research-du-an-2026-08-12.md`).
+> Thay đổi lớn: **thêm trục BẰNG CHỨNG** — Sun World trong nội khu đã vận hành từ 12/02/2026.
+> Verify qua API: 0 trùng RSA live · 0 vượt 30 ký tự · bằng-chứng 4/15 · thuốc-chữa 4/15.
+
+| # | Headline | Ký tự | Vai trò |
+|---|---|---|---|
+| H01 | **Sun World Ngay Trong Nội Khu** | 28 | 🆕 ⭐ **BẰNG CHỨNG** — Sinatra Test |
+| H02 | **Công Viên Nước Đã Vận Hành** | 26 | 🆕 ⭐ **BẰNG CHỨNG** — "đã", không phải "sẽ" |
+| H03 | **Tòa Sổ Hồng Lâu Dài Cuối Cùng** | 29 | 🆕 khan hiếm **có thật** (2 nguồn) |
+| H04 | Sổ Hồng Lâu Dài Đứng Tên Bạn | 28 | THUỐC CHỮA · Fear Factor · LF8 #3 |
+| H05 | Sở Hữu Lâu Dài, Không Thời Hạn | 30 | THUỐC CHỮA · cơ chế mức-3 Schwartz |
+| H06 | Sổ Hồng Để Lại Cho Con | 22 | THUỐC CHỮA + LF8 #7 |
+| H07 | **Gần 1km Bờ Biển Riêng** | 21 | 🆕 dữ kiện verify (VnExpress) |
+| H08 | Blanca City Của Sun Group | 25 | Transfer |
+| H09 | Căn Hộ Biển Blanca City | 23 | khớp truy vấn |
+| H10 | Sáng Mở Mắt Đã Thấy Biển | 24 | Concrete |
+| H11 | Chỗ Cả Nhà Muốn Về Cuối Tuần | 28 | LF8 #7 |
+| H12 | Cuối Tuần Không Cần Đặt Phòng | 29 | LF8 #8 · Concrete |
+| H13 | Nhận Thông Tin Beachtro Tower | 29 | bắc cầu Blanca → Beachtro |
+| H14 | Cách TP.HCM 2 Giờ Chạy Xe | 25 | human-scale |
+| H15 | Gọi Ngay 0937 837 888 | 21 | CTA |
+
+**Bỏ khỏi v2:** `Nghỉ Hưu Bên Biển Vũng Tàu` (đẩy xa nhóm 35–45), `Đi Bộ Vài Phút Là Tới Biển` ("vài phút" mơ hồ, chưa verify được số thật), `Căn Nhà Thứ Hai Cạnh Biển` (nhường chỗ cho trục bằng chứng), `Hè Này Cả Nhà Ở Đâu?` (lệch tầng nhận thức).
+
+**Descriptions v3:**
+
+| # | Description | Ký tự | Vai trò |
+|---|---|---|---|
+| D1 | **Sun World trong nội khu đã vận hành từ 2/2026. Tiện ích có thật, không phải bản vẽ.** | 83 | 🆕 ⭐ câu trả lời cho nỗi sợ lớn nhất: "dự án có thành hình không" |
+| D2 | **Beachtro Tower - quỹ căn hộ sổ hồng lâu dài cuối cùng của Blanca City. Nhận bộ thông tin.** | 89 | 🆕 khan hiếm thật + CTA |
+| D3 | Nhận nhà 8/2028 — hè 2029 là mùa hè đầu tiên cả nhà không phải đặt phòng. | 73 | Heath: câu mạnh nhất của bộ dữ kiện |
+| D4 | Sổ hồng lâu dài đứng tên bạn. Blanca City gần 1 km bờ biển riêng, Sun Group phát triển. | 87 | thuốc chữa + dữ kiện verify |
+
+---
+
+## 2b. Bộ v2 (lưu vết — ĐÃ THAY BẰNG v3 ở trên)
 
 Đã verify bằng script đọc RSA live: 0 câu vượt 30 · 0 ALL-CAPS · **0 trùng RSA đang chạy** · thuốc-chữa 3/15 · "bạn/cả nhà/con" 4/15.
 
@@ -55,7 +92,33 @@
 
 ---
 
-## 3. Bộ đề xuất v2 — `brand-beachtro-tower` (RSA #2)
+## 3. Bộ đề xuất **v3** — `brand-beachtro-tower` (RSA #2) ⭐ BẢN TRÌNH DUYỆT
+
+Verify qua API: 0 trùng RSA live · 0 vượt 30 · beachtro **7/15** · bằng-chứng 3/15 · thuốc-chữa 4/15.
+
+| # | Headline | Ký tự | Vai trò |
+|---|---|---|---|
+| H01 | Beachtro Tower Vũng Tàu | 23 | khớp truy vấn |
+| H02 | Beachtro Sổ Hồng Lâu Dài | 24 | THUỐC CHỮA + khớp truy vấn |
+| H03 | **Tòa Sổ Hồng Lâu Dài Cuối Cùng** | 29 | 🆕 khan hiếm có thật |
+| H04 | **Sun World Ngay Trong Nội Khu** | 28 | 🆕 ⭐ BẰNG CHỨNG |
+| H05 | **Công Viên Nước Đã Vận Hành** | 26 | 🆕 ⭐ BẰNG CHỨNG |
+| H06 | Sở Hữu Lâu Dài, Không Thời Hạn | 30 | THUỐC CHỮA |
+| H07 | Sổ Hồng Lâu Dài Đứng Tên Bạn | 28 | THUỐC CHỮA |
+| H08 | Căn Hộ Beachtro Sát Biển | 24 | |
+| H09 | Beachtro Trong Blanca City | 26 | |
+| H10 | Beachtro Tower Bàn Giao 2028 | 28 | |
+| H11 | Sáng Mở Mắt Đã Thấy Biển | 24 | Concrete |
+| H12 | Chỗ Cả Nhà Muốn Về Cuối Tuần | 28 | LF8 #7 |
+| H13 | Nhận Thông Tin Beachtro Tower | 29 | |
+| H14 | Tư Vấn Chọn Căn Beachtro | 24 | |
+| H15 | Gọi Ngay 0937 837 888 | 21 | CTA |
+
+**Descriptions:** dùng D1–D4 ở §2 (v3).
+
+---
+
+## 3b. Bộ v2 (lưu vết — ĐÃ THAY BẰNG v3 ở trên)
 
 7/15 chứa "Beachtro" (ngưỡng ≥5 rút từ vòng sửa Ad Strength 06/08) · thuốc-chữa 3/15 · 0 trùng RSA live.
 
@@ -145,9 +208,72 @@ v1 ghi "0 trùng bộ 1" — sai. Đã verify lại bằng script đọc RSA liv
 | `Hè Này Cả Nhà Ở Đâu?` là câu **mức 4** (problem-aware) đặt trong ad group phục vụ mức 1–3 | Chỉ 1/15 câu. RSA cần đa dạng; Google tự chọn tổ hợp. Nếu Ad Strength tụt hoặc CTR giảm sau 7 ngày → gỡ trước tiên |
 | `Đi Bộ Vài Phút Là Tới Biển` — "vài phút" mơ hồ, Heath đòi con số cụ thể ("12 phút") | **Chưa verify được** số phút thật từ chân tòa E6–E9 ra bãi. Bịa số là vi phạm luật hệ. Khi có mặt bằng chính xác → thay bằng số thật |
 
-### 7.5 Việc còn nợ (không chặn triển khai)
+### 7.5 ~~Việc còn nợ~~ → ĐÃ GIẢI QUYẾT bằng research (12/08)
 
-**Sinatra Test** (Heath): thay "Sun Group uy tín" bằng **một công trình Sun Group đã bàn giao xong mà khách biết mặt** — "làm được ở đó thì làm được ở đây". Cần user/CĐT cung cấp tên công trình có thật. Đây sẽ là câu mạnh nhất còn thiếu của bộ.
+~~**Sinatra Test**: cần user cung cấp tên một công trình Sun Group đã bàn giao...~~
+
+**Sai hướng.** Research cho thấy công trình đó **nằm ngay trong nội khu**: **Sun World Vũng Tàu khai trương 12/02/2026, đặt tại trung tâm Blanca City**, đã vận hành 6 tháng. Khách lái xe tới chơi được hôm nay — Sinatra Test mạnh nhất có thể có, không cần mượn công trình ở tỉnh khác.
+
+→ Sinh ra **v3** (§2, §3). Chi tiết nguồn: `research-du-an-2026-08-12.md`.
+
+---
+
+## 8. AUDIT VÒNG 2 — sau research dự án (v2 → v3, 12/08)
+
+### 8.1 Lỗ hổng thật: **0/30 headline đang chạy có bằng chứng khách tự kiểm được**
+
+Đếm 30 headline của 2 RSA đang chạy:
+
+| Loại lập luận | Số câu | Sức nặng ở thị trường sophistication 3–4 |
+|---|---|---|
+| Hứa hẹn tương lai (bàn giao 2028, bảng giá khi công bố) | ~8 | Bị khách **tự chiết khấu 50%** — Schwartz mô tả đúng cảnh này |
+| Thông số sản phẩm (1.785 căn, 4 tòa, 96 ha) | ~7 | Heath: ngôn ngữ của người làm quy hoạch |
+| Uy tín mượn ("Sun Group phát triển") | 2 | Whitman: *transfer* thuần, yếu hơn Sinatra Test nhiều |
+| **Bằng chứng đang tồn tại** | **0** | ⛔ lỗ hổng |
+
+Không câu nào nói được điều mà **240 dự án đối thủ không nói được**. Ai cũng có CĐT lớn, ai cũng hứa bàn giao, ai cũng "sắp có bảng giá".
+
+### 8.2 Thứ đổi cuộc chơi: Sun World đã vận hành
+
+**Khai trương 12/02/2026, tại trung tâm Blanca City** (VnExpress + Tiền Phong + sunworld.vn).
+
+Vì sao đây là dữ kiện mạnh nhất của cả dự án:
+
+1. **Trả lời đúng nỗi sợ số 1 của BĐS hình thành trong tương lai** — *"dự án này có thành hình không, hay lại đắp chiếu?"*. CĐT đã giao xong hạng mục lớn đầu tiên và nó đang chạy, có doanh thu, có khách vào chơi mỗi ngày.
+2. **Testable credential** (Heath) — khách không phải tin môi giới. Mua vé vào chơi, tự kết luận.
+3. **Vũ khí đúng tầng sophistication 4** (Schwartz): khi mọi claim và mọi cơ chế đều đã bị nhân bản, thứ còn thắng là **cái đã tồn tại** đấu với **bản vẽ**.
+4. Là **AIO thật**, không phải chữ marketing: tiện ích lớn nhất của hệ đã chạy trước khi cư dân về ở — ngược hẳn thông lệ "nhận nhà rồi chờ tiện ích".
+
+### 8.3 Ba thay đổi trong v3
+
+| # | Thay đổi | Lý do |
+|---|---|---|
+| 1 | **Thêm trục BẰNG CHỨNG** — `Sun World Ngay Trong Nội Khu` · `Công Viên Nước Đã Vận Hành` (4/15 blanca, 3/15 beachtro) | Vá lỗ hổng 0/30 ở §8.1. Chú ý chữ **"Đã"** — đối lập trực tiếp với "sẽ" của đối thủ |
+| 2 | **Thêm khan hiếm CÓ THẬT** — `Tòa Sổ Hồng Lâu Dài Cuối Cùng` | 2 nguồn xác nhận Beachtro là quỹ căn sổ hồng lâu dài cuối của Blanca City. Khan hiếm thật khác hẳn "chỉ còn vài căn" bịa |
+| 3 | **D1 mới**: *"Sun World trong nội khu đã vận hành từ 2/2026. Tiện ích có thật, không phải bản vẽ."* | Câu trả lời trực diện cho nỗi sợ số 1 |
+
+**Cắt khỏi v2 để nhường chỗ:** `Nghỉ Hưu Bên Biển Vũng Tàu` (đẩy xa nhóm 35–45) · `Đi Bộ Vài Phút Là Tới Biển` (mơ hồ, chưa verify số phút) · `Căn Nhà Thứ Hai Cạnh Biển` · `Hè Này Cả Nhà Ở Đâu?` (lệch tầng nhận thức — rủi ro đã nêu ở §7.4, nay có câu tốt hơn thay).
+
+### 8.4 Kỷ luật số liệu — ba con số CẤM dùng
+
+Research phát hiện các nguồn **mâu thuẫn nhau**. Không dùng con số nào chưa thống nhất:
+
+| Số | Mâu thuẫn | Xử lý |
+|---|---|---|
+| Quy mô Sun World | 19 ha (VnExpress) vs **15 ha** (Tiền Phong) | ❌ không nêu ha, chỉ nói "đã vận hành" |
+| Lượng khách/ngày | 5.000–8.000 vs **~25.000** | ❌ chênh 3–5 lần, không dùng |
+| Số trò chơi | 21 vs "hơn 20" | dùng "hơn 20" |
+| Tro Collection do **Kume Design** (Nhật) thiết kế | mới 1 nguồn | ⏸ chưa dùng, chờ nguồn thứ 2 |
+
+### 8.5 Không mâu thuẫn với negative keyword
+
+Vẫn **chặn** `sun world` · `công viên nước` · `vé` ở cấp campaign. Hai việc khác nhau:
+- **Không mua** traffic của khách du lịch tìm vé (họ không mua căn hộ)
+- **Vẫn dùng** Sun World làm **bằng chứng trong ad text** hiển thị cho người search `blanca city` / `beachtro tower`
+
+### 8.6 Việc còn nợ
+
+**LP chưa khai thác Sun World như bằng chứng.** Audit LP (3,50/5) làm trước khi có phát hiện này. Trang đích hiện vẫn nói về tiện ích ở thì tương lai. Nên bổ sung một khối "tiện ích đã vận hành" kèm ảnh thật Sun World — nhưng đây là việc riêng, không chặn RSA.
 
 ---
 
