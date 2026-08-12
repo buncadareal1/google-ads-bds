@@ -3,7 +3,11 @@ name: phan-tich
 description: Phân tích nhanh hiệu suất ads Beachtro (Ads + GA4) và báo cáo SIÊU NGẮN. Dùng khi user nói "phân tích", "check chỉ số", "báo cáo", "số hôm nay như nào", "soi camp/GA4". User có ADHD — output mặc định ≤10 dòng, chi tiết chỉ khi được hỏi thêm.
 ---
 
-# Phân tích nhanh — flow chuẩn (đúc từ session 2026-08-07)
+# Phân tích nhanh — flow chuẩn (đúc từ session 2026-08-07, nâng cấp 12/08 từ notfair + claude-ads)
+
+## Bước 0 — Sổ thay đổi (bao_cao.py in sẵn ở đầu)
+
+`ops/change-log.jsonl` — mỗi thay đổi có `review_sau` (+7 ngày cho bid/negative/budget, +14 ngày cho RSA/cấu trúc). **Thay đổi chưa tới hạn → CẤM phán tác động**, chỉ nói "còn N ngày". Tới hạn → so với `gia_thuyet`/`metric_thanh_cong`/`guardrail` đã đăng ký TRƯỚC, phán 1 trong 4: tốt / xấu (CPA +20% hoặc conv −20% → đề xuất revert) / không kết luận được / còn non. **Mọi thay đổi mới lên tài khoản = thêm 1 dòng vào file này, mỗi lần chỉ đổi 1 biến.**
 
 ## Bước 1 — Kéo số Ads (1 lệnh)
 
@@ -28,17 +32,22 @@ Cần địa lý thì thêm report `city × sessionSourceMedium`.
 - Tổng chi search terms < tổng chi ngày → phần lệch = term ẩn (bình thường nếu <15%)
 - IS/keyword-IS của HÔM NAY luôn = 0% → nghĩa là CHƯA CÓ SỐ, không phải 0. Chỉ đọc IS ngày đã chốt
 - form_submit từ desktop/direct = test nội bộ, không phải lead ads (đối chiếu thiết bị+nguồn với click ads)
+- **Nút thắt (chọn đúng 1 nhãn trước khi đề xuất)**: mất-budget >40% = thiếu VỐN (thêm tiền nếu CPL đạt) · mất-rank >30% + QS/LPX yếu = thiếu CHẤT (sửa ad/LP, KHÔNG thêm tiền) · cả hai thấp + impr thấp = HẾT CẦU (bằng chứng hợp lệ duy nhất để mở non-brand) · tiền chảy vào term rác = QUERY · tag hỏng = TRACKING
+- **Cổng đủ mẫu**: trước khi phán "X không ra lead" → `click × CVR tài khoản (~2,5%) ≥ 3`, tức ~120 click. Dưới ngưỡng = "chưa đủ mẫu", không quyết định
+- **So sánh**: cùng account + cùng độ dài kỳ + cùng độ chín conversion-lag mới được so. Benchmark ngành chỉ gắn nhãn "định hướng"
+- **3 nguồn số không cộng chéo**: conv Ads (attributed, chẩn đoán delivery) ≠ GA4 (hành trình) ≠ CRM/Keap (lead nghiệm thu thật). Mỗi con số phải khai nguồn
 
 ## Bước 4 — Báo cáo. FORMAT BẮT BUỘC (≤10 dòng):
 
 ```
-🚦 [1 câu verdict: ổn / có vấn đề X]
+🚦 [1 câu verdict; nếu thay đổi đang chín chưa tới hạn → verdict là "TẠM"]
 💰 Hôm nay: chi X | click Y | CPC Z — so hôm qua ↑↓
-👀 IS ngày chốt gần nhất: X% (mất-rank Y% / mất-budget Z%)
+👀 IS ngày chốt: X% (mất-rank Y% / mất-budget Z%) → nút thắt: [1 nhãn]
 🔍 Search terms: sạch ✓ / N term rác → đã negative
 🌍 GA4: N session ads · ~Xs/phiên · Y% TP.HCM
 📞 Lead: chưa có (mốc kỳ vọng ~30-50 click) / CÓ → kiểm gclid ngay
-👉 Cần làm: [1 việc duy nhất, hoặc "không — đợi"]
+⚪ Không đo được: phone/zalo click, lead ngoài form (luôn nhắc — đừng đọc "0" thành "không có")
+👉 Cần làm: [1 việc duy nhất] / "đợi đến <ngày review / ngưỡng click cụ thể>" — cấm chữ "đợi" trần
 ```
 
 Không thêm bảng, không giải thích phương pháp, không kể quá trình query. User hỏi "vì sao" mới mở rộng đúng mục đó.
@@ -64,13 +73,14 @@ Booking, F4 từ chiến dịch: <n> BK, <n> Deal
 ```
 
 ⚠️ Dữ liệu KHÔNG tự có, phải hỏi user (sale/CRM giữ): **F1, tỷ lệ qualify, booking, deal, lead qua hotline/Zalo**. Điền `— cần anh cung cấp` chứ TUYỆT ĐỐI không bịa. Phần Google Ads (chi, lead form, CPL) tự lấy từ script + GA4.
+⚠️ Mỗi con số phải khai nguồn ngay cạnh: `(Ads, 30d click)` / `(GA4)` / `(CRM — anh cung cấp)` — 3 hệ đếm khác nhau, cộng chéo là sai.
 
 ## Cờ đỏ — CHỈ những trường hợp này mới được viết dài hơn 10 dòng
 
 1. **Lead đầu tiên xuất hiện mà không có gclid trong Keap** → đề nghị PAUSE campaign (task #20)
 2. Search term rác/sai ngành → liệt kê + negative ngay
 3. Chi bất thường >2× nhịp cũ (cả tốt lẫn xấu — luật Twyman) hoặc chạm phanh 30tr/tháng
-4. Ad bị DISAPPROVED / **APPROVED_LIMITED** / campaign primary_status LIMITED vì policy / strength tụt xuống POOR — đọc `policy_topic_entries` để biết topic (bao_cao.py đã in sẵn). Đã dính thật: `PHONE_NUMBER_IN_AD_TEXT` 12/08
+4. Ad bị DISAPPROVED / **APPROVED_LIMITED** / campaign primary_status LIMITED vì policy — đọc `policy_topic_entries` (bao_cao.py in sẵn). Đã dính thật: `PHONE_NUMBER_IN_AD_TEXT` 12/08. **Ad Strength POOR KHÔNG phải cờ đỏ với campaign brand** (brand pin khớp LP → POOR nhưng CTR/CVR cao là bình thường — notfair rsa-best-practices)
 5. Ngày tracking hỏng → vứt toàn bộ số ngày đó, nói rõ
 
 ## Bối cảnh cố định (đỡ tra lại)

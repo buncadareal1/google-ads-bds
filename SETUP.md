@@ -37,6 +37,8 @@ Mọi script mới: dùng `scripts/ads_client.py` (client + retry + đổi VND�
 | 10 | Ad Strength đọc được qua API, kèm gợi ý sửa | `ad_group_ad.ad_strength` + `ad_group_ad.action_items`. **Ghim H1 = tụt thẳng POOR** — xem `campaign-setup.md §3` (đã sửa luật ghim 2026-08-06) |
 | 11 | **SĐT trong headline/description = vi phạm policy `PHONE_NUMBER_IN_AD_TEXT`** (dính thật 2026-08-12: `Gọi Ngay 0937 837 888` → ad APPROVED_LIMITED, campaign LIMITED) | SĐT chỉ đi qua **call asset**. Trước khi ghi RSA lên tài khoản: grep headline+description, thấy chuỗi dạng SĐT là chặn. Sau khi ghi: đọc lại `policy_summary.policy_topic_entries`, không chỉ `approval_status` |
 | 12 | GAQL `user_location_view` (và các view tương tự) báo `EXPECTED_REFERENCED_FIELD_IN_SELECT_CLAUSE` khi lọc `campaign.id` trong WHERE | Field dùng ở WHERE phải có mặt trong SELECT — thêm `campaign.id` vào SELECT là chạy |
+| 13 | `keyword_view` đổi grain khi SELECT `segments.date`: 1 dòng/keyword/ngày thay vì 1 dòng/keyword (probe thật 12/08: 16 dòng → 58 dòng, tổng chi y hệt) | Lọc ngày ở WHERE thì metric đã gộp sẵn — chỉ SELECT `segments.date` khi thật sự cần theo ngày, và khi đó phải tự gộp theo (ad_group + keyword + match_type) |
+| 14 | Response của lệnh ghi = "Google đã nhận", KHÔNG phải "trạng thái đúng như mình nghĩ" (bẫy #1 chỉ nói tiền — luật này là tổng quát) | Sau MỌI mutate: đọc lại đúng resource vừa đổi bằng search hẹp nhất (negative → đọc list; bid → đọc field bid; RSA → đọc asset + `policy_topic_entries`). Verify fail thì nói "chưa xác minh được", cấm nói "xong" |
 
 ### Bổ trợ: chỉ số qua GA4 (không bắt buộc nữa, vẫn nên link)
 

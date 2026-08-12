@@ -77,11 +77,17 @@ ORDER BY metrics.cost_micros DESC
 LIMIT 200
 ```
 
-Xử lý: mỗi dòng có `cost_micros` ≥ 50.000.000 (= 50.000 ₫) mà 0 conversion → cân nhắc negative. Append vào `negative-keywords.csv`:
+Xử lý — **hai nhánh KHÁC NHAU, đừng trộn** (học từ notfair analysis-heuristics 2026-08-12):
+1. **Sai intent** (thuê/tuyển dụng/tin tức/dự án khác…): cắt ngay, **1 click cũng đủ** — không cần đợi số.
+2. **Đúng intent nhưng 0 conversion**: cần đủ mẫu mới được kết luận. Ngưỡng: `click × CVR tài khoản ≥ 3` (CVR hiện ~2,5% → cần **~120 click/term**). Dưới ngưỡng = "chưa đủ mẫu", KHÔNG negative, ghi watch kèm ngưỡng thoát.
+
+Append vào `negative-keywords.csv`:
 ```csv
 <search term>,"Đốt <X> ₫ / <Y> click / 0 lead tuần <ISO week>",campaign
 ```
 Chỉ đưa lên `account` khi cụm đó chắc chắn không bao giờ liên quan (ví dụ "tuyển dụng", "thuê"), còn lại để `campaign` cho an toàn.
+
+⚠️ **Negative KHÔNG khớp biến thể gần** (khác keyword dương): `tuyển dụng` không chặn `tuyen dung`. Mọi negative tiếng Việt có dấu **phải kèm bản không dấu** — thêm cả 2 dòng vào CSV và lên tài khoản.
 
 ### Q2 — Search term CÓ conversion nhưng chưa phải keyword → nguồn keyword mới
 

@@ -14,6 +14,11 @@ Duyệt 2026-08-06. Tài liệu **thực thi**: mở Google Ads UI làm từ tr�
 |---|---|---|---|---|---|
 | `BDS_Search_Brand_DuAn` | `brand-beachtro-tower` (40) · `brand-blanca-city` (41) | **81** | **1.000.000 ₫/ngày** | **28.000 ₫** (nâng từ 20k, lệnh user 2026-08-06 ngày bật) | Maximize Clicks + cap |
 
+**Trần CPC thủ công — chiến lược có mục đích, không phải mặc định vĩnh viễn** (chốt 12/08):
+- *Mục đích*: kiểm soát chi khi tracking conversion chưa đủ tin (mới vá trang cám ơn 09/08, chưa đo phone/zalo).
+- *Điều kiện thoát* (→ cân nhắc tCPA): conversion ổn định ≥15-20/tháng **và** đã đối chiếu với lead nghiệm thu CRM ≥2 kỳ **và** tracking phone/zalo được vá hoặc chấp nhận bỏ. Chưa đủ cả 3 thì giữ manual.
+- *Rủi ro nếu chuyển sớm*: tCPA học trên signal mỏng/rác → bid loạn. (Lưu ý: skill `google-ads` kostja dạy ngưỡng "30 conv/tháng" — dùng làm định hướng, không phải luật; quyết theo chất lượng signal, không theo con số phổ quát.)
+
 File import sẵn: **`keywords/launch-uu-tien-1.tsv`** — 81 dòng, 4 cột `Campaign / Ad group / Keyword / Match type`, 40 exact + 41 phrase, **0 broad**. Lọc theo `uu_tien=1` **hoặc** volume thật > 0.
 
 Final URL cả 2 ad group: `https://smartrealtors.vn/beachtro-tower-blanca-city/`. RSA: 2 bộ trong `ad-copy.md`, mỗi ad group 1 bộ, ghim H1 = headline #1.
