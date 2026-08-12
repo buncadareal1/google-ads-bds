@@ -143,3 +143,12 @@ Rủi ro còn lại nếu Google vẫn từ chối vì thiếu thông tin doanh 
 | 2026-08-06 | Target tuổi **35+** (loại 18-24, 25-34; GIỮ Unknown) — chốt user. +13 negative campaign chặn khách du lịch (vé/Sun World/công viên nước/tắm biển/resort) + thứ cấp (thanh lý/chuyển nhượng) → 28 negative campaign |
 | 2026-08-06 | **BẬT CAMPAIGN** (lệnh user, bỏ qua gate G0): ENABLED · SERVING · 2 ad đã duyệt · bidding learning. Phanh cứng D+1: lead đầu phải có gclid |
 | 2026-08-06 | Ad Strength: POOR/AVERAGE → **GOOD cả 2** (bỏ ghim H1 + đa dạng headline + vòng 2 nhồi keyword bộ beachtro). Ảnh: 4 file trong thư viện, tài khoản chưa đủ điều kiện gắn (UI không có mục Hình ảnh) — retry sau xác minh + 1-2 tuần chạy |
+
+### 2026-08-12 — Tuần 2 mở màn
+- **Hạ trần CPC 35.000₫ → 28.000₫** (campaign + 2 ad group) — lý do: IS đạt 76%, mất-rank chỉ 24%, vài % thị phần cuối quá đắt. Verify qua API.
+- **Thêm RSA thứ 2 vào cả 2 ad group** (bộ v4, sau 3 vòng audit theo `research/books/` + research dự án):
+  - `brand-blanca-city` → ad `820622531236`
+  - `brand-beachtro-tower` → ad `820622531239`
+  - 15 headline · 0 ghim · 4 description · ENABLED
+- **Phát hiện đổi chiến lược:** Sun World Vũng Tàu khai trương **12/02/2026**, tại trung tâm Blanca City — đã vận hành 6 tháng. Đây là Sinatra Test mạnh nhất (khách tự kiểm được), vá lỗ hổng **0/30 headline cũ có bằng chứng đang tồn tại**. Chi tiết: `research-du-an-2026-08-12.md`.
+- ⚠️ **Hai thay đổi trong cùng ngày** (bid + RSA) → không tách được tác động riêng của từng cái. Khi đọc số tuần này phải nhớ điều đó; kỳ đo mới bắt đầu từ 13/08.

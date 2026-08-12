@@ -1,7 +1,10 @@
-# Kế hoạch RSA thứ 2 — Beachtro Tower | CHỜ DUYỆT
+# Kế hoạch RSA thứ 2 — Beachtro Tower | ✅ ĐÃ DUYỆT & TRIỂN KHAI 12/08/2026
 
 **Soạn:** 2026-08-12 (hết tuần-1 freeze) · **Audit lại theo `research/books/`: 2026-08-12 (bản v2)**
-**Trạng thái:** chưa ghi lên tài khoản, chờ user duyệt
+**Trạng thái:** ✅ **User duyệt bộ v4 ngày 12/08/2026 — đã ghi lên tài khoản, ENABLED**
+- `brand-blanca-city` → ad **820622531236**
+- `brand-beachtro-tower` → ad **820622531239**
+- Verify: 15 headline · **0 ghim** · 4 description · trạng thái ENABLED · duyệt PENDING (chờ Google review ≤24h)
 **Campaign:** `24103805490` · thêm RSA thứ 2 vào MỖI ad group (slot đã chừa từ đầu)
 
 > **Bản v1 có 2 lỗi, đã sửa ở v2 (xem §7 Audit).** Lỗi nặng nhất: bộ v1 nghiêng về "thuốc phòng"
