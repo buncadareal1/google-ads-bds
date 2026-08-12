@@ -150,5 +150,6 @@ Rủi ro còn lại nếu Google vẫn từ chối vì thiếu thông tin doanh 
   - `brand-blanca-city` → ad `820622531236`
   - `brand-beachtro-tower` → ad `820622531239`
   - 15 headline · 0 ghim · 4 description · ENABLED
+- **12/08 chiều — dính policy `PHONE_NUMBER_IN_AD_TEXT`**: headline `Gọi Ngay 0937 837 888` vi phạm luật cấm SĐT trong ad text → cả 2 ad mới bị APPROVED_LIMITED, campaign gắn cờ LIMITED. Sửa: thay bằng `Gọi Tư Vấn Miễn Phí Hôm Nay`, tạo ad mới + xóa 2 ad lỗi (RSA bất biến). **Ad thay thế: blanca `820626531246` · beachtro `820626531249`.** Hotline không mất — call asset `404214595370` (0937837888) vẫn gắn campaign ENABLED. Bài học ghi `SETUP.md §1 bẫy #11`.
 - **Phát hiện đổi chiến lược:** Sun World Vũng Tàu khai trương **12/02/2026**, tại trung tâm Blanca City — đã vận hành 6 tháng. Đây là Sinatra Test mạnh nhất (khách tự kiểm được), vá lỗ hổng **0/30 headline cũ có bằng chứng đang tồn tại**. Chi tiết: `research-du-an-2026-08-12.md`.
 - ⚠️ **Hai thay đổi trong cùng ngày** (bid + RSA) → không tách được tác động riêng của từng cái. Khi đọc số tuần này phải nhớ điều đó; kỳ đo mới bắt đầu từ 13/08.

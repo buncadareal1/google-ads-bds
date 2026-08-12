@@ -40,7 +40,12 @@ FROM search_term_view WHERE segments.date DURING LAST_7_DAYS AND campaign.id={CA
     print(f"{r.search_term_view.search_term} | impr {m.impressions} | click {m.clicks} | chi {m.cost_micros/M:,.0f}đ")
 print(f"(tổng chi search terms nhìn thấy: {st_cost/M:,.0f}đ)")
 
-print("\n=== TRẠNG THÁI AD ===")
-for r in q(f"""SELECT ad_group.name, ad_group_ad.status, ad_group_ad.policy_summary.approval_status, ad_group_ad.ad_strength
+print("\n=== TRẠNG THÁI AD + POLICY ===")
+for r in q(f"""SELECT campaign.primary_status, campaign.primary_status_reasons FROM campaign WHERE campaign.id={CAMPAIGN}"""):
+    print(f"campaign primary: {r.campaign.primary_status.name} | reasons: {[x.name for x in r.campaign.primary_status_reasons]}")
+for r in q(f"""SELECT ad_group.name, ad_group_ad.ad.id, ad_group_ad.status, ad_group_ad.policy_summary.approval_status,
+  ad_group_ad.policy_summary.policy_topic_entries, ad_group_ad.ad_strength
 FROM ad_group_ad WHERE campaign.id={CAMPAIGN} AND ad_group_ad.status != 'REMOVED'"""):
-    print(f"{r.ad_group.name} | {r.ad_group_ad.status.name} | duyệt: {r.ad_group_ad.policy_summary.approval_status.name} | strength: {r.ad_group_ad.ad_strength.name}")
+    print(f"{r.ad_group.name} | ad {r.ad_group_ad.ad.id} | {r.ad_group_ad.status.name} | duyệt: {r.ad_group_ad.policy_summary.approval_status.name} | strength: {r.ad_group_ad.ad_strength.name}")
+    for e in r.ad_group_ad.policy_summary.policy_topic_entries:
+        print(f"  ⛔ POLICY: {e.topic} ({e.type_.name})")

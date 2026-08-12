@@ -2,9 +2,9 @@
 
 **Soạn:** 2026-08-12 (hết tuần-1 freeze) · **Audit lại theo `research/books/`: 2026-08-12 (bản v2)**
 **Trạng thái:** ✅ **User duyệt bộ v4 ngày 12/08/2026 — đã ghi lên tài khoản, ENABLED**
-- `brand-blanca-city` → ad **820622531236**
-- `brand-beachtro-tower` → ad **820622531239**
-- Verify: 15 headline · **0 ghim** · 4 description · trạng thái ENABLED · duyệt PENDING (chờ Google review ≤24h)
+- `brand-blanca-city` → ad **820626531246** (bản đầu `820622531236` dính policy `PHONE_NUMBER_IN_AD_TEXT` vì headline `Gọi Ngay 0937 837 888` → xóa, thay headline bằng `Gọi Tư Vấn Miễn Phí Hôm Nay`)
+- `brand-beachtro-tower` → ad **820626531249** (bản đầu `820622531239`, cùng lỗi, cùng cách sửa)
+- Verify: 15 headline · **0 ghim** · 4 description · trạng thái ENABLED · SĐT vẫn hiện qua call asset gắn campaign
 **Campaign:** `24103805490` · thêm RSA thứ 2 vào MỖI ad group (slot đã chừa từ đầu)
 
 > **Bản v1 có 2 lỗi, đã sửa ở v2 (xem §7 Audit).** Lỗi nặng nhất: bộ v1 nghiêng về "thuốc phòng"

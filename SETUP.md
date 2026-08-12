@@ -35,6 +35,8 @@ Mọi script mới: dùng `scripts/ads_client.py` (client + retry + đổi VND�
 | 8 | Thi thoảng `503 UNAVAILABLE ... ipv6 Network is unreachable` | Lỗi mạng tạm thời của máy, không phải tài khoản — `retry()` trong `ads_client.py` |
 | 9 | **Keyword Planner hoạt động ngay** với credential hiện tại (không cần quyền thêm) | `KeywordPlanIdeaService.generate_keyword_historical_metrics` (volume bộ kw có sẵn) + `generate_keyword_ideas` (mở rộng). VN = geo `2704`, tiếng Việt = lang `1040` |
 | 10 | Ad Strength đọc được qua API, kèm gợi ý sửa | `ad_group_ad.ad_strength` + `ad_group_ad.action_items`. **Ghim H1 = tụt thẳng POOR** — xem `campaign-setup.md §3` (đã sửa luật ghim 2026-08-06) |
+| 11 | **SĐT trong headline/description = vi phạm policy `PHONE_NUMBER_IN_AD_TEXT`** (dính thật 2026-08-12: `Gọi Ngay 0937 837 888` → ad APPROVED_LIMITED, campaign LIMITED) | SĐT chỉ đi qua **call asset**. Trước khi ghi RSA lên tài khoản: grep headline+description, thấy chuỗi dạng SĐT là chặn. Sau khi ghi: đọc lại `policy_summary.policy_topic_entries`, không chỉ `approval_status` |
+| 12 | GAQL `user_location_view` (và các view tương tự) báo `EXPECTED_REFERENCED_FIELD_IN_SELECT_CLAUSE` khi lọc `campaign.id` trong WHERE | Field dùng ở WHERE phải có mặt trong SELECT — thêm `campaign.id` vào SELECT là chạy |
 
 ### Bổ trợ: chỉ số qua GA4 (không bắt buộc nữa, vẫn nên link)
 
