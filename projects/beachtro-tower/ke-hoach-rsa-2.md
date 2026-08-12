@@ -271,7 +271,7 @@ Vẫn **chặn** `sun world` · `công viên nước` · `vé` ở cấp campaig
 - **Không mua** traffic của khách du lịch tìm vé (họ không mua căn hộ)
 - **Vẫn dùng** Sun World làm **bằng chứng trong ad text** hiển thị cho người search `blanca city` / `beachtro tower`
 
-### 8.6 Việc còn nợ
+### 8.6 Việc còn nợ (LP)
 
 **LP chưa khai thác Sun World như bằng chứng.** Audit LP (3,50/5) làm trước khi có phát hiện này. Trang đích hiện vẫn nói về tiện ích ở thì tương lai. Nên bổ sung một khối "tiện ích đã vận hành" kèm ảnh thật Sun World — nhưng đây là việc riêng, không chặn RSA.
 
@@ -284,3 +284,56 @@ Vẫn **chặn** `sun world` · `công viên nước` · `vé` ở cấp campaig
 - [ ] Duyệt bộ **v2** như trên → tôi ghi lên tài khoản
 - [ ] Sửa/bỏ câu nào → ghi rõ số hiệu (vd "bỏ H04 blanca")
 - [ ] (không chặn) Tên **một công trình Sun Group đã bàn giao** mà khách biết mặt → dùng cho Sinatra Test, xem §7.5
+
+---
+
+## 9. AUDIT VÒNG 3 — cảm xúc & giọng người (v3 → v4, 12/08)
+
+Câu hỏi của user: *"đã audit cảm xúc trong câu giống văn người thật chưa"* — **chưa**. Đây là kết quả.
+
+### 9.1 Ba lỗi đo được
+
+Đếm bằng script trên bộ v3:
+
+| Chỉ số | blanca | beachtro | Vấn đề |
+|---|---|---|---|
+| **Câu cảm xúc** | 4/15 | **2/15** ⛔ | Sửa lỗi "thiếu bằng chứng" ở vòng 2 đã **đè chết cảm xúc**. Whitman/Sugarman: *cảm xúc mua, lý trí biện minh* — không có gì để động lòng thì không có gì để biện minh |
+| **Câu nói sổ hồng** | 4/15 | 4/15 | **Trùng lặp**: 4 câu cùng một ý, lãng phí slot. Google chỉ ghép 3 headline/lần hiển thị |
+| **Câu chỉ là NHÃN** (không động từ) | 6/15 | **7/15** | `Căn Hộ Beachtro Sát Biển`, `Beachtro Trong Blanca City` — đây là nhãn dán brochure, không phải câu người nói. Tiếng Việt tự nhiên có động từ |
+
+### 9.2 Ba câu thay ở v4
+
+| Bỏ | Vì sao | Thay bằng |
+|---|---|---|
+| `Cuối Tuần Không Cần Đặt Phòng` | trùng ý với câu mới, và "không cần" yếu hơn "không phải" | **`Hè Sau Không Phải Đặt Phòng`** (27) — có mốc thời gian cụ thể, giọng nói thẳng |
+| `Căn Hộ Beachtro Sát Biển` · `Sở Hữu Lâu Dài, Không Thời Hạn` (ở bộ beachtro) | nhãn brochure · trùng ý với 3 câu sổ hồng khác | **`Cuối Tuần Là Về Nhà Mình`** (24) — ám chỉ *quyền được kể* (Sutherland động cơ 1), câu này người thật nói được |
+| `Cách TP.HCM 2 Giờ Chạy Xe` (bộ blanca) | chưa verify chính xác, giá trị thấp | (nhường slot cho 2 câu cảm xúc trên) |
+
+Kết quả v4: **cảm xúc 5/15 (blanca) · 4/15 (beachtro)** · sổ hồng giảm còn 3–4 · động từ 9–10/15.
+
+### 9.3 Alchemy — nói thẳng cái gì, ám chỉ cái gì
+
+Sutherland: ad phải **nói thẳng** động cơ 4–7 (lý do công khai khách dùng để giải thích với vợ/chồng) và **chỉ ám chỉ** động cơ 1–3 (quyền được kể, tự chứng minh, mua quyền chọn). Sai lầm điển hình của copy BĐS VN là làm ngược: gào "đẳng cấp thượng lưu" (nói thẳng cái phải ám chỉ) rồi bỏ quên pháp lý (bỏ mất cái phải nói thẳng).
+
+| Động cơ | Xử lý ở v4 |
+|---|---|
+| #5 Lý do công khai (sổ hồng, để lại cho con, Sun Group) | ✅ **nói thẳng** — 3–4 câu |
+| #7 Satisficing (tránh thảm hoạ, "chắc chắn hơn") | ✅ sổ hồng + Sun World đã vận hành |
+| #3 Mua quyền chọn, không mua công năng | ⚠️ **ám chỉ** — `Hè Sau Không Phải Đặt Phòng` (không hứa tần suất ra biển) |
+| #1 Quyền được kể | ⚠️ **ám chỉ** — `Cuối Tuần Là Về Nhà Mình` (chữ *nhà mình* làm việc đó, không cần nói "đẳng cấp") |
+
+### 9.4 Description — đã sửa 1 câu cho bớt giọng brochure
+
+| v3 | v4 |
+|---|---|
+| `Beachtro Tower - quỹ căn hộ sổ hồng lâu dài cuối cùng của Blanca City. Nhận bộ thông tin.` | `Quỹ căn hộ sổ hồng lâu dài cuối cùng của Blanca City. Để lại số để nhận bộ thông tin.` (85) |
+
+Bỏ tên sản phẩm mở đầu (đã có ở headline), thay CTA cụt `Nhận bộ thông tin` bằng câu có hành động rõ.
+
+D3 giữ nguyên — đây là câu duy nhất trong cả bộ đọc lên **nghe như người nói**: *"Nhận nhà 8/2028 — hè 2029 là mùa hè đầu tiên cả nhà không phải đặt phòng."*
+
+### 9.5 Giới hạn chưa xử — user quyết
+
+**Toàn bộ headline đang viết Hoa Từng Chữ.** Đây là quy ước brochure BĐS, không phải cách người Việt viết. `Hè sau không phải đặt phòng` đọc tự nhiên hơn `Hè Sau Không Phải Đặt Phòng` rõ rệt. Google **không bắt buộc** Title Case.
+
+Chưa tự đổi vì: (a) toàn bộ tài sản hiện có đang Title Case, đổi một nửa sẽ lệch; (b) đây là lựa chọn thẩm mỹ thương hiệu, thuộc quyền user. **Nếu anh muốn thử giọng tự nhiên → nói, tôi đổi cả bộ v4 sang sentence case.**
