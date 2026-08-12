@@ -71,4 +71,4 @@ Google nêu 3 lý do dùng server-side: **performance**, **data control**, **dat
   Spec 7 file + `upload_ecl.py` giữ nguyên, mở lại khi user yêu cầu.
 - 🔲 Chặn launch: **LP thật + GTM gắn đúng 6 event registry** (hiện GA4 chỉ có 1 session test,
   bắn `view_content` — SAI registry), chưa đánh dấu key event nào, thiếu 5/6 conversion action,
-  negative account-level mới 1/382 dòng, tracking template UTM còn rỗng.
+  negative account-level + UTM template: ✅ XONG 06/08 (xem PROJECT.md).

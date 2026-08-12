@@ -6,7 +6,7 @@ Repo này là nền tảng vận hành Google Ads BĐS **đa dự án**. Mọi s
 
 | Dự án | Thư mục | CĐT | Vị trí | Trạng thái |
 |---|---|---|---|---|
-| **Beachtro Tower — Blanca City** | `projects/beachtro-tower/` | Sun Group | Vũng Tàu | Active từ 2026-08-05 · GA4 property `548678683` · Ads account `6918288556` (0 campaign — chưa launch) |
+| **Beachtro Tower — Blanca City** | `projects/beachtro-tower/` | Sun Group | Vũng Tàu | Active từ 2026-08-05 · GA4 property `548678683` · Ads account `6918288556` — campaign `24103805490` ENABLED 06/08, trạng thái sống: `projects/beachtro-tower/PROJECT.md` |
 
 Mỗi dự án có hồ sơ riêng trong `projects/<slug>/` (PROJECT.md, keywords/, data/, ad-copy.md, nghiem-thu.md). Quy ước + cách mở dự án mới: `projects/README.md`. Dự án mới = copy `projects/_TEMPLATE/` + thêm dòng vào bảng này và `keywords/projects.tsv` (qua keyword-planner), không fork repo.
 

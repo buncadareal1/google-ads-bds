@@ -140,7 +140,7 @@ Nguyên tắc: **không nhảy bậc thang intent** (`ads`/google-search-playboo
 |---|---|---|
 | 30tr | 1 | 4.538 → lọc còn dự án đang phân phối |
 | 60tr | 1 + 2 | 7.825 → lọc |
-| 150tr | 1 + 2 + 3 | 8.512 → lọc |
+| 150tr | 1 + 2 + 3 | kho master (self-check `gen.py`) → lọc |
 
 **Bidding theo volume conversion/campaign/tháng** (`google-search-playbook`):
 
@@ -176,7 +176,7 @@ Google gọi việc này là **"AI automation strategy"** — lập chiến lư�
 | Bậc | Điều kiện (khớp gate) | Được bật | Vì sao KHÔNG sớm hơn |
 |---|---|---|---|
 | **0** | Ngày 1, 0 conversion — **G0** | Max Clicks + bid cap · Phrase+Exact · **auto-apply TẮT hết** · ACA TẮT | Chưa có conversion thì mọi thứ "AI" đều học từ hư không |
-| **1** | ≥15 conv/30 ngày cấp campaign + contact rate >50% | `Maximize Conversions` (chưa đặt tCPA) · **đảo primary sang `Lead_Contactable`** | Đảo primary TRƯỚC khi bật smart bidding, không thì nó học form thô và mua lead rác |
+| **1** | Tiêu chí chuẩn: `plan-chay-ads.md §1` (contact rate đóng băng cùng ECL) | `Maximize Conversions` (chưa đặt tCPA) · **đảo primary sang `Lead_Contactable`** | Đảo primary TRƯỚC khi bật smart bidding, không thì nó học form thô và mua lead rác |
 | **2** | ≥30 conv/30 ngày + **ECL chạy thật** — **G4** phần dữ liệu | `tCPA` · **giờ mới** test 1 ad group **broad** · `Data exclusion` bắt đầu có tác dụng | Google: "It's **critical** to use Smart Bidding with broad match" — bậc 0-1 chưa thoả điều kiện của chính Google |
 | **3** | Giá trị lead phân tầng chảy về, ≥2 giá trị non-zero | `Maximize conversion value` / `tROAS` · **Conversion Value Rules** | Cần "2 or more unique, non-zero values" mới có gì để tối ưu theo giá trị |
 | **4** | Search ổn định ≥6 tuần ở bậc 3 | **AI Max** (bắt buộc conversion-based bidding; TẮT final URL expansion) | AI Max search term matching **không chạy với Manual CPC/Max Clicks** — bật sớm là bật vô nghĩa |

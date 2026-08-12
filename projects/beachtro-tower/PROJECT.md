@@ -15,7 +15,7 @@
 
 | Cổng | ID | Trạng thái |
 |---|---|---|
-| Google Ads customer | `6918288556` (SMR- Sun Galaxy - 7490 - Mạnh) | ✅ API v24 · VND / Asia/Saigon · **1 campaign (PAUSED)** |
+| Google Ads customer | `6918288556` (SMR- Sun Galaxy - 7490 - Mạnh) | ✅ API v24 · VND / Asia/Saigon · **1 campaign ENABLED (từ 06/08)** |
 | Google Ads conversion id | `18359425041` · label `rRYqCK3SoNwcEJGwurJE` | ✅ đã gắn trong GTM |
 | GA4 property | `548678683` · measurement `G-RRXWDGQ206` | ✅ có dữ liệu · ❌ **0 key event** · ❌ chưa link Ads |
 | GTM | `GTM-TKDNJXJ9` (account `6353959536` / container `260355978` / workspace `6`) | ✅ đã publish |
@@ -33,7 +33,7 @@
 | Ngân sách/ngày | **1.000.000 ₫** (chốt 2026-08-06) | **1 campaign brand duy nhất** — `plan-chay-ads.md` |
 | CPL mục tiêu | **chưa đặt** — chốt ở tuần 4 từ số thật | Tháng 1 dùng **kill rule cấu trúc**, không cắt theo giá (`plan-chay-ads.md §4`) |
 | CPC trần | **28.000 ₫** (20k → 35k ngày bật → 28k ngày 12/08) | Hạ vì IS đã đạt 76%, mất-rank chỉ 24% — vài % thị phần cuối rất đắt, không đáng mua |
-| IS brand | ≥ 80% | Ngưỡng `monitoring.md §4` |
+| IS brand | guardrail ≥65% (`ops/change-log.jsonl` 12/08) · cảnh báo −15đ WoW (`monitoring.md §4`) |
 
 ⚠️ **Giai đoạn pre-launch, chưa có bảng giá** → CPL raw sẽ rẻ giả tạo (LP không có rào tài chính). Không so CPL giai đoạn này với giai đoạn sau khi công bố giá.
 
@@ -42,7 +42,7 @@
 | # | Tên | ID | Trạng thái |
 |---|---|---|---|
 | 1 | Lượt gửi biểu mẫu KH tiềm năng (WEBPAGE · SUBMIT_LEAD_FORM · primary) | `7709665581` | ✅ có, đang bắn từ GTM |
-| 2 | Click_Hotline | — | ❌ thiếu (LP chưa bắn `phone_click`) |
+| 2 | Cuộc gọi từ quảng cáo (>=60s) (AD_CALL · PHONE_CALL_LEAD · **secondary**) | `7718436367` | ✅ bật 12/08 — đo cuộc gọi từ SỐ TRÊN AD (call asset). Click hotline TRÊN LP vẫn không đo |
 | 3 | Click_Zalo | — | ❌ thiếu (**LP chưa có link Zalo**) |
 | 4–6 | 3 action offline (ECL) | — | ⛔ đóng băng — hệ không đo lead |
 
@@ -150,6 +150,9 @@ Rủi ro còn lại nếu Google vẫn từ chối vì thiếu thông tin doanh 
   - `brand-blanca-city` → ad `820622531236`
   - `brand-beachtro-tower` → ad `820622531239`
   - 15 headline · 0 ghim · 4 description · ENABLED
-- **12/08 chiều — dính policy `PHONE_NUMBER_IN_AD_TEXT`**: headline `Gọi Ngay 0937 837 888` vi phạm luật cấm SĐT trong ad text → cả 2 ad mới bị APPROVED_LIMITED, campaign gắn cờ LIMITED. Sửa: thay bằng `Gọi Tư Vấn Miễn Phí Hôm Nay`, tạo ad mới + xóa 2 ad lỗi (RSA bất biến). **Ad thay thế: blanca `820626531246` · beachtro `820626531249`.** Hotline không mất — call asset `404214595370` (0937837888) vẫn gắn campaign ENABLED. Bài học ghi `SETUP.md §1 bẫy #11`.
+- **12/08 chiều — dính policy `PHONE_NUMBER_IN_AD_TEXT`**: headline `Gọi Ngay 0937 837 888` vi phạm luật cấm SĐT trong ad text → cả 2 ad mới bị APPROVED_LIMITED, campaign gắn cờ LIMITED. Sửa: thay bằng `Gọi Tư Vấn Miễn Phí Hôm Nay`, tạo ad mới + xóa 2 ad lỗi (RSA bất biến). **Ad thay thế: blanca `820626531246` · beachtro `820626531249`.** Hotline không mất — call asset `404214595370` (0937837888) vẫn gắn campaign ENABLED. Bài học ghi `SETUP.md §1 bẫy #11`. Cờ LIMITED của campaign đã tự gỡ sau khi xóa 2 ad.
+- **12/08 chiều — đại tu kỷ luật hệ (audit 3 mũi: quy trình + đo lường + cấu hình tài khoản)**: push 33 commit tồn đọng lên origin; đồng bộ trạng thái campaign ở 5 file nói ngược nhau; thống nhất ngưỡng negative (~120 click cho 0-conv); sửa CRLF làm export sót 8 negative campaign; chốt 1 tiêu chí thoát Max Clicks duy nhất (`plan-chay-ads.md §1`); tắt MCP `google-ads` trong settings (luật đã cấm mà config còn mở); tạo `scripts/ghi.py` (cổng ghi cưỡng chế read-back + chặn SĐT); `ops/ngay-hong.txt` + nhắc việc-đến-hạn trong `bao_cao.py`.
+- **12/08 chiều — BẬT ĐO CUỘC GỌI TỪ QUẢNG CÁO** (phát hiện audit: call asset để `call_conversion_reporting_state=DISABLED` trong khi tuần 1 có **17 click gọi từ ad không được đo** vs 3 lead form đo được): tạo action `7718436367` AD_CALL >=60s **SECONDARY** (không đổi định nghĩa cột conversions giữa kỳ), trỏ asset vào, verify read-back. Cửa sổ click 60 ngày (90 bị TOO_HIGH — bẫy #15).
+- **⚠️ Luật đọc số mới (audit đo lường)**: CVR/CPL CHỈ đọc từ Ads. GA4 `gui_form_beachtro_tower` bắn theo MỖI pageview trang cám ơn → tuần 1 GA4 đếm 5 vs Ads 3 vs khách thật 2 (thổi +67%). Ca 10/08: 1 lượt trang cám ơn nguồn `infusionsoft.com/referral`, 0 conv Ads — cần tra Keap ngày 10/08 để phân định lead-mất-attribution vs conversion-ma.
 - **Phát hiện đổi chiến lược:** Sun World Vũng Tàu khai trương **12/02/2026**, tại trung tâm Blanca City — đã vận hành 6 tháng. Đây là Sinatra Test mạnh nhất (khách tự kiểm được), vá lỗ hổng **0/30 headline cũ có bằng chứng đang tồn tại**. Chi tiết: `research-du-an-2026-08-12.md`.
 - ⚠️ **Hai thay đổi trong cùng ngày** (bid + RSA) → không tách được tác động riêng của từng cái. Khi đọc số tuần này phải nhớ điều đó; kỳ đo mới bắt đầu từ 13/08.

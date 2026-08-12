@@ -73,7 +73,7 @@ Thang giá trị theo `PLAN.md` §0.4. Tạo cả 6, kể cả 3 cái chưa có 
 
 ### 1.4 Import negative list từ `keywords/negative-keywords.csv`
 
-**382 dòng** `cap_do=account` → **từ khoá phủ định cấp tài khoản** (tự áp mọi campaign, kể cả PMax sau này). **83 dòng** `cap_do=campaign` → áp chọn lọc theo bảng trong `keywords/adgroup-map.md` §"Negative keyword — nơi gắn".
+**382 dòng** `cap_do=account` → **từ khoá phủ định cấp tài khoản** (tự áp mọi campaign, kể cả PMax sau này). **91 dòng** `cap_do=campaign` (12/08: sửa CRLF làm awk sót 8 dòng) → áp chọn lọc theo bảng trong `keywords/adgroup-map.md` §"Negative keyword — nơi gắn".
 
 Xuất danh sách account-level, đóng ngoặc kép để thành **phrase match** (mặc định theo `adgroup-map.md`):
 
@@ -523,7 +523,7 @@ Lộ trình gốc: `research` §4 · bảng ngưỡng volume: `journey-plan` §3
 
 | Từ → Đến | Điều kiện (ĐỦ CẢ) | Đường dẫn UI |
 |---|---|---|
-| Max Clicks → **Maximize Conversions** | Campaign đó ≥15 conversion/30 ngày · contact rate >50% (`research` §5) · đã chạy ≥4 tuần | Campaign → `Cài đặt` → `Đặt giá thầu` → `Chuyển đổi` → `Số chuyển đổi tối đa`, **không** đặt tCPA |
+| Max Clicks → **Maximize Conversions** | Tiêu chí CHUẨN DUY NHẤT: `projects/beachtro-tower/plan-chay-ads.md §1` (contact rate đã đóng băng cùng ECL — không dùng làm điều kiện) | Campaign → `Cài đặt` → `Đặt giá thầu` → `Chuyển đổi` → `Số chuyển đổi tối đa`, **không** đặt tCPA |
 | Maximize Conversions → **tCPA** | ≥30 conversion/30 ngày ổn định · đã chạy Max Conversions ≥2 tuần · **đã có ECL/offline import chạy thật** | cùng chỗ → tick `Đặt CPA mục tiêu` = CPA thực 30 ngày **+10–20%** |
 | tCPA → **tROAS** | Giá trị lead phân tầng thật đang chảy về (action 4/5/6 §1.2) · ≥15 conversion/30 ngày | cùng chỗ → `Giá trị chuyển đổi` |
 

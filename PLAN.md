@@ -28,7 +28,7 @@ Mục tiêu: hệ thống khép kín **Ads → Landing page → Lead → CRM qua
 |---|---|
 | `research/mcp-servers.md` — bản đồ cổng kết nối | ✔ |
 | `research/google-ads-bds-vn.md` — best practices BĐS VN, nguồn kiểm chứng | ✔ |
-| `keywords/` — **8.512 kw** (4.526 brand dự án từ 239 dự án thật / 3.225 giao dịch / 453 nghiên cứu / 308 CĐT), 256 negative, adgroup-map STAG, UPDATE.md (GAQL mẫu), gen.py tái sinh | ✔ QA pass: 0 trùng (kw,match), 0 field rỗng, spot-check tên dự án thật |
+| `keywords/` — kho keyword đa dự án (⚠️ SỐ CHUẨN = self-check `gen.py` mỗi lần chạy, số tĩnh trong tài liệu luôn trôi — đo 12/08: ~9.0k kw, 247 dự án, 473 negative), adgroup-map STAG, UPDATE.md (GAQL mẫu), gen.py tái sinh | ✔ QA pass: 0 trùng (kw,match), 0 field rỗng, spot-check tên dự án thật |
 
 Bộ từ khóa là **tài sản sống**: tuần → search terms report qua MCP thêm kw/negative; tháng → quét dự án mới, chạy lại `gen.py`. Có thể tự động hóa bằng `/schedule` (cloud, chạy cả khi tắt máy) sau khi có credentials.
 

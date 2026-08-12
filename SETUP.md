@@ -13,7 +13,7 @@ Developer token của Smartland + OAuth refresh_token đã ráp xong. **File cre
 
 | ID | Tên | Loại | Tiền/TZ | Hiện trạng |
 |---|---|---|---|---|
-| `6918288556` | SMR- Sun Galaxy - 7490 - Mạnh | thường (không MCC) | VND / Asia/Saigon | **0 campaign, 0 ngân sách** — tài khoản trống, sẵn sàng dựng Beachtro. Có 1 conversion action: `7709665581` "Lượt gửi biểu mẫu khách hàng tiềm năng" (WEBPAGE, SUBMIT_LEAD_FORM, **primary**) |
+| `6918288556` | SMR- Sun Galaxy - 7490 - Mạnh | thường (không MCC) | VND / Asia/Saigon | **1 campaign `24103805490` ENABLED từ 06/08** — trạng thái sống: `projects/beachtro-tower/PROJECT.md`. Có 1 conversion action: `7709665581` "Lượt gửi biểu mẫu khách hàng tiềm năng" (WEBPAGE, SUBMIT_LEAD_FORM, **primary**) |
 
 ⚠️ Refresh_token hiện tại chỉ thấy **1 account** này. Muốn thấy toàn bộ account con Smartland → sinh lại token bằng user quản lý MCC (chạy `~/get_ads_refresh_token.py`).
 
@@ -38,7 +38,8 @@ Mọi script mới: dùng `scripts/ads_client.py` (client + retry + đổi VND�
 | 11 | **SĐT trong headline/description = vi phạm policy `PHONE_NUMBER_IN_AD_TEXT`** (dính thật 2026-08-12: `Gọi Ngay 0937 837 888` → ad APPROVED_LIMITED, campaign LIMITED) | SĐT chỉ đi qua **call asset**. Trước khi ghi RSA lên tài khoản: grep headline+description, thấy chuỗi dạng SĐT là chặn. Sau khi ghi: đọc lại `policy_summary.policy_topic_entries`, không chỉ `approval_status` |
 | 12 | GAQL `user_location_view` (và các view tương tự) báo `EXPECTED_REFERENCED_FIELD_IN_SELECT_CLAUSE` khi lọc `campaign.id` trong WHERE | Field dùng ở WHERE phải có mặt trong SELECT — thêm `campaign.id` vào SELECT là chạy |
 | 13 | `keyword_view` đổi grain khi SELECT `segments.date`: 1 dòng/keyword/ngày thay vì 1 dòng/keyword (probe thật 12/08: 16 dòng → 58 dòng, tổng chi y hệt) | Lọc ngày ở WHERE thì metric đã gộp sẵn — chỉ SELECT `segments.date` khi thật sự cần theo ngày, và khi đó phải tự gộp theo (ad_group + keyword + match_type) |
-| 14 | Response của lệnh ghi = "Google đã nhận", KHÔNG phải "trạng thái đúng như mình nghĩ" (bẫy #1 chỉ nói tiền — luật này là tổng quát) | Sau MỌI mutate: đọc lại đúng resource vừa đổi bằng search hẹp nhất (negative → đọc list; bid → đọc field bid; RSA → đọc asset + `policy_topic_entries`). Verify fail thì nói "chưa xác minh được", cấm nói "xong" |
+| 14 | Response của lệnh ghi = "Google đã nhận", KHÔNG phải "trạng thái đúng như mình nghĩ" (bẫy #1 chỉ nói tiền — luật này là tổng quát) | Sau MỌI mutate: đọc lại đúng resource vừa đổi bằng search hẹp nhất (negative → đọc list; bid → đọc field bid; RSA → đọc asset + `policy_topic_entries`). Verify fail thì nói "chưa xác minh được", cấm nói "xong". **Cưỡng chế bằng `scripts/ghi.py`** — mọi script ghi import từ đó |
+| 15 | Conversion action `AD_CALL`: `click_through_lookback_window_days=90` bị `TOO_HIGH` (dính 12/08) | Cửa sổ click của AD_CALL tối đa **60 ngày** (WEBPAGE thì 90 được) |
 
 ### Bổ trợ: chỉ số qua GA4 (không bắt buộc nữa, vẫn nên link)
 

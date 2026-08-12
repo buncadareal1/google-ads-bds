@@ -16,7 +16,7 @@ Dự án mới = copy `projects/_TEMPLATE/` thành `projects/<slug>/` + thêm d�
 - MCP: dùng `analytics-ga4` + `clarity` + `gtm`. Credentials xem `SETUP.md`
 - Cowork (cloud): quy tắc làm việc + prompt khởi động trong `COWORK.md` — push nhánh `cowork/*`, không push main
 
-Quy ước: nội dung tiếng Việt, đơn vị ₫, số điện thoại/Zalo là CTA chính. Event GA4 chuẩn (registry duy nhất — LP và tracking/ phải khớp): `generate_lead`, `phone_click`, `zalo_click`, `xem_bang_gia`, `xem_mat_bang`, `form_start`.
+Quy ước: nội dung tiếng Việt, đơn vị ₫, số điện thoại/Zalo là CTA chính. Event GA4 chuẩn (registry duy nhất — LP và tracking/ phải khớp): `generate_lead`, `phone_click`, `zalo_click`, `xem_bang_gia`, `xem_mat_bang`, `form_start`. ⚠️ LP Beachtro hiện KHÔNG bắn registry này (chỉ auto-event GA4 + `gui_form_beachtro_tower` + thẻ awct trang cảm ơn) — registry là spec cho LP mới; query GA4 Beachtro KHÔNG ĐƯỢC lọc theo registry.
 
 ## Vận hành
 - **Fable 5 (main agent) = Project Manager + QA.** Mọi output của subagent phải qua QA trước khi coi là xong: kiểm tra chéo event names (LP↔tracking), message match (keyword↔ad copy↔LP), số liệu phải có nguồn, không bịa benchmark.

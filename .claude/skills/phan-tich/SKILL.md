@@ -89,5 +89,6 @@ Booking, F4 từ chiến dịch: <n> BK, <n> Deal
 - Mỗi ad group có 2 RSA từ 12/08 (bộ gốc + bộ v4 "bằng chứng Sun World"). KHÔNG phải A/B test — chỉ đọc tổng lead/CPL cả nhóm
 - Baseline tuần 1 (06-12/08): 1.714 impr · 122 click · CTR 7,1% · chi 3,16tr · 3 conv (CPL ~1,05tr)
 - Kỳ đo mới từ 13/08 (ngày 12/08 đổi cả bid lẫn RSA — không so trực tiếp với tuần 1)
-- GA4 không đo được phone/zalo click (quyết định không sửa GTM) — "0 cuộc gọi" nghĩa là "không đo được"
+- **CVR/CPL CHỈ đọc từ cột conversions của Ads.** `gui_form_beachtro_tower` GA4 bắn theo MỖI pageview trang cám ơn (F5/back = đếm thêm — tuần 1 GA4 đếm 5 vs Ads 3, thổi +67%). GA4 chỉ dùng xem hành vi
+- Cuộc gọi TỪ QUẢNG CÁO đo được từ 12/08: action `7718436367` "Cuộc gọi từ quảng cáo (>=60s)" — **SECONDARY**, nằm ở cột "Tất cả conversion", KHÔNG cộng vào cột conversions chính. Phone/zalo click TRÊN LP vẫn không đo (quyết định không sửa GTM)
 - Hồ sơ đầy đủ: `projects/beachtro-tower/PROJECT.md` + `plan-chay-ads.md`

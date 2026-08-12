@@ -22,6 +22,13 @@ Tự research để bù lỗ hổng **độ tin cậy (trust)** của bộ RSA. 
 | Kick-off **30/07/2026**, hơn **3.000 chuyên viên kinh doanh** dự | phaply.net.vn | |
 | Tro Collection thiết kế bởi **Kume Design (Nhật)** | Realtique | ⚠️ mới 1 nguồn — chưa dùng trong ad |
 
+## 1b. Tái kiểm 12/08 chiều — audit "nguồn PR vs nguồn độc lập" cho 2 claim ĐANG PHÁT trên ad
+
+| Claim trong ad | Kết quả kiểm | Nguồn độc lập |
+|---|---|---|
+| `Công Viên Nước Đã Vận Hành` | ✅ **XÁC NHẬN — nâng cấp bằng chứng**: Traveloka đang **bán vé** (bằng chứng giao dịch, không phải bài PR) + iVIVU/bonboncar có bài "kinh nghiệm đi chơi 2026" | [Traveloka](https://www.traveloka.com/vi-vn/explore/activities/sunworld-vung-tau/1004503) · [iVIVU](https://www.ivivu.com/blog/2026/02/kinh-nghiem-vui-choi-cong-vien-nuoc-sun-world-vung-tau-tu-a-den-z-2026/) |
+| `Tòa Sổ Hồng Lâu Dài Cuối Cùng` | ⚠️ **GIỮ CÓ ĐIỀU KIỆN**: "sổ hồng lâu dài" xác nhận đa nguồn (VnExpress, CafeF — Beacon Tower trước đó cũng lâu dài); riêng chữ "cuối cùng" là **tuyên bố quy hoạch chỉ CĐT nói được** — mọi nguồn đều xuôi dòng từ Sun Property, không tồn tại nguồn độc lập cho loại claim này. Phòng thủ được bằng bài VnExpress nếu bị hỏi. **Fallback nếu Google gắn cờ scarcity**: đổi thành `Quỹ Căn Sổ Hồng Lâu Dài` (bỏ "cuối cùng") | [VnExpress](https://vnexpress.net/hon-3-000-chuyen-vien-du-le-ra-quan-beachtro-tower-thuoc-blanca-city-5103939.html) |
+
 ## 2. Số liệu MÂU THUẪN — cấm dùng
 
 | Số | Nguồn A | Nguồn B | Xử lý |

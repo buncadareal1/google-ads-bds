@@ -8,7 +8,7 @@ Cầu nối giữa **bộ keyword tĩnh** (`master-keywords.csv` + `adgroup-map.
 
 **Nguồn số:** script aggregate ở §6 chạy trên `master-keywords.csv`. Mọi con số trong file này reproduce được; con số không có nguồn thì ghi `[điền]`.
 
-> ⚠️ **Lệch số đã phát hiện (không sửa ở đây):** master hiện **8.534 dòng / 240 dự án**; `adgroup-map.md` và `UPDATE.md` ghi 8.512 / 239 (chênh 22 dòng = 1 dự án hạng A mới thêm). `uu_tien`: thực tế **4.546 / 3.299 / 689** vs tài liệu ghi 4.538 / 3.287 / 687. Sửa ở vòng update tới theo `UPDATE.md`, không sửa trong file này.
+> ⚠️ **Đã xử lý 12/08/2026**: cờ lệch số treo từ 28/07 — kết luận: số tĩnh LUÔN trôi, mọi tài liệu đã đổi sang luật "số chuẩn = self-check `gen.py`", không hard-code lại nữa.
 
 ---
 

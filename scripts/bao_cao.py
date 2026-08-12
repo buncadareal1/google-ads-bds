@@ -21,6 +21,28 @@ try:
 except FileNotFoundError:
     print("(chưa có ops/change-log.jsonl)")
 
+HONG = set()
+try:
+    for line in open(os.path.join(REPO, "ops/ngay-hong.txt")):
+        if line.strip() and not line.startswith("#"): HONG.add(line.split("|")[0].strip())
+except FileNotFoundError: pass
+
+print("\n=== 📌 VIỆC ĐẾN HẠN ===")
+import subprocess
+ahead = subprocess.run(["git", "-C", REPO, "rev-list", "--count", "origin/main..HEAD"],
+                       capture_output=True, text=True).stdout.strip()
+if ahead not in ("", "0"): print(f"⚠️ {ahead} commit chưa push — push ngay (mất máy = mất hệ)")
+if today.weekday() == 4:  # thứ 6
+    import glob
+    aif = glob.glob(os.path.join(REPO, "projects/beachtro-tower/data/ads/auction-insights-*.csv"))
+    latest = max((os.path.basename(f) for f in aif), default="CHƯA CÓ FILE NÀO")
+    print(f"📥 THỨ 6: tải tay Auction Insights → data/ads/ (mới nhất: {latest}) + quét search terms (UPDATE.md)")
+if today.weekday() == 0 and today.day <= 7:
+    print("🔍 T2 ĐẦU THÁNG: rà auto-apply recommendations còn TẮT không (Google tự bật lại)")
+for moc, viec in [("2026-09-03", "Tuần 4: CHỐT CPL MỤC TIÊU (plan-chay-ads §5) + quyết định bidding")]:
+    d = (datetime.date.fromisoformat(moc) - today).days
+    if 0 <= d <= 7: print(f"🎯 {viec} — còn {d} ngày ({moc})")
+
 c = client()
 svc = c.get_service("GoogleAdsService")
 def q(query): return list(retry(lambda: svc.search(customer_id=ACCOUNT, query=query)))
@@ -34,6 +56,7 @@ for r in q(f"""SELECT segments.date, metrics.impressions, metrics.clicks, metric
 FROM campaign WHERE segments.date DURING LAST_7_DAYS AND campaign.id={CAMPAIGN} ORDER BY segments.date"""):
     m = r.metrics
     days.append((str(r.segments.date), m.clicks, m.search_impression_share))
+    if str(r.segments.date) in HONG: print("⛔ NGÀY ĐÁNH DẤU (ops/ngay-hong.txt) — loại khỏi trung bình/so sánh:")
     print(f"{r.segments.date} | impr {m.impressions} | click {m.clicks} | CTR {m.ctr*100:.1f}% | "
           f"CPC {m.average_cpc/M:,.0f}đ | chi {m.cost_micros/M:,.0f}đ | conv {m.conversions} | "
           f"IS {m.search_impression_share*100:.0f}% | mất-rank {m.search_rank_lost_impression_share*100:.0f}% | "

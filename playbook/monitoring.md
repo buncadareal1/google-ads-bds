@@ -64,7 +64,7 @@ Mọi suggest phải kèm: con số căn cứ + hành động cụ thể + rủi
 |---|---|---|
 | **Tăng budget** | IS lost (budget) ≥10% liên tục 3 ngày VÀ CPL ≤ trần VÀ contact rate đạt | +≤20%/lần, cách ≥3-4 ngày |
 | **Giảm budget / pause nhánh** | CPL > trần 3 ngày liên tiếp sau khi đã hết learning | -≤20%/lần; pause = đề xuất kèm dữ liệu nhánh |
-| **Negative mới** | Search term ≥30 click 0 conversion, hoặc lệch intent rõ | Soạn sẵn file import |
+| **Negative mới** | Lệch intent: 1 click đủ. Đúng intent 0 conv: cần click×CVR≥3 (~120 click, xem `keywords/UPDATE.md §Q1`) | Soạn sẵn file import |
 | **Nâng exact** | Search term có ≥1 conversion | Kèm bid đề xuất |
 | **Chỉnh tCPA** | Đủ 30 conv/30 ngày + chênh CPL thực vs target >15% | ±15%/lần |
 | **Seasonality adjustment** | Trước đợt mở bán/event (user khai lịch) **VÀ** campaign đang chạy **tCPA/tROAS** | Chỉ event 1-7 ngày. **GUARD:** xem 2 luật chặn dưới bảng |
@@ -117,6 +117,8 @@ Google khuyên test bid strategy bằng **experiment** thay vì đổi thẳng c
 
 ## 6. Flow DUYỆT-LÀ-CHẠY (approve → tự động apply)
 
+> ⛔ **TRẠNG THÁI 12/08/2026: CHƯA CHẠY.** `approve-bot.py` là stub (executor chưa nối API), suggest engine sinh `ops/pending-actions.jsonl` chưa tồn tại, luật 4/6/7 bảng dưới CHƯA có trong code. Bảng luật là SPEC, không phải mô tả hệ đang chạy. Ai nối API vào `apply_action()` phải cài đủ luật trước.
+
 ```
 Suggest engine                        Telegram                       Executor
 ─────────────                         ────────                       ────────
@@ -162,7 +164,7 @@ phát hiện điều kiện (mục 3)
 
 Điều kiện chạy (✅ đủ từ 2026-08-05): credential Google Ads API `~/google-ads-smartland.yaml` + venv `.venv-ads/` (API v24) + máy/cloud chạy `approve-bot.py`. Chạy ở **máy local** — Cowork cloud không có credential nên chỉ gửi đề xuất, không apply.
 
-⚠️ Chưa bật thật: đang chờ campaign đầu tiên (account `6918288556` hiện 0 campaign). Khi launch, bật theo thứ tự: chạy chế độ **chỉ đề xuất** 30 ngày đầu (user tự apply, đối chiếu xem đề xuất có đúng không) → mới mở apply tự động trong whitelist. Không mở apply ngay ngày 1 khi chưa hiệu chỉnh bằng dữ liệu thật.
+Campaign `24103805490` chạy từ 06/08. Bật theo thứ tự: chạy chế độ **chỉ đề xuất** 30 ngày đầu (user tự apply, đối chiếu xem đề xuất có đúng không) → mới mở apply tự động trong whitelist. Không mở apply ngay ngày 1 khi chưa hiệu chỉnh bằng dữ liệu thật.
 
 ## 7. Format tin Telegram (mẫu)
 

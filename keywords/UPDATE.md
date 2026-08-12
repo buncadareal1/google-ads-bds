@@ -7,7 +7,7 @@ Bộ keyword chết sau ~6 tuần nếu không nuôi: dự án mới mở bán l
 | File | Vai trò | Sửa tay? |
 |---|---|---|
 | `gen.py` | Bộ sinh ma trận [loại hình]×[khu vực]×[modifier] + [dự án]×[modifier] | **Có** — thêm khu vực / modifier ở đây |
-| `projects.tsv` | 239 dự án thật (`tên \| CĐT \| loại hình \| khu vực \| hạng A/B`) | **Có** — thêm dự án mới ở đây |
+| `projects.tsv` | dự án thật, số chuẩn = self-check `gen.py` (`tên \| CĐT \| loại hình \| khu vực \| hạng A/B \| alias`) | **Có** — thêm dự án mới ở đây |
 | `master-keywords.csv` | Output sinh ra | **KHÔNG** — sẽ bị ghi đè |
 | `negative-keywords.csv` | Negative list | **Có** — append thủ công |
 | `adgroup-map.md` | Map → campaign, ngân sách | Có |

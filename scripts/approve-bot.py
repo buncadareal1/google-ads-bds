@@ -71,8 +71,9 @@ def main():
             cb = u.get("callback_query")
             if not cb:
                 continue
-            if str(cb["message"]["chat"]["id"]) != str(chat_id):
-                audit({"event": "reject_foreign_chat", "from": cb["from"].get("id"), "ts": time.time()})
+            # kiểm NGƯỜI BẤM (from.id), không chỉ chat — trong group mọi thành viên đều bấm được nút
+            if str(cb["message"]["chat"]["id"]) != str(chat_id) or str(cb["from"]["id"]) != str(os.environ.get("TG_USER_ID", chat_id)):
+                audit({"event": "reject_foreign", "from": cb["from"].get("id"), "ts": time.time()})
                 continue
             decision, _, action_id = cb["data"].partition(":")  # "approve:<id>" | "skip:<id>"
             a = load_actions().get(action_id)

@@ -76,8 +76,8 @@ Ba điều rút ra, ảnh hưởng thẳng tới cách chạy:
 - Tài sản do AI tạo (ACA) **TẮT** · Dynamic sitelinks **TẮT**
 - Lịch quảng cáo **05:00–24:00**
 - **Auto-apply recommendations TẮT HẾT** (cấp tài khoản) — nguy hiểm nhất là `Remove conflicting negative keywords` (phá negative list) và `Use Display expansion` (bật lại thứ vừa tắt)
-- **Tracking template UTM** cấp tài khoản (`§1.5.9`) — hiện **rỗng**
-- **Negative account-level 382 dòng** — hiện mới **1 dòng**. Lệnh xuất ở `campaign-setup.md §1.4`. Đã rà chéo với 81 keyword launch: **0 xung đột**
+- **Tracking template UTM** cấp tài khoản (`§1.5.9`) — ✅ XONG 06/08
+- **Negative account-level 382 dòng** — ✅ XONG 06/08. Lệnh xuất ở `campaign-setup.md §1.4`. Đã rà chéo với 81 keyword launch: **0 xung đột**
 - RSA: **2 RSA/ad group** ngày 1, chừa 1 slot cho biến thể tuần 3
 
 ---
