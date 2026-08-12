@@ -95,7 +95,8 @@ Ad copy 2 bộ RSA: `ad-copy.md`. Plan chạy: `plan-chay-ads.md`.
 | 2 | ~~Gate G0~~ → thay bằng **phanh cứng D+1**: lead thật đầu tiên phải có `gclid` trong Keap, không có → PAUSE | user chốt bỏ qua G0 |
 | 3 | Tắt **Tài sản tự động tạo (ACA)** + **Dynamic sitelinks** | API không expose, phải làm trên UI |
 | 4 | Tắt **Auto-apply recommendations** (cấp tài khoản) | UI: Đề xuất → Tự động áp dụng → bỏ tick hết |
-| 5 | Nộp **xác minh nhà quảng cáo** (Tổ chức, 3–5 ngày) — ⚠️ giờ là nút thắt của 2 loại tài sản: Google từ chối gắn cả **hình ảnh** lẫn **biểu tượng doanh nghiệp** với lỗi "Customer is not verified". Logo SmartRealtors (asset `404392250361`) + 4 ảnh đã nằm sẵn thư viện, xác minh xong là gắn được ngay. **Đọc theo costly signalling (Alchemy): xác minh là việc MARKETING chứ không phải hành chính** — huy hiệu "đã xác minh" là tín hiệu tốn công không ai giả được, đúng trục "chắc chắn hơn" của khách 35+ | user — **ưu tiên cao nhất trong các việc chờ** |
+| 5 | ~~Nộp xác minh nhà quảng cáo~~ | ✅ **ĐÃ DUYỆT — xác nhận 12/08 bằng probe API** (lỗi "Customer is not verified" biến mất). Logo `404392250361` đã gắn cấp tài khoản qua API (ENABLED, verify read-back). |
+| 6 | **Gắn 4 ảnh vào campaign trên UI**: Chiến dịch → Tài sản → Hình ảnh (mục này giờ mới hiện). 4 ảnh có sẵn trong thư viện: `404213620169` (ngang 1200×628) · `404213620172` (vuông 1200×1200) · `404213620181` (vuông 566×566) · `404315555485` (ngang 1200×628) | user — API bị chặn allowlist (`SETUP.md` bẫy #16), chỉ UI làm được |
 
 ### ✅ Đã đúng sẵn — không phải sửa (đọc API 2026-08-06)
 

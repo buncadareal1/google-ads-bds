@@ -40,6 +40,7 @@ Mọi script mới: dùng `scripts/ads_client.py` (client + retry + đổi VND�
 | 13 | `keyword_view` đổi grain khi SELECT `segments.date`: 1 dòng/keyword/ngày thay vì 1 dòng/keyword (probe thật 12/08: 16 dòng → 58 dòng, tổng chi y hệt) | Lọc ngày ở WHERE thì metric đã gộp sẵn — chỉ SELECT `segments.date` khi thật sự cần theo ngày, và khi đó phải tự gộp theo (ad_group + keyword + match_type) |
 | 14 | Response của lệnh ghi = "Google đã nhận", KHÔNG phải "trạng thái đúng như mình nghĩ" (bẫy #1 chỉ nói tiền — luật này là tổng quát) | Sau MỌI mutate: đọc lại đúng resource vừa đổi bằng search hẹp nhất (negative → đọc list; bid → đọc field bid; RSA → đọc asset + `policy_topic_entries`). Verify fail thì nói "chưa xác minh được", cấm nói "xong". **Cưỡng chế bằng `scripts/ghi.py`** — mọi script ghi import từ đó |
 | 15 | Conversion action `AD_CALL`: `click_through_lookback_window_days=90` bị `TOO_HIGH` (dính 12/08) | Cửa sổ click của AD_CALL tối đa **60 ngày** (WEBPAGE thì 90 được) |
+| 16 | `AD_IMAGE` bị `UNSUPPORTED_FIELD_TYPE ... not supported to be added directly through asset links` ở CẢ campaign/ad group/customer (probe 12/08, SAU khi đã xác minh nhà quảng cáo) | Gắn image asset qua API = **allowlist riêng của Google**, không phải quyền thường. Ảnh cho Search campaign: gắn trên **UI** (Chiến dịch → Tài sản → Hình ảnh — mục này chỉ hiện sau xác minh). `BUSINESS_LOGO` thì API gắn được, ở **cấp tài khoản** (`CustomerAssetService`), không phải campaign |
 
 ### Bổ trợ: chỉ số qua GA4 (không bắt buộc nữa, vẫn nên link)
 
