@@ -32,7 +32,7 @@
 |---|---|---|
 | Ngân sách/ngày | **1.000.000 ₫** (chốt 2026-08-06) | **1 campaign brand duy nhất** — `plan-chay-ads.md` |
 | CPL mục tiêu | **chưa đặt** — chốt ở tuần 4 từ số thật | Tháng 1 dùng **kill rule cấu trúc**, không cắt theo giá (`plan-chay-ads.md §4`) |
-| CPC trần | **28.000 ₫** (20k → 35k ngày bật → 28k ngày 12/08) | Hạ vì IS đã đạt 76%, mất-rank chỉ 24% — vài % thị phần cuối rất đắt, không đáng mua |
+| CPC trần | **35.000 ₫** (20k → 35k ngày bật → 28k ngày 12/08 → 35k ngày 14/08) | Đảo lại sau Auction Insights: pqr.vn bid đè (trên mình 92% khi cùng hiện) — lệnh user 14/08 |
 | IS brand | guardrail ≥65% (`ops/change-log.jsonl` 12/08) · cảnh báo −15đ WoW (`monitoring.md §4`) |
 
 ⚠️ **Giai đoạn pre-launch, chưa có bảng giá** → CPL raw sẽ rẻ giả tạo (LP không có rào tài chính). Không so CPL giai đoạn này với giai đoạn sau khi công bố giá.
@@ -158,8 +158,7 @@ Rủi ro còn lại nếu Google vẫn từ chối vì thiếu thông tin doanh 
 
 ### 2026-08-14 — Auction Insights đầu tiên (kỳ 30/07–13/08, file `data/ads/auction-insights-2026-08-14.csv`)
 - Mình: IS 67,81% · đầu-trang 78,52% · abs-top 37,78%. **6 domain đang đấu brand Blanca City.**
-- **pqr.vn là đối thủ nặng nhất**: IS 32,80%, trùng lặp 39,78%, và khi cùng hiển thị thì **đứng trên mình 92,18%**, abs-top 64,78% (gần gấp đôi mình) — họ bid mạnh hơn hẳn. ⚠️ Nghi vấn: skill nội bộ có nhắc "SmartLand/PQR pattern" — nếu pqr.vn là công ty cùng hệ sinh thái thì hai bên đang **tự đấu giá lẫn nhau, đẩy CPC của nhau lên** → hỏi user trước khi phản ứng bằng bid.
-- `srt.com.vn` (IS 12,26%) cũng cần user xác nhận có phải sàn nhà/đối tác không.
+- **pqr.vn là đối thủ nặng nhất** (user xác nhận 14/08: KHÔNG liên quan gì đến mình): IS 32,80%, trùng lặp 39,78%, khi cùng hiển thị thì **đứng trên mình 92,18%**, abs-top 64,78% (gần gấp đôi mình) — họ bid mạnh hơn hẳn.
 - Còn lại 4 domain sàn phân phối nhỏ (IS <10–17%): vungtaublancacity.com, vungtau-sungroup.com.vn, sungroupblancacity.com.vn, sunmiennam.vn, blanca-vungtau.vn — bình thường với brand CĐT lớn, chưa cần phản ứng.
 - Bối cảnh đọc số: pos-above của đối thủ cao một phần là hệ quả **mình hạ bid 12/08** — kỳ này trộn 2 chế độ bid (35k trước 12/08, 28k sau), so kỳ sau phải nhớ.
 - **Phát hiện đổi chiến lược:** Sun World Vũng Tàu khai trương **12/02/2026**, tại trung tâm Blanca City — đã vận hành 6 tháng. Đây là Sinatra Test mạnh nhất (khách tự kiểm được), vá lỗ hổng **0/30 headline cũ có bằng chứng đang tồn tại**. Chi tiết: `research-du-an-2026-08-12.md`.

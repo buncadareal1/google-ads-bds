@@ -1,1 +1,2 @@
 2026-08-12 | đổi 2 biến cùng ngày (bid 35k→28k + RSA v4) — so sánh trước/sau phải cắt tại đây
+2026-08-14 | nâng bid 28k→35k giữa ngày — cắt so sánh tại đây
