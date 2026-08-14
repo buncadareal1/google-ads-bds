@@ -85,7 +85,7 @@ Booking, F4 từ chiến dịch: <n> BK, <n> Deal
 
 ## Bối cảnh cố định (đỡ tra lại)
 
-- Campaign `24103805490` · budget 1tr₫/ngày · trần CPC 28.000₫ (20k → 35k ngày 06/08 → 28k ngày 12/08)
+- Campaign `24103805490` · budget 1tr₫/ngày · trần CPC 35.000₫ (20k → 35k → 28k ngày 12/08 → 35k ngày 14/08 sau Auction Insights)
 - Mỗi ad group có 2 RSA từ 12/08 (bộ gốc + bộ v4 "bằng chứng Sun World"). KHÔNG phải A/B test — chỉ đọc tổng lead/CPL cả nhóm
 - Baseline tuần 1 (06-12/08): 1.714 impr · 122 click · CTR 7,1% · chi 3,16tr · 3 conv (CPL ~1,05tr)
 - Kỳ đo mới từ 13/08 (ngày 12/08 đổi cả bid lẫn RSA — không so trực tiếp với tuần 1)
