@@ -74,7 +74,7 @@ Ad copy 2 bộ RSA: `ad-copy.md`. Plan chạy: `plan-chay-ads.md`.
 |---|---|---|
 | Campaign | `BDS_Search_Brand_DuAn` · **ENABLED/SERVING** · Search · Maximize Clicks | `24103805490` |
 | Ngân sách | **1.000.000 ₫/ngày** (không dùng chung) | `15778630477` |
-| Trần CPC | **28.000 ₫** (campaign + cả 2 ad group — 20k → 35k ngày bật → 28k ngày 12/08, verify qua API) | |
+| Trần CPC | **35.000 ₫** (campaign + cả 2 ad group — 20k → 35k ngày bật → 28k ngày 12/08 → 35k ngày 14/08, verify qua API) | |
 | Ad group | `brand-beachtro-tower` · `brand-blanca-city` | `195939193901` · `195939194061` |
 | Keyword | **81** (40 exact + 41 phrase, 0 broad) | |
 | RSA | 2 bộ, ghim H1, path `/bang-gia/2026` và `/blanca-city/can-ho` | |
