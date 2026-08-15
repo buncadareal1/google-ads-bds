@@ -163,3 +163,13 @@ Rủi ro còn lại nếu Google vẫn từ chối vì thiếu thông tin doanh 
 - Bối cảnh đọc số: pos-above của đối thủ cao một phần là hệ quả **mình hạ bid 12/08** — kỳ này trộn 2 chế độ bid (35k trước 12/08, 28k sau), so kỳ sau phải nhớ.
 - **Phát hiện đổi chiến lược:** Sun World Vũng Tàu khai trương **12/02/2026**, tại trung tâm Blanca City — đã vận hành 6 tháng. Đây là Sinatra Test mạnh nhất (khách tự kiểm được), vá lỗ hổng **0/30 headline cũ có bằng chứng đang tồn tại**. Chi tiết: `research-du-an-2026-08-12.md`.
 - ⚠️ **Hai thay đổi trong cùng ngày** (bid + RSA) → không tách được tác động riêng của từng cái. Khi đọc số tuần này phải nhớ điều đó; kỳ đo mới bắt đầu từ 13/08.
+
+### 2026-08-15 — TẮT MẠNG DISPLAY: rò ~50% ngân sách suốt 2 ngày, 0 lead
+
+- **Triệu chứng (14/08)**: impr nhảy 389 → 2.488 (×6), CTR tụt 4,4% → 1,9%, chi chạm 1,14tr. Ban đầu tưởng hệ quả nâng bid 35k.
+- **Chẩn đoán (15/08)**: search terms ngày 14/08 chỉ giải thích **249/2.488 impr** (10%). Soi `segments.ad_network_type` → campaign đang chạy CẢ mạng CONTENT vì `network_settings.target_content_network=True` (Display Expansion — mặc định của Google khi dựng Search campaign).
+- **Thiệt hại**: CONTENT 54 click · **1.027.734 ₫** · **0 conversion** (toàn bộ rơi vào 14-15/08, impr dồn 5-6h sáng). SEARCH cùng kỳ: 164 click · 4,29tr · **4/4 conversion**. → Display = 0 lead, ~19k/click rác.
+- **Hành động**: `target_content_network=False` qua API, read-back xác minh `search=True display=False`. Ghi `ops/change-log.jsonl` (review **22/08**, guardrail: conv 7 ngày giảm >20% thì xem lại). Không đụng bid.
+- **Bẫy kỹ thuật mới (SETUP.md #17)**: `protobuf_helpers.field_mask()` **bỏ qua field set về `False`** (proto3 default) → lần mutate đầu Google trả OK nhưng read-back vẫn `display=True`. Phải tự `op.update_mask.paths.append(...)`. Cổng `ghi()` bắt được nhờ read-back bắt buộc — nếu không có nó thì đã báo "xong" sai.
+- **Hệ quả đọc số**: 14/08 và 15/08 nhiễm Display → chỉ đọc phần SEARCH (14/08 thật: 290 impr · 22 click · 623k · 1 conv). Đã ghi `ops/ngay-hong.txt`.
+- **Vá hệ thống**: `bao_cao.py` in thêm khối **MẠNG HIỂN THỊ 7 NGÀY** (cảnh báo ⛔ nếu có dòng CONTENT); skill `phan-tich` thêm luật "lệch chi search-terms >30% → soi ad_network_type" + "impr bùng + CTR tụt = pha loãng mạng, không phải ad kém".

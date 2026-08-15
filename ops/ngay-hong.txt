@@ -1,2 +1,3 @@
 2026-08-12 | đổi 2 biến cùng ngày (bid 35k→28k + RSA v4) — so sánh trước/sau phải cắt tại đây
 2026-08-14 | nâng bid 28k→35k giữa ngày — cắt so sánh tại đây
+2026-08-15 | Display ăn ~50% chi 14-15/08 (0 conv) — tắt lúc ~9h; số 14+15/08 nhiễm, chỉ đọc phần SEARCH

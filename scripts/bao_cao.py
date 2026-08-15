@@ -75,6 +75,13 @@ FROM campaign WHERE segments.date DURING TODAY AND campaign.id={CAMPAIGN} AND me
     print(f"{r.segments.hour:02d}h | impr {m.impressions} | click {m.clicks} | chi {m.cost_micros/M:,.0f}đ")
 print(f"TỔNG HÔM NAY: impr {ti} | click {tc} | chi {tcost/M:,.0f}đ")
 
+print("\n=== MẠNG HIỂN THỊ 7 NGÀY (campaign Search KHÔNG được có dòng CONTENT — bẫy #18) ===")
+for r in q(f"""SELECT segments.ad_network_type, metrics.impressions, metrics.clicks, metrics.cost_micros, metrics.conversions
+FROM campaign WHERE segments.date DURING LAST_7_DAYS AND campaign.id={CAMPAIGN}"""):
+    m = r.metrics; net = r.segments.ad_network_type.name
+    warn = "  ⛔ RÒ TIỀN — tắt target_content_network" if net == "CONTENT" else ""
+    print(f"{net} | impr {m.impressions} | click {m.clicks} | chi {m.cost_micros/M:,.0f}đ | conv {m.conversions:.1f}{warn}")
+
 print("\n=== SEARCH TERMS 7 NGÀY (lệch tổng chi = term ẩn) ===")
 st_cost = 0; n = 0
 for r in q(f"""SELECT search_term_view.search_term, metrics.impressions, metrics.clicks, metrics.cost_micros

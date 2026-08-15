@@ -29,7 +29,8 @@ Cần địa lý thì thêm report `city × sessionSourceMedium`.
 ## Bước 3 — Kiểm chéo (chỉ đánh dấu ✓/✗, không viết dài)
 
 - Click Ads ≈ session google/cpc GA4 (hao 10–30% là bình thường; GA4 trễ vài GIỜ — chỉ so ngày đã chốt)
-- Tổng chi search terms < tổng chi ngày → phần lệch = term ẩn (bình thường nếu <15%)
+- Tổng chi search terms < tổng chi ngày → phần lệch = term ẩn (bình thường nếu <15%). **Lệch >30% = KHÔNG phải term ẩn, phải soi `segments.ad_network_type` ngay** — dính thật 14-15/08: Display Expansion bật ngầm, ăn 1,03tr / 54 click / 0 conv (bao_cao.py giờ in sẵn khối MẠNG HIỂN THỊ)
+- Impression tăng đột biến + CTR tụt cùng lúc = **pha loãng mạng**, không phải ad kém. Đọc riêng phần SEARCH rồi mới kết luận về ad/bid
 - IS/keyword-IS của HÔM NAY luôn = 0% → nghĩa là CHƯA CÓ SỐ, không phải 0. Chỉ đọc IS ngày đã chốt
 - form_submit từ desktop/direct = test nội bộ, không phải lead ads (đối chiếu thiết bị+nguồn với click ads)
 - **Nút thắt (chọn đúng 1 nhãn trước khi đề xuất)**: mất-budget >40% = thiếu VỐN (thêm tiền nếu CPL đạt) · mất-rank >30% + QS/LPX yếu = thiếu CHẤT (sửa ad/LP, KHÔNG thêm tiền) · cả hai thấp + impr thấp = HẾT CẦU (bằng chứng hợp lệ duy nhất để mở non-brand) · tiền chảy vào term rác = QUERY · tag hỏng = TRACKING
@@ -79,7 +80,7 @@ Booking, F4 từ chiến dịch: <n> BK, <n> Deal
 
 1. **Lead đầu tiên xuất hiện mà không có gclid trong Keap** → đề nghị PAUSE campaign (task #20)
 2. Search term rác/sai ngành → liệt kê + negative ngay
-3. Chi bất thường >2× nhịp cũ (cả tốt lẫn xấu — luật Twyman) hoặc chạm phanh 30tr/tháng
+3. Chi/impression bất thường >2× nhịp cũ (cả tốt lẫn xấu — luật Twyman) hoặc chạm phanh 30tr/tháng. **Nghi can số 1: mạng CONTENT** (bẫy #18), số 2: search term mới
 4. Ad bị DISAPPROVED / **APPROVED_LIMITED** / campaign primary_status LIMITED vì policy — đọc `policy_topic_entries` (bao_cao.py in sẵn). Đã dính thật: `PHONE_NUMBER_IN_AD_TEXT` 12/08. **Ad Strength POOR KHÔNG phải cờ đỏ với campaign brand** (brand pin khớp LP → POOR nhưng CTR/CVR cao là bình thường — notfair rsa-best-practices)
 5. Ngày tracking hỏng → vứt toàn bộ số ngày đó, nói rõ
 
