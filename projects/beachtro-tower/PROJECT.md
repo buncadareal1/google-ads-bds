@@ -8,7 +8,7 @@
 | Phạm vi bán | **CHỈ căn hộ Beachtro** (chốt 2026-08-06) — không bán biệt thự / shophouse / nhà phố trong Blanca City → 15 negative cấp campaign, xem `keywords/negative.csv` |
 | Bàn giao | Dự kiến 8/2028 |
 | Vai trò của ta | **Phân phối chính thức** (SmartRealtors & Partners) — không phải CĐT |
-| Trạng thái | 🟢 **ĐANG CHẠY từ 2026-08-06** — bật theo lệnh user, BỎ QUA gate G0 → phanh cứng: lead đầu không có gclid trong Keap = PAUSE ngay |
+| Trạng thái | ⏸️ **ĐÃ TẮT 2026-08-17 — ngưng lỗ, chờ dự án khác.** Chạy 06→17/08 (12 ngày): 7,0tr · 269 click · 4 lead form · CPL 1,75tr (1,50tr nếu bỏ phần Display rò). Tổng kết đầy đủ ở cuối file. Bật lại = **kỳ đo mới** |
 | Ngày mở hồ sơ | 2026-08-05 |
 
 ## Cổng kết nối (verify 2026-08-06 bằng API thật)

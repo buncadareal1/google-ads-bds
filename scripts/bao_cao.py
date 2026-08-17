@@ -9,6 +9,15 @@ from ads_client import client, ACCOUNT, M, retry
 CAMPAIGN = 24103805490  # ponytail: hardcode Beachtro; tham số hóa khi có dự án 2
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+c = client()
+svc = c.get_service("GoogleAdsService")
+def q(query): return list(retry(lambda: svc.search(customer_id=ACCOUNT, query=query)))
+
+STATUS = q(f"SELECT campaign.status FROM campaign WHERE campaign.id={CAMPAIGN}")[0].campaign.status.name
+NGHI = STATUS != "ENABLED"
+if NGHI:
+    print(f"⏸️  CAMPAIGN {STATUS} — không chi tiền, mọi review đóng băng. Bật lại = KỲ ĐO MỚI, cấm nối số với kỳ cũ.\n")
+
 print("=== THAY ĐỔI ĐANG CHÍN (chưa tới hạn = CẤM phán tác động) ===")
 today = datetime.date.today()
 try:
@@ -32,7 +41,7 @@ import subprocess
 ahead = subprocess.run(["git", "-C", REPO, "rev-list", "--count", "origin/main..HEAD"],
                        capture_output=True, text=True).stdout.strip()
 if ahead not in ("", "0"): print(f"⚠️ {ahead} commit chưa push — push ngay (mất máy = mất hệ)")
-if today.weekday() == 4:  # thứ 6
+if today.weekday() == 4 and not NGHI:  # thứ 6
     import glob
     aif = glob.glob(os.path.join(REPO, "projects/beachtro-tower/data/ads/auction-insights-*.csv"))
     latest = max((os.path.basename(f) for f in aif), default="CHƯA CÓ FILE NÀO")
@@ -41,11 +50,7 @@ if today.weekday() == 0 and today.day <= 7:
     print("🔍 T2 ĐẦU THÁNG: rà auto-apply recommendations còn TẮT không (Google tự bật lại)")
 for moc, viec in [("2026-09-03", "Tuần 4: CHỐT CPL MỤC TIÊU (plan-chay-ads §5) + quyết định bidding")]:
     d = (datetime.date.fromisoformat(moc) - today).days
-    if 0 <= d <= 7: print(f"🎯 {viec} — còn {d} ngày ({moc})")
-
-c = client()
-svc = c.get_service("GoogleAdsService")
-def q(query): return list(retry(lambda: svc.search(customer_id=ACCOUNT, query=query)))
+    if 0 <= d <= 7 and not NGHI: print(f"🎯 {viec} — còn {d} ngày ({moc})")
 
 print("\n=== NGÀY (7 ngày, IS chỉ tin ngày ĐÃ CHỐT) ===")
 days = []
