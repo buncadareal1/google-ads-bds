@@ -173,3 +173,13 @@ Rủi ro còn lại nếu Google vẫn từ chối vì thiếu thông tin doanh 
 - **Bẫy kỹ thuật mới (SETUP.md #17)**: `protobuf_helpers.field_mask()` **bỏ qua field set về `False`** (proto3 default) → lần mutate đầu Google trả OK nhưng read-back vẫn `display=True`. Phải tự `op.update_mask.paths.append(...)`. Cổng `ghi()` bắt được nhờ read-back bắt buộc — nếu không có nó thì đã báo "xong" sai.
 - **Hệ quả đọc số**: 14/08 và 15/08 nhiễm Display → chỉ đọc phần SEARCH (14/08 thật: 290 impr · 22 click · 623k · 1 conv). Đã ghi `ops/ngay-hong.txt`.
 - **Vá hệ thống**: `bao_cao.py` in thêm khối **MẠNG HIỂN THỊ 7 NGÀY** (cảnh báo ⛔ nếu có dòng CONTENT); skill `phan-tich` thêm luật "lệch chi search-terms >30% → soi ad_network_type" + "impr bùng + CTR tụt = pha loãng mạng, không phải ad kém".
+
+### 2026-08-17 — USER TẮT CAMPAIGN (PAUSED). Đóng sổ kỳ chạy đầu 06–17/08
+
+- Trạng thái verify qua API: `status=PAUSED`, `primary_status_reasons=['CAMPAIGN_PAUSED', ...]`.
+- **Tổng kỳ 12 ngày**: 7.925 impr · 269 click · **6.997.549 ₫** · **4 lead form** (Ads). CPL trên tổng chi **1.749.387 ₫**; CPL trên riêng chi Search **1.498.740 ₫**.
+- Tách mạng: SEARCH 217 click · 5.994.960 ₫ · **4/4 conv** (CTR 6,8%, CPC 27.626 ₫) — CONTENT 52 click · 1.002.590 ₫ · **0 conv** (rò 14-15/08, đã tắt).
+- Tách nhóm: `brand-beachtro-tower` 28 click · 658.572 ₫ · 2 conv → **CPL 329.286 ₫** · `brand-blanca-city` 241 click · 6.338.977 ₫ · 2 conv → **CPL 3.169.489 ₫**. → Nhóm beachtro rẻ hơn ~10 lần nhưng gần như không có volume (trần cầu).
+- Lead rơi vào 09/08 (1) · 11/08 (2) · 14/08 (1). Không có lead từ 15/08.
+- Ba review đang chờ **đóng sổ ở trạng thái CHƯA KẾT LUẬN** (bid 35k 21/08, tắt Display 22/08, RSA v4 26/08) — campaign dừng trước hạn, không đủ dữ liệu phán.
+- ⚠️ Bật lại = **kỳ đo mới**, không nối số với kỳ này.
