@@ -184,10 +184,21 @@ Rủi ro còn lại nếu Google vẫn từ chối vì thiếu thông tin doanh 
 - Ba review đang chờ **đóng sổ ở trạng thái CHƯA KẾT LUẬN** (bid 35k 21/08, tắt Display 22/08, RSA v4 26/08) — campaign dừng trước hạn, không đủ dữ liệu phán.
 - ⚠️ Bật lại = **kỳ đo mới**, không nối số với kỳ này.
 
-### 2026-08-19 — Nghiệm thu lead từ CRM (user cung cấp)
+### 2026-08-19 — Nghiệm thu lead từ CRM (2 kỳ báo cáo)
 
-- **Làm rõ 19/08 (user)**: con số **4 lead / 1 F1** là **LŨY KẾ từ đầu chiến dịch**, không phải riêng kỳ 11–18/08. Trong kỳ 11–18/08 có **3 lead, trong đó 1 lên F1**. → Ads và CRM **khớp hoàn toàn**, không có lead thất lạc.
-- Kỳ 11–18/08: chi 4.858.607 ₫ · 3 lead · 1 F1 → CPL **1.619.536 ₫** · Chi/F1 **4.858.607 ₫** (chỉ tính chi Search: CPL **1.285.339 ₫**).
-- Lũy kế 06–18/08: chi 7.151.334 ₫ · 4 lead · 1 F1 → CPL **1.787.834 ₫** · Chi/F1 **7.151.334 ₫** · qualify **25%** (chỉ tính chi Search: CPL **1.537.186 ₫**).
-- Ngày lead theo Ads: 09/08 ×1 · 11/08 ×2 · 14/08 ×1 (8.027 impr · 274 click toàn kỳ).
+| | 06–10/08 | 11–18/08 | **Lũy kế 06–18/08** |
+|---|---|---|---|
+| Chi (tổng) | 2.292.727 ₫ | 4.858.607 ₫ | **7.151.334 ₫** |
+| Chi (chỉ Search, bỏ Display rò) | 2.292.727 ₫ | 3.856.017 ₫ | **6.148.745 ₫** |
+| Lead (CRM) | 2 | 4 | **6** |
+| F1 | 1 | 1 | **2** |
+| CPL (tổng chi) | 1.146.364 ₫ | 1.214.652 ₫ | **1.191.889 ₫** |
+| CPL (chi Search) | 1.146.364 ₫ | 964.004 ₫ | **1.024.791 ₫** |
+| Chi/F1 | 2.292.727 ₫ | 4.858.607 ₫ | **3.575.667 ₫** |
+| Qualify | 50% | 25% | **33%** |
+| Booking / Deal | 0 / 0 | — cần user | **0 / 0** |
+
+- **CRM 6 lead > Ads 4 conv** — không phải lệch đo: hệ **KHÔNG đo** lead qua hotline/Zalo (quyết định không sửa GTM, `audit-lp.md`). Ads gán 4: 09/08 ×1 · 11/08 ×2 · 14/08 ×1. Chênh 2 lead = kênh ngoài form. **Cấm cộng chéo 2 hệ**; CRM là bản nghiệm thu thật, Ads chỉ dùng chẩn đoán delivery.
+- Người chạy trên báo cáo công ty: **Tường Đặng MKT**.
+- Toàn kỳ: 8.027 impr · 274 click.
 - ⚠️ Còn phát sinh chi ngày 18/08 (102 impr · 5 click · 153.785 ₫) SAU khi user tắt campaign 17/08 — **chưa xác minh nguyên nhân** (lệnh kiểm change_event bị dừng giữa chừng). Việc còn treo: kiểm `campaign.status` + `change_event`, hoặc user xem trạng thái trên UI.
