@@ -184,9 +184,10 @@ Rủi ro còn lại nếu Google vẫn từ chối vì thiếu thông tin doanh 
 - Ba review đang chờ **đóng sổ ở trạng thái CHƯA KẾT LUẬN** (bid 35k 21/08, tắt Display 22/08, RSA v4 26/08) — campaign dừng trước hạn, không đủ dữ liệu phán.
 - ⚠️ Bật lại = **kỳ đo mới**, không nối số với kỳ này.
 
-### 2026-08-19 — Nghiệm thu lead từ CRM (user cung cấp, cho kỳ 11–18/08)
+### 2026-08-19 — Nghiệm thu lead từ CRM (user cung cấp)
 
-- **Kỳ 11–18/08: 4 lead · 1 F1 · 3 đang chăm** (CRM) → qualify **25%**. Chi kỳ này **4.858.607 ₫** → **CPL 1.214.652 ₫** · **Chi/F1 4.858.607 ₫**. Bỏ phần Display rò: CPL **964.004 ₫** · Chi/F1 **3.856.017 ₫**.
-- ⚠️ **Lệch 4 (CRM) vs 3 (Ads) trong cùng kỳ 11–18/08** — Ads chỉ gán 3 conv (11/08 ×2, 14/08 ×1). Lead thứ 4 hoặc đến ngoài kênh đo (hotline/Zalo — hệ KHÔNG đo), hoặc là lead 09/08 mà CRM ghi ngày khác. Không cộng chéo 2 hệ; nếu cần chốt, đối chiếu ngày tạo contact trong Keap.
-- Chi toàn kỳ 06–18/08 (số chốt): **7.151.334 ₫** · 8.027 impr · 274 click · 4 conv (Ads) → CPL 1.787.834 ₫.
+- **Làm rõ 19/08 (user)**: con số **4 lead / 1 F1** là **LŨY KẾ từ đầu chiến dịch**, không phải riêng kỳ 11–18/08. Trong kỳ 11–18/08 có **3 lead, trong đó 1 lên F1**. → Ads và CRM **khớp hoàn toàn**, không có lead thất lạc.
+- Kỳ 11–18/08: chi 4.858.607 ₫ · 3 lead · 1 F1 → CPL **1.619.536 ₫** · Chi/F1 **4.858.607 ₫** (chỉ tính chi Search: CPL **1.285.339 ₫**).
+- Lũy kế 06–18/08: chi 7.151.334 ₫ · 4 lead · 1 F1 → CPL **1.787.834 ₫** · Chi/F1 **7.151.334 ₫** · qualify **25%** (chỉ tính chi Search: CPL **1.537.186 ₫**).
+- Ngày lead theo Ads: 09/08 ×1 · 11/08 ×2 · 14/08 ×1 (8.027 impr · 274 click toàn kỳ).
 - ⚠️ Còn phát sinh chi ngày 18/08 (102 impr · 5 click · 153.785 ₫) SAU khi user tắt campaign 17/08 — **chưa xác minh nguyên nhân** (lệnh kiểm change_event bị dừng giữa chừng). Việc còn treo: kiểm `campaign.status` + `change_event`, hoặc user xem trạng thái trên UI.
