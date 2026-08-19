@@ -1,7 +1,7 @@
 # Hệ thống Google Ads BĐS
 
 Repo này là hệ thống vận hành Google Ads cho bất động sản VN — **nền tảng dùng chung cho NHIỀU dự án** (playbook/tracking/keywords là tài sản chung, mỗi dự án chỉ thêm bộ kw + LP + chỉ số riêng). Đọc `PLAN.md` trước.
-**Trạng thái 2026-08-17: KHÔNG có dự án nào đang chạy ads.** Beachtro Tower — Blanca City đã tắt 17/08 (ngưng lỗ), hồ sơ giữ nguyên ở `projects/beachtro-tower/` làm baseline cho dự án sau. Dự án mới về → dựng theo `projects/README.md`.
+**Trạng thái 2026-08-19: Beachtro Tower — Blanca City ĐANG CHẠY** (tắt 17/08 ngưng lỗ → bật lại 18/08, kỳ đo 2). Hồ sơ: `projects/beachtro-tower/`. Dự án mới về → dựng theo `projects/README.md`.
 Dự án mới = copy `projects/_TEMPLATE/` thành `projects/<slug>/` + thêm dòng vào `keywords/projects.tsv` + dòng bảng trong COWORK.md — **không fork repo**. Quy ước đầy đủ: `projects/README.md`.
 ⚠️ `projects/` (dự án MÌNH chạy ads) ≠ `keywords/projects.tsv` (245 dự án toàn thị trường, chỉ để sinh keyword).
 
@@ -12,7 +12,7 @@ Dự án mới = copy `projects/_TEMPLATE/` thành `projects/<slug>/` + thêm d�
 - `content/` — bài SEO hỗ trợ (chuẩn `seo-machine`)
 - `research/books/` — **10 cuốn chưng cất (2026-08-06)**: Schwartz/Whitman/Sugarman/Heath/Great Leads (copy) · Sharp/Binet-Field (chiến lược brand) · CRE/Kohavi (chẩn đoán + kỷ luật đọc số) · Sutherland (động cơ ngầm). Viết RSA/LP/đọc số: tra ở đây trước khi tự nghĩ.
 - **Lead: NGOÀI PHẠM VI hệ (chốt 2026-08-05)** — bỏ Keap API, hệ KHÔNG đo lead; user tự quản lý lead riêng. Pipeline ECL trong `tracking/` đóng băng.
-- **Google Ads API ĐÃ KẾT NỐI (2026-08-05)** — credential `~/google-ads-smartland.yaml`, venv `.venv-ads/`, API v24. Account đang dùng: `6918288556` (SMR- Sun Galaxy, VND — campaign `BDS_Search_Brand_DuAn` **ĐÃ TẮT 2026-08-17** — chạy 06→17/08, ngưng lỗ, chờ dự án mới; hồ sơ + tổng kết kỳ: `projects/beachtro-tower/PROJECT.md`). Gọi bằng script Python qua helper `scripts/ads_client.py` (client/retry/đổi VND↔micros), KHÔNG dùng MCP `google-ads` (ghim MCC khác). Bẫy API v24 (micros, EU political field, negative account = shared set, RSA bất biến, verify-gate cho ảnh/logo…): `SETUP.md §1`.
+- **Google Ads API ĐÃ KẾT NỐI (2026-08-05)** — credential `~/google-ads-smartland.yaml`, venv `.venv-ads/`, API v24. Account đang dùng: `6918288556` (SMR- Sun Galaxy, VND — campaign `BDS_Search_Brand_DuAn` **ĐANG CHẠY** — kỳ 1 06→17/08 (tắt ngưng lỗ), bật lại 18/08; hồ sơ + tổng kết kỳ: `projects/beachtro-tower/PROJECT.md`). Gọi bằng script Python qua helper `scripts/ads_client.py` (client/retry/đổi VND↔micros), KHÔNG dùng MCP `google-ads` (ghim MCC khác). Bẫy API v24 (micros, EU political field, negative account = shared set, RSA bất biến, verify-gate cho ảnh/logo…): `SETUP.md §1`.
 - MCP: dùng `analytics-ga4` + `clarity` + `gtm`. Credentials xem `SETUP.md`
 - Cowork (cloud): quy tắc làm việc + prompt khởi động trong `COWORK.md` — push nhánh `cowork/*`, không push main
 

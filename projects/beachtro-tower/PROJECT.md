@@ -8,7 +8,7 @@
 | Phạm vi bán | **CHỈ căn hộ Beachtro** (chốt 2026-08-06) — không bán biệt thự / shophouse / nhà phố trong Blanca City → 15 negative cấp campaign, xem `keywords/negative.csv` |
 | Bàn giao | Dự kiến 8/2028 |
 | Vai trò của ta | **Phân phối chính thức** (SmartRealtors & Partners) — không phải CĐT |
-| Trạng thái | ⏸️ **ĐÃ TẮT 2026-08-17 — ngưng lỗ, chờ dự án khác.** Chạy 06→17/08 (12 ngày): 7,0tr · 269 click · 4 lead form · CPL 1,75tr (1,50tr nếu bỏ phần Display rò). Tổng kết đầy đủ ở cuối file. Bật lại = **kỳ đo mới** |
+| Trạng thái | 🟢 **ĐANG CHẠY — bật lại 2026-08-18** (kỳ đo 2). Kỳ 1 (06–18/08): 7,15tr · 274 click · 4 conv Ads · 6 lead CRM / 2 F1 · CPL 1,19tr. Display đã tắt 15/08, không bật lại |
 | Ngày mở hồ sơ | 2026-08-05 |
 
 ## Cổng kết nối (verify 2026-08-06 bằng API thật)
@@ -202,3 +202,10 @@ Rủi ro còn lại nếu Google vẫn từ chối vì thiếu thông tin doanh 
 - Người chạy trên báo cáo công ty: **Tường Đặng MKT**.
 - Toàn kỳ: 8.027 impr · 274 click.
 - ⚠️ Còn phát sinh chi ngày 18/08 (102 impr · 5 click · 153.785 ₫) SAU khi user tắt campaign 17/08 — **chưa xác minh nguyên nhân** (lệnh kiểm change_event bị dừng giữa chừng). Việc còn treo: kiểm `campaign.status` + `change_event`, hoặc user xem trạng thái trên UI.
+
+### 2026-08-19 — BẬT LẠI campaign (kỳ đo 2)
+
+- Verify API: `status=ENABLED`, `target_content_network=False` (Display vẫn tắt ✓), trần CPC 35k giữ nguyên. `primary_status=LIMITED` vì `BIDDING_STRATEGY_LEARNING` — bình thường sau khi bật lại, tự hết sau 2–3 ngày.
+- Chi đã phát sinh: 18/08 **153.785 ₫** (102 impr · 5 click) · 19/08 **169.149 ₫** (131 impr · 5 click) → giải thích luôn khoản chi 18/08 từng bị treo nghi vấn ở mục trên: **campaign được bật lại**, không phải PAUSED mà vẫn tiêu tiền.
+- **Kỳ đo 2 tính từ 18/08**, không nối số với kỳ 1.
+- Skill `phan-tich` cập nhật cùng ngày theo phản hồi user *"quá chặt, độ phủ định quá cao"*: thay luật "CẤM phán" bằng **3 mức tin cậy CHỐT / NGHIÊNG / KHÔNG ĐỌC ĐƯỢC** (chỉ mức 3 mới được từ chối kết luận) + luật cân bằng giọng (mỗi báo cáo ≥1 kết luận có hướng, tối đa 1 dòng cảnh báo, >2 câu phủ định là phải viết lại). §4b làm rõ **khối trên = kỳ, khối dưới = lũy kế**.
