@@ -183,3 +183,10 @@ Rủi ro còn lại nếu Google vẫn từ chối vì thiếu thông tin doanh 
 - Lead rơi vào 09/08 (1) · 11/08 (2) · 14/08 (1). Không có lead từ 15/08.
 - Ba review đang chờ **đóng sổ ở trạng thái CHƯA KẾT LUẬN** (bid 35k 21/08, tắt Display 22/08, RSA v4 26/08) — campaign dừng trước hạn, không đủ dữ liệu phán.
 - ⚠️ Bật lại = **kỳ đo mới**, không nối số với kỳ này.
+
+### 2026-08-19 — Nghiệm thu lead từ CRM (user cung cấp)
+
+- **4 lead · 1 F1 · 3 đang chăm** → tỷ lệ qualify **25%**. Số lead CRM **khớp đúng 4/4 với cột conversions của Ads** — chuỗi đo (gclid → Keap) chạy đúng suốt kỳ, không thất thoát, không thổi phồng.
+- Chi toàn kỳ 06–18/08 (số chốt): **7.151.334 ₫** · 8.027 impr · 274 click. → **CPL 1.787.834 ₫** · **Chi/F1 7.151.334 ₫**.
+- Bỏ phần Display rò (52 click · 1.002.590 ₫ · 0 lead): CPL thật **1.536.686 ₫**.
+- ⚠️ Còn phát sinh chi ngày 18/08 (102 impr · 5 click · 153.785 ₫) SAU khi user tắt campaign 17/08 — **chưa xác minh nguyên nhân** (lệnh kiểm change_event bị dừng giữa chừng). Việc còn treo: kiểm `campaign.status` + `change_event`, hoặc user xem trạng thái trên UI.
