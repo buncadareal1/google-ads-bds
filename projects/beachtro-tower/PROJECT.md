@@ -209,3 +209,10 @@ Rủi ro còn lại nếu Google vẫn từ chối vì thiếu thông tin doanh 
 - Chi đã phát sinh: 18/08 **153.785 ₫** (102 impr · 5 click) · 19/08 **169.149 ₫** (131 impr · 5 click) → giải thích luôn khoản chi 18/08 từng bị treo nghi vấn ở mục trên: **campaign được bật lại**, không phải PAUSED mà vẫn tiêu tiền.
 - **Kỳ đo 2 tính từ 18/08**, không nối số với kỳ 1.
 - Skill `phan-tich` cập nhật cùng ngày theo phản hồi user *"quá chặt, độ phủ định quá cao"*: thay luật "CẤM phán" bằng **3 mức tin cậy CHỐT / NGHIÊNG / KHÔNG ĐỌC ĐƯỢC** (chỉ mức 3 mới được từ chối kết luận) + luật cân bằng giọng (mỗi báo cáo ≥1 kết luận có hướng, tối đa 1 dòng cảnh báo, >2 câu phủ định là phải viết lại). §4b làm rõ **khối trên = kỳ, khối dưới = lũy kế**.
+
+### 2026-08-21 — Chẩn đoán nút thắt kỳ 2: **QS thấp do TRANG ĐÍCH**, không phải ad
+- Kỳ 2 chốt 18–20/08: chi **1.325.924 ₫** · 40 click · **2 conv (Ads)** → **CPL 662.962 ₫** (kỳ 1: 1,19tr) — rẻ nhất từ đầu chiến dịch, n=2 nên còn là *nghiêng tốt*, chốt ở ~120 click.
+- IS 19–20/08 chỉ **54–55%**, **mất-rank 45%**, mất-budget **0%** → nút thắt **thiếu CHẤT** (không phải thiếu tiền).
+- Bóc thành phần QS từng keyword (`quality_info.*`, 18–21/08): **ad relevance ABOVE_AVERAGE gần như toàn bộ**, nhưng **post_click (trang đích) chỉ AVERAGE, riêng mọi keyword có chữ "giá" đều BELOW_AVERAGE**. Không keyword nào đạt LP ABOVE_AVERAGE. QS brand: `blanca city` 5 · `căn hộ blanca city` 2 · `giá bán blanca city` 3.
+- Kết luận: LP không có khối GIÁ cụ thể trong khi truy vấn hỏi-giá là nguồn lead thật (2/2 lead 20/08 đến từ term có chữ "giá"). Đòn tiếp theo: **thêm khối bảng giá / "giá từ …" + chính sách thanh toán vào LP** → kéo post_click lên, hạ CPC 33k, lấy lại phần mất-rank 45% mà không tăng ngân sách.
+- Dòng CONTENT trong khối MẠNG HIỂN THỊ của `bao_cao.py` là **dư âm 14–15/08** (Display vẫn tắt, `target_content_network=False`); rơi khỏi cửa sổ 7 ngày sau 22/08.
