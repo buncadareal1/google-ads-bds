@@ -216,3 +216,8 @@ Rủi ro còn lại nếu Google vẫn từ chối vì thiếu thông tin doanh 
 - Bóc thành phần QS từng keyword (`quality_info.*`, 18–21/08): **ad relevance ABOVE_AVERAGE gần như toàn bộ**, nhưng **post_click (trang đích) chỉ AVERAGE, riêng mọi keyword có chữ "giá" đều BELOW_AVERAGE**. Không keyword nào đạt LP ABOVE_AVERAGE. QS brand: `blanca city` 5 · `căn hộ blanca city` 2 · `giá bán blanca city` 3.
 - Kết luận: LP không có khối GIÁ cụ thể trong khi truy vấn hỏi-giá là nguồn lead thật (2/2 lead 20/08 đến từ term có chữ "giá"). Đòn tiếp theo: **thêm khối bảng giá / "giá từ …" + chính sách thanh toán vào LP** → kéo post_click lên, hạ CPC 33k, lấy lại phần mất-rank 45% mà không tăng ngân sách.
 - Dòng CONTENT trong khối MẠNG HIỂN THỊ của `bao_cao.py` là **dư âm 14–15/08** (Display vẫn tắt, `target_content_network=False`); rơi khỏi cửa sổ 7 ngày sau 22/08.
+
+### 2026-08-23 — Quyết định: CHỜ ĐỦ 120 CLICK mới xử
+- CPL kỳ 2 (18→23/08 13h): 3.745.529₫ / 95 click / 2 lead = **1.872.765₫** — vượt guardrail 1,5tr; 55 click liên tiếp 0 lead từ sau 20/08. CPC leo 33,4k→35,7k→51,2k→~53k (vượt trần 45k — nghi bid adjustment cộng lên trần).
+- User chọn **chưa hành động**, chờ đủ cổng mẫu 120 click (~1-2 ngày) rồi chốt kỳ 2 đúng luật. Hai phương án đã duyệt sẵn chờ kích hoạt: hạ trần CPC 45k→35k · gói sửa LP (section giá #bang-gia + Zalo sticky + MST footer).
+- ✅ Dòng CONTENT rơi khỏi cửa sổ 7 ngày — xác nhận Display tắt hẳn.
