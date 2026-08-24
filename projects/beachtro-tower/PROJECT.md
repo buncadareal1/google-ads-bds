@@ -221,3 +221,9 @@ Rủi ro còn lại nếu Google vẫn từ chối vì thiếu thông tin doanh 
 - CPL kỳ 2 (18→23/08 13h): 3.745.529₫ / 95 click / 2 lead = **1.872.765₫** — vượt guardrail 1,5tr; 55 click liên tiếp 0 lead từ sau 20/08. CPC leo 33,4k→35,7k→51,2k→~53k (vượt trần 45k — nghi bid adjustment cộng lên trần).
 - User chọn **chưa hành động**, chờ đủ cổng mẫu 120 click (~1-2 ngày) rồi chốt kỳ 2 đúng luật. Hai phương án đã duyệt sẵn chờ kích hoạt: hạ trần CPC 45k→35k · gói sửa LP (section giá #bang-gia + Zalo sticky + MST footer).
 - ✅ Dòng CONTENT rơi khỏi cửa sổ 7 ngày — xác nhận Display tắt hẳn.
+
+### 2026-08-24 — KỲ 2 CHẠM CỔNG MẪU 120 CLICK: CPL 1.208.908₫ — ĐẠT SÁT BIÊN mục tiêu 1,2tr
+- Chốt 18–23/08: chi **4.835.631₫** · **120 click** · **4 conv (Ads)** → CPL **1.208.908₫** (mục tiêu đăng ký ≤1,2tr — lệch +0,7%, tính trên conv Ads; số CRM do user giữ). Guardrail 1,5tr KHÔNG vỡ.
+- Cảnh báo 23/08 (CPL 1,87tr giữa kỳ) tự gỡ: 23/08 về **2 conv** từ term `blanca city vũng tàu` (9 click/468.836₫) — lại đúng pattern conversion-lag, lần thứ 3 (14/08, 20/08, 23/08). Đọc CPL giữa kỳ khi chưa đủ mẫu = nhiễu.
+- IS 22–23/08: 69–70% ✓ (đạt điều kiện ≥65% của kỳ đo); mất-rank còn 30–31%, CPC vẫn cao 46,5–51,2k (vượt trần 45k — nghi bid adjustment). 23/08 chi 1.675.356₫ = 168% budget ngày (overdelivery hợp lệ, Google bù trong tháng).
+- Đóng mục review 24/08 (entry PAUSED 17/08 — vô hiệu do đã bật lại). Review chính thức kỳ 2: 26/08.
