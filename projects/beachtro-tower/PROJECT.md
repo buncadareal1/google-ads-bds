@@ -227,3 +227,9 @@ Rủi ro còn lại nếu Google vẫn từ chối vì thiếu thông tin doanh 
 - Cảnh báo 23/08 (CPL 1,87tr giữa kỳ) tự gỡ: 23/08 về **2 conv** từ term `blanca city vũng tàu` (9 click/468.836₫) — lại đúng pattern conversion-lag, lần thứ 3 (14/08, 20/08, 23/08). Đọc CPL giữa kỳ khi chưa đủ mẫu = nhiễu.
 - IS 22–23/08: 69–70% ✓ (đạt điều kiện ≥65% của kỳ đo); mất-rank còn 30–31%, CPC vẫn cao 46,5–51,2k (vượt trần 45k — nghi bid adjustment). 23/08 chi 1.675.356₫ = 168% budget ngày (overdelivery hợp lệ, Google bù trong tháng).
 - Đóng mục review 24/08 (entry PAUSED 17/08 — vô hiệu do đã bật lại). Review chính thức kỳ 2: 26/08.
+
+### 2026-08-25 — PHÁT HIỆN: người khác đổi cấu hình giữa kỳ — KỲ ĐO 2 NHIỄM TỪ 20/08
+- `change_event` lộ 4 thay đổi bởi **webseo@smartland.vn** (không phải user, không qua sổ): 20/08 đổi tên campaign → `Beachtro_Search_Brand_DuAn`; 20/08 15:08 **trần CPC 35k→45k**; 22/08 09:32 **45k→55k**; 22/08 09:37 **budget 1tr→2,1tr/ngày**.
+- Giải mã toàn bộ bí ẩn CPC: 33k (trần 35k) → 44-51k (trần 45k) → 51-53k (trần 55k). KHÔNG phải bid adjustment như nghi 23/08. Chi 1,67tr (23/08) và 2,46tr (24/08) là hợp lệ theo budget mới 2,1tr.
+- **Kỳ đo 2 chỉ sạch 18→20/08 (trước 15:08)**: 1.325.924₫ · 40 click · 2 conv → CPL 663k. Đoạn sau (21–24/08, cấu hình leo thang): 5.967.066₫ · 136 click · 2 conv → **CPL 2.983.533₫** — trả giá gấp rưỡi/click, thêm 110% ngân sách, lead không tăng theo. Con số chốt-120-click hôm 24/08 (CPL 1,21tr) trộn 2 cấu hình — hạ cấp thành tham khảo.
+- IS/abs-top tăng (72% / 63%) đúng như mua thêm bằng tiền; mất-budget vẫn 0%.
