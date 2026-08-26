@@ -233,3 +233,14 @@ Rủi ro còn lại nếu Google vẫn từ chối vì thiếu thông tin doanh 
 - Giải mã toàn bộ bí ẩn CPC: 33k (trần 35k) → 44-51k (trần 45k) → 51-53k (trần 55k). KHÔNG phải bid adjustment như nghi 23/08. Chi 1,67tr (23/08) và 2,46tr (24/08) là hợp lệ theo budget mới 2,1tr.
 - **Kỳ đo 2 chỉ sạch 18→20/08 (trước 15:08)**: 1.325.924₫ · 40 click · 2 conv → CPL 663k. Đoạn sau (21–24/08, cấu hình leo thang): 5.967.066₫ · 136 click · 2 conv → **CPL 2.983.533₫** — trả giá gấp rưỡi/click, thêm 110% ngân sách, lead không tăng theo. Con số chốt-120-click hôm 24/08 (CPL 1,21tr) trộn 2 cấu hình — hạ cấp thành tham khảo.
 - IS/abs-top tăng (72% / 63%) đúng như mua thêm bằng tiền; mất-budget vẫn 0%.
+
+### 2026-08-26 — REVIEW KỲ ĐO 2 (tới hạn): đọc theo 2 đoạn cấu hình
+| | Sạch 18–20/08 (trần 35k, budget 1tr) | Nhiễm 21–25/08 (trần 45→55k, budget 2,1tr) | Cả kỳ |
+|---|---|---|---|
+| Chi | 1.325.924₫ | 7.953.715₫ | 9.279.639₫ |
+| Click | 40 | 175 | 215 |
+| Conv (Ads) | 2 | 3 | 5 |
+| CPL | **662.962₫** ✓ | **2.651.238₫** | 1.855.928₫ ✗ |
+- Metric đăng ký (CPL ≤1,2tr · IS ≥65% · 0 CONTENT): chỉ đạt vế CONTENT; IS 25/08 = 62%. Giả thuyết gốc ("cấu hình sạch còn dư địa") thực chất ĐÚNG trên đoạn được test; cấu hình leo thang của webseo cho CPL gấp 4 — tiền mua thêm click (175 vs 40) nhưng conv không theo (3 vs 2).
+- 25/08 chốt: 39 click · 1.986.649₫ · 1 conv · CPC 50,9k · IS 62% (mất-rank 38%).
+- Sự cố hạ tầng 26/08: OS nâng Python 3.13→3.14 làm `.venv-ads` gãy (`ModuleNotFoundError: google`) — rebuild venv bằng python3.14 + reinstall google-ads, script chạy lại bình thường.
