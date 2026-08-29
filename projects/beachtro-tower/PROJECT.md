@@ -244,3 +244,15 @@ Rủi ro còn lại nếu Google vẫn từ chối vì thiếu thông tin doanh 
 - Metric đăng ký (CPL ≤1,2tr · IS ≥65% · 0 CONTENT): chỉ đạt vế CONTENT; IS 25/08 = 62%. Giả thuyết gốc ("cấu hình sạch còn dư địa") thực chất ĐÚNG trên đoạn được test; cấu hình leo thang của webseo cho CPL gấp 4 — tiền mua thêm click (175 vs 40) nhưng conv không theo (3 vs 2).
 - 25/08 chốt: 39 click · 1.986.649₫ · 1 conv · CPC 50,9k · IS 62% (mất-rank 38%).
 - Sự cố hạ tầng 26/08: OS nâng Python 3.13→3.14 làm `.venv-ads` gãy (`ModuleNotFoundError: google`) — rebuild venv bằng python3.14 + reinstall google-ads, script chạy lại bình thường.
+
+### 2026-08-29 — REVIEW CẤU HÌNH WEBSEO (trần 55k + budget 2,1tr) sau 7 ngày trọn
+| | Kỳ 1 (06–17/08) | Kỳ 2 sạch (18–20/08) | Cấu hình webseo (22–28/08) |
+|---|---|---|---|
+| Chi | 7,15tr | 1.325.924₫ | 10.882.450₫ |
+| Click | 274 | 40 | 227 |
+| Conv Ads | 4 | 2 | **7** |
+| CPL | 1,19tr | 663k | **1.554.636₫** |
+| CPC | ~26k | ~33k | ~47,9k |
+- Trade-off chốt bằng số: cấu hình đắt cho **nhiều lead nhất/tuần từ đầu chiến dịch** (7 lead, 4 ngày liền 25–28/08 đều có) nhưng mỗi lead đắt hơn 30–130% các kỳ trước. CVR 3,1% ổn định quanh nhịp tài khoản → tăng chi mua thêm volume, KHÔNG cải thiện hiệu suất/click — đúng luật giảm dần.
+- IS dao động 53→73% trong tuần dù trần không đổi → biến động do đối thủ, không do mình. Auction Insights 28/08 chưa tải (file mới nhất 14/08).
+- Sổ sạch: mọi entry đã reviewed. Mốc kế: **03/09 chốt CPL mục tiêu + bidding** (plan-chay-ads §5) — bảng trên là đầu vào.
