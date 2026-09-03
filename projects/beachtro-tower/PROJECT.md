@@ -256,3 +256,16 @@ Rủi ro còn lại nếu Google vẫn từ chối vì thiếu thông tin doanh 
 - Trade-off chốt bằng số: cấu hình đắt cho **nhiều lead nhất/tuần từ đầu chiến dịch** (7 lead, 4 ngày liền 25–28/08 đều có) nhưng mỗi lead đắt hơn 30–130% các kỳ trước. CVR 3,1% ổn định quanh nhịp tài khoản → tăng chi mua thêm volume, KHÔNG cải thiện hiệu suất/click — đúng luật giảm dần.
 - IS dao động 53→73% trong tuần dù trần không đổi → biến động do đối thủ, không do mình. Auction Insights 28/08 chưa tải (file mới nhất 14/08).
 - Sổ sạch: mọi entry đã reviewed. Mốc kế: **03/09 chốt CPL mục tiêu + bidding** (plan-chay-ads §5) — bảng trên là đầu vào.
+
+### 2026-09-03 — MỐC TUẦN 4: số nền để chốt CPL mục tiêu (plan-chay-ads §5)
+| Giai đoạn | Chi | Click | CPC | Conv (Ads) | CPL |
+|---|---|---|---|---|---|
+| Kỳ 1 (06–17/08, trần 35k/1tr) | 6.997.549₫ | 269 | 26.013₫ | 4 | 1.749.387₫ |
+| Kỳ 2 sạch (18–20/08) | 1.325.924₫ | 40 | 33.148₫ | 2 | 662.962₫ |
+| Cấu hình 55k/2,1tr (22–31/08) | 16.107.989₫ | 348 | 46.287₫ | 10 | 1.610.799₫ |
+| 6 ngày gần nhất (28/08–02/09) | 10.659.056₫ | 247 | 43.154₫ | 5 | 2.131.811₫ |
+| **Toàn chiến dịch (06/08–02/09)** | **29.702.860₫** | **787** | **37.742₫** | **17** | **1.747.227₫** |
+- **CPL thật của toàn chiến dịch = 1.747.227₫** (conv Ads; số lead CRM do user giữ, thường cao hơn vì hotline/Zalo không đo).
+- Nghịch lý cần đọc kỹ: **IS đã lên 88–90%** (mất-rank chỉ 10–12%) và CPC đang hạ (39–45k), CTR 11–13% — phần đấu giá gần như tối ưu hết mức. Nhưng CPL 6 ngày gần nhất **2,13tr**, xấu hơn trung bình. Volume kịch trần: IS 89% → chỉ còn +33 click/tuần dư địa.
+- Ý nghĩa cho quyết định 03/09: tăng tiền KHÔNG còn mua thêm được gì (đã gần 90% thị phần hiển thị); đòn còn lại nằm ở **tỷ lệ chuyển đổi sau click** (LP) và **chất lượng truy vấn** (tách nhóm giá-intent / Sun Group), không nằm ở bid.
+- 02/09 lần đầu xuất hiện **mất-budget 1%** — chạm trần ngân sách 2,1tr.
